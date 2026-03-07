@@ -1,0 +1,737 @@
+---
+title: "Intervista a Mizio Ratti e Stefano Lombardini: la creatività nell'era dell'AI"
+categories:
+  - interviste
+tags:
+  - AI
+  - creatività
+layout: single
+author_profile: true
+---
+
+{% include video id="xMMjWC3ii2k" provider="youtube" %}
+
+👉 [Ascolta su Spotify](https://open.spotify.com/show/16dTKEEtKkIzhr1JJNMmSF?si=900902f2dca8442e)<br/>
+👉 [Guarda su YouTube](https://www.youtube.com/channel/UCYQgzIby7QHkXBonTWk-2Fg)<br/>
+👉 [Segui su LinkedIn](https://www.linkedin.com/company/risorseartificiali)<br/>
+
+## **[00:00] Introduzione e Giochi dell'Infanzia**
+
+**Stefano Maestri**
+
+> Bentornati alle nostre interviste per il podcast Risorse Artificiali. Grazie di essere tornati ad ascoltarci e grazie infinite ai nostri due ospiti che come sapete io di solito non presento, faccio sempre prima la domanda a rompighiaccio. Dico soltanto grazie a Mizio, grazie a Stefano, poi lascerò a voi presentarvi. Ma prima la domanda che faccio a tutti: il vostro gioco giocattolo preferito?
+
+
+**Stefano Lombardini**
+
+> Vuoi andare prima tu? Vado io.
+
+
+**Mizio**
+
+> È spiazzante. Vai pure, Stefano.
+
+
+**Stefano Lombardini**
+
+> Ok, allora gioco giocattolo preferito? Ma, allora, ecco, se devo dire un gioco che non proprio da ragazzino, perché è uscito nel 1999, che però ci gioco ancora, direi Age of Empires 2. Per chi non lo sapesse è un videogioco di strategia online, che appunto io sono dell'81, è uscito quando avevo 18 anni, e in realtà ci gioco ancora. Poi vabbè, è uscito il 3, che va dimenticato, non tutti l'abbiamo dimenticato, invece il 4 è molto bello. Però comunque se devo pensare a un gioco che mi ha segnato è proprio quello, anche perché poi all'epoca nel '99 io avevo internet da poco tempo col 56k ed era veramente un dramma perché si giocava in multiplayer, mi pare su una rete di MSN, qualcosa del genere.
+>
+> Normalmente una partita in multiplayer di Age of Empires 2 dura mezz'ora, però col 56k dopo 10 minuti venivi disconnesso, c'erano dei lag pazzeschi, quindi era veramente una tragedia. Però era veramente divertentissimo e forse tra i giochi di strategia è uno dei più noti e più amati. C'è ancora adesso gente che ci gioca tantissimo, al 2, pur essendo uscito il 4 che è un upgrade soprattutto degli aspetti. Quindi appunto io direi questo. Lascio la parola a Mizio.
+
+
+**Mizio**
+
+> Ti dico la prima cosa che mi è venuta in mente quando me l'hai chiesta: Subbuteo.
+
+
+**Stefano Maestri**
+
+> Subbuteo, figo! Ci ho giocato anch'io.
+
+
+**Mizio**
+
+> Che comunque non è che non gioco da quando ho 8 anni, ma fino a 10 anni fa facevamo ancora un po' di tornei di Subbuteo. Poi mi piacciono al limite i giochi strategici, diciamo, moderni. Mi ero un po' perso per Civilization, adesso per Football Manager, sono rimasto al 24, per il 26 è stato uno strazio. Adesso vi faccio una domanda io: come mai questa domanda, che è curiosa?
+
+
+**Stefano Maestri**
+
+> Perché mi piace molto ascoltare le interviste. Allora, intanto dico ai nostri ascoltatori, avrete capito, i nostri ascoltatori hanno capito che oggi ne abbiamo due di intervistati e non uno, una specie di panel insomma. Ma generalmente quando vado in uno a uno mi piace molto ascoltare chi intervisto e provare a ricollegare alla fine il gioco che mi hanno raccontato con quello che mi hanno raccontato durante la puntata. E proverò a farlo anche con voi.
+
+
+## **[03:50] Presentazione degli Ospiti**
+
+**Stefano Maestri**
+
+> Bene, vi lascio. Io non faccio di voi l'introduzione perché sono certo che voi la facciate di voi stessi meglio di me. Dico soltanto Stefano Lombardini e Mizio Ratti, e raccontatemi chi siete, cosa fate nella vita.
+
+
+**Stefano Lombardini**
+
+> Ok, allora, io come Mizio, anche se poi appunto abbiamo fatto cose diverse, sono un copywriter pubblicitario e molto sinteticamente è la persona che trova le idee, scrive i testi delle pubblicità a 360 gradi. Forse una volta andava specificato, adesso credo che le persone sappiano un po' meglio cos'è questa professione.
+>
+> E come dicevo prima, sono dell'81, ho fatto l'Università a Milano, ho studiato comunicazione. Poi ho fatto un master al Politecnico in Art Direction e Copywriting e per 4 anni ho lavorato in agenzia, in due multinazionali, in una grande agenzia indipendente che poi purtroppo è fallita, e dal 2011 faccio il freelance. E quindi da un bel po' di tempo. E quindi come freelance poi ho lavorato sia per grandi agenzie, per case di produzione, per piccole aziende. E poi ultimamente, poi avremo tempo di parlarne dopo, negli ultimi mesi ho iniziato a interessarmi anche alla video creation di video in AI. E quindi questo è quanto. Lascio la parola.
+
+
+**Mizio**
+
+> Ok, grazie. Io sono Mizio Ratti, sono di Lerici, ok? Nel bellissimo Golfo dei Poeti. Lo dico perché comunque io in realtà praticamente lavoro in advertising dal 1990. Prima lavoravo nel porto della Spezia, lo dico sempre con grande orgoglio. Poi sono venuto su a Milano per fare l'Accademia di Comunicazione, l'ho fatta fino all'89, e poi ho iniziato a lavorare in advertising.
+>
+> E praticamente nel 1996 ho aperto la mia struttura, che in realtà noi abbiamo cominciato a lavorare come freelance. Non so se Stefano lo sapeva, infatti io mi reputo ancora molto freelance. Ed è stato il periodo più figo della mia vita.
+
+
+## **[06:56] Carriere e Percorsi Professionali**
+
+**Mizio**
+
+> Dove comunque probabilmente ho fatto le cose più belle e ho anche guadagnato di più, perché erano tempi incredibili. E poi praticamente questo gruppo di freelance si è trasformato nella mia prima agenzia che poi comunque è tutt'ora l'agenzia più importante, che è Enfant Terrible, che è un'agenzia creativa indipendente, che non è grande, è una ventina di persone, ma comunque si contraddistingue per il fatto che nonostante siamo piccoli lavoriamo per grandi brand, lavoriamo da 15 anni per Procter, ad esempio.
+>
+> Per cui diciamo abbiamo un approccio, conosciamo un po' tutto quello che è la burocrazia per lavorare con le internazionali. Però il fatto di esserci da 30 anni, perché Enfant Terrible adesso è il trentesimo anno, quindi non dico l'età, però se uno si fa due calcoli più o meno ci arriva. E il fatto di stare 30 anni vivi, alive and kicking, ha fatto sì che comunque noi abbiamo sviluppato una grande capacità di adattamento, nel senso che abbiamo attraversato insomma milioni di ere che diventano sempre più veloci, sempre più ristrette, e ci ha salvato sempre anche il fatto di essere abbastanza innovatori, nel senso che quando arrivano cose nuove noi le annusiamo e le vediamo.
+>
+> È stato il caso del digital, è stato il caso della unconventional all'inizio degli anni 2000, adesso è il caso dell'AI. Però volevo dirlo all'inizio: io ho una posizione ambigua nei confronti dell'AI, cioè nel senso che è amore e odio. Trovo che sia interessante per molte cose e comunque sia un po' da tenere d'occhio per altre. Forse prima ero più giovane e vedevo tutto il bello dell'innovazione, adesso vedo i rischi e vedo le opportunità.
+
+
+**Stefano Maestri**
+
+> Benissimo, perché poi è proprio quello che in genere ci interessa. Quando invitiamo persone qui a parlare, a me piace avere punti di vista diversi. Lo stesso noi, ci conoscono i nostri ascoltatori, siamo in tre e vestiamo tre anime diverse pur all'interno dell'ingegneria. Io sono quello più entusiasta, quindi Mizio se la prenderà con me nel caso.
+
+
+**Mizio**
+
+> No, ma non ce l'ho con l'AI, nel senso che comunque lo facciamo, è che comunque non è tutto rose e fiori. Mi ricordo come i social, quando sono arrivati sembrava che migliorassero il mondo, invece adesso ci stiamo rendendo conto che non è così. Cioè, in effetti sono un'ottima cosa. L'AI sta arrivando, è una grande democratizzazione della creatività, che è un bene per certi aspetti e un problema per altri, per quelli che saranno gli sviluppi. Cioè, ogni giorno apro LinkedIn e vedo qualcuno che mi dice che la creatività è morta, che siamo tutti morti, che può darsi che sia così. Però in effetti questa democratizzazione, questa facilità di arrivare a questa tecnica, cambierà molto. Non è detto in bene.
+
+
+## **[10:47] Approccio all'Intelligenza Artificiale**
+
+**Stefano Maestri**
+
+> Certo, questo non lo possiamo sapere. E intanto i miei ascoltatori si chiederanno che cosa ci fa Stefano con due creativi pubblicitari, copywriter, o comunque gente che lavora nella pubblicità, diciamo lontanissimi dal mio mondo. A parte che ieri ero a camminare nel Golfo dei Poeti, ma non è questo il motivo per cui siamo qua, neanche sapevo Mizio fosse di Lerici fino a poco fa.
+>
+> Allora, io sono stato un po' attratto da voi due per motivi non opposti ma sicuramente diversi, proprio di posizionamento anche rispetto all'AI. Da qualche tempo già seguo la newsletter di Mizio in cui tu ti posizioni, come stavi dicendo, in una maniera non necessariamente critica, perché credo che dalla tua newsletter si capisca che sei ben consapevole dell'impatto che questa cosa sta avendo su vari aspetti della società e anche probabilmente del tuo lavoro. Dall'altra, da Stefano, che non è certo uno di quelli che dice su LinkedIn che la creatività è morta, ma, passami il termine, è diventato abbastanza virale su LinkedIn per alcuni video che ha pubblicato fatti con l'AI.
+>
+> Ma prima di addentrarci in questi due aspetti, volevo capire da voi che cosa significa approcciarsi oggi ad una qualunque nuova tecnologia, diciamo, così tanto disruptive come può essere l'AI, dai due punti di vista diversi che voi avete. Perché uno è un freelance, è in qualche modo forse più libero di sperimentare, con qualche vincolo in meno, e invece essendo all'interno di un'agenzia dove comunque, mettiamolo molto tra virgolette, ma devi rendere conto delle scelte che fai in qualche modo al cliente, al socio, a varie persone.
+>
+> Anche nel mondo dei creativi questa cosa è diversa, perché io questa differenza la vedo gigantesca nel mondo dello sviluppo software, per esempio. Cioè, le startup stanno andando mille all'ora, le grandi enterprise per forza di cose hanno tutta una serie di regolamentazioni da seguire. È così anche in un mondo come quello più dinamico forse della pubblicità, oppure ci sono delle differenze?
+
+
+**Stefano Lombardini**
+
+> Allora, magari rispondo prima io. Ricollegandomi al discorso di prima, comunque io tra gli scettici e gli entusiasti, invece come te Stefano sono più sul lato entusiasta. Però qua secondo me è più una cosa personale, perché io essendo un millennial, praticamente quando avevo 7-8 anni mio padre aveva portato a casa il Commodore 64.
+>
+> Quindi secondo me la mia generazione, almeno che ha vissuto un po' il mio percorso, ha avuto una specie di imprinting proprio sulla tecnologia informatica. Dove appunto da bambino avevi magari visto il Commodore 64, poi ho avuto il primo PC quando facevo la prima media. Quindi la tecnologia informatica era qualcosa che veramente iniziava da, magari per chi è più vecchio anche dall'Amiga, era qualcosa che era molto rudimentale, però poi si ricollegava sempre a questo desiderio di "voglio qualcosa di più".
+>
+> Infatti poi da quando ho avuto il Commodore 64, avevo dei cugini un po' più vecchi di me che avevano già il computer. La prima volta ho visto il computer, poi l'unica cosa che desideravo era quella. E poi andando avanti sempre un computer più potente. Poi, ad esempio, quando da bambino ho visto WarGames, Giochi di Guerra, che ovviamente è quel film famosissimo e che è appunto dove scoppia la guerra nucleare. Però la cosa che veramente mi aveva impressionato, io ovviamente ero piccolo, non sapevo cosa fosse internet, vedevo il protagonista che si collegava col telefono a una rete col suo computer e lì poi ho detto, non sapevo cosa fosse internet, quella cosa lì mi ha meravigliato, ma più di Jurassic Park, per dire. E quindi poi da lì appunto poi mi è venuto il desiderio di avere internet.
+>
+> Quindi arrivando al discorso dell'AI, comunque verso l'informatica, e penso appunto che sia una cosa un po' comune a molti della mia generazione, ho comunque questo afflato di entusiasmo che forse manca sia a chi è nativo digitale, quindi più giovane di me, che invece la dà più per scontata, sia invece magari anche a chi è un po' più anziano, perché magari è più legato al mondo analogico. Nel mio caso, anch'io ho avuto un fortissimo legame col Walkman, col mondo analogico. Però fin da bambino sono entrato in questa trasformazione.
+>
+> Poi all'inizio internet, io mi sono collegato per la prima volta nel 1997-1998, erano veramente i siti, li facevi tu con GeoCities. C'era proprio questa idea che era un mondo a parte, separato dai media tradizionali e lo costruivi tu, non c'erano le grandi aziende, era veramente una cosa libera, c'era Napster. Quindi poi ovviamente ingrandendosi è diventato un business. Vabbè, ho un po' divagato.
+>
+> Però comunque invece arrivando al discorso, l'approccio freelance agenzia, ovviamente sì, un freelance ovviamente rispetto a un'agenzia che deve rendere conto ai propri clienti, anche a livello proprio di flussi di lavoro, meno libera di sperimentare, è diverso. È un po' come sostanzialmente un regista che lavora per una casa di produzione, quindi è vincolato a fare solo i lavori di quella casa di produzione, e uno che invece può scegliere i suoi progetti.
+>
+> Quindi da questo punto di vista credo che forse solo per gli spot sociali le agenzie, anche lì però magari hanno, mi ricordo quando lavoravo nella mia ultima agenzia in Forchets c'era Legambiente, quindi facevamo gli spot per quella ed erano pro bono. Però ovviamente invece gli spec ad, proprio quelli commerciali, poi in realtà ne ho fatti pochi, adesso poi cerco di farne sempre meno, sono più cose che fa il freelance anche per proporsi alle agenzie e alle altre aziende. Difficilmente un'agenzia invece si mette proprio a fare lo spec ad magari per un cliente che ha un'altra agenzia, perché sarebbe un po' problematico.
+
+
+## **[17:53] Rischi e Opportunità dell'AI**
+
+**Mizio**
+
+> Adesso posso rilanciare la palla. Ok, ma allora volevo solo chiarire, c'è una cosa: a parte sono Gen X, per cui non sono ancora boomer, no?
+
+
+**Stefano Maestri**
+
+> Anche io sono Gen X, anche io.
+
+
+**Mizio**
+
+> Allora, per quanto riguarda l'innovazione, io sono molto attratto dall'innovazione, è una cosa che ho sempre perseguito. Odio la nostalgia, odio tutti coloro che guardano verso il passato. Ma per dire, quando nel 1990 sono entrato in agenzia, il primo stipendio ho comprato un Macintosh Classic. Allora nel '90 era una cosa incredibile e tutti mi guardavano e mi prendevano in giro, e dopo due mesi tutti mi chiedevano di stampare i titoli. E tutti quelli che, metà delle persone mi prendevano in giro, dopo 6 mesi sono state licenziate. Per dire, conosco il passaggio.
+>
+> C'è però una differenza, no? Per quanto sia affascinante questa tecnologia, perché io ad esempio ho cominciato a fare vibe coding, mi faccio, non sapendo una riga di codice, trovo veramente affascinante il fatto di mettermi lì e mi sono fatto delle applicazioni, ed è fantastico. Poi forse ci ho perso troppo tempo a fare tutto il debugging, per un po', poi ho capito anche certe cose.
+>
+> La differenza che c'è però rispetto alle altre tecnologie è che ha un grosso rischio questa tecnologia, che per quanto fantastica, affascinante, è quella che verso alcune persone farà smettere di pensare. Questa è la grossa cosa che a me fa paura. Del motivo per cui io sono tornato ad insegnare in Accademia dopo tanti anni. Avevo smesso di andare in Accademia perché mi ero stufato di fare sempre le stesse cose, le copy ad, queste cose qua che anche Stefano conosce. E invece trovo che, mi sono inventato un corso, mi ha chiamato l'Accademia per tornare, mi sono inventato questo corso, l'ho chiamato Deep Creativity, e vado a provare a insistere affinché i creativi continuino a pensare. Perché vedo un grosso rischio nel fatto di affidarsi molto all'intelligenza artificiale senza pensare precedentemente, che sicuramente non è una cosa che ha Stefano, ma io vedo nei ragazzi giovani, nel momento in cui prima qualche mese fa ho cominciato a dire dovete cominciare a vedere l'intelligenza artificiale, dalla resistenza sono passati a usarla, ad abbandonare il Photoshop, ad abbandonare tutti i fogli di carta e vanno lì. Per cui è questa cosa che secondo me è un po' problematica dell'intelligenza artificiale.
+>
+> Tornando invece al discorso freelance agenzia, quello che dicevi Stefano Maestri, cioè è molto giusto perché comunque il vantaggio del freelance è proprio l'agilità. Infatti ho visto negli ultimi mesi Stefano, Stefano Lombardini, ok? Ha fatto cose molto interessanti, io lo seguo, anche se poi non è che passo tantissimo tempo sui social per varie questioni. E in effetti il più piccolo ha sempre la possibilità di prendere un vantaggio competitivo. Noi siamo un'agenzia comunque piccola, anche se lavoriamo per i grandi, per cui abbiamo un vantaggio.
+>
+> Io non prevedo il futuro, non voglio prevederlo, perché comunque il futuro non lo prevedono le cartomanti, i chiromanti, e è un po' da stolti prevederlo. Posso ricordare il passato, il passato alla fine è che bisogna essere bravi a muoversi per primi, bisogna essere bravi anche, secondo me, a riuscire ad essere solidi, perché poi quando i grandi decidono di arrivare, arrivano con dei mezzi che sono molto più importanti e recuperano velocemente il terreno che avevano perso. Anche se questa è una tecnologia diversa.
+>
+> Quello che vedo io per quanto riguarda i clienti è che qualche mese fa c'era una grossa resistenza perché tutto il tema dell'AI, dei diritti, tutto l'aspetto legale spaventava molto le aziende più grandi. Questa cosa è un po' scemata, ok? Io vedo che c'è molta curiosità, e che però secondo me prima che un brand grosso arrivi a fare un film tutto in AI, dal punto di vista pubblicitario, passerà ancora un po' di tempo, anche se poi mi sembra Esselunga ne ha fatto metà in AI, qualcuno comincia ad affacciarsi. Però secondo me, più che altro, perché la qualità corre a una velocità incredibile, c'è un problema proprio. C'è un problema legale, c'è un problema che queste grandi multinazionali fanno fatica a prendersi dei rischi. Se li prenderanno quando probabilmente tutto sarà più sviluppato. Questo è il mio punto di vista. Non so se Stefano sei d'accordo.
+
+
+## **[22:54] Spot Pubblicitari e AI**
+
+**Stefano Lombardini**
+
+> Sì, infatti c'è questo problema. Ecco, volevo aggiungere sugli spot già fatti in AI da grandi aziende. Forse l'esempio migliore finora è uno spot che si chiama Satellite of Love di Mercedes, l'ha fatto Team X, che è un'agenzia mi pare di WPP che si occupa appunto di AI. E quello è uno spot appunto sul canale ufficiale di Mercedes, quindi un grande brand.
+>
+> Ecco, è stato molto intelligente perché sostanzialmente nello spot non si vedono persone, si vede la Mercedes che viaggia in una città e viene risucchiata, si chiama Satellite of Love, c'è la canzone, viene risucchiata da un satellite. E quindi quello è stato molto intelligente perché lì, infatti poi, a differenza di molti spot AI, ad esempio che ha fatto anche Coca-Cola, McDonald's queste vacanze natalizie, che sono stati sommersi dalle critiche, lì stranamente, se vedete su YouTube i commenti sono molto positivi. Appunto perché sostanzialmente poi quello che genera l'AI è CGI, computer grafica. Quindi in realtà quello spot lì tu potevi anche girarlo vent'anni fa, però andava fatto comunque in computer grafica. Quindi dato che comunque la resa dell'AI è molto buona e non ci sono persone, quindi non c'è l'effetto un po' straniante, quello che si chiama uncanny valley dei volti, quello ha funzionato bene.
+>
+> E poi un altro spot interessante è stato fatto, forse magari qualcuno l'ha visto, per Panda, e anche lì un'ambientazione spaziale. Lì invece è interessante, secondo me, poi ne ho parlato anche su LinkedIn con il responsabile, e lì hanno fatto un'altra cosa intelligente perché anche lì c'è sostanzialmente una persona, un giovane, una Panda che viene risucchiata nello spazio da degli alieni. E la cosa interessante qui è che il mondo alieno è fatto in stile cartoon tipo Pixar, mentre la persona invece è fotorealistica, però fatta in AI. E in quel caso però funziona bene perché dato che la persona umana è inserita in, un po' come Roger Rabbit, in un contesto cartoonesco, non disturba il fatto che sia fatto in AI. Poi mi pare che parla pochissimo e quindi anche quello, infatti poi ho visto i commenti, sono tutti positivi perché hanno fatto bene. Questo italiano sostanzialmente con la Panda poi insegna agli alieni a bere il caffè, a mangiare la pizza, ad essere italiani.
+>
+> Quindi anche lì secondo me il discorso è questo, perché poi dietro ai video in AI c'è la domanda: ma perché farlo in AI anziché in live action o in CGI tradizionale? E quindi ci deve essere comunque, come dire, una specie di filosofia all'inizio. Perché poi ovviamente le persone che fanno video in AI, specialmente i singoli come me, vengono da background molto differenti: ci può essere il programmatore, il regista, la persona, anche l'operaio che dice "voglio provare a fare questa cosa". E quindi poi anche lì, ad esempio, io sono ovviamente totalmente contrario al deep fake, anche al fatto, appunto, che poi il grosso problema che diceva Mizio, che spaventa le aziende, è di usare asset, personaggi, persone, o anche magari l'AI che crea una persona che somiglia alla persona reale, allora poi ci sono dei problemi non indifferenti.
+>
+> Però è chiaro che poi sui social è un po' il Far West, soprattutto, ad esempio, LinkedIn non essendo un social monetizzato, tu sostanzialmente puoi pubblicare qualsiasi cosa coperta da diritti e non viene bloccata. Già invece su YouTube non puoi usare musiche protette, asset protetti, quindi anche quello è un discorso da tener presente.
+
+
+**Mizio**
+
+> Meno male. Dicevo che non si potevano usare asset protetti, certamente perché poi YouTube è monetizzato, quindi non è che puoi caricare il film di Truffaut e farci i soldi con quello. Però la cosa che dicevo io era leggermente diversa, perché secondo me, almeno dal mio osservatorio, che non è detto che sia... allora, conosco bene il caso di McDonald's, le critiche eccetera, però almeno le aziende di un certo tipo che sono molto legalizzate, hanno più paura, più del fatto di usare delle persone umane.
+>
+> Anzi, so che c'è una grande multinazionale che sta proprio cercando di creare degli attori AI, perché questo significherebbe un grosso risparmio di costi nei diritti. Perché se tu pensi a brand che stanno in TV quasi sempre e tu immagini i costi dei diritti che possono avere anche l'attore più scarso, stiamo parlando di centinaia di migliaia di euro.
+>
+> Secondo me la grossa paura che vedo io è più un fatto che qualcuno un domani, specialmente con le piattaforme cinesi, possa chiedere, possa dire "tu hai usato alla fine comunque quell'immagine che mi appartiene perché viene da una mia immagine". Questo è il rischio che secondo me stanno valutando al momento, per cui alla fine cercheranno in qualche modo qualcuno che faccia una manleva su tutti questi aspetti.
+
+
+## **[29:29] Aspetti Legali e Diritti d'Autore**
+
+**Stefano Maestri**
+
+> Non so se su questa cosa avete seguito quello che è successo nel mondo della musica. Perché sia Suno che Udio, sono le due piattaforme principali di produzione di musica AI, stanno stringendo accordi con le major, Udio con Sony, mentre invece Suno credo con Warner Music, per utilizzare appunto, diciamo, le tracce musicali coperte da diritti per costruirci sopra. Proprio per evitare il rischio che adesso diceva Mizio, perché se io ti ho pagato prima, in buona sostanza nessuno può venirmi a dire "questa canzone assomiglia a quella e quindi tu mi devi pagare i diritti".
+
+
+## **[30:37] Evoluzione della Musica e AI**
+
+**Mizio**
+
+> No, secondo me è il grosso tema, perché sull'aspetto di qualità dello sviluppo, che è talmente veloce che comunque stiamo vedendo tutti i passi da gigante, è ovvio che la qualità arriverà prestissimo. Cioè, quello che sarà rallentato, secondo me, poi dico, non sono un chiromante e non prevedo il futuro, però da quello che vedo io, dal mio osservatorio, quello che rallenterà l'utilizzo, stiamo parlando dei grossi brand, è appunto l'aspetto legale.
+>
+> Stefano Maestri citava questa cosa. Anch'io so, ad esempio, perché ho parlato con persone che lavorano in grandi multinazionali di musica, che prima avevano degli uffici, delle persone che comunque erano lì per bloccare tutto ciò che era generato da AI, per tamponare. Adesso stanno licenziando queste persone, stanno assumendo gente che produrrà musica in AI. Perché poi alla fine questa cosa dei diritti è una cosa grande. Sicuramente arriverà qualche legge a livello europeo, perché se aspettiamo l'Italia... Però arriverà da qualche parte una legge a livello europeo che regolamenterà tutto.
+>
+> Anche l'AIAP, che è l'Associazione Italiana dei Registi Pubblicitari, so che ne stanno parlando, stanno parlando soprattutto di diritti. Questo tema dei diritti è molto delicato perché mentre le piattaforme, mentre i cinesi se ne fregano, prendono, addestrano e tutto, poi quando vai sul commerciale, specie queste multinazionali, prima che si prendano dei rischi passerà un po' di tempo.
+
+
+**Stefano Lombardini**
+
+> Su Suno, posso dire una cosa su Suno, perché io comunque l'ho usato per fare la musica di tutti i miei video. C'è da dire che Suno comunque è molto attenta al copyright, anche a livello un po' paranoico. Ad esempio, tu su Suno puoi creare delle canzoni mettendo tu i testi. Se tu metti il testo di una canzone famosa, subito ti blocca, ti dice non si può usare. Poi nella descrizione dello stile non puoi dire "voglio fare una canzone alla Guns N' Roses". Poi ecco, ad esempio, nell'ultima versione te lo riformula, ti dice facciamo una canzone di metal in stile anni '90. Però comunque ho visto che è sempre molto attenta a questa questione perché ovviamente poi è anche perché poi Suno è impressionante, perché anche con un prompt banalissimo ti genera dei brani che sono incredibili.
+>
+> E in realtà invece collegandomi al discorso di Kling e SeeDance 2, che sono le piattaforme cinesi, invece quelle effettivamente sono molto più lasse sui diritti. Perché, ad esempio, le immagini, come molti sapranno, adesso lo standard generale col tool di Google, quindi Nano Banana Pro, lì è veramente attentissima a personaggi famosi, anche un personaggio reale ti blocca subito.
+
+
+**Stefano Maestri**
+
+> Sì, sì, anche non famoso. Io se per fare le copertine del podcast non puoi dirgli "prendi l'immagine di questa persona e sostituisci a quella che avevo già nella parte circolare dove metto le immagini degli ospiti", perché ti dice "No, io questa cosa con le persone reali non la faccio, apriti Photoshop", più gentilmente di così, ma sostanzialmente quello ti dice.
+
+
+**Stefano Lombardini**
+
+> No, infatti. Poi ho visto che invece Kling, se tu invece provi a caricare un'immagine di un attore famoso e gli dici "fai Tom Cruise che balla la Macarena", almeno col 2.6 spesso te lo faceva. Adesso ho visto che col modello nuovo 3, forse avranno dato una stretta a bloccare di più. Perché poi ovviamente anche se sono piattaforme cinesi, sanno benissimo che, ricordando che l'Unione Europea per qualche mese, pare due anni fa, aveva bloccato anche ChatGPT. Quindi sanno benissimo che in Occidente comunque se non risolvono, adesso che poi sia il sindacato degli attori di Hollywood, sia Disney, poi mi pare anche Netflix, hanno fatto tutti causa a BytDance, che è la società di SeeDance 2, ovviamente si devono darsi una regolata, perché ovviamente poi non vogliono che venga bloccato in Occidente per appunto i profitti e l'utilizzo che potrebbe avere. Quindi credo che un po' comunque a livello di mercato questa cosa si regolerà. Poi ovviamente ci sono sempre le zone oscure.
+
+
+## **[35:42] Creatività e AI nella Pubblicità**
+
+**Stefano Maestri**
+
+> Io vi riporto adesso invece su una cosa che ha detto prima Mizio che mi aveva acceso una domanda, e diceva appunto quei giovani, giovanissimi che si allontanano dalla carta, penna, piuttosto che dallo strumento più tradizionale e si buttano direttamente sull'AI. Allora, siccome noi andiamo anche in video, ne approfitterei per far vedere uno dei video che ha fatto Stefano. Intanto lo faccio partire, poi però toglierei l'audio così andiamo avanti a parlare, perché intanto che lui va e lo vediamo, vorrei farti questa domanda: ma fare uno spot così quanto ci vuole? E quanto pesa, e quanto ha pesato per te in questo tuo esperimento la parte creativa rispetto alla parte prettamente tecnica fatto con l'AI?
+
+
+**Stefano Lombardini**
+
+> Allora, diciamo questo è uno spec ad, quindi uno spot per un brand in realtà di finzione. Allora, diciamo la genesi di questo spot è che a me era venuta l'idea dello spot appunto per un brand di motociclette, e quindi all'inizio ho pensato, io prima avevo fatto uno spec ad per McDonald's, quindi ho pensato faccio uno spec ad che ne so per Honda, per Kawasaki, Yamaha. Però poi mi sono detto, invece no, questa volta ho fatto una roba folle, quindi ho deciso: creo io il brand. Quindi appunto ho preso il nome dalla protagonista di Neon Genesis Evangelion, di Ghost in the Shell, e poi ho creato io il design della moto. L'ho creato io appunto mettendo, ovviamente è un brand giapponese, funzionale, ispirato appunto ai grandi brand giapponesi.
+>
+> Ho creato io il design della moto sostanzialmente prendendo dei pezzi di moto esistenti, quindi Honda, Yamaha e così via, e accrocchiando i pezzi che mi piacevano di più con ChatGPT e Nano Pro. E quindi poi una volta, e poi è stato un lavoro abbastanza folle, perché appunto a parte aver creato la moto e il brand, poi io avevo la storia, però poi all'inizio volevo ambientarla in California, Los Angeles, quindi mi ero messo, ecco, poi avevo quest'idea di girarla in luoghi reali, quindi sono andato su Google Maps, Street View, e ho cercato appunto dei percorsi.
+>
+> All'inizio volevo girarla a Los Angeles in mezzo alla città, però lì era un problema perché poi Kling, a differenza adesso di SeeDance 2, crea un sacco di glitch se ci sono troppe persone, troppi particolari intorno. Quindi poi alla fine ho detto, no, è più interessante una strada di montagna. Allora lì però, pensando al brand giapponese, ambientiamo in Giappone. Sono andato a cercare in Giappone, ho preso questa, la strada che si vede nello spot è vera, l'ho presa, non mi ricordo come si chiama adesso, però è un celebre percorso panoramico su una vera montagna del Giappone. Quindi ho preso praticamente le strade da Street View, le ho fatte rifare a Nano Pro e ci ho messo dentro, ho fatto gli studi dei personaggi.
+>
+> Ecco, perché ad esempio anche lì per gli attori dei miei spot io parto, ovviamente ho cercato sempre di evitare, perché se tu gli chiedi "fammi l'attore action anni '90" Nano Pro ti farà qualcuno di somigliante a Bruce Willis o a Sylvester Stallone, magari non proprio, però te lo farà così. Quindi bisogna anche cercare di dargli diversi input, fare diverse prove. Ad esempio su questo è molto utile Midjourney, che quello l'ho un po' abbandonato perché fino a Nano Pro tutti usavano Midjourney. Dopo Nano Pro, invece, dato che ti dà un fotorealismo migliore, tutti hanno iniziato a usare quello. Però Midjourney è utile proprio per generare, perché è più artistico, generare varianti di volti e fare studi del genere.
+>
+> E quindi in realtà, come ho anche scritto, mi ha impegnato un bel po' a fare questo spot, circa 70-80 ore dall'inizio alla fine. Anche perché poi, è tutto animato partendo da frame, tendo sempre poi a rifare moltissime volte i frame, perché Nano Pro, comunque Gemini ti consente di rifarli a costo zero se hai l'abbonamento, però anche Kling, poi l'ho animato con Kling, poi anche Kling è abbastanza economico. Quindi anche lì, difficilmente mi accontento della clip se non mi viene appunto benissimo. Quindi se devo spendere, poi in realtà proprio a livello di costi materiali sarà costato non più di 50-60 euro di crediti su Kling.
+
+
+**Stefano Maestri**
+
+> Più il tuo tempo.
+
+
+**Mizio**
+
+> Sì, ma 70 ore vuol dire...
+
+
+**Stefano Lombardini**
+
+> Appunto, in realtà poi con 50-60 euro su Kling, lavorando con clip senza audio da pochi secondi, ti fai veramente tantissime clip. Più che altro secondo me il punto del video in AI, che in realtà poi è anche quello delle opere tradizionali, perché io ad esempio ho scritto due romanzi che poi ho pubblicato su Amazon, è chiaro che tu scrivendo un romanzo lo puoi scrivere, che ne so come dire, alla Kerouac, tu lo scrivi prima stesura buono e poi, vabbè, non te l'accetta nessuna casa editrice e poi pensi è finita lì. Volendo invece c'è gente che, anch'io poi l'ho riscritto tantissime volte, parte dalla prima stesura e poi lo raffina sempre di più. Io comunque li ho scritti prima del 2022, quindi in epoca pre-AI. Dipende sostanzialmente dal risultato che vuoi ottenere.
+>
+> Poi con le AI sarà sempre di più così, perché poi tante persone adesso dicono, ed è un discorso che secondo me lo capisco ma regge poco, dicono: il valore dell'opera è nella fattura umana. Ad esempio, ho visto lo spot, probabilmente l'hanno visto un po' tutti, della BBC per le Olimpiadi di Cortina, hanno fatto uno spot animato con dei piccoli sciatori, degli snowboarder che sciano lasciando una scia di fuoco, no? E io quando l'ho visto ho detto "finalmente qualcuno che usa le AI!", perché poi in realtà sembra veramente animato. Ho detto "qualcuno che usa l'AI veramente bene, il fuoco sembra reale". Poi sono rimasto interdetto perché ho visto il video dietro le quinte ed è tutto fatto con i modellini e col fuoco vero, c'hanno un lanciafiamme dietro il modellino dello sciatore!
+>
+> E mi ha impressionato perché io dicevo, vabbè, o sarà AI o CGI tradizionale, ma non avevo mai pensato che si mettessero a fare una cosa del genere. Anche perché poi vedendo lo spot, è bello il fuoco, però ormai in CGI da 10-15 anni il fuoco è praticamente perfetto. E poi mi ha colpito il post della casa di produzione dove in realtà c'era un po' questa cosa di dire: è uno spot molto bello visivamente, anche il concetto è bello, però c'era questa cosa di dire "vale di più rispetto alle cose in AI, perché poi magari ci sono anche cose in AI fatte benissimo, perché l'abbiamo fatto a mano stando lì 30 persone animando cose del genere". Però è chiaro che la persona che lo vede a casa in TV, lo vede su internet, non lo sa come è stato fatto, quindi non è che puoi allegare il comunicato stampa allo spot dicendo "questa cosa è stata fatta artigianalmente, quindi vale di più". È chiaro che poi se lo dici, se le persone lo sanno...
+
+
+## **[41:36] Il Valore dell'Idea Creativa**
+
+**Stefano Maestri**
+
+> Io da ignorante capisco di più un'opera tipo in stop motion di Tim Burton che si vede chiaramente che è fatta con quella tecnica, dove c'è tutta la creatività del regista. Se la cosa è indistinguibile, capisco anch'io il tuo punto di vista. Ma qua volevo il contraltare di Mizio, che dice in un post, se ricordo bene un post sulla tua newsletter, che se la lasci libera l'AI converge verso 12, mi pare cliché, tu abbia detto.
+
+
+**Mizio**
+
+> Sì, sì, l'AI ha solo 12 idee, era il titolo della newsletter. Tornando però alla tua domanda iniziale che era quella sul pensiero, c'è, più di quella newsletter, diciamo che il mio pensiero è racchiuso in un'altra newsletter che studia tutto tranne l'AI.
+
+
+**Stefano Maestri**
+
+> Sì, dovremmo citarle dopo.
+
+
+**Mizio**
+
+> La newsletter laterale è andata più virale in assoluto, continuo a leggere, continuo a leggere, a dire... che quando scrivi delle cose non sai nemmeno perché abbiano questo clamore, no? Poi ci ragioni dopo. Però il mio pensiero è sintetizzato lì, cioè io non sono un luddista, credo, l'ho già detto, è una... trovo una tecnologia affascinante.
+>
+> Però la mia battaglia per tutto il 2026 e 2027, e se lavorerò ancora nel 2028 visti i tempi, sarà quella del pensiero umano prima dell'AI. Cioè, nel senso che comunque io sono fortemente convinto che l'AI sia uno strumento. Comunque il video di Motoka, che io avevo già visto di Stefano tempo fa, quello che fa la differenza, cioè si vedono molti molti video in questo momento sui social, sono video fatti bene e ok, ma il 90% di questi video che vediamo, forse anche il 99%, non hanno un'idea dentro. Mentre il video di Motoka di Stefano ha un'idea dentro che è un'idea pubblicitaria, perché comunque Stefano è un pubblicitario. Però alla fine è quello che io credo fortemente farà la differenza.
+
+
+## **[46:36] L'Importanza del Pensiero Umano**
+
+**Mizio**
+
+> Per cui nel momento in cui tutti possono, con un prompt, in 70 ore, che sembrano tante ma sono poche, sembrano poche ma sono tante, dipende dal punto di vista, tu puoi fare un prodotto che è un prodotto di livello. Ci sono degli spot pubblicitari che vediamo in onda che sono meno belli di quello di Stefano. Alla fine la differenza sarà proprio il tuo pensiero che metti sulla carta. Poi io parlo della carta ma non è che uno deve per forza scrivere su una carta, però c'è l'esperienza di Stefano, comunque di altri creativi, è quello di, cioè, prima di metterti sullo strumento capire cosa vuoi fare, capire cosa vuoi fare e capire come lo vuoi fare. Perché comunque c'è tutto un vissuto che se tu non, io odio la parola storytelling, però se tu non hai un'idea di come strutturare una storia, ma non hai nemmeno un'idea di come scrivere la singola inquadratura, poi alla fine quando lo monti si vede la differenza.
+>
+> No, per cui le opere e i video che sono stati fatti da persone che hanno cognizione di regia si vedono, rispetto a tanti video che sono bellissimi dal punto di vista tecnico. Ma ormai la tecnica non conta più. Si possono dire le parolacce in questo podcast?
+
+
+**Stefano Maestri**
+
+> Sì, io e Paolo le diciamo sempre.
+
+
+**Mizio**
+
+> La tecnica non conta più un emerito cazzo. La tecnica ormai è... Ma per quello dico, studia tutto tranne l'AI. Quello in cui secondo me va investito non è il fatto... cioè, tanto ogni settimana arriva una novità, adesso è arrivato il SeeDance, l'ho provato oggi pomeriggio così per non arrivare impreparato a questo incontro. Va bene, ok. Poi ritornerà fuori Veo, ora Kling 1.57, cioè alla fine uno potrebbe dormire un anno, si sveglia fra un anno, va in coma per un anno, no? Fra un anno torna dal coma e in 5 minuti è aggiornato come quelli che sono stati dietro a tutto.
+>
+> Quello che invece farà la differenza è il pensiero, secondo me. Per cui in questo momento il pensiero però è in pericolo, perché questa tecnologia è talmente comoda, ma io lo vedo facendo il vibe coding, cioè io non capisco cosa scrive, non capisco le righe che scrive, faccio la foto al monitor, lo butto nell'intelligenza artificiale e "adesso cosa devo fare?". Ok, mi dice esattamente copio e incollo. Per cui il rischio che trovo è questo, almeno dal punto di vista creativo.
+>
+> Dove invece farà la differenza, nel momento in cui l'originalità è talmente poca, perché siamo nel periodo in cui l'originalità è morta. Se vediamo è tutto un remix, un reboot, no? Spider-Man 118, tutte queste cose qua. Nessuno fa più dei grandi contenuti originali. Ma quando una risorsa è scarsa diventa veramente preziosa. L'ultima grande serie secondo me originale che ha avuto un grande successo è quella sudcoreana, Squid Game, no? Ma se pensiamo a dei contenuti originali oggi, adesso ieri vedevo Sky ha lanciato Il Signore delle Mosche, e chapeau, però cazzo, comunque è un libro, non so di che anno sarà, boh, anni '60.
+
+
+**Stefano Lombardini**
+
+> Sì, più o meno sì.
+
+
+**Mizio**
+
+> Per cui credo che farà una grande differenza, cioè dal punto di vista pubblicitario, mettersi lì, sapere cosa vuoi fare, perché poi non è che hai la libertà creativa in pubblicità, comunque rispondi a un committente. L'altra cosa pubblicitaria è la difficoltà che forse ci salverà, la cosa che abbiamo sempre disprezzato, cioè il cliente rompe i coglioni, perché il cliente è talmente rompicoglioni che l'AI si stufa, non ce la fa, starci dietro. Invece noi? "Più verde, più giallo, più..." Ecco, cioè con l'AI comunque è un livello di... cioè si prende la libertà, tu non riesci a fare esattamente quello che vuoi fare.
+
+
+**Stefano Lombardini**
+
+> E poi anche su questo aspetto, che adesso forse è ancora un po' fantascientifico, ma anche meno, è che in realtà poi gli spot, ne hai, a parte il fatto che il cliente può appunto dirti "cambiamo questo", ci metti un minuto a cambiarlo, e in realtà poi anche lato consumatore, lato spettatore, si può immaginare, e che poi in realtà era quel discorso che faceva secondo me Zuckerberg l'anno scorso.
+
+
+**Mizio**
+
+> Sì, però scusami Stefano, cioè ci metti un minuto a cambiare, ma non come vuoi tu, perché comunque tu non avrai mai la certezza del risultato, no?
+
+
+**Stefano Lombardini**
+
+> No, sì. Ti faccio un esempio. Io il primissimo spot che ho fatto a novembre in AI, in realtà è stato per un vero cliente, cioè un mio amico che ha una rivendita di auto usate. Appunto in realtà parlavamo già da un po' di fare spot. Ho fatto questo spot dove sostanzialmente lui vende auto vintage e gli avevo messo una Mini, appunto lui mi aveva detto "mettici una Mini, un'auto degli anni '70, qualsiasi", e gli avevo messo una Mini. Poi però lui mi ha detto "ma no, mettiamoci un'Alfa Romeo che i miei clienti la comprano di più". Due minuti ho preso l'Alfa Romeo e l'ho sostituita alla Mini, non c'è stato nessun problema. Quindi in questo ovviamente, invece se tu giri lo spot in live action e c'è un'auto, poi devi tornare sul set e rigirarla con l'altra auto, e quindi poi il cliente si fa andare bene quello che c'è.
+
+
+**Mizio**
+
+> Però ti dico, ci sono multinazionali, io ne ho conosciute dove fai sei mesi di riunione per una nuance di colore, lì... Io credo che per quanto riguarda la pubblicità un futuro potrebbe essere ibrido.
+
+
+## **[53:00] Futuro della Pubblicità e Cinema con AI**
+
+**Stefano Lombardini**
+
+> No, no, certo, quello sì. Perché chiaramente la grande possibilità è che, che ne so, il pizzaiolo che ho sotto casa può fare un video ambientato nell'antica Roma, mettendoci appunto con SeeDance 2, ci metti una scena introduttiva dove si vede l'antica Roma, tipo film di Scorsese che in live action avrebbe fatto con 20 milioni a Cinecittà, lui se lo può fare, si fa il prompt, vabbè, magari non lui, magari una persona che lo sa fare. Però è una possibilità che le piccole attività soprattutto non avevano. Adesso questo limite non c'è più.
+>
+> E poi lo puoi fare in ibrido. Infatti penso che inizialmente, soprattutto nel cinema, sarà così. Quindi non ha più senso, che ne so, devi fare la veduta di Los Angeles negli anni '20 in un flashback, non ha più senso magari farla in CGI o addirittura ricostruirla con un set. Se devi fare solo quella cosa lì, la fai in AI e poi fai appunto la scena con gli attori, gli attori veri che recitano. Adesso gli attori veri che, gran parte dei film, recitano davanti al green screen, si vede ad esempio gli Avengers, si vedono dietro le quinte che praticamente sono loro in uno stanzone con le tute, in uno stanzone verde, quindi uno dice... No, quelli che dicono il cinema è fatto come una volta, però in realtà poi gran parte dei film dove ci sono degli effetti speciali ormai si girano così, quindi c'è già molta tecnologia, molta artificialità.
+
+
+**Mizio**
+
+> La grossa differenza sul cinema, perché in advertising non è che abbiamo dei grandi attori, sarà la recitazione. Secondo me c'è ancora una discriminante, nel senso che è difficile trovare una spontaneità di recitazione e anche una sensibilità. Perché quando uno che fa il pizzaiolo si mette lì e sceglie un attore virtuale che dice una battuta, magari non è come quello che ha un'esperienza e una sensibilità di un certo tipo.
+
+
+## **[55:32] La Creatività e la Tecnologia**
+
+**Stefano Maestri**
+
+> No, questo è sicuro. Io ho due domande, piccole provocazioni per Mizio. Allora, la prima che esula da tutto il resto del vostro contesto lavorativo, ma una cosa che dicevi prima, questi sono strumenti e conta la creatività, io sono d'accordissimo su questo. Mi chiedo se la facilitazione degli strumenti può sbloccare certi tipi di creatività o se invece tu sei dell'avviso opposto. Perché poi pensiamo alla fotografia: la fotografia, sono arrivati i telefonini, chiunque può fare una fotografia, cento quintali di merda, però lì dentro qualche chicca, magari che prima non sarebbe venuta fuori, della fotografia fatta al volo, che ne so, dal reporter che non fa il fotografo di mestiere ma si trova nella condizione di fare la foto, la manifestazione in Asia, si è vista. Mi chiedo: sbloccare gli strumenti così nel creare cose da zero, può sbloccare un certo tipo di creatività nel vostro mondo o pensi proprio il contrario?
+
+
+**Mizio**
+
+> Assolutamente sì. Calcolando però anche quali sono io. Da giovane ero bianco e nero, adesso invecchiando, magari invecchiando anche male, sono diventato sempre più... Nel senso che tu citavi una cosa che avrei citato anch'io che è la fotografia. Nel senso che quando è arrivata la fotografia digitale ha cambiato tutto, ma anche il cinema. Io comunque sono di un'età per cui, ma insomma anche Stefano, lavorava già quando c'era la pellicola. Ok? Quando c'era la pellicola, io parlo di pubblicità ma vale anche per il cinema, mi ricordo quando arrivò il digitale, la famosa Alexa, no? E poi addirittura la Canon 5D, la Canon 5D che è stata quella che ha veramente rivoluzionato l'ambiente. Che non so se la conoscete, ma la sensazione più spaesante era arrivavi sul set e vedevi la macchina fotografica al posto della cinepresa. Prima erano macchine che costavano centinaia di migliaia di euro, poi la Canon 5D costava 5.000 euro.
+>
+> Io mi ricordo le grandissime resistenze da parte dei registi: la pellicola, il sapore... Sono durati un anno e mezzo, metà dei registi sono morti, poi tutti si sono abituati. E ha fatto sì anche che comunque sono riusciti ad arrivare a girare anche dei registi molto giovani, perché nel momento in cui abbatti l'entrata... La stessa cosa che è successa quando è arrivato il digital. Ci sono tante agenzie creative che non esistevano prima del 2005, che oggi, adesso non voglio citare perché sono concorrenti, però sono agenzie arrivate dal nulla col digital e che hanno spaccato i grandi network.
+
+
+## **[58:23] Democratizzazione della Creatività**
+
+**Mizio**
+
+> Però per cui tutti questi passaggi sono assolutamente utili per fare anche pulizia, no? Per portare il nuovo. Come le guerre, i terremoti, le carestie, no? Fanno un po' pulizia, ogni tanto arriva il nuovo, arriva il meteorite, muoiono i dinosauri e arrivano quelli più giovani. Questo va tutto al bene.
+>
+> Poi c'è il male, cioè nel senso che la democratizzazione della creatività o del video fa sì che crollano i costi, cioè crollano le ricompense. Per cui se prima un cliente era abituato a pagare uno spot pubblicitario 250 mila euro, adesso può farlo con 25 mila. Ok, per cui, ok, adesso ho esagerato, no? Non lo può fare con 25 mila, però diciamo che può farlo per molto meno. Vuol dire che magari adesso resisterà, poi fra X tempo dirà "tutti spendono di meno", e questo farà sì che arriverà una nuova classe di registi, creativi, eccetera eccetera, però la filiera morirà. Da quello che sta un po' succedendo anche in altri ambiti, perché quando l'intelligenza artificiale permette, se tu hai 100 persone, ok, e adesso ti servono 100 persone, ma fra un anno te ne serviranno 25 perché comunque tramite l'automazione e tutte queste cose qui rinunci a tre quarti della tua forza lavoro, queste persone cosa vanno a fare?
+>
+> Questo è il tema secondo me delicato, anche perché quando è arrivato il digitale, non facevi più il copywriter, l'art director, facevi il social media manager, che per me è un mestiere di merda, però comunque la gente si spostava. Invece adesso sarà un tema, chi esce fuori cosa va a fare? Perché non è che l'intelligenza artificiale crea altri posti. Questo secondo me è il tema.
+
+
+## **[01:01:02] L'Impatto dell'Intelligenza Artificiale**
+
+**Mizio**
+
+> Un po' delicato. Per cui ripeto, la tecnologia è affascinantissima. Bisogna capire se tutta questa democratizzazione dell'accesso a questa tecnologia non fa sgonfiare il soufflé. Che non vuol dire proteggere le vecchie posizioni, perché comunque il fatto di rivoluzionarle, cioè Stefano freelance può fare un culo a un'agenzia, ok? Per me sarebbe il massimo, fa il culo a WPP, no? Io sarei l'uomo più felice di questo mondo. Il problema poi, no, di solito, perché l'ho visto già succedere un paio di volte, poi tutto tutto tutto si appiattisce verso il basso, perché i compensi crollano. E questo è una cosa che dovremmo affrontare.
+
+
+**Stefano Lombardini**
+
+> Ma ecco, secondo me la cosa nuova dell'AI, perché in realtà c'è un aspetto che è quello dell'evoluzione tecnologica, come dicevamo prima, che dà una spinta alla creatività, che c'è sempre stata. Ad esempio, quando Godard nel 1959 ha girato Fino all'ultimo respiro, nello stesso anno Kubrick ha girato Spartacus. Quindi Kubrick ha girato un colossal con migliaia di comparse, Godard con una macchina da presa, un operatore, una troupe ridottissima, una macchina a mano e pochissimi soldi, è comunque girato un film che ha influenzato la storia del cinema. E poi successivamente anche Romero e molti altri registi, arrivando da noi a Nanni Moretti, che ha girato Io sono un autarchico sostanzialmente col pare con la Super 8 all'inizio, quindi a costi bassissimi. E sono persone, però ecco, in quel caso lì non è che se Nanni Moretti e Godard girano il film a costi bassissimi non ci sono più le grosse produzioni, in realtà poi quelle hanno continuato.
+
+
+**Mizio**
+
+> Scusami, però un po' mi dai ragione, perché c'è un valore autoriale.
+
+
+**Stefano Lombardini**
+
+> Sì. No, quello che volevo dire è che però anche se Godard e Nanni Moretti avessero voluto girare il film con migliaia di comparse, avrebbero dovuto trovare un produttore che gli dava i miliardi e pagava migliaia di comparse, le scenografie e così via. La grossa differenza adesso, che poi è un po' quello che penso inquieti anche Hollywood, industria normale, che se invece con SeeDance 2 tu con 2 euro puoi girare una sequenza che prima anche in CGI ti sarebbe costata che ne so 80 mila euro, e girarla dal vivo 3 milioni, la fai con 2 euro, e allora lì è un problema, è un problema grosso.
+>
+> Perché poi giustamente ci sono delle persone che hanno, a Hollywood c'è una specie di banca dati delle sceneggiature non realizzate, che sono sceneggiature ottime, ogni tanto vengono pescate per fare un film, che però sono infinite. E poi tutte quelle che hanno le persone. Quindi nel mondo ci sono migliaia, forse centinaia di migliaia di persone che hanno delle idee che vogliono realizzare in video, adesso gli dai lo strumento per farlo e non ci sono più barriere. Perché poi la tendenza dei tool in AI è quella di diventare, come dicevamo prima, sempre più semplici e immediati da usare.
+>
+> Anche perché poi, rispetto al pensiero, la cosa un po' diabolica e ingannevole delle AI è che in realtà sono veramente semplicissime da usare. Perché tu non sai fare qualcosa, non sai scrivere il prompt, ad esempio per Nano Pro funzionano molto bene dei prompt scritti in un linguaggio che si chiama JSON, che vabbè, non è difficilissimo, però tu potresti impararlo. Però non c'è bisogno che tu lo impari, perché basta che gli dici a ChatGPT "scrivimi il prompt in JSON per Nano Pro" e quello te lo fa. Non devi neanche leggerlo, lo prendi e lo incolli. Quindi la cosa ingannevole è che a livello tecnico, sostanzialmente, quasi non c'è niente da imparare, perché quello che non sai tu basta che lo chiedi all'AI e lei ti spiega come funziona l'altra AI.
+>
+> La cosa appunto problematica è questa, che forse, al di là poi dei discorsi sul deep fake, anche il giornalismo è davvero a rischio, perché ormai penso che già oggi la gente alla fotografia, ma anche al video, soprattutto adesso con SeeDance, non dà più credito. Quindi lo vedevo ad esempio nelle discussioni, l'avranno visto tutti, le discussioni più sensibili sulle guerre. Qualsiasi cosa venga fuori c'è quello che dice, sarà un'opinione contraria, "questa cosa è fatta in AI, questa cosa non è vera", e non c'è verso poi di dimostrare che sia così. Anche se poi magari fai vedere quello che l'ha ripresa, l'ho visto con una foto in Palestina che c'era un fotografo che aveva ripreso la scena da un'altra angolazione, però poi i commenti erano sempre "no, anche questa è generata", perché in realtà poi con Nano Pro tu puoi fare una foto.
+>
+> E poi anche io l'ho fatto per i miei video, scherzosamente ho messo una specie di dietro le quinte dei video dove io faccio il regista con una troupe fittizia che però sembra una vera troupe. Quindi in realtà questo è un discorso veramente problematico che meriterebbe un discorso a parte.
+
+
+## **[01:06:09] L'Autorialità e il Futuro della Creatività**
+
+**Mizio**
+
+> Sì, scusa, volevo solo tornare un attimo sull'aspetto autoriale per spiegare bene quello che volevo dire, cioè nel senso che alla fine ci siamo persi, Stefano è caduto, chissà se Stefano Maestri è sparito dal video.
+
+
+**Stefano Maestri**
+
+> No, no, ci sono, ci sono, ci sono. È andato via il video un attimo. Ci sono, ci sono.
+
+
+**Mizio**
+
+> Ok, scusami. E ha una bellissima poltrona da gamer.
+
+
+**Stefano Maestri**
+
+> Sì, è una bellissima poltrona da gamer rossa.
+
+
+**Mizio**
+
+> Stavo dicendo che per chiudere il discorso sull'aspetto autoriale, che secondo me è una cosa a cui tengo molto, che è un mio punto di vista, poi non è detto che sia quello giusto, ma quello che farà la differenza. Prima parlavi, Stefano, dicevi che hai scritto due libri prima del 2022, no? Il libro è un'opera di ingegno che ha una particolarità, che tu la scrivi e sei solo.
+>
+> Che è un po' quello a cui si sta avvicinando l'AI, nel senso che comunque prima per fare un film avevi bisogno di una casa di produzione, un regista, un direttore della fotografia, tutte le maestranze. Perché poi le maestranze sono questi, gli attrezzisti, che sicuramente non credo che si convertiranno nell'AI, non so cosa andranno a fare, no? Elettricisti, eccetera eccetera. Invece il libro, ti metti lì, lo scrivi, eccetera. Però il libro, anche grazie ad Amazon oggi, perché io non ho i dati certi, li avevo letti qualche anno fa, ma credo che usciranno tipo 70 mila libri l'anno, ok?
+
+
+**Stefano Lombardini**
+
+> Sì, sì.
+
+
+**Mizio**
+
+> No, ok, proprio perché è facile, però di questi 70 mila libri alla fine, cioè meno di 500, che io sappia, superano le mille copie.
+
+
+**Stefano Lombardini**
+
+> Poi quasi tutti in realtà non hanno veramente neanche un lettore, neanche una copia.
+
+
+**Mizio**
+
+> Esatto. Ok, ok. Questo è il problema della democratizzazione, cioè che non per forza è un danno. Però alla fine quando tutti con questa semplicità possono arrivare, perché comunque il fatto di avere anche un limite d'ingresso fa sì che tu devi essere fortemente motivato, devi riuscire ad avere la capacità di vendere la tua idea a un committente, a un produttore. E comunque specialmente come se tu, invece che vendere la tua idea alla casa editrice che ti chiede 100 euro per pubblicare, poi prendere i 100 euro, non spinge per niente il tuo libro, comunque investe su quella cosa lì.
+>
+> Per cui secondo me è un altro dei problemi di questa democratizzazione, che avremo milioni di contenuti video e che poi la gente non avrà nemmeno voglia di vedere. Perché adesso siamo all'inizio, sono anche pochi. Quando saremo completamente invasi, al di là del deep fake, ma proprio invasi di storie, di cose, già adesso la capacità di attenzione è calata sotto i 3 secondi, cioè lo scroll, sarà sempre più facile fare storie. Per cui sicuramente qualcuno adesso arriverà con un film completamente fatto e fatto bene. Avremo ancora le persone che avranno voglia di vedere contenuti da 90 minuti?
+
+
+## **[01:13:06] La Nuova Generazione e il Consumo dei Contenuti**
+
+**Stefano Maestri**
+
+> No, tocchi proprio il punto su cui sarei andato io. Citando Warren Buffett, economista americano, che disse, stimolato su un argomento simile, disse: "Sì, ma dovete ancora inventare il robot che mangia il gelato". Perché la nostra società dei consumi è fatta da un'offerta e da un consumatore, ma se l'offerta è troppa perché il robot, nel caso del suo esempio, è in grado di produrre tantissimi gelati, ma poi chi li mangia tutti questi gelati? E quindi torniamo un po' a quello che stavi dicendo tu.
+>
+> Io estendo, facendo il tecnico qui, perché le sperimentazioni viste già da qualche big tech, Google su tutti e qualche cinese, porta a pensare ad un futuro ancora peggiore di quello che delineavi tu, con tanta produzione, non tutti hanno voglia di vederselo, ma fino al fatto di andare su Netflix o la piattaforma di turno e invece di scegliere il film dire "vorrei vedere una storia che parla di queste cose bla bla bla" e mi viene prodotta al volo. Quindi contenuto effimero addirittura.
+>
+> E allora io mi chiedo, lì dove mettiamo il creativo? E mi riaggancio però ad un'altra cosa che citavi, no? L'arrivo di nuove generazioni. Dicevi prima, cercando di essere più positivo, apriamo la creatività perché diamo gli strumenti, e quindi è disruptive, in qualche modo arrivano nuove generazioni. Il punto è che le nuove generazioni non le sta più assumendo nessuno, o nella pubblicità è diverso? Io vedo nel mio settore che oggi assumere uno junior sta diventando difficile perché il senior potenziato ti fa il lavoro che farebbe anche lo junior, e questo diventa un problema perché storicamente sono i giovani che portano nuove idee. Quindi da questo punto di vista è un po' preoccupante.
+>
+> E poi invece nel vostro mondo, invece scendo un attimo più nel vostro mondo, e dico: queste nuove generazioni che sono cresciute a pane e AI, come reagiranno a questa nuova creatività? Perché io ho un racconto divertente, credo, del primo video, che ho mostrato prima, che era uscito di Stefano, quello della pubblicità fake di McDonald's. E l'ho mostrato alla mia compagna, che è alla mia età, e gliel'ho detto dopo che era generato, e ha detto "non l'avrei mai detto". L'ho mostrato a mia figlia, ha 18 anni, e dopo 20 secondi mi dice "ha le sopracciglia al contrario, è generato". Perché c'è un punto, un punto solo, dove effettivamente la ragazza fa un'espressione, le sopracciglia non sono esattamente al contrario, ma sono leggermente innaturali. Lei, così abituata a TikTok, a tutto quanto di generato, l'ha beccato subito. E quindi cambia anche un po' la prospettiva, cambiano anche i consumatori, e insieme ai consumatori c'è quel discorso che faceva prima Mizio dello scrolling, c'è quel discorso dell'attenzione. E allora come si fa? Si torna a... Non è più solo creatività, c'è anche un'attenzione diversa all'attenzione. L'attenzione all'attenzione, ho fatto un gioco di parole brutto, però...
+
+
+**Mizio**
+
+> Ma guarda, volevo aggiungere una cosa perché si lega molto bene, nel senso che noi adesso stiamo cominciando a uscire con dei video in AI, poi magari ne fai vedere uno perché sennò sembro luddista. No, no, aspetta un attimo, poi, sennò sembro luddista che non vuole l'AI, invece lo trovo molto affascinante. Però prima di uscire con dei video, per molto tempo li abbiamo usati internamente.
+
+
+**Stefano Maestri**
+
+> Adesso ne faccio vedere uno. Arrivo, arrivo, ce l'avevo pronto infatti.
+
+
+**Mizio**
+
+> Sì, questa è una cazzata che poi abbiamo fatto la stessa cosa di Stefano Lombardini, perché anche noi ci siamo inventati un brand per il Super Bowl e abbiamo fatto questa cosa che è andata molto bene, per divertirci. Però prima di uscire fuori, vabbè, comunque è un video che ha anche un po' di difetti nel senso che l'abbiamo fatto in tre giorni e diciamo che se avessimo avuto tempo certe generazioni le avremmo rifatte.
+>
+> Prima però di cimentarci sui video da uscire fuori, abbiamo lavorato per tanto tempo con l'AI internamente, cioè per produrre tutti quei materiali che sono i layout, i rubamatic e tutte queste cose qua. Noi con i rubamatic ci abbiamo fatto una carriera. Per spiegare a Stefano Maestri cosa sono i rubamatic, non essendo un tecnico...
+
+
+**Stefano Maestri**
+
+> Sì, grazie.
+
+
+**Mizio**
+
+> Allora, quando presenti un film a un cliente, ok, uno dei metodi diciamo più efficaci è quello di prendere delle scene di film usciti, ok? E fare una specie di montaggio che racconta la storia, ok? Questa è una cosa che funziona molto perché tutto ciò che è visivo nei clienti ha sempre funzionato molto. È una cosa che fanno praticamente tutti in pubblicità da tanti anni.
+>
+> Questo ha fatto sì, però ha sempre avuto un grosso limite, nel senso che il rubamatic, utilizzando pezzi di film, ma ti sto parlando di pezzi tipo di film proprio da cinema, ok? Alla fine crei delle storie per lo più destrutturate, cioè non riesci a raccontare una storia con un personaggio dall'inizio alla fine, perché tu prendi pezzi di film diversi e c'è un problema, c'è sempre stato un problema di consistency. Per cui alla fine, infatti, la pubblicità italiana e mondiale negli ultimi 15 anni ha fatto solo film destrutturati. C'è un concetto, ci sono tante vignette, ma non è una cosa che derivava dal fatto di essere una scelta. Che cazzo, facendo tutti i rubamatic alla fine avevi tutti i film destrutturati.
+>
+> Quando è arrivata l'intelligenza artificiale io ho detto "figata!", cioè finalmente posso fare dei film, no? Dove posso raccontare una storia, perché comunque il personaggio, ok, ho dovuto aspettare che la consistency arrivasse a un certo livello, però poi ho cominciato a fare. Allora, ci credete che le prime due gare le ho perse? Non tanto per la qualità del rubamatic fatto con l'AI, ma perché mi sono reso conto che comunque l'AI in questo, almeno fino a qualche mese fa, magari adesso cambierà molto velocemente, restituisce ancora un senso di inumanità.
+>
+> Che non so da cosa derivi, probabilmente dagli occhi. Poi ho visto anche oggi degli esempi invece dove i personaggi veramente sono indistinguibili. Però una delle fra le tante ricerche che sono state fatte sulla comunicazione, è una cosa che si dice dalla notte dei tempi, che se tu vuoi essere molto efficace devi mettere una persona che ti guardi negli occhi, perché nel momento in cui tu in pubblicità vedi una persona c'è una sorta di immedesimazione. E questo invece manca ancora nell'AI, cioè quel senso che tua figlia ha sentito e tua moglie no.
+>
+> Credo che derivi proprio da questo. Nel senso che comunque i ragazzi giovani, essendo più sgamati, sentono questa differenza, forse noi la sentiamo di meno, ma comunque secondo me la sentiamo inconsciamente. C'è ancora un senso di differenza, di distanza, che probabilmente verrà colmato.
+
+
+## **[01:20:01] La Frammentazione della Fruizione dei Contenuti**
+
+**Stefano Maestri**
+
+> No, beh, ma tecnicamente sì, tecnicamente probabilmente questa distanza si va a colmare. Se pensiamo così era la generazione video o di codice, per stare al vibe coding che citavi prima, un anno fa, è nulla rispetto a quello che facciamo oggi. Ma anche sui video, cioè se pensiamo al primo Sora, che è stato il primo un po' ad andare mainstream, se lo paragoniamo oggi ad anche solo un Veo 3.1, senza scomodare cinesi o altro, la differenza è abissale. Sicuramente quella distanza si colmerà.
+>
+> Però forse la domanda, ma questo vale un po' su tutto, è: come cambia, ma come si reinventa il lavoro? Perché io faccio spesso l'esempio, no? Le segretarie di direzione negli anni '70 erano essenzialmente delle dattilografe. Oggi nessuno si sognerebbe di dettare alla segretaria la lettera perché ha la tastiera davanti, e quello strumento che è finito sulle scrivanie di tutti ha cambiato non solo il modo di approcciarsi allo strumento, ma anche il modo di approcciarsi a una posizione di lavoro che è evoluta, diventando pure meglio.
+>
+> Forse è questo il genere di evoluzione a cui guardare nel mondo creativo, ma anche in tutti gli altri mondi? Cioè, cos'è che portiamo noi al di là dello strumento, quella creatività, quello storytelling che nominava Mizio? Ma la mia domanda è: riusciamo ad avere un pubblico che è ancora interessato a quel contenuto, o sono così tanto drogati dallo scrolling che diceva Mizio, dall'effetto speciale, che abbiamo perso quella parte lì? O come facciamo a reintrodurla?
+
+
+**Stefano Lombardini**
+
+> Ecco, posso rispondere io. Secondo me, lato fruizione, il fenomeno che si vede adesso, perché in realtà poi la fruizione delle opere è sempre stata, di opere letterarie, film, di tutti i tipi, è sempre stata molto molto frammentata. Però in realtà quello che in realtà è importante per le persone, rispetto che sia un libro, rispetto a un film, in realtà è avere qualcosa da condividere, di cui parlare.
+>
+> In realtà poi pensando alle grandi opere letterarie, ai grandi film, mi ricordo, ricorderete anche voi, quando è uscito Titanic erano andati tutti a vederlo e tutti parlavano di quello. Quindi il valore è anche quello. Oggi la tendenza, secondo me, poi si può vedere anche in fenomeni come ad esempio questo inverno, in sala c'era solo il film di Checco Zalone. O ad esempio Spotify è proprio l'esempio principale dove ci sono pochissimi artisti, Taylor Swift, poche pop star che l'ascoltano a miliardi di ascolti, e poi una marea di gente che non ascolta nessuno.
+>
+> Quindi secondo me, è una tendenza per risolvere questo problema dell'overflow di contenuti, perché è chiaro che oggi anche lo squattrinato peggiore ha accesso anche solo su YouTube a una marea di libri, di film, di musica, però il tempo è limitato. Quindi la tua fruizione, uno dice che cosa scelgo di vedere, di ascoltare, di leggere? E allora la molla principale di questa scelta è: devo scegliere qualcosa di cui poi posso discutere con gli altri. Questo secondo me ovviamente è la molla principale.
+>
+> E secondo me ci sarà questa spinta, comunque rimarrà, perché poi ad esempio adesso inizia Sanremo, quindi tutti parlano di Sanremo, si concentrano su quello, il valore è proprio nella discussione che tu puoi fare con gli altri di quest'opera. Ed è anche poi quello che c'è alla base della viralità. Poi la viralità è semplicemente un contenuto che colpisce le persone e le persone ne vogliono parlare con altre persone, che poi sia online che sia offline, la molla è questa.
+
+
+## **[01:22:34] La Creazione di Opere Memorabili**
+
+**Stefano Lombardini**
+
+> Il problema poi lato autoriale, che poi era il problema che aveva anche Dante, aveva anche Shakespeare: come faccio a creare un'opera di cui le persone abbiano voglia di parlare, però abbiano voglia di parlare della mia opera e non delle altre cento? Perché poi anche all'epoca di Dante c'erano tantissime persone che scrivevano poesie che poi adesso non sono più ricordate o sono poeti minori. Come mai invece la sua opera ha avuto questo scalpore? Anche perché, ad esempio, Dante nella Divina Commedia aveva inserito personaggi reali dell'epoca e poi aveva fatto tutta una costruzione, quindi era riuscito comunque a trovare qualcosa, un argomento di conversazione dentro l'opera.
+>
+> E questo da un lato diventerà sempre più difficile perché poi ovviamente tutti sono consapevoli di questo, quindi tutti cercano di, ad esempio, anche lo spot che avete fatto voi, Mizio, che ha questo contenuto politico. Ovviamente l'ICE è un argomento molto caldo e questo genera molta discussione. Mi ricordo quello spot di un anno fa, non mi ricordo chi l'aveva fatto, che parodizzava gli spot di Trump. Era praticamente la spiaggia di Gaza con il mare insanguinato e c'erano Trump, Elon Musk e altri personaggi che giocavano.
+
+
+**Mizio**
+
+> Sì, sì.
+
+
+**Stefano Lombardini**
+
+> Che è stato fatto da un italiano, Mauro Gastaldon, che ha fatto anche quello di Zaia. E anche quello appunto era diventato virale perché appunto era su un tema iperattuale di cui tutti già discutevano e dava appunto una versione satirica molto che colpiva molto. E anche ad esempio anche lì ovviamente aveva usato dei tool AI che appunto erano molto plasticosi, però lì non era un problema perché appunto essendo satirico in realtà poi era anche un valore aggiunto, perché appunto era un po' la parodia dei video che diffondeva Trump sui suoi canali che anche lì era totalmente plastica, quindi senza nessuna pretesa di fotorealismo.
+>
+> Quindi secondo me la partita anche poi a livello pubblicitario si gioca su questo, devi trovare qualcosa che catturi l'attenzione delle persone, che però la devi rubare ad altro. Ad esempio questa settimana, a meno che non scoppi la guerra termonucleare globale, ma proprio solo lì, si parlerà solo di Sanremo. Deve proprio succedere una cosa incredibile perché si parli di altro. E quello perché vabbè Sanremo è una roba tradizionale, però riuscire a fare cose nuove, ad esempio anche nuovi brand che ambiscono... Quanti brand negli ultimi vent'anni? A me viene l'esempio di Liquid Death che è uno dei pochi non tech che è riuscito a imporsi. Però sono veramente pochissimi esempi, rispetto invece alla maggior parte delle aziende famose oggi, Coca-Cola, Nike e così via, sono aziende che hanno un heritage molto molto più antico. Quindi è sempre più difficile riuscire a diventare argomento di conversazione, e ovviamente poi con le AI la competizione aumenterà ancora di più.
+
+
+## **[01:25:49] La Viralità e la Pubblicità Contemporanea**
+
+**Mizio**
+
+> Se posso legarmi al discorso della viralità. Nel 2006 noi avevamo un brand che si chiamava Ebola Industries, non so se te lo ricordi.
+
+
+**Stefano Lombardini**
+
+> Sì, lo ricordo.
+
+
+**Mizio**
+
+> Che era un brand e praticamente siamo stati fra i primissimi insieme a Ninja Marketing a occuparci di virale e io pensavo di aver scoperto all'epoca che era l'invenzione della vita, perché facevamo un paio di cose che andarono virali e cominciare a dire "caspita, adesso trovo la tecnica". Questo per dire che alla fine, cioè la viralità è anche abbastanza casuale. Una volta funziona, una volta no. Questo l'ho scoperto molto molto velocemente.
+>
+> Ma una cosa che vedo è cambiata rispetto all'epoca è quella che noi all'epoca chiamavamo long tail, che era questa teoria per la quale il video partiva subito su, quando il video andava bene partiva su con le visualizzazioni e poi c'era una curva molto lenta che scendeva, scendeva, scendeva, andava avanti settimane. Per cui avevi la prima settimana che faceva molte visualizzazioni, poi la discesa era lenta, lenta, lenta e poi per un mese andava.
+>
+> Oggi la long tail non esiste più, l'abbiamo visto anche per Bonitos dove in effetti abbiamo fatto questo video per divertimento, per test. È stata la stessa operazione che ha fatto Stefano con Motoka, ci siamo inventati un brand perché avevamo voglia di fare sperimentazione, perché con i brand normali è difficile perché devi rispondere sempre a certe cose, invece lì puoi sperimentare. E il tentativo diciamo che è stato proprio quello di sfruttare un po' questo aspetto della contemporaneità, per cui c'era il Super Bowl, più che la politica, è poi venuta dopo, ma c'era la voglia di fare qualcosa per il Super Bowl.
+>
+> Ok, come adesso c'è la voglia di fare qualcosa per Sanremo, perché in effetti Stefano ha ragione, cioè adesso, se vuoi fare una cosa... Però credo che la sfida, oltre che sfruttare la contemporaneità, che sicuramente fa sì che il tuo video funzioni, se tu riesci a creare un tuo stile, un tuo brand, un tuo valore autoriale, è l'unico modo per andare avanti.
+
+
+## **[01:28:27] Il Futuro dei Creativi e delle Professioni**
+
+**Mizio**
+
+> Perché il passaparola, il discorso sta durando molto poco, sempre di più, perché veramente siamo diventati una società consumistica anche dei contenuti, cioè i contenuti durano niente, la notizia dura quel giorno lì, dura un'ora addirittura, perché poi siamo anche in mano a dei pazzi che ogni giorno succede una cosa sempre più incredibile.
+>
+> Per cui io credo che la sfida sarà rimanere tra quelli che hanno uno stile distintivo. C'è un'altra cosa che almeno io ho provato sulla mia pelle, c'è anche una citazione, non so di chi: quando tutti vanno a zig, tu vai a zag, no? Perché anche prendersi il rischio di fare cose completamente diverse che vanno anche contro quella che è la tendenza, secondo me, cioè o sei veramente il primo o sei un fenomeno, no? Come MrBeast, allora fai milioni di visualizzazioni. O sennò ti metti sulla coda e fai la fine dei milioni di influencer che tutti oggi vogliono fare l'influencer, però cioè o sei tra i primi 10 sennò che vita fai. Per cui secondo me ci vuole anche il coraggio di avere una visione e seguire un proprio stile, credo.
+
+
+**Stefano Lombardini**
+
+> No, e poi relativamente ai creator e influencer è importante: se fai anche un contenuto bellissimo che va virale, però poi non riesci a trasformarlo in format, qualcosa di ripetibile, poi rimane lì. Infatti noi ad esempio in Italia abbiamo il caso di Khaby Lame, che è proprio l'esempio principale di questa cosa. Che lui sostanzialmente si è inventato un singolo trick, cioè appunto rifare dei video assurdi in modo più quotidiano. Lo stesso, ha trovato un solo trick che poi ha ripetuto, poteva ripetere milioni di volte e così è diventato il principale creator influencer italiano. Quello è proprio un caso estremo.
+
+
+**Mizio**
+
+> Non solo italiano, forse mondiale, perché su TikTok...
+
+
+**Stefano Lombardini**
+
+> Sì, è proprio un caso... Però ad esempio, anche citando un altro creator famoso che è Accorciabro, probabilmente gli ascoltatori conoscono, è una persona che si è inventata questa cosa di dire, ti riassume in pochissimi secondi dei video lunghissimi. Questa cosa è andata viralissima, perché poi ovviamente sfrutta anche la cosa che uno magari mette su YouTube, si può mettere il 2x per, quindi non c'ha voglia di sentirsi tutto il video. Anche perché poi gli YouTuber fanno i furbacchioni, più il video è lungo più possono mettere ads in mezzo al video, nel titolo dice "devo rivelarvi un segreto incredibile", te lo rivelano dopo mezz'ora. Accorciabro te lo rivela in dieci secondi. E quindi quella cosa lì è andata viralissima. Però anche lì, appunto, è diventato anche lui un creator famosissimo, si è inventato questa cosa qui, ripetibile, anche abbastanza semplicemente.
+>
+> E certo, questo è un problema anche per le aziende, la pubblicità, perché poi una volta si... magari c'era anche la campagna pubblicitaria, lanciavi lo spot, la campagna aveva un eco magari anche di tre mesi, sei mesi, così. Adesso è veramente difficile questa cosa. Si impongono di più i brand, tipo ad esempio Ryanair, che è famosa perché sui social dà risposte molto molto scostanti, molto rudi ai suoi clienti, e questa cosa è una cosa che comunque possono ripetere quotidianamente. E quindi questo, e poi ecco, è un po' lo shift dalla pubblicità classica alla pubblicità online.
+>
+> Che in realtà poi anche nella pubblicità classica non bastava fare la singola campagna, perché ad esempio citando una campagna famosissima, Think Small di Bernbach per Volkswagen, due annunci, Lemon e Think Small, famosissimi. Però poi in realtà aveva fatto tantissimi altri annunci, c'è una persona su LinkedIn che li posta tutti, quindi aveva fatto tantissimi altri annunci stampa, sempre nello stesso stile per Volkswagen, che sono meno noti. Quindi un po' la continuità sicuramente è sempre stata importante, però sui social, perché poi in realtà è il problema della spanna di attenzione, perché anche la cosa più virale, come diceva Mizio, la cosa più virale del mondo lo è un giorno o due. Proprio per raggiungere tre giorni, una settimana, deve essere una cosa super eclatante. Ad esempio, quando è uscito lo spot di Esselunga della pesca, lì la gente ne aveva parlato tipo due settimane ed era una cosa incredibile, mai vista prima. Però poi il problema è: ok, e poi cosa c'è dopo?
+
+
+## **[01:33:34] Consigli per i Giovani Creativi**
+
+**Stefano Maestri**
+
+> Vi porto in chiusura con un tema che a me è molto caro, ma che capisco che tra l'Accademia nominata da Mizio e le cose in generale che sono venute fuori, credo sia caro anche a voi. Parlando di chi si affaccia al vostro mondo, parlando di giovani, ditemi, risposte secche: uno che vuole cominciare il vostro percorso di studio, lavoro, quello che sia, diciamo che comincia, cosa deve fare domani mattina e cosa non deve fare assolutamente domani mattina? Ditemene uno per uno, con le AI, non con le AI.
+
+
+**Stefano Lombardini**
+
+> Ok, vai magari prima tu, Mizio. Quindi per fare il... perché sostanzialmente sia io che Mizio, io vabbè io sono rimasto copywriter, sono ancora copywriter, e lui comunque ha iniziato come copywriter e penso che nell'anima sia comunque rimasto, perché uno che nasce così non...
+
+
+**Mizio**
+
+> Io mi definisco un creativo pubblicitario ancora prima di copywriter. Per cui, ma fai la domanda più specifica, nel senso, è una persona che vorrebbe fare il creativo, vorrebbe fare il copywriter, che vorrebbe fare cosa? O in generale che vuole usare l'AI?
+
+
+**Stefano Maestri**
+
+> No, guarda, allora, a te la faccio ancora meno specifica e ti dico che, sì, esce un tuo libro in cui dici "Mi annoio, dunque creo".
+
+
+**Mizio**
+
+> Sì, sì, vediamo se esce perché mi sta annoiando, nel senso che dovrebbe uscire, no, ma mentre lo sto scrivendo sta diventando un'altra cosa, perché mi sono reso conto che comunque l'AI è solo una parte delle cose di cui voglio parlare, per cui può darsi che cambierà il titolo.
+
+
+**Stefano Maestri**
+
+> Può darsi che cambierà il titolo. Ma dove la trovano la voglia di creare, che sia il copywriter, che sia il creativo pubblicitario, un giovane che si affaccia oggi, dopo che abbiamo dipinto questo bel panorama distruttivo in cui arriva l'AI e c'è poco da... il mondo cambia, c'è questo abbassamento del livello anche delle aspettative economiche eccetera, ma se uno è veramente motivato a entrare nel vostro mondo, che consiglio gli date? Come fa a creare?
+
+
+**Mizio**
+
+> Allora, la cosa difficile è rispondere secco come vuoi, però proviamo a rispondere.
+
+
+**Stefano Maestri**
+
+> No, no, rispondi pure libero, non secchissimo.
+
+
+**Mizio**
+
+> Spero di non offendere Stefano, ma io a un giovane che volesse fare il copywriter, direi: non farlo. Io non lo rifarei. E sono onesto, cioè nel senso che oggi quella di copywriter è una professione che oggi è, diciamo, che ha i giorni contati, per il mio punto di vista. Perché comunque al di là di quello che c'è con ChatGPT, dopo il Covid c'è stato un deterioramento della professione dato dal fatto, per dirti, io quando sono venuto da Lerici nell'89, prima di definirmi copywriter ci ho messo 3 o 4 anni.
+>
+> Oggi uno si definisce copywriter dopo un corso di una settimana fatto online, perché copywriter significa oggi una cosa completamente diversa da quella che intendevamo noi. Perché l'accezione di copywriter, Stefano Lombardini correggimi se sbaglio, per noi significava quello che scriveva i messaggi pubblicitari. Oggi copywriter significa tutto, cioè questa cosa del copywriter persuasivo, tutti questi corsi assurdi in cui sembra che diventi ricco, sono un sacco di guru copywriter che sono dei cialtroni inenarrabili, ok?
+>
+> Per cui oggi il copywriter io non lo suggerirei. Suggerirei invece, secondo me, il mestiere del creativo è una cosa che potrebbe sopravvivere, ok? E l'unica cosa che posso suggerire, per cui se tu mi dicessi un ragazzo vuol fare il creativo, è la passione e appunto sviluppare la capacità di pensare. Cioè non perdere la capacità di pensare, perché veramente io penso che andiamo verso un mondo... Noi adesso andiamo in palestra, ci vado anch'io perché mi hanno spiegato la cosa della sarcopenia.
+
+
+**Stefano Maestri**
+
+> Sì, sarcopenia credo.
+
+
+**Mizio**
+
+> Non ho fatto il classico, per cui posso dire anche cose un po' sceme. Nel senso, mi hanno detto che arriverai a 80 anni che se non sviluppi un po' i muscoli non ti alzi più dalla tazza del cesso. E credo che abbiamo raggiunto il punto più alto di questo podcast, ok? Però credo che in futuro diventerà un po' come andare in palestra, cioè allenare il pensiero diventerà la stessa cosa.
+>
+> Come noi arriviamo da una civiltà contadina dove comunque andavamo a zappare i campi o facevamo i portuali o comunque facevamo lavori di fatica, non c'era bisogno di andare in palestra. C'è bisogno adesso perché sennò ci viene la sarcopenia. Mentre invece il pensiero l'abbiamo sempre sviluppato. Oggi c'è questa difficoltà qui.
+>
+> Per cui a un ragazzo che volesse fare il creativo io direi di fare solo cose controintuitive: cioè annoiarsi, sognare ad occhi aperti, fare cose inutili, cioè studiare delle cose assurde. Perché poi alla fine tutto quello che è cultura orizzontale, no? Io non ho fatto l'università, una delle poche, pochi rimpianti che ho, per motivi che non vi sto a spiegare. Però anche l'inutilità di quello studio orizzontale che poi è stato un po' maledetto, secondo me invece è una cosa molto importante oggi. Cioè avere una cultura quasi da autodidatta è una cosa che secondo me oggi è molto importante, cioè studiare cose inutili. Perché poi alla fine sono quelle che fanno la tua differenza rispetto agli altri e quelle che faranno sì che comunque tu sarai diverso dagli altri, perché andiamo verso un mondo che ci omologa. Per cui andare fuori, studiare delle cose assurde è quello che gli suggerirei. A parte la sarcopenia, Stefano, ti ho dato una risposta.
+
+
+**Stefano Maestri**
+
+> Assolutamente.
+
+
+**Stefano Lombardini**
+
+> No, invece, ecco, secondo me invece vale sempre quel famoso detto per i giovani: "non fidarti di nessuno sopra i trent'anni". Soprattutto nell'ambito pubblicitario, perché ad esempio io sono praticamente l'ultima generazione che sono entrato come stagista in McCann Erickson. All'epoca, anche adesso, una delle più grandi agenzie italiane. C'era un palazzone in Via Valtellina a Milano dove c'era un piano dove c'erano solo creativi, quindi copywriter, art director, che facevano solo spot pubblicitari e affissioni e qualche spot radio, basta.
+>
+> Lì nel 2007-2008 c'era invece il piano digital che stava crescendo, era un altro piano, altri creativi, proprio separato del tutto. Però lì è stato veramente forse gli ultimi anni, ultimi scampoli di questo mondo, che nella pubblicità durava da tantissimo, perché poi ovviamente il digital ha preso piede. E allora quello che appunto faceva un creativo pubblicitario una volta, cioè appunto fare spot pubblicitari, le campagne stampa, affissioni e per i copywriter gli spot radio, e stop, se ovviamente lavoravi diciamo nell'ATL, quella che poi un po' snobisticamente quelli che fanno questo lavoro chiamano la serie A. Poi ovviamente ci sono sempre stati anche i copywriter, i creativi che facevano cataloghi, materiali cartacei, BTL, quello che si chiama.
+>
+> E adesso ovviamente si è rimescolato tutto. E poi credo che quando ho iniziato io, ho fatto il master, io credo che è stata anche l'ultima generazione che aveva il mito dell'agenzia, cioè quando ho deciso io di fare il copywriter ho pensato: devo fare, voglio fare il creativo pubblicitario, lo posso fare solo nell'agenzia pubblicitaria e volevo entrare nell'agenzia grande. Credo che questa cosa qua per appunto un 18, un 20enne non esiste più. Prima di tutto non so neanche se tu gli parli, "vai a fare il copywriter per una grande agenzia", non sa neanche quali sono e dice "ma, cioè in ufficio, davanti con un capo? Cioè no, io mi metto a fare il creator indipendente, magari tiro qua i miei amici, faccio una startup".
+>
+> Quindi adesso per rispondere alla domanda, i giovani sono molto più consapevoli perché poi sostanzialmente sono nati e sono cresciuti in un mondo che è iper frammentato, dove non c'è più la carriera di una volta in agenzia, quindi dove già da bambini vedono intorno a loro delle persone che sanno che cambiano lavoro, che passano da un lavoro all'altro. E quindi sono più, secondo me, hanno più una forma mentis da, non da creativo ma da creator. Quindi se la domanda è "vuoi fare il creativo, come fai a mantenerti economicamente, ad esempio facendo i video in AI?", lì dipende veramente da... perché poi, ecco, ad esempio una domanda che può essere: ok, ma tutti fanno i video in AI, ma come fai a guadagnarci?
+>
+> Secondo me ci sono sostanzialmente tre modi. O fai appunto video pubblicitari commissionati da un'azienda che ti paga per questo video. Oppure fai la creation sui social, su YouTube, quindi come fanno gli YouTuber tradizionali, tu fai un video in AI che raggiunge un certo numero di visualizzazioni, quindi un po' ti monetizza la piattaforma, che ne so, crei un influencer virtuale e riesci poi a fare le sponsorizzazioni. Ti fai la tua Chiara Ferragni AI e riesci a fare le sponsorizzazioni, quello te lo puoi fare col tuo computer da solo.
+>
+> Oppure la terza via è quella del cinema tradizionale. C'è un post su Facebook di qualche giorno fa di Pupi Avati, il famoso sceneggiatore, che ha scritto proprio questo. Ha scritto: adesso i giovani che fanno le scuole di cinema, i grandi registi di domani saranno quelli che non hanno più voglia di fare il percorso tradizionale. Cioè il regista tradizionale doveva andare a cercarsi un produttore, poi cercare i finanziamenti per fare i film, magari poi anche in modo indipendente prendendoli un po' di qua o un po' di là, ed era veramente una fatica enorme, a meno di non essere ricchi di famiglia, però quella era una questione rara. Quindi trovi qualcuno che ti finanzia la tua opera in AI. E poi ovviamente poi il problema però è, ok la produzione, però poi la distribuzione: riesco a guadagnare? Faccio un film in AI, riesco avendo Netflix che mi paga come pagherebbe un film girato in modo tradizionale? E lì dipende da com'è il film, dalla storia, dalla regia, dal montaggio, quello che diceva Mizio.
+>
+> Poi ecco, un altro aspetto, è che una volta la società era anche più semplice. La società è talmente incasinata, complessa, che è anche difficile riuscire a fare delle opere sia brevi che lunghe che riescano a raccontare la società. Però se qualcuno ci riesce, sicuramente poi le persone vorranno sempre vederle.
+
+
+**Mizio**
+
+> Volevo solo, scusa, integrare una cosa che hai detto Stefano Lombardini. Cioè hai detto, io volevo entrare in agenzia, adesso no, la gente non ha più voglia di entrare in agenzia.
+
+
+**Stefano Lombardini**
+
+> No, perché leggo i copywriter giovani su LinkedIn, cioè non leggo nessuno che ha il sogno di entrare in McCann.
+
+
+**Mizio**
+
+> Sì, ma volevo solo dire, tu volevi entrare in agenzia perché era l'unico modo per fare dei video. Oggi li puoi fare per conto tuo, no? Nel senso che prima entravi in agenzia perché l'agenzia era l'unico modo per fare una cosa, vedere la tua cosa uscire sui giornali, perché eri in camera, non l'avresti mai potuto immaginare. Per questo, oggi uno veramente può fare il suo video. Poi l'altro discorso è riuscire a farlo vedere alle persone.
+>
+> Oggi su una rivista di settore che non citerò, è uscito un annuncio che diceva che l'agenzia X ha fatto una nuova serie che si chiama Creativi. Sono andato a vedere e ho detto, ma chi l'ha comprata? Perché oggi chi se la guarda, scusate, sto dicendo troppe parolacce, Stefano Maestri, che mia moglie mi cazzia sempre che dico troppe parolacce, ma arrivo dal porto, dovete perdonare.
+
+
+**Stefano Maestri**
+
+> No, no, tranquillo. Anche io sono nella stessa situazione, vai tranquillo.
+
+
+**Mizio**
+
+> Praticamente dico, ma chi se la guarda la serie dei creativi? Già tutte le volte che hanno provato a fare cose su creativi, su agenzie pubblicitarie, non le guarda nessuno, perché noi che siamo dentro... E poi vai a vedere, leggi un articolone e non c'è scritto a chi l'hanno venduta questa serie. Per cui diventa un po' un giocattolo. È vero che tutti possono farla, ma poi c'è: a chi lo vendi? Devi comunque avere la capacità di fare la differenza, e poi anche la capacità di venderla, che poi è la cosa più difficile. Perché tutti noi, presumo anche tu, abbiamo l'idea nel cassetto che pensiamo sia geniale, vogliamo venderla a Netflix, a Hollywood, a Tarantino. Però alla fine ci sono così tanti copioni e soggetti nel cassetto, e quello è una differenza.
+
+
+## **[01:48:34] Strategia e Creatività nel Gioco e nel Lavoro**
+
+**Stefano Maestri**
+
+> Benissimo, direi che siamo arrivati ampiamente in chiusura. E io vi ringrazio molto intanto per tutti gli spunti. So che vi ho promesso di ricollegarmi al gioco e giocattolo e quindi lo farò.
+>
+> Allora, beh, Mizio quasi facile, nel senso che Subbuteo è un gioco dove si studiano per bene le posizioni degli altri e si cerca di fare qualcosa di diverso nel momento giusto, dove non conta tanto l'arrivare prima, la sorpresa eccetera, un po' come negli scacchi, se vogliamo, per chi non conoscesse Subbuteo, ma bisogna saper scegliere la mossa giusta nel momento giusto. E io in tante cose che hai detto ho ritrovato questa cosa.
+>
+> Mentre invece per Stefano è la strategia. Appassionato di giochi di strategia, e mi sembra evidente che tutto quello che ha fatto anche nell'ultimo periodo, del cercare di mettere le idee prima ancora della tecnica, al di là che sia AI o la tecnica, fanno parte di una strategia che si intravede, e io trovo che sia tornata anche in queste parole. Quindi questo è il mio personalissimo ricollegamento dei vostri giochi e giocattoli.
+>
+> Io vi ringrazio tanto per la splendida chiacchierata, sono certo che anche agli ascoltatori piacerà, e poi per una volta non sentono parlare di codice e di come si fa inferenza di un modello, saranno tutti felici, soprattutto quelli meno tecnici, magari parenti, amici costretti ad ascoltarmi, ma che del resto che dico tutto il resto del tempo non gliene frega niente. Questa sarà più fruibile per tutti. Grazie davvero.
+
+
+**Stefano Lombardini**
+
+> Grazie per l'opportunità, a presto!
+
+
+**Mizio**
+
+> Grazie, ciao, buona serata!
+
+
+**Stefano Lombardini**
+
+> Ciao!
