@@ -1,0 +1,26 @@
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+/usr/bin/ruby -I/usr/share/rubygems extconf.rb
+creating Makefile
+
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20260423-332491-iu44nj sitelibdir\=./.gem.20260423-332491-iu44nj clean
+rm -f 
+rm -fr cparse.so false cparse.o *.bak mkmf.log .*.time
+
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20260423-332491-iu44nj sitelibdir\=./.gem.20260423-332491-iu44nj
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DRACC_INFO_VERSION=1.8.1    -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -m64 -o cparse.o -c cparse.c
+rm -f cparse.so
+gcc -shared -o cparse.so cparse.o -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,pack-relative-relocs -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -specs=/usr/lib/rpm/redhat/redhat-hardened-ld-errors -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -Wl,--build-id=sha1 -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed -Wl,-z,relro -Wl,--as-needed  -Wl,-z,pack-relative-relocs -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -specs=/usr/lib/rpm/redhat/redhat-hardened-ld-errors -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -Wl,--build-id=sha1     -m64  -lruby  -lm -lpthread  -lc
+:
+
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20260423-332491-iu44nj sitelibdir\=./.gem.20260423-332491-iu44nj install
+/usr/bin/mkdir -p . ./.gem.20260423-332491-iu44nj/racc
+exit > .sitearchdir.-.racc.time
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20260423-332491-iu44nj/racc
+
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20260423-332491-iu44nj sitelibdir\=./.gem.20260423-332491-iu44nj clean
+rm -f 
+rm -fr cparse.so false cparse.o *.bak mkmf.log .*.time

@@ -1,0 +1,47 @@
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/bigdecimal-4.1.2/ext/bigdecimal
+/usr/bin/ruby -I/usr/share/rubygems extconf.rb
+checking for __builtin_clz()... yes
+checking for __builtin_clzl()... yes
+checking for __builtin_clzll()... yes
+checking for float.h... yes
+checking for math.h... yes
+checking for stdbool.h... yes
+checking for stdlib.h... yes
+checking for x86intrin.h... yes
+checking for _lzcnt_u32() in x86intrin.h... no
+checking for _lzcnt_u64() in x86intrin.h... no
+checking for intrin.h... no
+checking for ruby/atomic.h... yes
+checking for ruby/internal/has/builtin.h... yes
+checking for ruby/internal/static_assert.h... yes
+checking for rb_complex_real() in ruby.h... yes
+checking for rb_complex_imag() in ruby.h... yes
+checking for rb_opts_exception_p() in ruby.h... yes
+checking for rb_category_warn() in ruby.h... yes
+checking for RB_WARN_CATEGORY_DEPRECATED in ruby.h... yes
+checking for RUBY_TYPED_EMBEDDABLE in ruby.h... yes
+creating Makefile
+
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/bigdecimal-4.1.2/ext/bigdecimal
+make DESTDIR\= sitearchdir\=./.gem.20260423-332491-w1zfvf sitelibdir\=./.gem.20260423-332491-w1zfvf clean
+rm -f 
+rm -fr bigdecimal.so false bigdecimal.o missing.o *.bak mkmf.log .*.time
+
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/bigdecimal-4.1.2/ext/bigdecimal
+make DESTDIR\= sitearchdir\=./.gem.20260423-332491-w1zfvf sitelibdir\=./.gem.20260423-332491-w1zfvf
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_BUILTIN___BUILTIN_CLZ -DHAVE_BUILTIN___BUILTIN_CLZL -DHAVE_BUILTIN___BUILTIN_CLZLL -DHAVE_FLOAT_H -DHAVE_MATH_H -DHAVE_STDBOOL_H -DHAVE_STDLIB_H -DHAVE_X86INTRIN_H -DHAVE_RUBY_ATOMIC_H -DHAVE_RUBY_INTERNAL_HAS_BUILTIN_H -DHAVE_RUBY_INTERNAL_STATIC_ASSERT_H -DHAVE_RB_COMPLEX_REAL -DHAVE_RB_COMPLEX_IMAG -DHAVE_RB_OPTS_EXCEPTION_P -DHAVE_RB_CATEGORY_WARN -DHAVE_CONST_RB_WARN_CATEGORY_DEPRECATED -DHAVE_CONST_RUBY_TYPED_EMBEDDABLE    -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -m64 -o bigdecimal.o -c bigdecimal.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_BUILTIN___BUILTIN_CLZ -DHAVE_BUILTIN___BUILTIN_CLZL -DHAVE_BUILTIN___BUILTIN_CLZLL -DHAVE_FLOAT_H -DHAVE_MATH_H -DHAVE_STDBOOL_H -DHAVE_STDLIB_H -DHAVE_X86INTRIN_H -DHAVE_RUBY_ATOMIC_H -DHAVE_RUBY_INTERNAL_HAS_BUILTIN_H -DHAVE_RUBY_INTERNAL_STATIC_ASSERT_H -DHAVE_RB_COMPLEX_REAL -DHAVE_RB_COMPLEX_IMAG -DHAVE_RB_OPTS_EXCEPTION_P -DHAVE_RB_CATEGORY_WARN -DHAVE_CONST_RB_WARN_CATEGORY_DEPRECATED -DHAVE_CONST_RUBY_TYPED_EMBEDDABLE    -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -m64 -o missing.o -c missing.c
+rm -f bigdecimal.so
+gcc -shared -o bigdecimal.so bigdecimal.o missing.o -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,pack-relative-relocs -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -specs=/usr/lib/rpm/redhat/redhat-hardened-ld-errors -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -Wl,--build-id=sha1 -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed -Wl,-z,relro -Wl,--as-needed  -Wl,-z,pack-relative-relocs -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -specs=/usr/lib/rpm/redhat/redhat-hardened-ld-errors -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -Wl,--build-id=sha1     -m64  -lruby  -lm -lpthread  -lc
+:
+
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/bigdecimal-4.1.2/ext/bigdecimal
+make DESTDIR\= sitearchdir\=./.gem.20260423-332491-w1zfvf sitelibdir\=./.gem.20260423-332491-w1zfvf install
+/usr/bin/mkdir -p . ./.gem.20260423-332491-w1zfvf
+exit > .sitearchdir.time
+/usr/bin/install -c -m 0755 bigdecimal.so ./.gem.20260423-332491-w1zfvf
+
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/bigdecimal-4.1.2/ext/bigdecimal
+make DESTDIR\= sitearchdir\=./.gem.20260423-332491-w1zfvf sitelibdir\=./.gem.20260423-332491-w1zfvf clean
+rm -f 
+rm -fr bigdecimal.so false bigdecimal.o missing.o *.bak mkmf.log .*.time

@@ -15,6 +15,28 @@ permalink: /:year/:month/:day/:title/
 plugins:
   - jekyll-include-cache
   - jekyll-paginate
+  - jekyll-feed       # Genera /feed.xml con metadati episodi
+  - jekyll-sitemap    # Genera /sitemap.xml
+  - jekyll-seo-tag    # Fallback SEO (override in _includes/head/custom.html ha priorità)
+
+# Jekyll Feed config
+feed:
+  path: /feed.xml
+
+# SEO globale
+logo: /assets/images/profile.jpg
+social:
+  type: Organization
+  name: "Risorse Artificiali"
+  links:
+    - https://open.spotify.com/show/16dTKEEtKkIzhr1JJNMmSF
+    - https://www.youtube.com/channel/UCYQgzIby7QHkXBonTWk-2Fg
+    - https://www.linkedin.com/company/risorseartificiali
+    - https://podcasts.apple.com/us/podcast/risorse-artificiali-appunti-e-spunti-dal-mondo-dellintelligenza/id1816213074
+    - https://x.com/risorseAI
+
+# Default Open Graph image (fallback per post senza immagine propria)
+og_image: /assets/images/profile.jpg
 
 # Impostazioni Paginazione
 paginate: 5          # Numero di articoli per pagina

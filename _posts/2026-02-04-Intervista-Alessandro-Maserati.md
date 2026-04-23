@@ -1,22 +1,32 @@
 ---
-title: "Intervista ad Alessandro Maserati:AGI allineamento e consapevolezza;  il futuro di società e lavoro"
+title: "L'AGI arriva prima di quanto credi | Alessandro Maserati"
+date: 2026-02-04
+layout: episode
+author_profile: true
+
+episode_number: null
+episode_type: intervista
+youtube_id: XP2jiPxFtPk
+description: >-
+  L'AGI arriva prima di quanto credi. Alessandro Maserati (ex-BCG, AI lead) racconta allineamento, futuro del lavoro e gap ricerca-business in Italia.
+spotify_episode_id: 1Tk01LbQhmFS877ogOEvOR
+apple_episode_url: https://podcasts.apple.com/us/podcast/risorse-artificiali-appunti-e-spunti-dal-mondo-dellintelligenza/id1816213074?i=1000748228954
+
+guest_name: "Alessandro Maserati"
+guest_bio: >-
+  AI lead in una società svizzera di digital transformation, ex-Boston Consulting. Matematico di formazione (Scuola Normale di Pisa, tesi in logica pura), si occupa di intelligenza artificiale in azienda dal 2017.
+
+header:
+  og_image: /assets/images/episodes/maserati-2026-02-04_relaunch.png
+
 categories:
   - Interviste
 tags:
-
   - AI
   - LLM
   - AGI
-layout: single
-author_profile: true
 ---
 
-
-{% include video id="XP2jiPxFtPk" provider="youtube" %}
-
-👉 [Ascolta su Spotify](https://open.spotify.com/show/16dTKEEtKkIzhr1JJNMmSF?si=900902f2dca8442e)<br/>
-👉 [Guarda su YouTube](https://www.youtube.com/channel/UCYQgzIby7QHkXBonTWk-2Fg)<br/>
-👉 [Segui su LinkedIn](https://www.linkedin.com/company/risorseartificiali)<br/>
 
 # Trascrizione: Intervista Risorse Artificiali - Alessandro Maserati
 
