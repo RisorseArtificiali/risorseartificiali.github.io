@@ -1,0 +1,119 @@
+- generic [ref=e3]:
+  - generic [ref=e5]:
+    - img "Google" [ref=e8]
+    - generic [ref=e9]:
+      - generic [ref=e11]:
+        - heading "Sign in" [level=1] [ref=e12]
+        - paragraph [ref=e13]: with your Google Account to continue to YouTube. This account will be available to other Google apps in the browser.
+      - generic [ref=e14]:
+        - generic [ref=e17]:
+          - generic [ref=e22]:
+            - textbox "Email or phone" [active] [ref=e23]
+            - generic:
+              - generic: Email or phone
+          - paragraph [ref=e24]:
+            - link "Forgot email?" [ref=e25] [cursor=pointer]:
+              - /url: /signin/usernamerecovery?continue=https://www.youtube.com/signin?action_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3Dhttps%253A%252F%252Fstudio.youtube.com%252F%26feature%3Dredirect_login&dsh=S1228156785:1776807817729213&flowEntry=ServiceLogin&flowName=WebLiteSignIn&hl=en&ifkv=AT1y2_XaLAMFnVTz1RyXJ_WhlzSGD2VUOsfJT2_RrDZcjS2ILO3XZAR-9SJs_G3dPGV4cMWTdZqrIg&service=youtube
+        - paragraph [ref=e28]:
+          - text: Not your computer? Use a private browsing window to sign in.
+          - link "Learn more about using Guest mode" [ref=e29] [cursor=pointer]:
+            - /url: https://support.google.com/accounts?p=signin_privatebrowsing&hl=en
+        - generic [ref=e31]:
+          - button "Next" [ref=e33]
+          - link "Create account" [ref=e35] [cursor=pointer]:
+            - /url: /lifecycle/flows/signup?continue=https://www.youtube.com/signin?action_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3Dhttps%253A%252F%252Fstudio.youtube.com%252F%26feature%3Dredirect_login&dsh=S1228156785:1776807817729213&flowEntry=SignUp&flowName=GlifWebSignIn&hl=en&ifkv=AT1y2_XaLAMFnVTz1RyXJ_WhlzSGD2VUOsfJT2_RrDZcjS2ILO3XZAR-9SJs_G3dPGV4cMWTdZqrIg&nogm=1&service=youtube
+  - contentinfo [ref=e36]:
+    - combobox [ref=e39] [cursor=pointer]:
+      - option "Afrikaans"
+      - option "azərbaycan"
+      - option "bosanski"
+      - option "català"
+      - option "Čeština"
+      - option "Cymraeg"
+      - option "Dansk"
+      - option "Deutsch"
+      - option "eesti"
+      - option "English (United Kingdom)"
+      - option "English (United States)" [selected]
+      - option "Español (España)"
+      - option "Español (Latinoamérica)"
+      - option "euskara"
+      - option "Filipino"
+      - option "Français (Canada)"
+      - option "Français (France)"
+      - option "Gaeilge"
+      - option "galego"
+      - option "Hrvatski"
+      - option "Indonesia"
+      - option "isiZulu"
+      - option "íslenska"
+      - option "Italiano"
+      - option "Kiswahili"
+      - option "latviešu"
+      - option "lietuvių"
+      - option "magyar"
+      - option "Melayu"
+      - option "Nederlands"
+      - option "norsk"
+      - option "o‘zbek"
+      - option "polski"
+      - option "Português (Brasil)"
+      - option "Português (Portugal)"
+      - option "română"
+      - option "shqip"
+      - option "Slovenčina"
+      - option "slovenščina"
+      - option "srpski (latinica)"
+      - option "Suomi"
+      - option "Svenska"
+      - option "Tiếng Việt"
+      - option "Türkçe"
+      - option "Ελληνικά"
+      - option "беларуская"
+      - option "български"
+      - option "кыргызча"
+      - option "қазақ тілі"
+      - option "македонски"
+      - option "монгол"
+      - option "Русский"
+      - option "српски (ћирилица)"
+      - option "Українська"
+      - option "ქართული"
+      - option "հայերեն"
+      - option "‫עברית‬‎"
+      - option "‫اردو‬‎"
+      - option "‫العربية‬‎"
+      - option "‫فارسی‬‎"
+      - option "አማርኛ"
+      - option "नेपाली"
+      - option "मराठी"
+      - option "हिन्दी"
+      - option "অসমীয়া"
+      - option "বাংলা"
+      - option "ਪੰਜਾਬੀ"
+      - option "ગુજરાતી"
+      - option "ଓଡ଼ିଆ"
+      - option "தமிழ்"
+      - option "తెలుగు"
+      - option "ಕನ್ನಡ"
+      - option "മലയാളം"
+      - option "සිංහල"
+      - option "ไทย"
+      - option "ລາວ"
+      - option "မြန်မာ"
+      - option "ខ្មែរ"
+      - option "한국어"
+      - option "中文（香港）"
+      - option "日本語"
+      - option "简体中文"
+      - option "繁體中文"
+    - list [ref=e40]:
+      - listitem [ref=e41]:
+        - link "Help" [ref=e42] [cursor=pointer]:
+          - /url: https://support.google.com/accounts?hl=en&p=account_iph
+      - listitem [ref=e43]:
+        - link "Privacy" [ref=e44] [cursor=pointer]:
+          - /url: https://accounts.google.com/TOS?loc=IT&hl=en&privacy=true
+      - listitem [ref=e45]:
+        - link "Terms" [ref=e46] [cursor=pointer]:
+          - /url: https://accounts.google.com/TOS?loc=IT&hl=en

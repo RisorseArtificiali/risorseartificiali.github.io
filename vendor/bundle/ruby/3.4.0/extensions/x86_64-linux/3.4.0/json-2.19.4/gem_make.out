@@ -1,0 +1,34 @@
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.19.4/ext/json/ext/parser
+/usr/bin/ruby -I/usr/share/rubygems extconf.rb
+checking for rb_enc_interned_str() in ruby/encoding.h... yes
+checking for rb_str_to_interned_str() in ruby.h... yes
+checking for rb_hash_new_capa() in ruby.h... yes
+checking for rb_hash_bulk_insert() in ruby.h... yes
+checking for RUBY_TYPED_EMBEDDABLE in ruby.h... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+checking for x86intrin.h... yes
+checking for cpuid.h... yes
+creating Makefile
+
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.19.4/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20260423-332491-2xvuyj sitelibdir\=./.gem.20260423-332491-2xvuyj clean
+rm -f 
+rm -fr parser.so false parser.o *.bak mkmf.log .*.time
+
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.19.4/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20260423-332491-2xvuyj sitelibdir\=./.gem.20260423-332491-2xvuyj
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DHAVE_RB_ENC_INTERNED_STR -DHAVE_RB_STR_TO_INTERNED_STR -DHAVE_RB_HASH_NEW_CAPA -DHAVE_RB_HASH_BULK_INSERT -DHAVE_CONST_RUBY_TYPED_EMBEDDABLE -DHAVE_X86INTRIN_H -DJSON_ENABLE_SIMD -DHAVE_CPUID_H    -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o parser.o -c parser.c
+rm -f parser.so
+gcc -shared -o parser.so parser.o -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,pack-relative-relocs -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -specs=/usr/lib/rpm/redhat/redhat-hardened-ld-errors -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -Wl,--build-id=sha1 -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed -Wl,-z,relro -Wl,--as-needed  -Wl,-z,pack-relative-relocs -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -specs=/usr/lib/rpm/redhat/redhat-hardened-ld-errors -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -Wl,--build-id=sha1     -m64  -lruby  -lm -lpthread  -lc
+:
+
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.19.4/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20260423-332491-2xvuyj sitelibdir\=./.gem.20260423-332491-2xvuyj install
+/usr/bin/mkdir -p . ./.gem.20260423-332491-2xvuyj/json/ext
+exit > .sitearchdir.-.json.-.ext.time
+/usr/bin/install -c -m 0755 parser.so ./.gem.20260423-332491-2xvuyj/json/ext
+
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/json-2.19.4/ext/json/ext/parser
+make DESTDIR\= sitearchdir\=./.gem.20260423-332491-2xvuyj sitelibdir\=./.gem.20260423-332491-2xvuyj clean
+rm -f 
+rm -fr parser.so false parser.o *.bak mkmf.log .*.time

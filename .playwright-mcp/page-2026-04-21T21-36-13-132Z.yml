@@ -1,0 +1,397 @@
+- generic [ref=e2]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - button "Guide" [ref=e9] [cursor=pointer]
+        - generic [ref=e11]:
+          - link "YouTube Home" [ref=e12] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e16]: IT
+        - button "Skip navigation" [ref=e20] [cursor=pointer]:
+          - generic [ref=e21]: Skip navigation
+      - search [ref=e26]:
+        - generic [ref=e27]:
+          - combobox "Search" [expanded] [ref=e30]
+          - button "Search" [ref=e31] [cursor=pointer]
+      - generic [ref=e34]:
+        - button "Settings" [ref=e39] [cursor=pointer]
+        - link "Sign in" [ref=e43] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252Fchannel%252FUCYQgzIby7QHkXBonTWk-2Fg%252Fvideos%253Fcbrd%253D1&hl=en&ec=65620
+          - generic [ref=e46]: Sign in
+  - main [ref=e51]:
+    - generic [ref=e58]:
+      - generic [ref=e66]:
+        - generic [ref=e74]:
+          - heading "Risorse Artificiali" [level=1] [ref=e76]
+          - generic [ref=e77]:
+            - group [ref=e78]:
+              - generic [ref=e79]: "@risorseartificiali"
+            - generic [ref=e80]: •
+            - group [ref=e81]:
+              - generic "268 subscribers" [ref=e82]
+              - generic [ref=e83]: •
+              - generic [ref=e84]: 83 videos
+          - generic [ref=e86] [cursor=pointer]:
+            - generic [ref=e87]: Risorse Artificiali. Appunti e spunti dal mondo dell’Intelligenza Artificiale (AI)
+            - button "Description. Risorse Artificiali. Appunti e spunti dal mondo dell’Intel...tap for more." [ref=e88]:
+              - generic [ref=e89]: ...more
+        - generic [ref=e90]:
+          - link "open.spotify.com/show/16dTKEEtKkIzhr1JJNMmSF?si=38a42a32d4c8492b" [ref=e94] [cursor=pointer]:
+            - /url: https://www.youtube.com/redirect?event=channel_header&redir_token=QUFFLUhqbS1xb3lvTVZYVzFtRXpZaWVsM2d0eGpUY0dCd3xBQ3Jtc0ttd2g2VndfeEFzYXNjcmpoYUFTRU5OZFNqNnVzUDJtVlVaQXRuaDE3c0RVN1BuV1Y0M2llQzFVcWNaa2Q4QXlyQ0lZeEUySm1yWFprZ29SN2N5eTJVVHpVU3hEdjlmTUJZT2Nfc0dlNmtIanNzejNfMA&q=https%3A%2F%2Fopen.spotify.com%2Fshow%2F16dTKEEtKkIzhr1JJNMmSF%3Fsi%3D38a42a32d4c8492b
+          - button "Subscribe" [ref=e99] [cursor=pointer]:
+            - generic [ref=e100]: Subscribe
+      - tablist [ref=e107]:
+        - tablist [ref=e111]:
+          - tab "Home" [ref=e112] [cursor=pointer]:
+            - generic [ref=e113]: Home
+          - tab "Videos" [selected] [ref=e114] [cursor=pointer]:
+            - generic [ref=e115]: Videos
+          - tab "Shorts" [ref=e116] [cursor=pointer]:
+            - generic [ref=e117]: Shorts
+          - tab "Podcasts" [ref=e118] [cursor=pointer]:
+            - generic [ref=e119]: Podcasts
+          - tab "Playlists" [ref=e120] [cursor=pointer]:
+            - generic [ref=e121]: Playlists
+          - button "Search" [ref=e125] [cursor=pointer]
+        - button [ref=e129] [cursor=pointer]:
+          - generic [ref=e130]:
+            - img
+    - generic [ref=e134]:
+      - tablist [ref=e137]:
+        - tab "Latest" [selected] [ref=e141] [cursor=pointer]:
+          - generic [ref=e143]: Latest
+        - tab "Popular" [ref=e150] [cursor=pointer]:
+          - generic [ref=e152]: Popular
+        - tab "Oldest" [ref=e159] [cursor=pointer]:
+          - generic [ref=e161]: Oldest
+      - generic [ref=e165]:
+        - generic [ref=e169]:
+          - link [ref=e172] [cursor=pointer]:
+            - /url: /watch?v=s6ZLpBCA9zI
+          - generic [ref=e175] [cursor=pointer]:
+            - 'heading "Sicurezza AI, bug bounty e i rischi di un futuro Freemium #48 1 hour, 4 minutes" [level=3] [ref=e176]':
+              - 'link "Sicurezza AI, bug bounty e i rischi di un futuro Freemium #48 1 hour, 4 minutes" [ref=e177]':
+                - /url: /watch?v=s6ZLpBCA9zI
+                - generic [ref=e178]: "Sicurezza AI, bug bounty e i rischi di un futuro Freemium #48"
+            - generic [ref=e181]:
+              - generic [ref=e182]: 64 views
+              - generic [ref=e183]: •3 days ago
+        - generic [ref=e187]:
+          - link [ref=e190] [cursor=pointer]:
+            - /url: /watch?v=ZW4ZZoRXeuQ
+          - generic [ref=e193] [cursor=pointer]:
+            - 'heading "Interview with Luigi Congedo: AI, Talent, and the Future of Work between Silicon Valley and Italy 1 hour, 5 minutes" [level=3] [ref=e194]':
+              - 'link "Interview with Luigi Congedo: AI, Talent, and the Future of Work between Silicon Valley and Italy 1 hour, 5 minutes" [ref=e195]':
+                - /url: /watch?v=ZW4ZZoRXeuQ
+                - generic [ref=e196]: "Interview with Luigi Congedo: AI, Talent, and the Future of Work between Silicon Valley and Italy"
+            - generic [ref=e199]:
+              - generic [ref=e200]: 96 views
+              - generic [ref=e201]: •6 days ago
+        - generic [ref=e205]:
+          - link [ref=e208] [cursor=pointer]:
+            - /url: /watch?v=YqLGVprxltw
+          - generic [ref=e211] [cursor=pointer]:
+            - 'heading "Da Mythos a Gemma 4: 0-day, costi AI e PR come prompt #47 1 hour, 11 minutes" [level=3] [ref=e212]':
+              - 'link "Da Mythos a Gemma 4: 0-day, costi AI e PR come prompt #47 1 hour, 11 minutes" [ref=e213]':
+                - /url: /watch?v=YqLGVprxltw
+                - generic [ref=e214]: "Da Mythos a Gemma 4: 0-day, costi AI e PR come prompt #47"
+            - generic [ref=e217]:
+              - generic [ref=e218]: 138 views
+              - generic [ref=e219]: •10 days ago
+        - generic [ref=e223]:
+          - link [ref=e226] [cursor=pointer]:
+            - /url: /watch?v=9t03EZBL34A
+          - generic [ref=e229] [cursor=pointer]:
+            - 'heading "Dal leak di Claude Code a Lince e antivocale: le app AI fai-da-te e i nostri progetti open #46 1 hour, 13 minutes" [level=3] [ref=e230]':
+              - 'link "Dal leak di Claude Code a Lince e antivocale: le app AI fai-da-te e i nostri progetti open #46 1 hour, 13 minutes" [ref=e231]':
+                - /url: /watch?v=9t03EZBL34A
+                - generic [ref=e232]: "Dal leak di Claude Code a Lince e antivocale: le app AI fai-da-te e i nostri progetti open #46"
+            - generic [ref=e235]:
+              - generic [ref=e236]: 114 views
+              - generic [ref=e237]: •2 weeks ago
+        - generic [ref=e241]:
+          - link [ref=e244] [cursor=pointer]:
+            - /url: /watch?v=371fVe1Ya0Q
+          - generic [ref=e247] [cursor=pointer]:
+            - 'heading "Interview with Gabriele Venturi: PandasAI, Y Combinator, and the Future of AI Coding in Startups 1 hour, 33 minutes" [level=3] [ref=e248]':
+              - 'link "Interview with Gabriele Venturi: PandasAI, Y Combinator, and the Future of AI Coding in Startups 1 hour, 33 minutes" [ref=e249]':
+                - /url: /watch?v=371fVe1Ya0Q
+                - generic [ref=e250]: "Interview with Gabriele Venturi: PandasAI, Y Combinator, and the Future of AI Coding in Startups"
+            - generic [ref=e253]:
+              - generic [ref=e254]: 89 views
+              - generic [ref=e255]: •2 weeks ago
+        - generic [ref=e259]:
+          - link [ref=e262] [cursor=pointer]:
+            - /url: /watch?v=nOcZVKi-7Ug
+          - generic [ref=e265] [cursor=pointer]:
+            - 'heading "Da Bernie Sanders a ARC-AGI: l’AI non è ancora intelligente (cosa sta cambiando Claude e OpenAI) #45 1 hour, 10 minutes" [level=3] [ref=e266]':
+              - 'link "Da Bernie Sanders a ARC-AGI: l’AI non è ancora intelligente (cosa sta cambiando Claude e OpenAI) #45 1 hour, 10 minutes" [ref=e267]':
+                - /url: /watch?v=nOcZVKi-7Ug
+                - generic [ref=e268]: "Da Bernie Sanders a ARC-AGI: l’AI non è ancora intelligente (cosa sta cambiando Claude e OpenAI) #45"
+            - generic [ref=e271]:
+              - generic [ref=e272]: 164 views
+              - generic [ref=e273]: •3 weeks ago
+        - generic [ref=e277]:
+          - link [ref=e280] [cursor=pointer]:
+            - /url: /watch?v=UwzkzXjyIvg
+          - generic [ref=e283] [cursor=pointer]:
+            - 'heading "Claude vs GPT-Codex: i trend AI che stanno cambiando l’AI Engineering (e validano OpenClaw) #44 1 hour, 12 minutes" [level=3] [ref=e284]':
+              - 'link "Claude vs GPT-Codex: i trend AI che stanno cambiando l’AI Engineering (e validano OpenClaw) #44 1 hour, 12 minutes" [ref=e285]':
+                - /url: /watch?v=UwzkzXjyIvg
+                - generic [ref=e286]: "Claude vs GPT-Codex: i trend AI che stanno cambiando l’AI Engineering (e validano OpenClaw) #44"
+            - generic [ref=e289]:
+              - generic [ref=e290]: 206 views
+              - generic [ref=e291]: •1 month ago
+        - generic [ref=e295]:
+          - link [ref=e298] [cursor=pointer]:
+            - /url: /watch?v=uGgRQ4pbhEY
+          - generic [ref=e301] [cursor=pointer]:
+            - 'heading "Intervista a Massimo Re Ferrè: AI Coding, Spec Driven development e il futuro degli sviluppatori 1 hour, 35 minutes" [level=3] [ref=e302]':
+              - 'link "Intervista a Massimo Re Ferrè: AI Coding, Spec Driven development e il futuro degli sviluppatori 1 hour, 35 minutes" [ref=e303]':
+                - /url: /watch?v=uGgRQ4pbhEY
+                - generic [ref=e304]: "Intervista a Massimo Re Ferrè: AI Coding, Spec Driven development e il futuro degli sviluppatori"
+            - generic [ref=e307]:
+              - generic [ref=e308]: 135 views
+              - generic [ref=e309]: •1 month ago
+        - generic [ref=e313]:
+          - link [ref=e316] [cursor=pointer]:
+            - /url: /watch?v=PWeJO_LURZo&pp=0gcJCdMKAYcqIYzv
+          - generic [ref=e319] [cursor=pointer]:
+            - 'heading "Generazione di codice e code review AI: il futuro del software è già iniziato Live at JUG Milano #43 1 hour, 17 minutes" [level=3] [ref=e320]':
+              - 'link "Generazione di codice e code review AI: il futuro del software è già iniziato Live at JUG Milano #43 1 hour, 17 minutes" [ref=e321]':
+                - /url: /watch?v=PWeJO_LURZo&pp=0gcJCdMKAYcqIYzv
+                - generic [ref=e322]: "Generazione di codice e code review AI: il futuro del software è già iniziato Live at JUG Milano #43"
+            - generic [ref=e325]:
+              - generic [ref=e326]: 190 views
+              - generic [ref=e327]: •1 month ago
+        - generic [ref=e331]:
+          - link [ref=e334] [cursor=pointer]:
+            - /url: /watch?v=nitLzgXt33M
+          - generic [ref=e337] [cursor=pointer]:
+            - 'heading "Da GPT-5.4 agli AI Engeeners: perché CLI e workflow stanno cambiando il coding #42 1 hour, 16 minutes" [level=3] [ref=e338]':
+              - 'link "Da GPT-5.4 agli AI Engeeners: perché CLI e workflow stanno cambiando il coding #42 1 hour, 16 minutes" [ref=e339]':
+                - /url: /watch?v=nitLzgXt33M
+                - generic [ref=e340]: "Da GPT-5.4 agli AI Engeeners: perché CLI e workflow stanno cambiando il coding #42"
+            - generic [ref=e343]:
+              - generic [ref=e344]: 139 views
+              - generic [ref=e345]: •1 month ago
+        - generic [ref=e349]:
+          - link [ref=e352] [cursor=pointer]:
+            - /url: /watch?v=xMMjWC3ii2k
+          - generic [ref=e355] [cursor=pointer]:
+            - 'heading "Intervista a Mizio Ratti e Stefano Lombardini: la creatività nell''era dell''AI 1 hour, 50 minutes" [level=3] [ref=e356]':
+              - 'link "Intervista a Mizio Ratti e Stefano Lombardini: la creatività nell''era dell''AI 1 hour, 50 minutes" [ref=e357]':
+                - /url: /watch?v=xMMjWC3ii2k
+                - generic [ref=e358]: "Intervista a Mizio Ratti e Stefano Lombardini: la creatività nell'era dell'AI"
+            - generic [ref=e361]:
+              - generic [ref=e362]: 167 views
+              - generic [ref=e363]: •1 month ago
+        - generic [ref=e367]:
+          - link [ref=e370] [cursor=pointer]:
+            - /url: /watch?v=Vwl7stdsxj0
+          - generic [ref=e373] [cursor=pointer]:
+            - 'heading "Claude Code, OpenClaw e l’Effetto Slot Machine: la nuova era dell’AI Engineering #41 1 hour, 10 minutes" [level=3] [ref=e374]':
+              - 'link "Claude Code, OpenClaw e l’Effetto Slot Machine: la nuova era dell’AI Engineering #41 1 hour, 10 minutes" [ref=e375]':
+                - /url: /watch?v=Vwl7stdsxj0
+                - generic [ref=e376]: "Claude Code, OpenClaw e l’Effetto Slot Machine: la nuova era dell’AI Engineering #41"
+            - generic [ref=e379]:
+              - generic [ref=e380]: 228 views
+              - generic [ref=e381]: •1 month ago
+        - generic [ref=e385]:
+          - link [ref=e388] [cursor=pointer]:
+            - /url: /watch?v=JkmnXU4QKf8
+          - generic [ref=e391] [cursor=pointer]:
+            - 'heading "AI e Coding agents: come cambia lo sviluppo software e le organizzazioni italiane #40 1 hour, 17 minutes" [level=3] [ref=e392]':
+              - 'link "AI e Coding agents: come cambia lo sviluppo software e le organizzazioni italiane #40 1 hour, 17 minutes" [ref=e393]':
+                - /url: /watch?v=JkmnXU4QKf8
+                - generic [ref=e394]: "AI e Coding agents: come cambia lo sviluppo software e le organizzazioni italiane #40"
+            - generic [ref=e397]:
+              - generic [ref=e398]: 277 views
+              - generic [ref=e399]: •2 months ago
+        - generic [ref=e403]:
+          - link [ref=e406] [cursor=pointer]:
+            - /url: /watch?v=B9qDo-BWQiA
+          - generic [ref=e409] [cursor=pointer]:
+            - 'heading "Intervista a Daniele Zonca: come portare l''AI generativa in Enterprise 1 hour, 37 minutes" [level=3] [ref=e410]':
+              - 'link "Intervista a Daniele Zonca: come portare l''AI generativa in Enterprise 1 hour, 37 minutes" [ref=e411]':
+                - /url: /watch?v=B9qDo-BWQiA
+                - generic [ref=e412]: "Intervista a Daniele Zonca: come portare l'AI generativa in Enterprise"
+            - generic [ref=e415]:
+              - generic [ref=e416]: 178 views
+              - generic [ref=e417]: •2 months ago
+        - generic [ref=e421]:
+          - link [ref=e424] [cursor=pointer]:
+            - /url: /watch?v=1dWdyCTovQU
+          - generic [ref=e427] [cursor=pointer]:
+            - 'heading "Paolo in fissa Claude Code come previsto da Stefano.Con OpenClaw arriva internet degli Agenti AI #39 1 hour, 9 minutes" [level=3] [ref=e428]':
+              - 'link "Paolo in fissa Claude Code come previsto da Stefano.Con OpenClaw arriva internet degli Agenti AI #39 1 hour, 9 minutes" [ref=e429]':
+                - /url: /watch?v=1dWdyCTovQU
+                - generic [ref=e430]: "Paolo in fissa Claude Code come previsto da Stefano.Con OpenClaw arriva internet degli Agenti AI #39"
+            - generic [ref=e433]:
+              - generic [ref=e434]: 143 views
+              - generic [ref=e435]: •2 months ago
+        - generic [ref=e439]:
+          - link [ref=e442] [cursor=pointer]:
+            - /url: /watch?v=YyNkWq-GIsY
+          - generic [ref=e445] [cursor=pointer]:
+            - 'heading "Agenti di coding e non solo:meglio un boomer smanettone oggi che un doomer domani #38 1 hour, 16 minutes" [level=3] [ref=e446]':
+              - 'link "Agenti di coding e non solo:meglio un boomer smanettone oggi che un doomer domani #38 1 hour, 16 minutes" [ref=e447]':
+                - /url: /watch?v=YyNkWq-GIsY
+                - generic [ref=e448]: "Agenti di coding e non solo:meglio un boomer smanettone oggi che un doomer domani #38"
+            - generic [ref=e451]:
+              - generic [ref=e452]: 234 views
+              - generic [ref=e453]: •2 months ago
+        - generic [ref=e457]:
+          - link [ref=e460] [cursor=pointer]:
+            - /url: /watch?v=XP2jiPxFtPk
+          - generic [ref=e463] [cursor=pointer]:
+            - heading "Intervista ad Alessandro Maserati:AGI allineamento e consapevolezza; il futuro di società e lavoro 1 hour, 35 minutes" [level=3] [ref=e464]:
+              - link "Intervista ad Alessandro Maserati:AGI allineamento e consapevolezza; il futuro di società e lavoro 1 hour, 35 minutes" [ref=e465]:
+                - /url: /watch?v=XP2jiPxFtPk
+                - generic [ref=e466]: Intervista ad Alessandro Maserati:AGI allineamento e consapevolezza; il futuro di società e lavoro
+            - generic [ref=e469]:
+              - generic [ref=e470]: 301 views
+              - generic [ref=e471]: •2 months ago
+        - generic [ref=e475]:
+          - link [ref=e478] [cursor=pointer]:
+            - /url: /watch?v=Xbi1FBoADto
+          - generic [ref=e481] [cursor=pointer]:
+            - 'heading "Oltre la Chat: Gemini, Agenti e la corsa all’AGI tra Hassabis, Amodei e il futuro del lavoro #37 1 hour, 11 minutes" [level=3] [ref=e482]':
+              - 'link "Oltre la Chat: Gemini, Agenti e la corsa all’AGI tra Hassabis, Amodei e il futuro del lavoro #37 1 hour, 11 minutes" [ref=e483]':
+                - /url: /watch?v=Xbi1FBoADto
+                - generic [ref=e484]: "Oltre la Chat: Gemini, Agenti e la corsa all’AGI tra Hassabis, Amodei e il futuro del lavoro #37"
+            - generic [ref=e487]:
+              - generic [ref=e488]: 121 views
+              - generic [ref=e489]: •2 months ago
+        - generic [ref=e493]:
+          - link [ref=e496] [cursor=pointer]:
+            - /url: /watch?v=7Sc5PLAV-nw
+          - generic [ref=e499] [cursor=pointer]:
+            - 'heading "L''AI scala davvero? E poi coding creativo, Gemini ovunque e ChatGPT introduce la pubblicità #36 1 hour, 14 minutes" [level=3] [ref=e500]':
+              - 'link "L''AI scala davvero? E poi coding creativo, Gemini ovunque e ChatGPT introduce la pubblicità #36 1 hour, 14 minutes" [ref=e501]':
+                - /url: /watch?v=7Sc5PLAV-nw
+                - generic [ref=e502]: "L'AI scala davvero? E poi coding creativo, Gemini ovunque e ChatGPT introduce la pubblicità #36"
+            - generic [ref=e505]:
+              - generic [ref=e506]: 87 views
+              - generic [ref=e507]: •2 months ago
+        - generic [ref=e511]:
+          - link [ref=e514] [cursor=pointer]:
+            - /url: /watch?v=vdXPo2tkmqs&pp=0gcJCdMKAYcqIYzv
+          - generic [ref=e517] [cursor=pointer]:
+            - 'heading "Intervista a Emanuele Fabbiani: ricerca e startup AI; allucinazioni ed explainability degli LLM 1 hour, 38 minutes" [level=3] [ref=e518]':
+              - 'link "Intervista a Emanuele Fabbiani: ricerca e startup AI; allucinazioni ed explainability degli LLM 1 hour, 38 minutes" [ref=e519]':
+                - /url: /watch?v=vdXPo2tkmqs&pp=0gcJCdMKAYcqIYzv
+                - generic [ref=e520]: "Intervista a Emanuele Fabbiani: ricerca e startup AI; allucinazioni ed explainability degli LLM"
+            - generic [ref=e523]:
+              - generic [ref=e524]: 102 views
+              - generic [ref=e525]: •3 months ago
+        - generic [ref=e529]:
+          - link [ref=e532] [cursor=pointer]:
+            - /url: /watch?v=mwI7ukZ7Kf0&pp=0gcJCdMKAYcqIYzv
+          - generic [ref=e535] [cursor=pointer]:
+            - 'heading "Il caso Grok, ChatGPT Health: AI ci costringe a ripensare autenticità, responsabilità e fiducia #35 1 hour, 13 minutes" [level=3] [ref=e536]':
+              - 'link "Il caso Grok, ChatGPT Health: AI ci costringe a ripensare autenticità, responsabilità e fiducia #35 1 hour, 13 minutes" [ref=e537]':
+                - /url: /watch?v=mwI7ukZ7Kf0&pp=0gcJCdMKAYcqIYzv
+                - generic [ref=e538]: "Il caso Grok, ChatGPT Health: AI ci costringe a ripensare autenticità, responsabilità e fiducia #35"
+            - generic [ref=e541]:
+              - generic [ref=e542]: 62 views
+              - generic [ref=e543]: •3 months ago
+        - generic [ref=e547]:
+          - link [ref=e550] [cursor=pointer]:
+            - /url: /watch?v=VoHc-iP670g
+          - generic [ref=e553] [cursor=pointer]:
+            - 'heading "AI e robotica nel 2026: Meta dilemma, novità CES, mattoncini Lego intelligenti e world models #34 1 hour, 8 minutes" [level=3] [ref=e554]':
+              - 'link "AI e robotica nel 2026: Meta dilemma, novità CES, mattoncini Lego intelligenti e world models #34 1 hour, 8 minutes" [ref=e555]':
+                - /url: /watch?v=VoHc-iP670g
+                - generic [ref=e556]: "AI e robotica nel 2026: Meta dilemma, novità CES, mattoncini Lego intelligenti e world models #34"
+            - generic [ref=e559]:
+              - generic [ref=e560]: 67 views
+              - generic [ref=e561]: •3 months ago
+        - generic [ref=e565]:
+          - link [ref=e568] [cursor=pointer]:
+            - /url: /watch?v=Q5s4643t4GE
+          - generic [ref=e571] [cursor=pointer]:
+            - 'heading "Intervista a Simone Di Somma: lezioni da Y Combinator per portare robotica e startup in Italia 1 hour, 29 minutes" [level=3] [ref=e572]':
+              - 'link "Intervista a Simone Di Somma: lezioni da Y Combinator per portare robotica e startup in Italia 1 hour, 29 minutes" [ref=e573]':
+                - /url: /watch?v=Q5s4643t4GE
+                - generic [ref=e574]: "Intervista a Simone Di Somma: lezioni da Y Combinator per portare robotica e startup in Italia"
+            - generic [ref=e577]:
+              - generic [ref=e578]: 126 views
+              - generic [ref=e579]: •3 months ago
+        - generic [ref=e583]:
+          - link [ref=e586] [cursor=pointer]:
+            - /url: /watch?v=GVpjI6YtEKI
+          - generic [ref=e589] [cursor=pointer]:
+            - 'heading "Previsioni Intelligenza Artificiale 2026: modelli locali, agenti AI, robotica e guida autonoma #33 1 hour, 5 minutes" [level=3] [ref=e590]':
+              - 'link "Previsioni Intelligenza Artificiale 2026: modelli locali, agenti AI, robotica e guida autonoma #33 1 hour, 5 minutes" [ref=e591]':
+                - /url: /watch?v=GVpjI6YtEKI
+                - generic [ref=e592]: "Previsioni Intelligenza Artificiale 2026: modelli locali, agenti AI, robotica e guida autonoma #33"
+            - generic [ref=e595]:
+              - generic [ref=e596]: 159 views
+              - generic [ref=e597]: •3 months ago
+        - generic [ref=e601]:
+          - link [ref=e604] [cursor=pointer]:
+            - /url: /watch?v=7dDbpdnhWRM
+          - generic [ref=e607] [cursor=pointer]:
+            - 'heading "AI nel 2025: sorprese e delusioni tra Vibe Coding, DeepSeek, Gemini e open source #32 50 minutes" [level=3] [ref=e608]':
+              - 'link "AI nel 2025: sorprese e delusioni tra Vibe Coding, DeepSeek, Gemini e open source #32 50 minutes" [ref=e609]':
+                - /url: /watch?v=7dDbpdnhWRM
+                - generic [ref=e610]: "AI nel 2025: sorprese e delusioni tra Vibe Coding, DeepSeek, Gemini e open source #32"
+            - generic [ref=e613]:
+              - generic [ref=e614]: 77 views
+              - generic [ref=e615]: •3 months ago
+        - generic [ref=e619]:
+          - link [ref=e622] [cursor=pointer]:
+            - /url: /watch?v=NclkrRdh-cs
+          - generic [ref=e625] [cursor=pointer]:
+            - 'heading "AI Engineering con Alex di backlog.md, mentre anche topolino si interessa di AI generativa #31 1 hour, 17 minutes" [level=3] [ref=e626]':
+              - 'link "AI Engineering con Alex di backlog.md, mentre anche topolino si interessa di AI generativa #31 1 hour, 17 minutes" [ref=e627]':
+                - /url: /watch?v=NclkrRdh-cs
+                - generic [ref=e628]: "AI Engineering con Alex di backlog.md, mentre anche topolino si interessa di AI generativa #31"
+            - generic [ref=e631]:
+              - generic [ref=e632]: 135 views
+              - generic [ref=e633]: •4 months ago
+        - generic [ref=e637]:
+          - link [ref=e640] [cursor=pointer]:
+            - /url: /watch?v=alqL7BEQHoo
+          - generic [ref=e643] [cursor=pointer]:
+            - 'heading "Intervista a Pamela Gotti: dal codice alla CTO, tra AI e persone, lottando con il gender bias 1 hour, 33 minutes" [level=3] [ref=e644]':
+              - 'link "Intervista a Pamela Gotti: dal codice alla CTO, tra AI e persone, lottando con il gender bias 1 hour, 33 minutes" [ref=e645]':
+                - /url: /watch?v=alqL7BEQHoo
+                - generic [ref=e646]: "Intervista a Pamela Gotti: dal codice alla CTO, tra AI e persone, lottando con il gender bias"
+            - generic [ref=e649]:
+              - generic [ref=e650]: 54 views
+              - generic [ref=e651]: •4 months ago
+        - generic [ref=e655]:
+          - link [ref=e658] [cursor=pointer]:
+            - /url: /watch?v=NmnTOJ7Ldi0
+          - generic [ref=e661] [cursor=pointer]:
+            - 'heading "L’AI tra GPT 5.2, benchmark, API, occhiali smart, cucina robotica e futuro della guida autonoma #30 1 hour, 19 minutes" [level=3] [ref=e662]':
+              - 'link "L’AI tra GPT 5.2, benchmark, API, occhiali smart, cucina robotica e futuro della guida autonoma #30 1 hour, 19 minutes" [ref=e663]':
+                - /url: /watch?v=NmnTOJ7Ldi0
+                - generic [ref=e664]: "L’AI tra GPT 5.2, benchmark, API, occhiali smart, cucina robotica e futuro della guida autonoma #30"
+            - generic [ref=e667]:
+              - generic [ref=e668]: 138 views
+              - generic [ref=e669]: •4 months ago
+        - generic [ref=e673]:
+          - link [ref=e676] [cursor=pointer]:
+            - /url: /watch?v=iNbxngud1us
+          - generic [ref=e679] [cursor=pointer]:
+            - 'heading "AI multi-modello, immagini e video evoluti, auto autonome e meccanici col pilota automatico #29 1 hour, 16 minutes" [level=3] [ref=e680]':
+              - 'link "AI multi-modello, immagini e video evoluti, auto autonome e meccanici col pilota automatico #29 1 hour, 16 minutes" [ref=e681]':
+                - /url: /watch?v=iNbxngud1us
+                - generic [ref=e682]: "AI multi-modello, immagini e video evoluti, auto autonome e meccanici col pilota automatico #29"
+            - generic [ref=e685]:
+              - generic [ref=e686]: 105 views
+              - generic [ref=e687]: •4 months ago
+        - generic [ref=e691]:
+          - link [ref=e694] [cursor=pointer]:
+            - /url: /watch?v=annKzlWVKmM
+          - generic [ref=e697] [cursor=pointer]:
+            - 'heading "🎙️ Intervista a Mario Fusco: sviluppo software nell’era dell’Intelligenza Artificiale 1 hour, 39 minutes" [level=3] [ref=e698]':
+              - 'link "🎙️ Intervista a Mario Fusco: sviluppo software nell’era dell’Intelligenza Artificiale 1 hour, 39 minutes" [ref=e699]':
+                - /url: /watch?v=annKzlWVKmM
+                - generic [ref=e700]: "🎙️ Intervista a Mario Fusco: sviluppo software nell’era dell’Intelligenza Artificiale"
+            - generic [ref=e703]:
+              - generic [ref=e704]: 141 views
+              - generic [ref=e705]: •4 months ago

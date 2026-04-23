@@ -1,0 +1,85 @@
+{% comment %}
+Override Minimal Mistakes social-share — share buttons custom per podcast.
+Supporta LinkedIn, WhatsApp, X/Twitter, copy-link + Spotify/Apple deep-link.
+Ogni link esce con UTM tracking per attribution.
+
+Utilizzo nel layout:
+  {% include social-share.html %}
+{% endcomment %}
+
+{%- assign ep = page.episode_number | default: "x" -%}
+{%- assign url_base = page.url | absolute_url | url_encode -%}
+{%- assign title_enc = page.title | url_encode -%}
+
+<section class="social-share" style="margin: 2em 0; padding-top: 1em; border-top: 1px solid #eee;">
+  <h4 style="font-size: 1em; font-weight: 600; margin-bottom: 0.6em;">Condividi questo episodio</h4>
+
+  <ul style="list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5em; margin: 0;">
+
+    <li>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | append: '?utm_source=share&utm_medium=linkedin&utm_campaign=ep' | append: ep | url_encode }}"
+         class="btn btn--primary btn--small"
+         rel="noopener"
+         target="_blank"
+         title="Condividi su LinkedIn">
+        <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
+      </a>
+    </li>
+
+    <li>
+      <a href="https://wa.me/?text={{ title_enc }}%20{{ page.url | absolute_url | append: '?utm_source=share&utm_medium=whatsapp&utm_campaign=ep' | append: ep | url_encode }}"
+         class="btn btn--success btn--small"
+         rel="noopener"
+         target="_blank"
+         title="Condividi su WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+      </a>
+    </li>
+
+    <li>
+      <a href="https://twitter.com/intent/tweet?text={{ title_enc }}&url={{ page.url | absolute_url | append: '?utm_source=share&utm_medium=x&utm_campaign=ep' | append: ep | url_encode }}&via=risorseAI"
+         class="btn btn--inverse btn--small"
+         rel="noopener"
+         target="_blank"
+         title="Condividi su X (Twitter)">
+        <i class="fab fa-x-twitter" aria-hidden="true"></i> X
+      </a>
+    </li>
+
+    {% if page.spotify_episode_id %}
+    <li>
+      <a href="https://open.spotify.com/episode/{{ page.spotify_episode_id }}?utm_source=share&utm_medium=spotify&utm_campaign=ep{{ ep }}"
+         class="btn btn--small"
+         style="background-color: #1DB954; color: white;"
+         rel="noopener"
+         target="_blank"
+         title="Apri su Spotify">
+        <i class="fab fa-spotify" aria-hidden="true"></i> Spotify
+      </a>
+    </li>
+    {% endif %}
+
+    {% if page.apple_episode_url %}
+    <li>
+      <a href="{{ page.apple_episode_url }}?utm_source=share&utm_medium=apple&utm_campaign=ep{{ ep }}"
+         class="btn btn--small"
+         style="background-color: #9933CC; color: white;"
+         rel="noopener"
+         target="_blank"
+         title="Apri su Apple Podcasts">
+        <i class="fab fa-apple" aria-hidden="true"></i> Apple
+      </a>
+    </li>
+    {% endif %}
+
+    <li>
+      <a href="#"
+         class="btn btn--small btn--inverse"
+         onclick="navigator.clipboard.writeText('{{ page.url | absolute_url }}?utm_source=share&utm_medium=copy&utm_campaign=ep{{ ep }}'); this.textContent='Copiato!'; return false;"
+         title="Copia link">
+        <i class="fas fa-link" aria-hidden="true"></i> Copia link
+      </a>
+    </li>
+
+  </ul>
+</section>
