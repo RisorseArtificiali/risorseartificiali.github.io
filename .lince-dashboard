@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "agents": [
+    {
+      "name": "codex",
+      "agent_type": "codex-bwrap",
+      "profile": null,
+      "project_dir": "/home/maeste/project/codiceartificiale.github.io/",
+      "group": null,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    {
+      "name": "cwave",
+      "agent_type": "claude",
+      "profile": "anthropic",
+      "project_dir": "/home/maeste/project/cyberwave_hackathon/",
+      "group": null,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    {
+      "name": "pippo",
+      "agent_type": "claude",
+      "profile": "zai",
+      "project_dir": "/home/maeste/project/research/agent-memory/",
+      "group": null,
+      "tokens_in": 0,
+      "tokens_out": 0
+    }
+  ],
+  "next_agent_id": 9
+}
