@@ -1,0 +1,627 @@
+---
+title: "I guardrail degli LLM sono una tassa sul coding"
+date: 2026-04-25
+layout: episode
+author_profile: true
+
+episode_number: 49
+episode_type: numerato
+youtube_id: OHoJ-ZE68_Q
+spotify_episode_id: 5m9AOMouSF26rXrleVa8c8
+# apple_episode_url: da aggiungere post-publish Apple (T+4-24h)
+duration: PT1H10M28S
+
+description: >-
+  GPT 5.5 supera Opus 4.7, GPT Image 2 domina l'Arena, e togliere i guardrail
+  a un LLM migliora il coding. Puntata 49 con Anthropic post-mortem e Karpathy wiki.
+
+header:
+  og_image: /assets/images/episodes/ep49.png
+
+categories:
+  - Puntate
+tags:
+  - intelligenza artificiale
+  - AI engineering italia
+  - guardrail LLM
+  - coding agent in produzione
+  - modelli obliterati
+  - allineamento AI
+  - Claude Code
+  - GPT 5.5
+  - GPT Image 2
+  - Gemma obliterato
+  - Opus 4.7
+  - Obliteratus
+  - SynthID
+  - Karpathy wiki
+  - Ethan Mollick
+---
+
+## **[00:00] Intro: Claude, GPT 5.5, Gemma obliterata**
+
+**Stefano Maestri**
+
+> Ciao a tutti e tutte, ciao Paolo, ciao Alessio. Oggi puntata super densa perche' ci sono state tante cose di cui vogliamo parlare. GPT che e' uscito con la 5.5 e le immagini. Poi vi abbiamo da raccontare di Claude, di un po' di polemiche che ci sono su Claude. Gemma di cui hanno fatto il reverse engineering per togliere i guardrail. E poi magari vi racconto anche del Carpati wiki, del wiki gestito dagli LLM che ho provato a farmi per me e sono molto molto colpito tra l'altro da quella cosa li'.
+
+**Alessio Soldano**
+
+> Ciao!
+
+**Paolo Antinori**
+
+> Ciao!
+
+## **[01:05] Le nostre thumbnail sembrano iscrizioni funerarie**
+
+**Stefano Maestri**
+
+> Ma prima partiamo da Claude. Claude che io ho chiesto mentre ero in vacanza, mentre voi avete fatto una puntata molto bella, e consiglio a tutti tra l'altro di ascoltarla, a parte i primi 5 minuti, non stufatevi nei primi 5 minuti quando non sentite Andrea Cosentino parlare perche' dopo ho messo a posto il microfono.
+
+**Paolo Antinori**
+
+> Stavamo cercando di correggere il suo accento con l'AI ma non ce l'abbiamo fatta.
+
+**Stefano Maestri**
+
+> E' una puntata bella sulla sicurezza in generale, una bella puntata che vi ho ascoltato mentre ero in vacanza. Ma mentre ero in vacanza ho anche avuto l'idea, piu' che altro il tempo, ne parlavamo da un po', di chiedere a Claude, o comunque a un LLM, cosa ne pensava del nostro podcast. In termini di crescita, di ascolti. C'e' in giro un sacco di gente che gli da' i dati.
+
+**Paolo Antinori**
+
+> Scusami, questo e' perche' la tua compagna si e' stufata di darti questa risposta, giusto?
+
+**Stefano Maestri**
+
+> No, perche' avevo il jet lag, di notte non dormivo le prime notti, quindi dovevo fare qualcosa mentre lei dormiva. E quindi per non disturbare facevo queste cose qui. No, la battuta del mio jet lag a parte, c'e' tanta gente che fa questa cosa, avevamo visto, Paolo me l'aveva molto stimolato su questo dicendo che c'e' tanta gente che gli da' i dati e chiede di analizzarli. E ho deciso di farlo anch'io. L'ho fatto che era appena uscito 4.7 che, spoiler, e' meno sicofantico dei precedenti ed e' stato abbastanza tranciante. Nel senso, ha detto tutte cose giuste, come migliorare eccetera eccetera, tutte cose che magari proveremo a fare. Ma la cosa piu' ridicola che racconto qua in podcast e' quando gli ho chiesto cosa pensava delle nostre thumbnail, e lui mi ha risposto, e leggo, onesto sembrano delle iscrizioni funerarie. E poi me l'ha giustificata tutta dicendo vedi ci sono le immagini...
+
+**Paolo Antinori**
+
+> Buono.
+
+**Alessio Soldano**
+
+> E tu gli sei andato dietro e hai detto ma no, dai, vuoi dire che...
+
+**Stefano Maestri**
+
+> Esatto. Io gli ho detto no, ma dai, non puoi dire cosi'. E lui mi ha detto no, no, guarda, ci sono le immaginate rotonde esattamente come le fotografie, lo sfondo verdino sembra quello di una lapide, il numero dietro che mettete per il numero di puntata sembra un numero commemorativo.
+
+**Alessio Soldano**
+
+> Pensavo l'eta' di morte.
+
+**Stefano Maestri**
+
+> Al di la' che la cosa mi abbia fatto molto ridere, mi ha anche fatto pensare, che io non ce l'avevo mai pensato, anzi mi sembrava che mettere il numero dietro fosse una figata. Mi ha fatto pensare quello che ogni tanto Paolo dice, che questo non e' un programma per giovani. Ma diventeremo piu' giovani perche' seguiremo le indicazioni di Claude Code e faremo delle thumbnail piu' belle. Se poi vi fanno schifo, fatecelo sapere. Scopriremo che non aveva ragione Claude, pero' dubito. Ho fatto un A/B test cosi' al volo e mi sa che ha ragione di base. Pero' vabbe', meglio B, e B e' quello nuovo.
+
+**Paolo Antinori**
+
+> Altrimenti avremo una carriera nel mondo delle pompe funebri. Mi lievito, mi lievito, no sempre mi lievito.
+
+**Alessio Soldano**
+
+> Quindi se improvvisamente vedete delle thumbnail che sembrano generate da persone di vent'anni meno di noi, e' per questo motivo.
+
+**Stefano Maestri**
+
+> Non sono persone che hanno vent'anni meno di noi ma qualcuno che ci aiuta, e qualcuno e' un it e non un he or she.
+
+**Paolo Antinori**
+
+> La badante di Stefano.
+
+**Stefano Maestri**
+
+> La badante di Stefano, esatto. A proposito di badanti...
+
+## **[05:09] Post-mortem Anthropic: 3 bug ammessi su Claude**
+
+**Stefano Maestri**
+
+> C'e' badante e badante, nel senso che... Allora, questa settimana non so da dove parto. Parto dalle polemiche sulla badante che uso di piu' io? O vi racconto come l'ho usata nel Carpati Wiki? Partiamo dalle polemiche.
+
+**Paolo Antinori**
+
+> Gia' mi piace questa puntata. Parti delle polemiche anche perche' tu settimana scorsa eri negli Stati Uniti, giusto perche' sei andato a lamentarti in prima persona?
+
+**Stefano Maestri**
+
+> Si', ero andato a lamentarmi in prima persona del loro presidente. Non si puo' dire questa cosa, me la tengo. Ero andato in vacanza. Pero' leggevo in questi giorni, cosa e' successo ieri: Anthropic ha pubblicato un articolo che magari metteremo il link nei commenti, non in descrizione, ha detto Claude, nei commenti si mettono i link. Comunque e' uscito un articolo di quelli di Anthropic sul loro blog, che dicono: scusate, lo abbiamo fatto fuori dal vaso. Nel senso che hanno riconosciuto quello che su X da qualche mese gente che si lamentava delle performance degrade di Claude. Tutti quanti accusavano il modello dicendo il modello non e' piu' quello di una volta, gli state riducendo probabilmente la capacita' di thinking perche' non ci state dentro con l'hardware. Questo era quello che si diceva su X. E loro dopo mesi di analisi, perche' le prime lamentele sono di meta' marzo, dicono che il primo bug, nel post-mortem in questo articolo post-mortem, il primo problema e' intorno all'inizio di marzo che hanno rilasciato. Hanno identificato tre major bug che effettivamente hanno portato alla sensazione generale, secondo loro, di degrado delle performance, anche se ognuno di questi era su casi specifici. Pero' messi insieme davano questa sensazione. E dicono che non e' il modello, assolutamente non e' il modello, non e' quello che ha degradato le performance del modello. Anzi, e' tutto sommato, visto quello che fa ad esempio Claude Design che e' uscito settimana scorsa, mi sento di essere d'accordo, cioe' il modello fa cose strepitose in questo momento. Ma quello che dicono loro e' Claude Code stesso e tutta la parte SDK che c'e' dietro ai prodotti che stanno sulla vostra macchina, quello che in gergo si chiama l'harness, l'arnese, i coding agent, quella cosa che dicevo, il Claude Code per intenderci, in gergo si chiamano harness. Loro dicono che li' e' il problema, e l'hanno fixato. E quindi loro tutti felici. La reazione su X e' stata, come al solito, un po' eccessiva perche' chi frequenta quel social sa che e' tutto molto eccessivo. Tu dici sara' il proprietario?
+
+**Paolo Antinori**
+
+> No, non e' arrivato Elon a commentare la sua opinione personale della faccenda.
+
+**Stefano Maestri**
+
+> Certo, certo, certo. Che c'era anche il commento di "non ci mancherebbe", figuratevi se lo fa mancare. No, pero' la reazione un po' eccessiva, dicendo no bisogna passare a qualcos'altro, e' tutto uno schifo, non potete mettere dei bug cosi'. Allora le uniche un po' piu' equilibrate, a cui magari non do torto, sono state: sono state si' rilasciate un po' di meno feature ma con i piedi un pochino piu' di piombo. In fondo e' un problema che abbiamo avuto tutti nella nostra carriera, di rilasciare alla velocita' della luce e poi, prima o poi, perdi il controllo. E questo puo' essere successo. L'hanno detto, aver fissato sicuramente, hanno avuto un impatto di popolarita' sui loro utenti secondo me non del tutto indifferente. Per quanto Claude Code sia ancora un'ottima esperienza, pero' effettivamente quei degradi di performance qua e la' si percepivano. E' che e' talmente buono che soltanto chi lo usa veramente in maniera massiva se ne e' accorto. Tanto e' vero che e' qualche mese che si sente dire, l'aveva detto anche per stare in Italia San Filippo, che Codex e' meglio sui compiti piu' complessi. Loro in questo articolo sostengono che questa apparente perdita di capacita' nei compiti estremamente complessi dipendessi in particolare da un bug della gestione del contesto, che dicono di aver risolto. Poi e' un fatto che questi vanno alla velocita' della luce, prima o poi, come si dice in gergo, una merda la pestano. Non e' che si possono fare i miracoli. Io sto ancora usando Claude Code, non ho intenzione in questo momento di cambiare, anche se ho letto cose bellissime del nuovo Codex di ChatGPT 5.5. Avete visto che e' uscito ieri, credo.
+
+**Alessio Soldano**
+
+> Si'. Infatti io fino all'altro giorno avrei commentato dicendo vabbe' tanto possono anche permettersi di rallentare un attimo. Pero' questa settimana sono uscite un po' di cosette interessanti da lato OpenAI e quindi forse di serviva continuare, serve continuare ad andare alla velocita' della luce, no? I benchmark, perche' poi il rilascio non e' solo sul modello 5.5 ma anche sulle immagini. Per cui magari dopo ne parliamo anche, di immagini, che dici?
+
+**Stefano Maestri**
+
+> Si', parliamo anche di immagini.
+
+## **[11:01] GPT 5.5 vs Opus 4.7: benchmark e leak di Mythos**
+
+**Stefano Maestri**
+
+> I benchmark del 5.5 tu hai visti? Tu che guardi piu' benchmark di noi?
+
+**Alessio Soldano**
+
+> Le ho viste ma non ce le ho sotto mano. Se ne recuperi...
+
+**Stefano Maestri**
+
+> Si', no, pero' intanto dico io che su Codex pare che faccia cose mirabolanti. E OpenAI aggiungiamo anche che OpenAI lancia in resta nel cercare, e anche nel riuscirci devo dire negli ultimi mesi, complici un po' questi problemi ma non solo quelli, nel recuperare terreno sul coding. Tant'e' che adesso gli abbonamenti dei due, di Anthropic e OpenAI, sono a stessa cifra: 100 e 200 dollari. Perche' adesso hanno inserito anche loro quello da 100 dollari. Da' limiti molto piu' alti a Codex rispetto a Claude. E questo sta facendo, anche solo questo aiuta a far recuperare il terreno. Perche' oggettivamente Claude e' caro come il fuoco. Al momento io uso Claude ma ho il fallback su GLM per quando finisco i crediti nelle cinque ore. Il problema e' quando comincia a finirli nella settimana, quello diventa un po' piu' una menata. Codex pare che sia molto piu' ampio su quello.
+
+**Alessio Soldano**
+
+> Allora guarda, te dico, aperto adesso i benchmark su artificialanalysis.io e sull'indice...
+
+**Stefano Maestri**
+
+> Condividi lo schermo se riesci, che lo facciamo vedere per chi ci guarda anche.
+
+**Alessio Soldano**
+
+> Aspetta, facciamo cosi', vi faccio vedere Chrome...
+
+**Stefano Maestri**
+
+> Perche' erano buoni molto i benchmark sull'agentic features, se ricordo bene.
+
+**Alessio Soldano**
+
+> Si', ma guarda io avevo aperto proprio quello di generale, Artificial Intelligence Index. E per capirci: Opus 4.7 Max, quindi con il reasoning messo a palla, 57. Questo nuovo GPT 5.5, 60.
+
+**Stefano Maestri**
+
+> Ok. Si', tre punti sono tanti in questo momento. Una volta erano pochi ma...
+
+**Alessio Soldano**
+
+> Si', sono tanti tanti, che e' la stessa distanza quasi che c'e' tra un Opus 4.6 e un Opus 4.7, per capirci. Quindi e' come dire, lo step avanti.
+
+**Stefano Maestri**
+
+> Si', si'. Interessante. Poi la racconto in casa Anthropic che loro comunque c'hanno Mythos, e' piu' potente di tutti ma non lo rilasciano. A parte che gliel'hanno leakato.
+
+**Alessio Soldano**
+
+> Esatto.
+
+**Stefano Maestri**
+
+> Non lo rilasciamo, nessuno, e' troppo pericoloso eccetera eccetera eccetera. C'e' un gruppo di... e Icar che gliel'ha leakato e lo sta usando, perfetto.
+
+**Paolo Antinori**
+
+> Avete letto come e' stato fatto il leak? Non so se sia vero, pero' ho letto un articolo. Hanno indovinato il nome dell'endpoint perche' devono aver usato la struttura. Al posto di Opus c'era Mythos. E hanno provato: funziona. E questo l'ho letto in un articolo. Sara' vero? Non lo so, pero' apprezzo chi riesce a fare queste cose.
+
+**Alessio Soldano**
+
+> Comunque coding index...
+
+**Stefano Maestri**
+
+> No, pero' non sara' cosi' lontano dalla verita'. Perche' poi... Vabbe', e' curioso che con lo stesso account ti facessero entrare. Sorvoliamo. Bisognerebbe saperlo per davvero, perche' poi io ho letto altri articoli che dicono che stanno ancora indagando per confermare se c'e' stato un leak veramente. Che vuol dire? C'e' stato ma non possiamo dirlo.
+
+**Alessio Soldano**
+
+> No, comunque per finire sui benchmark di GPT 5.5: sul coding e' ancora piu' marcata la differenza rispetto a Opus.
+
+**Stefano Maestri**
+
+> Il coding secco, pero' non agentico.
+
+**Alessio Soldano**
+
+> Di coding secco siamo a 59 versus 53 di Opus 4.7.
+
+**Stefano Maestri**
+
+> Anche se il coding secco conta fino a un certo punto, nel senso che e' alto anche Minimax 2.5 ma poi dopo...
+
+**Alessio Soldano**
+
+> Questo invece e' agentic.
+
+**Stefano Maestri**
+
+> E' pero' anche qua, 74, 71.
+
+**Alessio Soldano**
+
+> Direi che comunque e' un bel esemplare.
+
+**Paolo Antinori**
+
+> Avete finito di misurarvi col righello i modelli?
+
+**Stefano Maestri**
+
+> Si', si', si'. Misurare col righello. No, ma per non misurare col righello... C'e' una cosa che potevo farvi vedere. Intanto raccontaci delle immagini, poi torniamo su questa e vi faccio vedere invece un test empirico molto interessante che da' l'idea secondo me.
+
+**Alessio Soldano**
+
+> Beh, poi se vogliamo parlare di... allora vi racconto si' qualcosa sulle immagini secondo che...
+
+**Stefano Maestri**
+
+> Ce l'ho anche gia', se vuoi. Se vogliamo stare sull'argomento, aspetta, l'ho trovato, vediamo se lo apre questo, fammi vedere se riesco a condividerlo.
+
+**Alessio Soldano**
+
+> Si', va bene, dai, facciamo dopo le immagini.
+
+**Stefano Maestri**
+
+> Siete qui? No, vabbe' vai con le immagini tanto io mi cerco di capire come condividere 'sta roba.
+
+**Paolo Antinori**
+
+> La pubblicita' per colmare questi buchi imbarazzanti.
+
+**Stefano Maestri**
+
+> Ecco.
+
+## **[17:50] GPT Image 2 stracca Arena con 1512 punti**
+
+**Alessio Soldano**
+
+> Visto che parlavamo di benchmark partiamo da qua, quindi, e' stato rilasciato GPT Image 2 di OpenAI. Questa immagine parlerebbe da sola. Cioe' questi sono i risultati di Design Arena, che e' quel sito dove gli utenti vanno, vengono presentate due immagini senza dirgli quale modello le ha generate, devono scegliere qual e' quella che secondo loro e' migliore, e in base a questo il servizio costruisce una classifica. I punteggi sui benchmark erano tutti attorno a 1200 ormai da mesi, con i modelli state of the art proprietari sui 1200 e i modelli open weight 100 punti sotto, circa 1100 o qualcosa. E' uscito GPT Image 2: 1512. Quindi il 30 per cento meglio di tutto quello che esiste. In che cosa sono migliorati? Non tanto nel fotorealismo e nella generazione di immagini che sembrano vere, diciamo, quanto in tutto il resto: generazione di infografiche, generazione di immagini con tantissimi dettagli, con il testo, cose complesse sostanzialmente. Questo anche in funzione del fatto che e' un modello, diciamo, thinking, un po' come era chiaramente anche Nano Banana Pro, ma ancora piu' efficiente. Non e' pura generazione di immagine, ma c'e' proprio tutto il ragionamento che porta alla generazione di immagine. E per dare un'idea di che cosa significa questa cosa vediamo ad esempio questa cosa. Ho preso dei prompt che ho trovato di qualcuno che ha fatto delle prove, e qualcuno invece l'ho fatto io. In questo esempio si diceva: va bene, abbiamo queste cuffiette, vogliamo sostanzialmente creare una storyboard pubblicitaria per capirci. Nano Banana generava questa cosa che non e' malaccio pero' non e' neanche cosi' accattivante. Per darvi un'idea, con GPT Image 2 abbiamo questo. Quindi molte piu' fasi, con immagini molto piu' accattivanti, con spiegazioni coerenti con quello che si sta facendo vedere. Sembra una cosa professionale, onestamente. Si puo' prendere e utilizzare. Sempre sul discorso del thinking a me ha colpito quest'altra cosa. Osservate qua, questa e' un'immagine di uno still life con dei cubetti di ghiaccio che si stanno sciogliendo su un tavolino, un cubo di metallo e una sfera di vetro cristallo. Questa immagine e' generata da Nano Banana e non e' male, c'e' il ghiaccio che si scioglie, le gocce d'acqua. Ma questa e' quella che genera GPT Image. Osservate il ghiaccio, come il pattern dentro, il fatto che la parte interna del ghiaccio ha un colore leggermente differente da quella esterna. L'acqua dello scioglimento del ghiaccio che non e' una goccia sferica ma si sta diffondendo sul piano. I riflessi sul piano di marmo che sono condizionati sia dal fatto che c'e' del metallo che riflette in un certo modo, che il vetro che riflette in un altro. Abbastanza impressionante. Sulla generazione delle immagini per soggetti, sul fotorealismo se vuoi, questo prompt, un'immagine di un leopardo: avevamo Nano Banana che ci generava questa bella immagine qua.
+
+**Stefano Maestri**
+
+> Si'.
+
+**Alessio Soldano**
+
+> Con la neve che viene sollevata dall'animale mentre corre eccetera, bellissima, stupenda. Ma si puo' fare meglio. In questa immagine che e' generata da GPT Image vediamo proprio il pattern del pelo che e' remarkable, mi verrebbe da dire in inglese, il fatto che la generazione dell'immagine ci faccia vedere un animale che corre verso, diciamo, che era una delle cose richieste, interessante, il ghiaccio di nuovo molto meglio la resa.
+
+**Stefano Maestri**
+
+> Ha fatto un po' grasso pero', no? Ha fatto un'inversione invernale, si', si'.
+
+**Alessio Soldano**
+
+> Deve sopravvivere all'inverno.
+
+## **[23:09] Griglie anime e censura nei modelli image**
+
+**Alessio Soldano**
+
+> E poi prima vi raccontavo del fatto delle generazioni di immagini complesse con tanto testo eccetera. Uno dei podcast che seguo che parla di queste cose generava dei poster per fare la prova, un poster con 100 anime o manga. Siccome ho un passato di, diciamo, interesse per queste cose, ho provato anch'io. E ho provato e ho scoperto delle cose interessanti riguardo il reasoning. Quindi per capirci, con Nano Banana, facendo, chiedendo a Nano Banana di generare una griglia con 49, ho detto 49 perche' volevo 7x7, 49 poster di cartoni animati giapponesi, anime o manga, che siano stati resi disponibili in Italia, che aggiunge, diciamo, della complessita' di thinking. Perche' non e' che basta prendere un qualunque poster, ma deve essere in qualche modo stato reso disponibile in Italia. Ho ottenuto questa cosa. E questa e' fatta facendo il prompt in inglese.
+
+**Paolo Antinori**
+
+> Aspetta, aspetta, scusa, fermati subito dicendo che il 7x7 gia' ce lo siamo persi delle tabelline.
+
+**Alessio Soldano**
+
+> Esatto, intanto ci siamo... allora, io non gli ho detto 7x7, gli ho detto 49 e mi sembrava abbastanza chiaro che per farne 49 la cosa migliore fosse fare 7x7. Lui invece ha pensato che 5x10 con 1 extra fosse meglio. E vabbe', e gia'... le immagini, ci sono dei duplicati, chiaramente, vedo per dire due Goldrake.
+
+**Paolo Antinori**
+
+> E' stato generoso, dai, te ne ha regalato uno.
+
+**Stefano Maestri**
+
+> E dove avra' messo quello extra?
+
+**Alessio Soldano**
+
+> Intanto e' interessante, ma questa e' una cosa che ha in comune sia GPT Image che Nano Banana e poi dopo ci arriviamo meglio. I guardrail fanno si' che il modello mi abbia generato queste immagini ma si sono premurati di non farle esattamente uguali, di fare diciamo delle immagini ispirate ai soggetti originali per discorsi di copyright. Pero' comunque meglio generate. Ci sono dei duplicati e piu' o meno accettabile. Poi io ho detto, ma perche' fare il prompt in inglese? Potrei fare il prompt in italiano. Poi dopo arrivo a GPT Image. Col prompt in italiano ho ottenuto questa cosa che e' imbarazzante, vediamola cosi'. E' interessante perche' secondo me espone dei limiti sul reasoning. Nel senso che il fatto che io avessi fatto una domanda in italiano ha condizionato il modello nel produrmi un output in italiano, che va bene, pero' il testo generato non ha senso, non e' coerente, intanto ci sono degli errori proprio anche di italiano, cioe' "due cuori nella paita volo"...
+
+**Stefano Maestri**
+
+> Palattauro...
+
+**Alessio Soldano**
+
+> Ci sono dei caratteri non leggibili. In questo caso anche la grafica non c'entra molto.
+
+**Stefano Maestri**
+
+> Poi non combina sguai, combina sguai anzi. Secondo te, tua esperienza, e' perche' gli hanno messo un modello di reasoning piccolo davanti? Cioe' non c'e' Gemini qui perche'...
+
+**Alessio Soldano**
+
+> Secondo me in parte, ma poi... questo non era nel prompt, pero' ci si sarebbe potuto arrivare: il fatto che io ti faccia una richiesta in italiano non significa che devi solo tradurre. Cioe' che ti chieda qualcosa che e' uscito in Italia non significa solo che devi tradurre ma che devi andare a vedere come e' stato adattato. Per cui c'e' uno step aggiuntivo da fare mentre il colpo...
+
+**Stefano Maestri**
+
+> Pero' forse qua e' piu' una roba agentica che dovresti fare fare, cioe' costruire tutto per darglielo con un singolo prompt. Tipo, fa quello che puo'.
+
+**Alessio Soldano**
+
+> Si', si'. Esatto. Che pero' e' quello che in parte promettono loro di fare. Detto questo, combina sguai, e tra l'altro con due cartoni animati mixati nella stessa foto. Allora sono passato a GPT Image e sull'italiano non ci siamo ancora, secondo me soffre dello stesso problema.
+
+**Stefano Maestri**
+
+> Ok. Si', e' vero.
+
+**Alessio Soldano**
+
+> Abbiamo 49 o 246... si', abbiamo un 7x7 questo giro. Non sono allineati, e soprattutto non e' niente di esistente, e' l'allucinazione pura qua.
+
+**Stefano Maestri**
+
+> Pero' non sono allineati. Perfetto attacco vincente, invece di...
+
+**Alessio Soldano**
+
+> Diciamo che sono guardabili, nel senso che sono delle immagini generate carine, non ci sono, o comunque ci sono meno errori di italiano, cioe'... non sono tutte inventate...
+
+**Stefano Maestri**
+
+> Esatto. Pero' sono tutti inventati.
+
+**Alessio Soldano**
+
+> Facendo il prompt in inglese invece... Eureka, ce l'abbiamo fatta. Ce l'abbiamo fatta nel senso che le immagini generate sono quasi uguali alle originali. Heidi era un po' diversa, bene, Amen. Ranma invece e' uguale, Inuyasha pure. I titoli sono sostanzialmente i titoli delle serie o dei manga, e va bene, senza particolari interpretazioni. Qui evidentemente il reasoning e' riuscito a fare quello che doveva fare. Abbiamo 49 immagini tutte numerate e non ci sono particolari errori di caratteri non intelligibili. E a mia memoria quasi tutti questi li abbiamo visti in Italia, in un modo o nell'altro. Poi io sono anni che non seguo piu' queste cose per cui alcuni non li conosco ma vabbe', quello e' un altro discorso. Niente, ci sono tanti utilizzi possibili di questo modello di immagini. Ho visto esempi di generazione di cataloghi, di vestiti piuttosto che di prodotti vari. Ho visto...
+
+**Paolo Antinori**
+
+> Sempre li' finisci, Alessio. Sempre a guardare le signorine, non ti riesci a staccare.
+
+**Alessio Soldano**
+
+> Guarda che l'utilizzo per generazione di cataloghi e' un use case abbastanza comune. Ti permette di ridurre i costi di foto editing, i costi di modelli intesi come persone che ti indossano i vestiti. Ci sono tanti vantaggi. Ho visto che tu citi queste cose come frivole, ho visto gente che faceva, per dire, prendeva degli screenshot di propri post sui vari social network e poi faceva modificare lo screenshot perche' sembrasse che avevano avuto un seguito maggiore, quindi aumentarsi i like, le stelline eccetera. E pensa, volevo farlo anche per il nostro podcast, per aprire con un'immagine che diceva "abbiamo raggiunto 8 milioni di visitatori" eccetera. Ma, e questo mi porta a un tema da citare, il modello si e' rifiutato di farlo, sostenendo che era un utilizzo non lecito del tool, quando io ho visto gente che e' riuscita a farlo. Quindi evidentemente anche i control sull'utilizzo lecito, che sono inseriti dentro sia la GPT Image ma in realta' anche in Nano Banana, vengono aggiornati. E infatti una delle critiche che ho letto e' che la censura, intesa come la verifica dell'utilizzo che sia conforme a, diciamo, mi verrebbe da dire anche la morale, e' molto molto forte. Motivo per cui qualcuno dice vabbe', pero' con i modelli open weight riusciamo a fare cose che con questi non riusciamo eccetera.
+
+**Paolo Antinori**
+
+> Quindi dici che adesso dovrebbero essere in grado di impedirti di generare un'immagine di te stesso con le sembianze di Gesu'?
+
+**Alessio Soldano**
+
+> Ogni riferimento e' puramente casuale. Teoria si'.
+
+**Paolo Antinori**
+
+> Ok. Fortunatamente ho io una soluzione per tutto questo se vi interessa. No, sto scherzando, pero' e' un argomento collegato.
+
+## **[32:23] Obliteratus e SynthID: modelli che sproteggono modelli**
+
+**Paolo Antinori**
+
+> Io mi sono imbattuto per caso grazie all'algoritmo di YouTube in una coppia di news e progetti che sono esattamente le cose che divertono me quando qualcuno dimostra che qualcosa ritenuto impossibile non era davvero impossibile, era semplicemente che non sapevi come farlo. In particolare vi parlero' del progetto Obliteratus, che e' un progetto open che si trova su GitHub, che e' stato scritto da qualcuno per rimuovere, per sproteggere i modelli tendenzialmente. Sproteggere come nei videogiochi, cosa che si sproteggevano? Le console? Per sproteggere...
+
+**Stefano Maestri**
+
+> Le console, si', le console, le console.
+
+**Paolo Antinori**
+
+> Le console erano ok. Praticamente adesso siamo arrivati a sproteggere i modelli. Che cosa vuol dire sproteggere i modelli? Vuol dire a livello funzionale riuscire a rimuovere i guardrail e quindi questi vincoli che hai descritto tu adesso, Alessio, tipo "non posso mettere 100.000 stelline al mio post". Queste cose cosi' e oppure le cose piu' famose, tipo "voglio costruire una bomba atomica, non mi dici come fare queste cose qua". E il progetto e' un progetto di ricerca di persone che sanno che cosa stanno facendo, che ha dentro una serie di euristiche per andare a togliere questi layer da questi modelli. La cosa interessante, il motivo per cui la news mi ha raggiunto questa settimana, e' perche' qualcuno, indipendentemente dall'esistenza gia' di questo progetto, che e' interessante e andrebbe esplorato, e' riuscito a sproteggere Gemma 4. Gemma 4 e' una delle due versioni piccole. Ma non solo e' riuscito a sproteggerla, e' riuscito a sproteggerlo semplicemente dando a un qualche altro modello una serie di prompt. Loro ci tengono a sottolineare che sono state otto iterazioni, quindi otto prompt. E con otto prompt, chiedendo al coding agent di utilizzare il progetto Obliteratus, che gia' fa queste cose di base, la pipeline da sola ha sprotetto Gemma. Quindi, innanzitutto, era una testimonianza di quanto non sia cosi' tanto difficile ottenere questi risultati in questa epoca, facendosi anche aiutare dalle AI stesse per fare il lavoro se non siamo in grado. I risultati interessanti, poi piu' specifici su questa attivita' su Gemma, sono stati che hanno poi fatto dei benchmark sul modello liberato, modello obliterato, e pare che siano riusciti a togliere fino al 92 per cento di blocchi per i guardrail. Quindi non del tutto, ma hanno tolto tantissima roba. E un side effect di questa attivita' e' stato di migliorare le performance sui benchmark di coding normali. E per questo secondo aspetto ci si chiede qual e' l'interpretazione, come mai togliendo dei guardrail adesso i modelli scrivono meglio il codice. Una delle interpretazioni che si da' e' che i guardrail sono una tassa di performance sul modello stesso, per cui la loro sola esistenza fa si' che il modello sia impegnato a far quello, far calcoli, tempo, o a sporcare il dato, si' che fondamentalmente degrada la qualita' della risposta. Quindi avere accesso a dei modelli sprotetti ce li fa anche funzionare meglio. Io devo dire la verita' sono estremamente curioso da questa cosa qua quindi proveremo, probabilmente provero' anche a scaricare, li hanno gia' pubblicati su GitHub i modelli Gemma che hanno sprotetto, peraltro non su GitHub, scusate, su Hugging Face, provero' a includerli nell'Anti-Vocale giusto per vedere se cambia qualcosa o quantomeno per giocacchiare con questi modelli sprotetti per vedere che cosa fanno. La parte interessante e'... scusatemi l'ultimo pezzo, poi vi lascio, che hanno notato come questa cosa sia possibile perche' l'applicazione dei guardrail viene fatta come fine tuning, come post-training finale. E quindi fondamentalmente tende a non distribuire il suo ruolo per tutta la rete del modello ma soltanto in determinati livelli, gli ultimi tendenzialmente. Si puo' andare abbastanza puntuali a cercare di cancellare, come fosse in Photoshop, a rimuovere quella parte li' e vedere cosa ne esce. Tanto che questi modelli scritti da persone esperte, ma qualunque, su Internet riescono a ottenere questi risultati.
+
+**Alessio Soldano**
+
+> Per cui Obliteratus perche' hanno eliminato quelle parti dove c'era l'intervento del guardrail.
+
+**Paolo Antinori**
+
+> Si', in realta' loro che sono, vi stupiro', dei nerd, dicono che Obliteratus e' l'unione di due termini, di ablazione e liberazione. E quindi ci tengono a sottolineare questa cosa. Quindi visto che me l'hai chiesto te la commento. Pero' appunto e' interessante, a me piace sempre quando ci sono persone che dimostrano per cui non e' vero che non era impossibile, poi possiamo metterci d'accordo che non dovremmo farlo, ma si poteva fare e si puo' fare.
+
+**Alessio Soldano**
+
+> Io trovo interessante, non che sia questa scoperta esagerata, ma come queste cose qui siano assolutamente facilitate dalla disponibilita' di modelli di intelligenza artificiale che aiutano chi capisce gia' un pochino queste cose qua a essere super efficiente nel metterle in pratica. In realta' giusto tu mi giravi un link l'altro giorno di qualcuno che e' riuscito a forzare SynthID, e' il, ricordiamolo, il sistema con cui Google fa il watermarking delle immagini generate da Nano Banana, in realta' non solo delle immagini ma anche dell'audio, e del testo in qualche modo. Si puo' fare, sono riusciti a fare reverse engineering. Loro non hanno mai rilasciato pubblicamente il funzionamento ma qualcuno partendo da un'immagine bianca sostanzialmente, facendo un'analisi in frequenza di cosa c'e' veramente nell'immagine generata, e' riuscito a trovare il pattern del watermark e, utilizzando un'intelligenza artificiale a fare tutto il lavoro di reverse engineering, a riuscire a decifrarlo correttamente. Quindi c'e' un progetto su GitHub con cui si puo' sproteggere le immagini marchiate con SynthID.
+
+**Paolo Antinori**
+
+> Peraltro, scusami, ho letto anch'io l'articolo ed era, lo trovo interessante e mi ha dato in realta' la sensazione che forse questa sia stata una vaga ingenuita' di quelli di Google che pensavano di essere arrivati, perche' dicevano che la distribuzione del rumore era assolutamente lineare e quindi era per questo che era facile rimuoverlo. Quindi ci sta che una versione 2.0 si faranno piu' furbi. Ma la parte interessante del risultato finale era che sproteggevano le immagini ma, e forse ne abbiamo parlato in passato, il risultato e' che l'immagine e' tecnicamente diversa, e' stato tolto del rumore o e' stato aggiunto del rumore, ma all'occhio umano e' assolutamente indistinguibile. Quindi tu vedi la stessa cosa anche se tecnicamente c'e' un binario diverso.
+
+**Alessio Soldano**
+
+> Per lo stesso motivo per cui l'immagine protetta non era distinguibile da un'altra immagine non protetta, perche' il watermark e' in una frequenza che non e' visibile, sostanzialmente.
+
+## **[40:05] Perche' i guardrail sono una tassa sul coding**
+
+**Stefano Maestri**
+
+> Anch'io tornando sul coding e al perche' possono diventare piu' efficienti: i guardrail, cosi', accenno tecnico, vengono fatti. Guardrail interni ai modelli, non quelli degli agenti. Vengono fatti con un LoRA o un DoRA, che e' una variante del LoRA, cioe' Low Rank Adaptation significa LoRA, ovvero si vanno a scegliere i pesi del modello adesso con un fine tuning, si fanno scegliere dei pesi dei modelli per tirare molto su o molto giu' dei parametri in modo tale che certe cose non passino. L'ho semplificata talmente tanto che, se qualcuno che davvero segue queste cose mi sta ascoltando, gli viene il vomito. Pero' e' per dare un attimo l'idea. Quindi sicuramente e' fatto cosi', soprattutto su modelli relativamente piccoli come Gemma e' di sicuro fatto cosi', e per questo sono andati a fare quello che Paolo spiegava. Sul coding invece mi viene in mente una cosa del perche' migliorano, a livello diciamo logico o filosofico piu' che tecnico. Ne parlavo proprio in un'intervista con, tempo fa, con Alessandro Maserati, parlavamo li' di allineamento. E lui spiegava secondo me molto bene che l'allineamento non e' soltanto, e quindi i guardrail che fanno parte dell'allineamento, non e' soltanto impedire uno specifico output ma impedire le traiettorie di pensiero che possono essere rischiose. Perche' se io dico "risolvi il problema dell'inquinamento", adesso ti sto ovviamente esagerando, credo che avesse fatto proprio questo esempio, se io dico al modello "risolvi il problema dell'inquinamento" e la sua soluzione e' lo sterminio del genere umano, forse e' vero che non c'e' piu' l'inquinamento alla fine. Pero' forse non e' la traiettoria che noi ci immaginavamo, che auspichiamo. Questo e' filosoficamente portato all'estremo, pero' anche nel piccolo si evitano traiettorie che magari sono quelle ottimali per il coding. E prima di farvi vedere di me...
+
+**Alessio Soldano**
+
+> Ma quindi scusa, mi stai dicendo che potenzialmente un modello obliterato potrebbe essere piu' bravo a fare penetration testing?
+
+**Stefano Maestri**
+
+> Si', potrebbe, potrebbe, per diversi motivi. Li' il motivo e' che certe cose che non gli vengono consentite le puo' fare. Perche' la maggior parte dei modelli che scrivono codice, se gli chiedi di scrivere una distributed denial of service, ti dicono forse no. Nel senso, devi trovare un altro modo per chiederglielo, mettiamola cosi'.
+
+**Alessio Soldano**
+
+> Si', devi aver fatto tutto il preambolo di contesto per dire che sei un ricercatore, pero' non e' detto che te la faccia fare.
+
+**Stefano Maestri**
+
+> Si' ma neanche quello. Forse gli devi chiedere di fare un'implementazione specifica che poi tu userai come denial of service, ma non necessariamente sara' da fare quello. Se tu gli dai il classico zero-shot prompt per fare il tic-tac-toe, te lo fa. Se gli dai lo zero-shot prompt per fare il piu' semplice dei denial of service, non te lo fa, ti dice no io questa roba non la faccio.
+
+**Alessio Soldano**
+
+> Gli devi dire "prova a vedere se sono abbastanza sicuro con questo servizio, scrivi un denial of service e vedi se riesci a..."
+
+**Stefano Maestri**
+
+> E non e' detto che... una volta lo facevano, non e' detto che neanche quello adesso te lo faccia, perche' dicono tu sei brutto e cattivo...
+
+**Paolo Antinori**
+
+> Ti suggerisce di installare Teams per fare il denial of service.
+
+**Stefano Maestri**
+
+> Si', e' una buona idea.
+
+**Alessio Soldano**
+
+> Quindi in sostanza, risposta a questa cosa: il modello obliterato ti aiuta perche' non avendo il rail che ti impedisce di fare questa cosa.
+
+**Stefano Maestri**
+
+> Certo, si', si'. Non avendo il guardrail puoi fargli fare cose che probabilmente... ma quello e' nel, diciamo, nella sfera proprio del guardrail specifico, che costruire la bomba atomica e' piu' grave di fare un denial of service ma sei sempre brutto e cattivo. Invece no, quello che dicevo io e' anche cose lecite magari vengono evitate perche' il guardrail e' stato messo per evitare certe traiettorie di sviluppo che magari per certe cose invece sono piu' efficienti. Ma adesso sto immaginando, letto, pero' a logica potrebbe essere questa cosa qua, per come funzionano proprio internamente i modelli.
+
+**Alessio Soldano**
+
+> E quindi cambia la capacita' di affrontare un problema.
+
+**Stefano Maestri**
+
+> Cambia alla fine la capacita' di affrontare un certo tipo di problemi perche' magari la soluzione ottimale viene evitata perche' e' considerata rischiosa, semplificando un po'. Questa cosa, tu prima parlando di immagini mi hai fatto venire in mente due cose, questa cosa del reasoning eccetera eccetera. Vediamo sempre di piu' nei modelli di generazione di immagini, di generazione video eccetera un mischiarsi di cose con il reasoning. Questa cosa, se vi ricordate, ce l'ha raccontata, ce l'ha detta proprio, a suo modo, quello che era vero a ottobre e quello che era vero in quel momento, quello che si intuiva in quel momento a ottobre, ce l'ha detta qua un ospite, Stefano Gatti, di cui adesso vi faccio vedere lo shorts. Perche' quello shorts l'avevamo tirato fuori... no scusate questo... ecco, secondo me questa cosa che Stefano ci raccontava e' diventata estremamente attuale ed e' infilata molto nei modelli di generazione di altre cose. Ma perche' ve lo dico? Perche' mercoledi' intervisto Stefano. Torna a trovarci Stefano. Beh si', facciamo la marchetta. No, cadeva veramente bene. Mi e' venuta in mente questa cosa che non e' preparata, questa. Mi e' semplicemente venuta in mente questa cosa mentre Alessio parlava, ricordavo che avevamo tirato fuori questo short e ve l'ho riproposto. Stefano torna a trovarci e torna in intervista quindi avra' spazio di esperienza a imprimere i suoi tanti pensieri in maniera molto veloce come fa sempre lui. Per cui ascoltateci mercoledi', cambiamo anche leggermente l'orario, all'una usciamo.
+
+## **[47:47] Il test 3D di Ethan Mollick: GPT 5.5 vince**
+
+**Stefano Maestri**
+
+> Invece, tornando alle cose che dovevo condividere, e che ha a che fare con GPT 5.5 e in qualche modo con questa roba, se volete l'intelligenza ibrida come la chiama lui, o la generazione di cose complicate, vi faccio vedere un post di una persona che io seguo, se l'ignoranza di... sto collaborando se non seguite, dovreste, che e' Ethan Mollick. Ethan Mollick e' un professore di...
+
+**Paolo Antinori**
+
+> Io lo seguo ma posta un sacco di roba. Posta quattro articoli al giorno. Il mio LinkedIn continua a bippare con i suoi articoli non ne posso piu'. Ma davvero, cioe' sto scherzando, cioe' seguitelo ma sappiate che dovete dargli, dove volete stargli dietro.
+
+**Stefano Maestri**
+
+> Lo so, scrive tanto, fa quello, fa quello di mestiere.
+
+**Alessio Soldano**
+
+> Dovete farvi riassumere da un LLM quello che scrive.
+
+**Stefano Maestri**
+
+> Quindi... lui ha una serie di test. Uno dei motivi per cui lo seguono, e' un ricercatore molto bravo, uno dei motivi e' che e' una delle persone che ha i modelli in anteprima, proprio perche' e' un ricercatore bravo. Quindi il giorno in cui esce il modello lui di solito se ne esce con una serie di test sensati di utilizzo piu' o meno reale, che confrontano quel modello con gli altri. E quello che a me personalmente piace di piu' e' questo qui, in cui lui sostanzialmente gli chiede "build me a procedurally generated 3D simulation showing the evolution of a harbor town from 3000 BCE to 3000 AD in one prompt". Cioe' gli da' solo questo prompt e chiede ai modelli di generargli questa mini applicazione. Allora l'applicazione c'e' e potete farla girare per ogni modello a quel link che vedete li'. Ma lui mette sempre insieme questo video di confronto, che se io adesso riesco... adesso lo vedete a pieno schermo, si', ok, vi fa vedere il confronto tra O3 in avanti, diciamo, dei vari modelli. Secondo me e' abbastanza impressionante. Questo e' O3 che tira su delle cose non intelligibili. Opus 4.6 insomma cominciamo ad avere grattacieli riconoscibili. Gemini Deep Think arriva anche lui, carino ma niente di che. GPT 5.4 secondo me fa un lavoro non paragonabile agli altri perche' questi grattacieli a punta... Poi c'e' Opus 4.7 che fa un lavoro ancora migliore, ma adesso arriviamo a... Poi c'e' Kimi, ma poi c'e' 5.5 che secondo me fa delle cose impressionanti. Cioe' guardate come il passare del tempo, della luce sui tetti, il realismo dei grattacieli alla fine e' incredibile. Ed e' un'applicazione a tutti gli effetti, e' generata in single prompt. Quindi l'evoluzione dei modelli da quel punto di vista li' e' stata notevole, e 5.5 visto cosi' fa delle cose veramente incredibili. Se andate a provarvelo c'e' proprio l'applicazione Cine in cui potete giocare con i parametri, per ogni modello, e vedete anche quanto e' ricca l'applicazione che fanno Opus 4.7 e GPT 5.5 rispetto agli altri. Gli altri era un minimo, ma per esempio non potevi cambiare visuale, invece con questi e' una vera propria applicazione 3D che ti permette di cambiare visuale, navigarci dentro eccetera eccetera.
+
+**Alessio Soldano**
+
+> Bene.
+
+## **[52:12] Il wiki gestito da un LLM alla Karpathy**
+
+**Stefano Maestri**
+
+> Ma volete che vi parli invece di quello di cui parlava X soltanto, prima che scoppiasse il caso Claude "dateci indietro i nostri soldi siete brutti e cattivi"? No, perche' poi la reazione, la reazione a quegli errori che dicevo prima e' stata assolutamente eccessiva come sempre su quel social. Pero' al di la' di quello, prima si e' parlato tanto di una cosa di, indovinate chi? La persona piu' citata di questo podcast, Andrei Karpathy. Allora, lui ha postato, e' interessante da tanti punti di vista. Cominciamo dal che cos'e'. Lui ha detto "sto usando questa cosa sempre, ho un po' di giorni che uso questa cosa e mi piace". E la dice cosi', come disse per il vibe coding. E questa cosa che gli piaceva e' generare un wiki di conoscenza completamente gestito da un agente, da un LLM, da un agente nell'affatti specie. Allora l'idea e' quella che tu sei il curatore della conoscenza, quindi prendi tutta una serie di articoli, PDF, pagine web, quello che vuoi, li metti in una cartella che chiami Raw nella sua implementazione. E poi chiedi al modello di fare il digest, e questo digest con un prompt, gli dici che deve generare un wiki in cui fare il riassunto di ognuno dei concetti, non degli articoli necessariamente, espressi nella tua base di conoscenza e collegarli tra loro. E poi lui se li guarda con Obsidian. Questo e' quello che fa lui. E' interessante, molto molto interessante, vedere come i collegamenti che si creano creino dei cluster di conoscenza a cui lui dice "io non avevo pensato". E poi questo sistema, nella sua implementazione, evolve continuamente perche' dice che tende a ridargli in pasto una selezione delle conversazioni che ha con il sistema. Perche' poi lui ci conversa, gli dice "ok va bene sto facendo ricerca su, che ne so, auto research", piuttosto che l'ora. Gli da' una base di conoscenza e poi comincia a fargli domande come "questo articolo si collega a questo", "ma allora questo concetto lo possiamo sviluppare". E di fatto si comporta come un RAG diciamo, ma andando a cercare collegamenti che non vedi di per se'. La cosa era abbastanza affascinante, e io me la sono scritta con qualche distinguo da quella di Karpathy. Come tutti, non ho inventato l'uovo di Colombo. Andate su GitHub, cercate Karpathy e wiki, trovate almeno 50 progetti, due startup eccetera eccetera. Quindi l'hanno fatto tutti. E poi arrivo anche su questa cosa qua, perche' non ha nessun senso. Io me la sono fatta perche' la volevo per me. Ho fatto qualche distinguo, ho una cosa che si chiama View che mi aiutano a vedere le cose perche' io sono una persona che quando ragiona ha bisogno di visualizzare. Quindi mi genera delle slide, genera dei grafici, cose cosi'. Ed e' molto molto utile. Io non gli do in pasto le conversazioni ma soltanto alcune delle view perche' altrimenti mi sembra che si alimenti troppo da solo. E l'ho usata, la sto usando per una cosa di ricerca che sto facendo sulla memoria, e li' e' abbastanza pazzesca. Pero' l'ho usata anche per cazzeggio, e ne ho fatta un'altra specie, lo racconto nella newsletter. L'implementazione l'ho fatta in aereo di quella roba qua perche' c'era il Wi-Fi. Cosa deve fare un nerd se c'e' il Wi-Fi? Dorme in aereo, no? E quindi, sono andato a New York, avevo queste otto ore di aereo, e mi sono preso un po' di ricerche dalle dieci cose da fare a New York, un po' di consigli di amici, un po' di cose che mi ricordavo io, che avevo fatto in viaggi precedenti, gliele ho messe in aereo, e gli ho detto va bene, ho dieci giorni, mi piacciono queste queste queste cose, perche' voi gli dite anche su quali argomenti concentrarsi, stupiscimi. E lui ha cominciato a creare collegamenti a cui io non avevo pensato. E man mano che ero li', alla sera, gli chiedevo cosa faccio il giorno dopo, e sul telefono anche gli chiedevo cose tipo "sono qua, spiegami che cosa devo vedere". E mi ha fatto insomma da guida, ed e' stato affascinante perche' il sistema evolveva con quello che stavo facendo. Ad esempio, all'ultimo giorno gli ho chiesto "senti, ho ancora un biglietto da spendere di quelli prepagati delle City Card eccetera, cosa dici, vado sul Salvatori, quello che hanno costruito al posto del Two WTC?". Lui mi ha risposto "onesto no, hai gia' fatto due grattacieli, che palle. Piuttosto, se hai, sei andato a vedere questa cosa qui dei graffiti, sei andato a vedere il MoMA, non ti puoi perdere il Whitney" che io non avevo messo in conto di vedere. E mi ha spiegato perche' li' vedi Haring che viene dal mondo dei graffiti, vedi Basquiat. Io ho seguito il consiglio, sono stato contento peraltro. E cosi' su... io non sono un amante del jazz, ma mi ha insistito perche' andassi a vedere un tipo particolare di concerto jazz perche' ero stato ad Harlem, che aveva un richiamo. E anche li' devo dire che ci ha preso ed e' stato affascinante, affascinante la gente che faceva le cose.
+
+## **[59:25] E' finito il tempo delle app?**
+
+**Stefano Maestri**
+
+> Pero' al di la' della mia esperienza, mia personalissima implementazione che ovviamente avete trovato su GitHub anche la mia perche' mi piace condividere, ma ci sono due cose interessanti. Karpathy non ha condiviso un repository.
+
+**Alessio Soldano**
+
+> 1.
+
+**Stefano Maestri**
+
+> E' la prima cosa che a me ha affascinato di tutta 'sta storia. E' che lui ha detto "va bene visto che vi piace tanto, perche' ovviamente ha preso un miliardo di commenti sul post che diceva mi piace questa cosa, ve la condivido, la trovate qui, e ha messo un gist". Per chi non sapesse cos'e' un gist, e' un copia incolla su Git di un single file di testo, che era un prontone gigantesco, commentando nel primo commento sotto "datelo al vostro agente e lui sa cosa fare". Ed effettivamente, poi io l'ho personalizzato perche' volevo questa cosa delle view eccetera eccetera. Pero' pronti via, tu prendi quel prompt li', lo dai a un agente, gli hai provato e lui ti crea la struttura e dice "vabbe' cominciamo". La reazione pero' della community e' stata praticamente opposta. Un miliardo di repository GitHub, gente che si mette a rifare Obsidian perche' lo faccio io in Mac, cosi' adesso vedete tutti i collegamenti per benino e poi il prompt ve lo nascondo. E ma che chi se ne freghe? Non lo so, io ho sviluppato questa... poi ti lascio dire Paolo, ma era per dire questa cosa, l'ho anche scritta in newsletter. Io non sono piu' convinto, in generale non lo ero prima, quel gist li' secondo me lo identifica bene come momento in cui discuterne, che sia ancora il tempo delle app o dei prodotti di quel genere qua. Cioe' tutto quello che veste un LLM che io mi posso fare e personalizzare per come serve a me, con le mie view, torniamo alla mia personalizzazione, con un prompt e un paio di ore di lavoro. Non sara' perfetto, non avra' la grafica dell'universo eccetera, ma non ha senso che io faccia una startup, un prodotto a pagamento, magari per chi, per cosa, soprattutto su una cosa cosi'. Attenzione, perche' poi dopo mi dice "ma io non sono in grado di farmelo, sono il consumatore finale". Si' ma quella roba li' non e' da consumatore finale, cioe' e' da uno che smanetta poi con l'LLM, sa che cosa chiedergli, come guardare il Markdown. Cioe' e' una cosa da tecnici. Secondo me non c'e' piu' spazio per quella roba li'. Siamo nel momento in cui si passa dai CD-ROM ai siti web o dai siti web alle app e dalle app a qualcos'altro. Bisogna cambiare il modo di pensare. Poi io vado avanti a metterli su GitHub, ma per un altro motivo, perche' l'open source e' condivisione e contributo alla ricerca. Se qualcuno arriva e vede il mio repo GitHub e vede come io faccio le view, e da li' c'e' un'evoluzione, io sono solo che contento, ma non ne frega niente delle stelline su GitHub, piuttosto che di farne un prodotto. Credo che non, ma proprio perche' non credo ci sia piu' spazio per quella cosa li'. Forse esagero, pero' siamo ad un momento di svolta come e' stato CD-ROM e siti web, per me.
+
+**Paolo Antinori**
+
+> Ci puo' stare. Se non che dipende un pochettino chi e' il consumatore di questa cosa. Nel senso, io e te la app ce la scriviamo, tua figlia non se la scrive, te la fa scrivere a te, e mia nonna non se la scrive. Quindi ci sara' comunque qualcuno che...
+
+**Stefano Maestri**
+
+> No, no, questo sicuro, questo sicuro. Tuo nonno si', mia figlia ma vediamo... Oggi no, ma...
+
+**Paolo Antinori**
+
+> Sara' comunque sempre qualcuno che le vuole comprare al supermercato queste cose, una versione piu' cattiva di quelle che potrebbe farsi in casa. Quindi quella parte rimane.
+
+**Stefano Maestri**
+
+> No, no, infatti il mio distinguo e' su una roba cosi' tecnica, cosi' che poi dopo l'LLM lo devi saper usare. Adesso tutto quello che dice Karpathy, la gente ci costruisce delle startup. Secondo me stanno un pochino esagerando da quel punto di vista li'. Pero'...
+
+**Paolo Antinori**
+
+> E' vero, non che... e' vero, cioe' tendenzialmente sono d'accordo con te. E richiama la conversazione che avevano avuto, credo che erano lui e il tizio di OpenClaw, in cui gli diceva "non apritemi le PR, mandatemi semplicemente il prompt che poi mi arrangio io". Cioe' e' la stessa idea applicata. Tu, inconsapevolmente in realta', hai fatto un esempio che non calza tanto bene quando hai detto che il tizio che si e' riscritto e' Obsidian, perche' Obsidian e'...
+
+**Stefano Maestri**
+
+> Si', si'.
+
+**Paolo Antinori**
+
+> Di cui tutti parlano in particolare adesso perche' ne ha parlato Karpathy, quindi la gente l'ha scoperto adesso, non e' open source. Quindi se tu te lo vuoi riscrivere, quantomeno c'hai il buon motivo per dire vabbe' te lo faccio in versione open source. Obsidian nello specifico e' un esempio non calzante, pero' il discorso... si'. Una persona che e' bazica di software e oggi si deve chiedere ma ha senso che io scriva...
+
+**Stefano Maestri**
+
+> Si', si'.
+
+**Paolo Antinori**
+
+> Un'idea per una startup, per un servizio, per qualche cosa, in particolare quando e' tutto software. E' difficile dare una risposta onesta. Probabilmente noi siamo bias perche' abbiamo sempre avuto piu' o meno gli strumenti per poter costruire quasi tutte le robe che abbiamo sentito, e quindi con un po' di pazienza e sudore della fronte avremmo potuto farlo. E adesso ha maggior ragione, infatti adesso siamo tutti contenti perche' possiamo fare tutte le pazze idee che avevamo prima.
+
+**Alessio Soldano**
+
+> E adesso ha maggior ragione.
+
+**Paolo Antinori**
+
+> Non so se questo concetto ha superato quella soglia, che dicevi tu, che e' diventato completamente consumer, per cui un qualunque studente che ha fatto almeno le medie riesce ad ottenere un risultato simile, diciamo.
+
+**Stefano Maestri**
+
+> No, probabilmente no. Se vuoi, e' dove metti il layer di, di dove... guardando un pochino piu' avanti, cioe' non oggi, ma per chi ha usato, tornando al mondo Anthropic, Claude Design in questi giorni, e insomma li' siamo vicini al farlo fare a mia figlia. Cioe' io che non so neanche da che parte cominciare a fare una modellazione 3D, ieri mi ha dato sei foto e in cinque minuti avevo un robottino modellato in 3D con una corona in testa che si muoveva in uno spazio. E li' ho fatto un prompt e ho toccato cinque o sei cose con il mouse che non, mia figlia magari, mia madre no ma mia zia si'. Per cui, non lo so, se guardo un pochino piu' avanti, mi chiedo dov'e' il layer, dov'e' il software tra virgolette come l'abbiamo conosciuto noi, anche se aiutati a scriverlo, anche se ha senso farlo, manutenerlo, perche' poi partono 100.000 progetti stessi, ma chi ha poi il tempo di mantenerli se qualcuno li usa davvero?
+
+**Paolo Antinori**
+
+> Si', si'. OpenClaw, pero', a parte quello... No, mi e' fatto venire in mente un altro concetto interessante, che mi viene il dubbio che avevamo gia' citato in passato quindi non vorrei che suoni noioso, ma la prima cosa che mi e' fatto venire in mente sul discorso "ha senso un software specializzato o un software amatoriale me lo faccio in casa sulle mie esigenze" mi ricorda molto l'esplosione di Excel, quando si e' passati da dei software che prima qualcuno scriveva per fare una roba, e poi ti hanno dato un sistema base accettabilmente flessibile per cui se devi farti la collezione dei DVD o i conti delle vacanze, te li fai per i fatti tuoi, non ti serve un programmatore che ti scriva il programma.
+
+**Stefano Maestri**
+
+> No, no, sono d'accordo. Pero' davvero, io insisto ancora su quei due paragoni che ho fatto: CD-ROM, web, o web app. Non perche' io dica che non serve piu' il software, cambia il tipo di fruibilita', cambia il tipo di prodotto che andiamo a preparare. Cioe' fare una roba come il wiki che ho fatto io e impacchettizzarla non so se ha senso. Rifare Obsidian perche' cosi' e' open source magari si', ma adesso stando nei nostri due esempi poi forse entrambi sono tirati per i capelli. Oppure ancora chiedersi qual e' il layer che ne ha bisogno, cioe' si sta nel mondo piu' tecnico dei protocolli o diventa un'altra cosa. Perche' ad un certo punto i programmatori, quelli core che facevano i CD-ROM, sono trovati a fare i sistemi di base per costruirci sopra il web, e sono nate altre professionalita' che sono quelle del designer di siti web, che io non sono capace di fare. Io non sono capace di fare il design di un sito web. Al contrario credo che un designer di siti web, se gli do in mano un protocollo SSH, non sa da che parte guardarlo.
+
+**Paolo Antinori**
+
+> Ci siamo.
+
+**Stefano Maestri**
+
+> Quindi non so, e' un mondo che sta cambiando davvero. E pensare oggi al come pensavamo prima, ok, cioe' questa opportunita' ne faccio un software, un prodotto, non dico che sia sbagliata sempre. Pero' bisogna farsi delle domande diverse oggi.
+
+**Paolo Antinori**
+
+> Concordo.
+
+**Alessio Soldano**
+
+> Assolutamente.
+
+## **[1:09:25] Chiusura**
+
+**Stefano Maestri**
+
+> E ne siamo in chiusura.
+
+**Paolo Antinori**
+
+> Quindi facciamo la startup degli annunci mortuari, detto. Che ci viene bene perche' siamo dei natural, diciamo.
+
+**Stefano Maestri**
+
+> Facciamo la startup degli annunci mortuari che siamo bravissimi. Ma questo episodio non avra' un annuncio mortuario come thumbnail perche' ho fatto tutte le skill per evitare di fare qualcosa li'. Fateci sapere cosa ne pensate. Claude mi ha anche detto che siamo dei cazzoni perche' diciamo mettete le stelline e le campanelline alla fine, dovremmo dirlo all'inizio, ma noi ci dimentichiamo sempre. Lo diciamo almeno alla fine.
+
+**Paolo Antinori**
+
+> Quindi non mettete le stelline e le campanelline.
+
+**Stefano Maestri**
+
+> Mi ha detto di toglierlo dai thumbnail, pero' fatelo per il prossimo video all'inizio. Bene, ascoltate l'intervista di mercoledi', ascoltate anche quelle vecchie se ne avete voglia, e anche le puntate vecchie. E non fatevi ingannare dai primi 5 minuti di Cosentino che la puntata e' bellissima.
+
+**Alessio Soldano**
+
+> Fatelo per il prossimo video all'inizio.
+
+**Stefano Maestri**
+
+> Bene, ciao a...
+
+**Paolo Antinori**
+
+> Ciao a...

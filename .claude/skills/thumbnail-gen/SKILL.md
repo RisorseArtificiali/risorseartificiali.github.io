@@ -1,17 +1,32 @@
 ---
 name: thumbnail-gen
-description: Genera prompt pronti per modelli di image generation moderni (Gemini 3 Pro, ChatGPT Image 2/DALL-E 3, Ideogram, Midjourney v7, Flux 1.1 Pro) per creare thumbnail YouTube del podcast Risorse Artificiali complete di testo integrato. Template differenziati tra episodi numerati e interviste. Attiva quando l'utente chiede di generare thumbnail, creare prompt per thumbnail, o prepara visual per un nuovo episodio. Output: 3 varianti di concept con prompt immagine + testo gia' baked-in + istruzioni opzionali di rifinitura in post.
+description: Genera prompt pronti per modelli di image generation moderni (Gemini 3 Pro, ChatGPT Image 2, Ideogram, Flux 1.1 Pro, Midjourney v7) per creare thumbnail YouTube 16:9 (1280×720) del podcast Risorse Artificiali con testo integrato nel prompt, template differenziati numerato vs intervista, regole anti-necrologio. Use case: iterazioni creative aggiuntive su una thumbnail non convincente (3 varianti alternative), generazione thumbnail per rilanci (invocata da `interview-relaunch` Passaggio 3), produzione visual non-episodio (social graphics, cover articoli indipendenti). Per nuovi episodi del podcast usa direttamente `podcast-promo` v4.0 che include brief thumbnail + 3 prompt pronti al Passaggio 13 (non serve invocare separatamente).
 metadata:
   author: risorseartificiali
-  version: "1.1"
+  version: "1.2"
 ---
 
 <!--
 CHANGELOG
+v1.2 (2026-04-22): Demote scope: non più nel flusso standard nuovo episodio.
+  La skill podcast-promo v4.0 ha assorbito la generazione prompt thumbnail come
+  Passaggio 13 inline (3 prompt pronti per Ideogram/Gemini 3 Pro/ChatGPT Image 2
+  direttamente nel file promo consolidato). Questa skill thumbnail-gen resta
+  primaria per:
+    - Iterazioni creative aggiuntive (se i 3 prompt di podcast-promo non ti
+      convincono, invoca questa per produrre altre 3 varianti esplorando diversi
+      toni/colori/angoli)
+    - Rilanci retroattivi: invocata da interview-relaunch al Passaggio 3 con
+      parametri pre-compilati
+    - Use case non-episodio: social graphics, cover di articoli non-podcast,
+      immagini per post standalone
+  Description aggiornata per chiarire scope. Nessuna modifica funzionale.
+
 v1.1 (2026-04-22): Il testo e' ora parte integrante del prompt image gen.
   I modelli moderni (Gemini 3 Pro, ChatGPT Image 2/DALL-E 3, Ideogram, MJ v7,
   Flux 1.1 Pro) gestiscono bene il testo in-image. Post-production resta
   come opzione backup se il rendering testo e' imperfetto.
+
 v1.0 (2026-04-22): Versione iniziale con testo overlay separato in post.
 -->
 
@@ -20,14 +35,17 @@ v1.0 (2026-04-22): Versione iniziale con testo overlay separato in post.
 
 ## Workflow integrato con le altre skill
 
-Questa skill fa parte di un quartetto coordinato per il ciclo di vita degli episodi:
+Questa skill fa parte del quintetto coordinato per il ciclo di vita di episodi + newsletter:
 
-1. **`podcast-promo`** (primo, per episodi nuovi) — genera titolo definitivo + hook. Output consumato da questa skill come input al Passaggio 0 (campi "Titolo definitivo" e "Hook testuale").
-2. **`thumbnail-gen`** (questa skill, secondo) — genera i prompt image per la thumbnail. Serve sia per episodi nuovi che per rilanci intervista.
-3. **`podcast-transcript`** (terzo) — crea il post Jekyll con `layout: episode` che referenzierà la thumbnail generata (via `header.og_image` nel frontmatter).
-4. **`interview-relaunch`** (per rilancio interviste esistenti) — al Passaggio 3 genera un brief pre-compilato per questa skill, con hook adatto al "callback" e indicazioni di colore background diverso dall'originale per segnalare "director's cut".
+1. **`podcast-promo`** — genera titolo definitivo + hook.
+2. **`thumbnail-gen`** (questa skill) — genera prompt image per thumbnail YouTube (**16:9, 1280×720**).
+3. **`podcast-transcript`** — post Jekyll con `layout: episode` (referenzia la thumbnail via `header.og_image`).
+4. **`interview-relaunch`** — per rilancio interviste esistenti, al Passaggio 3 genera un brief pre-compilato per questa skill.
+5. **`newsletter-cover-gen`** — per cover Substack (**1.91:1, 1200×630**), NON usare questa skill: logica diversa (ratio, template quote card / face+quote / chart / concept, target Substack Home vs feed YT).
 
-Se non hai ancora invocato `podcast-promo` o `interview-relaunch`, puoi comunque usare questa skill fornendo manualmente titolo e hook.
+**Quando usare questa skill vs newsletter-cover-gen**: questa genera visual 16:9 per YouTube (thumbnail + Shorts). Se condividi contenuto tra un episodio YT e un post Substack, invoca entrambe per produrre asset nello stesso stile ma con ratio e regole differenti. Alcuni modelli (Gemini 3 Pro, Ideogram) accettano batch cross-ratio mantenendo coerenza visiva.
+
+Se non hai invocato `podcast-promo` o `interview-relaunch`, puoi usare questa skill fornendo manualmente titolo e hook.
 
 ---
 
