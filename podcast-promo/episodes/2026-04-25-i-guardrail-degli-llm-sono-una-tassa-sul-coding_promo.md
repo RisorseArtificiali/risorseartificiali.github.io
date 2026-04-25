@@ -619,3 +619,174 @@ Sezione omessa — non applicabile a episodi numerati.
 - **Thumbnail iteration**: se dopo 48h il CTR YT e' sotto target (media 4%+ su ep numerati), usa YT Studio Test & Compare con il Prompt 2 o Prompt 3 del cap. 13 come variante B.
 - **Rilancio futuro**: se a T+90gg l'episodio sottoperforma, invoca `thumbnail-gen` v1.1 per 3 varianti A/B test o rivedi il claim centrale.
 - **Aneddoto "funerario"**: la thumbnail di questo episodio e' la prima che applica le nuove skill anti-necrologio. Monitorare CTR vs episodi precedenti per validare il rework.
+
+---
+
+# 18. End screen + YT Cards (suggerito da youtube-cross-link v1.1)
+
+<!-- Generato da .claude/skills/youtube-cross-link v1.1 il 2026-04-25.
+     Cache canale: .claude/skills/youtube-cross-link/.cache/channel-videos.json (fresca, 0 giorni).
+     Episodio target: OHoJ-ZE68_Q | "I guardrail degli LLM sono una tassa sul coding" | drop 2026-04-25.
+     Candidati pre-screened: 15 (su 22 validi nel canale) | Selezione finale: 1 end screen + 5 cards.
+     Algoritmo: 0.55*semantic + 0.25*recency(half-life 6mesi) + 0.20*views_log.
+     v1.1: scoring su metadata leggera (title + description + chapters H2), NO transcript reading. -->
+
+## End screen — 1 video (layout: Subscribe + Video)
+
+| Campo | Valore |
+|---|---|
+| Titolo target | L'AGI arriva prima di quanto credi \| Alessandro Maserati |
+| YT ID | `XP2jiPxFtPk` |
+| Durata | 1h35m15s |
+| Views (al 2026-04-25) | 351 (max del canale) |
+| Pubblicato | 2026-02-04 (~2.6 mesi fa) |
+| URL | https://www.youtube.com/watch?v=XP2jiPxFtPk |
+
+**Razionale** (perche' questo video):
+
+L'episodio corrente al min 40:05 ("Perche' i guardrail sono una tassa sul coding") cita Maserati per nome quando Stefano spiega che l'allineamento non blocca solo output ma "traiettorie di pensiero" — concetto che Maserati aveva sviluppato in questa intervista. Il viewer che e' arrivato fino in fondo all'episodio ha sentito il riferimento e ha la curiosita' di sentirlo direttamente. Score 0.907 (semantic 0.95 per callback nominale + views 1.00 max canale). End screen e' il posto giusto perche' offre la visione completa di un tema toccato di striscio nel corrente.
+
+**Setup in YT Studio** (operativo, ~90s):
+
+1. YT Studio → Content → seleziona video corrente `OHoJ-ZE68_Q` → Editor → End screen
+2. Aggiungi elemento → Subscribe (canale Risorse Artificiali, default)
+3. Aggiungi elemento → Video → Specific video → incolla `https://www.youtube.com/watch?v=XP2jiPxFtPk`
+4. Layout: pre-set "Subscribe + 1 video" (template B). Posiziona negli ultimi 20 secondi (timestamp 1:09:25 - 1:10:28 / fine).
+5. Save.
+
+---
+
+## YT Cards — 5 cards a timestamp specifici del video corrente
+
+Le YT Cards si configurano in YT Studio → Editor video → Cards. Ogni card mostra un teaser nell'angolo superiore destro per 5-10 secondi al timestamp impostato, poi resta cliccabile come icona "i" fino a fine video.
+
+### Card 1 — Mostra al min `05:09` del video corrente
+
+| Campo | Valore |
+|---|---|
+| Linka video | Claude Code, OpenClaw e l'Effetto Slot Machine: la nuova era dell'AI Engineering |
+| YT ID target | `Vwl7stdsxj0` |
+| URL | https://www.youtube.com/watch?v=Vwl7stdsxj0 |
+| Tema della card | Claude Code, Anthropic, agentic coding |
+| Custom message | `Predecessore Claude Code` |
+| Teaser text | `Effetto Slot Machine` |
+
+**Razionale**:
+
+Al min 05:09 del corrente apri il cap "Post-mortem Anthropic: 3 bug ammessi su Claude". Quell'episodio del 28 febbraio aveva inquadrato Claude Code e l'effetto slot machine dell'AI Engineering: e' la cornice narrativa che il viewer odierno cerca per contestualizzare il post-mortem. Score 0.827 (semantic 0.80 + recency 0.81 + views 0.93).
+
+---
+
+### Card 2 — Mostra al min `11:01` del video corrente
+
+| Campo | Valore |
+|---|---|
+| Linka video | Da GPT-5.4 agli AI Engineers: perche' CLI e workflow stanno cambiando |
+| YT ID target | `nitLzgXt33M` |
+| URL | https://www.youtube.com/watch?v=nitLzgXt33M |
+| Tema della card | GPT 5.x progression + CLI/MCP workflow |
+| Custom message | `Da GPT 5.4 a 5.5` |
+| Teaser text | `CLI e MCP` |
+
+**Razionale**:
+
+Al min 11:01 apri "GPT 5.5 vs Opus 4.7: benchmark e leak di Mythos". L'evoluzione 5.4 → 5.5 e' la naturale continuazione del confronto fatto un mese fa, quando 5.4 era stato letto come svolta sull'AI engineering CLI/MCP. Stessa cornice benchmark comparativo. Score 0.805 (recency 0.83 — episodio molto fresco).
+
+---
+
+### Card 3 — Mostra al min `32:23` del video corrente
+
+| Campo | Valore |
+|---|---|
+| Linka video | Previsioni Intelligenza Artificiale 2026: modelli locali, agenti AI, robotica |
+| YT ID target | `GVpjI6YtEKI` |
+| URL | https://www.youtube.com/watch?v=GVpjI6YtEKI |
+| Tema della card | Modelli locali / open weight 2026 |
+| Custom message | `Profezia open weight` |
+| Teaser text | `Modelli locali 2026` |
+
+**Razionale**:
+
+Al min 32:23 entri in "Obliteratus e SynthID: modelli che sproteggono modelli". Il fatto che Gemma open weight sia stata sprotetta in 8 prompt rende attuale la previsione di gennaio sulla centralita' dei modelli locali. Connessione retorica forte (profezia confermata). Score 0.677. **Flag low-conf**: chapters H2 non estratti dal Jekyll post (formato pre-v3.0), match su title+description.
+
+---
+
+### Card 4 — Mostra al min `40:05` del video corrente
+
+| Campo | Valore |
+|---|---|
+| Linka video | Intervista a Mario Fusco: sviluppo software nell'era dell'Intelligenza Artificiale |
+| YT ID target | `annKzlWVKmM` |
+| URL | https://www.youtube.com/watch?v=annKzlWVKmM |
+| Tema della card | AI assisted coding (intervista) |
+| Custom message | `Fusco su AI coding` |
+| Teaser text | `Sapere leggere il codice` |
+
+**Razionale**:
+
+Al min 40:05 apri "Perche' i guardrail sono una tassa sul coding", il cuore tecnico dell'episodio. Fusco aveva discusso AI assisted coding e il fatto che oggi conta piu' saper leggere il codice che scriverlo: tesi che dialoga con il punto di Stefano sulle traiettorie ottimali del coding. Mix format (intervista) per varieta' rispetto alle 4 card numerate. Score 0.699.
+
+---
+
+### Card 5 — Mostra al min `59:25` del video corrente
+
+| Campo | Valore |
+|---|---|
+| Linka video | Dal leak di Claude Code a Lince e antivocale: le app AI fai-da-te |
+| YT ID target | `9t03EZBL34A` |
+| URL | https://www.youtube.com/watch?v=9t03EZBL34A |
+| Tema della card | Tempo delle app + app AI fai-da-te |
+| Custom message | `Le app te le scrivi tu` |
+| Teaser text | `Lince e Antivocale` |
+
+**Razionale**:
+
+Al min 59:25 entri in "E' finito il tempo delle app?". Tre settimane fa avevi raccontato Lince e Antivocale come dimostrazione concreta del "te la scrivi in un pomeriggio". L'episodio piu' recente del set (0.7 mesi) e ad altissima recency: la card chiude il loop tematico Karpathy wiki → app fai-da-te. Score 0.844 (recency 0.92).
+
+---
+
+## Setup in YT Studio (cards, operativo ~5min)
+
+1. YT Studio → Content → video `OHoJ-ZE68_Q` → Editor → Cards
+2. Per ogni card sopra:
+   a. Click "Aggiungi card" → Tipo "Video" → incolla URL del video target
+   b. Imposta "Show card at" al timestamp indicato (`05:09`, `11:01`, `32:23`, `40:05`, `59:25`)
+   c. (Opzionale) Compila Custom message + Teaser text dai campi della tabella
+3. Aggiungi tutte e 5 in una sessione, poi click Save una sola volta a fine.
+4. Verifica: riproduci il corrente, scorri ai 5 timestamp, controlla che il teaser appaia ~5s nell'angolo superiore destro.
+
+## Distribuzione timestamp lungo l'episodio (durata 1h10m28s = 4228s)
+
+| Card | Timestamp | Posizione relativa | Ancora capitolo ep49 |
+|---|---|---|---|
+| Card 1 | `05:09` |  7% | Post-mortem Anthropic |
+| Card 2 | `11:01` | 16% | GPT 5.5 vs Opus 4.7 |
+| Card 3 | `32:23` | 46% | Obliteratus e SynthID |
+| Card 4 | `40:05` | 57% | Guardrail tassa sul coding |
+| Card 5 | `59:25` | 84% | E' finito il tempo delle app? |
+
+Gap minimi tra card consecutive: 5:52, 21:22, 7:42, 19:20 — tutti >= 90s. Vincolo distribuzione rispettato (una nei primi 20%, una a meta', una verso la fine prima dell'end screen).
+
+## Score breakdown (trasparenza algoritmo)
+
+| Video | Score | Sem | Rec | Views_log | Note |
+|---|---|---|---|---|---|
+| Maserati AGI (end screen) | 0.907 | 0.95 | 0.74 | 1.00 | Callback nominale + max views canale |
+| Lince Antivocale (Card 5) | 0.844 | 0.82 | 0.92 | 0.81 | Episodio piu' recente del set |
+| OpenClaw Slot Machine (Card 1) | 0.827 | 0.80 | 0.81 | 0.93 | Tema Claude Code post-mortem |
+| GPT 5.4 AI Engineers (Card 2) | 0.805 | 0.78 | 0.83 | 0.84 | Predecessore GPT 5.5 |
+| Mario Fusco (Card 4) | 0.699 | 0.70 | 0.58 | 0.84 | Mix format intervista |
+| Previsioni 2026 (Card 3) | 0.677 | 0.62 | 0.65 | 0.87 | Open weight, low-conf |
+
+<!-- Pesi: semantic 0.55 (dominante), recency 0.25 (decay esponenziale half-life 6 mesi), views log-normalizzata 0.20.
+     Recency = exp(-ln(2) * months_since_post_date / 6).
+     Views_log = log10(view_count + 1) / log10(351 + 1)  [max_views canale = 351]. -->
+
+## Note operative
+
+- **Cards visibili sia su mobile che desktop**: il teaser appare per pochi secondi al timestamp impostato, poi resta come icona "i" cliccabile fino a fine video. Funzionano in tutti i player YT.
+- **End screen e ultimi secondi**: occupa parte del frame negli ultimi 5-20 secondi. Il cap "1:09:25 Chiusura" del corrente lascia ~63 secondi di outro: spazio sufficiente per Subscribe + Maserati senza coprire contenuto critico.
+- **Misurazione**: YT Studio → Analytics → Engagement → "End screens" e "Cards". Soglia di riferimento: CTR card > 2% buono, > 4% ottimo. Per l'end screen Maserati il valore atteso e' alto perche' il callback e' esplicito.
+- **Refresh cache canale**: cache valida 7 giorni (next refresh consigliato: 2026-05-02). Per forzare: cancella `.claude/skills/youtube-cross-link/.cache/channel-videos.json`.
+- **Re-invocazione**: a T+30gg verifica CTR. Se < 2%, re-invoca la skill: i dati cambiano (nuovi episodi nel pool, views aggiornate, recency degrada Maserati e nitLzgXt33M).
+- **Card 3 low-conf**: il candidato "Previsioni 2026" ha frontmatter pre-v3.0 senza chapters estratti. Match basato solo su title+description. Se a T+7gg il CTR Card 3 e' sotto media, considera sostituirla con il prossimo top-15 (Zonca Enterprise score 0.674, oppure GPT 5.2 0.666).

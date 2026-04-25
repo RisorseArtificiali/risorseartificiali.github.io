@@ -3,7 +3,7 @@ timezone: Europe/Rome
 future: true
 email: maestri.stefano@gmail.com
 description: >-
-  Risorse Artificiali è la tua bussola settimanale nel mondo dell’Intelligenza Artificiale Generativa. Notizie, tendenze, strumenti e riflessioni critiche.
+  Il podcast italiano di AI Engineering. Ogni settimana, deep dive tecnici su agent, LLM, tool chain e produzione — per chi l’AI la scrive, non per chi la racconta.
 baseurl: "" 
 url: "https://risorseartificiali.com"
 
@@ -45,7 +45,7 @@ paginate_path: /page:num/
 author:
   name: "Risorse Artificiali"
   avatar: "/assets/images/profile.jpg"
-  bio: "La tua bussola settimanale <br/> nel mondo dell’AI"
+  bio: "AI Engineering in italiano <br/> per chi l’AI la scrive, non per chi la racconta"
   links:
     - label: "LinkedIn"
       icon: "fab fa-linkedin"

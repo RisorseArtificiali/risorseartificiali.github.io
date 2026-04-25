@@ -6,68 +6,38 @@
 
 ---
 
-## ⚡ Immediate — 30 minuti totali (da fare oggi o domani)
+## ⚡ Immediate — COMPLETATE ✅
 
-### ✅ Già fatte (verificato da `_config.yml`)
 - ✅ Apple Podcasts claim (URL presente in author links)
 - ✅ Amazon Music distribuzione (URL presente in author links)
-
-### 🟢 Quick wins residue
-
-- [ ] **Abilita su Spotify for Creators distribuzione extra piattaforme** (10 min)
-  - Vai su https://creators.spotify.com → your show → Settings → Availability
-  - Abilita: Pocket Casts, Overcast, Castbox, Goodpods, iHeartRadio
-  - (Amazon Music e Apple già fatti)
-
-- [ ] **Aggiungi YouTube Music** (10 min)
-  - Via hoster (Spotify for Podcasters o futuro Transistor): abilita distribuzione automatica a YouTube Music
-  - Verifica dopo 24h che il feed sia indicizzato su music.youtube.com
-
-- [ ] **Aggiungi Podchaser + Fountain.fm** (10 min)
-  - Podchaser: https://www.podchaser.com → Submit podcast → inserisci RSS feed
-  - Fountain: https://fountain.fm → creator signup → importa RSS
-
-- [ ] **Esponi RSS feed sul sito** (già fatto dal piano tecnico — `jekyll-feed` plugin attivato in `_config.yml`)
+- ✅ Spotify for Creators distribuzione extra piattaforme (Pocket Casts, Overcast, Castbox, Goodpods, iHeartRadio)
+- ✅ YouTube Music distribuzione abilitata
+- ✅ Podchaser registrato
+- ✅ Fountain.fm registrato
+- ✅ RSS feed esposto sul sito (`jekyll-feed` plugin attivato in `_config.yml`)
   - Verifica dopo il prossimo deploy: visita risorseartificiali.com/feed.xml
+- ✅ Thumbnail Puntata 49 generata con `thumbnail-gen` e caricata su YT Studio
+- ✅ Pilot rilancio Maserati eseguito con `interview-relaunch`
 
 ---
 
-## 🎯 Settimana 1 — 4-6 ore
+## 🎯 Settimana 1 — COMPLETATA ✅
 
-### Thumbnail + primo test CTR
-- [ ] **Genera 3 thumbnail con skill `thumbnail-gen`** (1h con skill + image model):
-  - Prossimo numerato → invoca `thumbnail-gen` in Claude Code
-  - Prossima intervista → stesso
-  - Scegli modello: Gemini 3 Pro (flessibile), Ideogram (best su testo), ChatGPT Image 2 (buono con reference foto)
-- [ ] **Applica a 1 episodio pilota** e carica su YouTube Studio (15 min)
-- [ ] **Abilita "Test & compare" su YT Studio** per l'episodio pilota con 2-3 varianti thumbnail (5 min)
-- [ ] Dopo 7 giorni: leggi CTR del winner, se sopra 4% consolida template, se sotto 3% rivedi
-
-### Prossimo episodio con skill v2.0
-- [ ] **Genera promo con skill `podcast-promo` v2.0** (dopo refactor): titoli, descrizioni separate YT/Spotify, post LinkedIn, post X, hook-30s, Shorts script, Spotify Clip spec, chapters, tags, meta tags
-- [ ] **Se intervista**: usa Guest Launch Kit → invia al guest 1 settimana prima del drop
-- [ ] **Crea primo post Jekyll con skill `podcast-transcript` v3.0** (dopo refactor): testa che il nuovo layout `episode` renderizzi correttamente
+- ✅ Thumbnail Puntata 49 generata con `thumbnail-gen` e caricata su YT Studio
+- ✅ "Test & compare" abilitato su YT Studio
+- ✅ Puntata 49 pubblicata con layout `episode` e frontmatter completo (titolo hook-first, description keyword-rich, og_image, schema.org)
+- ✅ Pilot rilancio Maserati eseguito con `interview-relaunch`
+- [ ] **Dopo 7 giorni**: leggi CTR Puntata 49, se sopra 4% consolida template, se sotto 3% rivedi
+- [ ] **Dopo 7 giorni**: leggi risultati rilancio Maserati (CTR vs 3,3% baseline, views cumulative)
 
 ---
 
 ## 🏗️ Settimana 2-4 — 1 giornata totale
 
-### Hoster migration
-- [ ] **Apri trial Transistor.fm 14 giorni** (30 min setup)
-  - https://transistor.fm
-  - Import feed RSS corrente da Spotify for Podcasters
-  - Esplora le analytics cross-platform per 2 settimane
-- [ ] **Decisione go/no-go** dopo trial:
-  - Se trial positivo → migra definitivamente (altre 2-3 ore: redirect 301, update Apple Podcasts con nuovo feed URL)
-  - Se trial negativo → resta su Spotify for Podcasters
+### ⏳ Posticipato a bassa priorità
 
-### Newsletter
-- [ ] **Setup Substack** (1h)
-  - Crea account `risorseartificiali.substack.com`
-  - Importa shownotes dei 10 episodi più recenti come post
-  - Aggiungi form iscrizione (embed code Substack)
-- [ ] **Integra Newsletter CTA nel layout Jekyll**: modifica `_layouts/episode.html` aggiungendo blocco CTA verso Substack (skippato in questo piano per decisione esplicita, va fatto dopo setup Substack)
-- [ ] **Primo post newsletter** con template sezione "il nostro take della settimana"
+- [ ] **Setup Substack / Newsletter** — posticipato, riesamina quando le metriche lo giustificheranno
+- [ ] **Cover Spotify nuova** — posticipata, la cover attuale è accettabile
 
 ### Rilancio retroattivo (Azione #18)
 
@@ -83,18 +53,23 @@
 
 ## 🎨 Mese 2 — ongoing
 
-### Riposizionamento nicchia (decisione strategica)
-- [ ] **Scegli tra le 3 opzioni** (vedi `alta-priorita-April22.md` Priorità #4):
-  - A) "AI Engineering in italiano" (raccomandato)
-  - B) "AI in impresa"
-  - C) "AI per senior dev che vogliono restare rilevanti"
-- [ ] Una volta scelto:
-  - Riscrivi bio Spotify (primi 100 char = hook + promessa nicchia)
-  - Riscrivi bio YouTube channel + header banner
-  - Aggiorna `description:` in `_config.yml` con nuova tagline
-  - Aggiorna descrizione Apple Podcasts via hoster
-  - Aggiorna descrizione Amazon Music
-  - Aggiorna tagline LinkedIn company page
+### ✅ Riposizionamento nicchia — DECISO: Opzione A "AI Engineering in italiano"
+
+Scelta fatta il 25 aprile 2026. La risposta alla domanda chiave è: **Latent Space italiano, non Montemagno dell'AI.**
+
+- ✅ `description:` in `_config.yml` aggiornata con nuova tagline
+- ✅ `author.bio` in `_config.yml` aggiornata
+- ✅ Riscrivi bio Spotify (primi 100 char = hook + promessa nicchia)
+- ✅ Riscrivi keywords + description YouTube channel
+- ✅ Banner YouTube aggiornato con nuovo posizionamento
+- ✅ Aggiorna descrizione Apple Podcasts (sync automatico da Spotify)
+- ✅ Aggiorna descrizione Amazon Music (sync automatico da Spotify)
+- ✅ Aggiorna tagline + overview LinkedIn company page
+
+### YouTube Home Tab & Playlist
+- ✅ Nascoste sezioni vuote in Home Tab (live streams, posts, collaborations)
+- ✅ Riordinate sezioni: For You → Playlists → Videos → Shorts
+- [ ] Creare 4-5 playlist tematiche coerenti con "AI Engineering in italiano" (es. "AI Agents & Tool Chain", "LLM Deep Dive", "Interviste", "AI in Produzione") — bassa priorità
 
 ### Big guest booking (Azione #12)
 - [ ] Crea lista 10-20 nomi target (vedi Strategia #4 di improvements per framework)
@@ -133,6 +108,32 @@ Settimanalmente dopo l'esecuzione del piano, controlla:
 | Iscritti newsletter Substack | 0 | **200** |
 
 Frequenza check: settimanale il martedì mattina (prima del post LinkedIn numerato).
+
+### 🤖 Da valutare: /schedule agent per automatizzare il monitoring
+
+Claude Code espone lo slash command `/schedule` (skill omonima) per creare agenti remoti su cron schedule o one-time. Da valutare come alternativa "leggera" alla Strategia #2 (Weekly Analytics Digest, 12-20h setup): /schedule non richiede sviluppo, basta scrivere il prompt dell'agent.
+
+**Use case candidati per /schedule** (in ordine di ROI atteso):
+
+- [ ] **Recurring weekly — martedì 09:00**: triage metriche YT Studio + Spotify Creators per il post numerato. Output: tabella delta vs baseline, flag su metriche sotto target. Sostituisce parte del check manuale del martedì.
+- [ ] **Recurring weekly — venerdì 17:00**: scan T+7gg degli episodi pubblicati nelle ultime 4 settimane. Per ogni episodio: CTR YT, retention 50%, plays Spotify. Flag automatico se CTR < 3% (soglia per re-thumbnail via `thumbnail-gen`).
+- [ ] **One-time T+7gg per ogni nuovo drop**: verifica CTR end screen + cards YT (skill `youtube-cross-link`). Se Card N sotto soglia (CTR < 2%), suggerisce sostituzione con il prossimo top-15. Da agganciare al workflow `podcast-promo` come reminder post-publish.
+- [ ] **One-time T+30gg per ogni nuovo drop**: confronto engagement cumulato vs media ultimi 5 episodi. Se sotto media → suggerisce iterazione (re-thumbnail, re-titolo, oppure ulteriore push social).
+- [ ] **Recurring monthly — primo lunedì del mese**: report aggregato mensile (subscribers delta, top 3 episodi per CTR, top 3 per retention, hypothesis su cosa ha funzionato). Versione manualmente-generata della Strategia #2 finche' non e' implementata.
+- [ ] **One-time T+14gg per ogni rilancio retroattivo** (output di `interview-relaunch`): verifica delta CTR vs baseline pre-rilancio (es. Maserati 3,3% → ?). Conferma o smentisce l'efficacia del format rilancio.
+- [ ] **Recurring weekly — domenica 18:00**: scan Apple Podcasts URL per episodi recenti senza `apple_episode_url` nel frontmatter Jekyll, aggiunge URL via micro-commit (oggi e' un task manuale post-drop).
+
+**Pro vs Strategia #2 completa**:
+- Setup quasi zero (scrivere il prompt dell'agent, no codice da mantenere)
+- Sfrutta gia' le skill esistenti (`youtube-cross-link`, `interview-relaunch`, `podcast-transcript` retrofit)
+- Iterazione veloce: se il prompt non rende, lo modifichi con `/schedule` update
+
+**Contro**:
+- Richiede che lo scheduling sia attivo localmente o su un host (verificare requisiti runtime di Claude Code per /schedule)
+- Non sostituisce un dashboard vero e proprio: la Strategia #2 con grafici resta superiore per pattern recognition long-term
+- Costi token ricorrenti (un agent ogni martedì 52 settimane/anno ha un costo non trascurabile, da quotare prima)
+
+**Decisione da prendere**: testare 1-2 use case sopra (es. "weekly Tuesday triage" + "T+7gg new drop check") per 4 settimane. Se ROI positivo, espandere; altrimenti accelerare Strategia #2 nativa.
 
 ---
 

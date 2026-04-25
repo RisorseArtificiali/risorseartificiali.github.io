@@ -3,7 +3,7 @@ name: podcast-promo
 description: Skill master per la pubblicazione di un nuovo episodio del podcast "Risorse Artificiali". Un'unica invocazione produce titolo high-CTR (pattern numerato o intervista), descrizioni YouTube/Spotify, hook 30s scripted, script Shorts, spec Spotify Clip, chapters YouTube, tag SEO, post LinkedIn/X, newsletter Substack, meta tags sito, brief thumbnail con prompt image pronti per Ideogram/Gemini 3 Pro/ChatGPT Image 2, e per le interviste un Guest Launch Kit completo. In output scrive DUE file: un promo file consolidato (`podcast-promo/episodes/{date}-{slug}_promo.md`) con tutti i contenuti pronti copia-incolla, e il post Jekyll (`_posts/{date}-{slug}.md`) con frontmatter v3.0 e trascrizione verbatim. Attiva quando l'utente vuole pubblicare un nuovo episodio, preparare il drop di una puntata, menziona Riverside, o materiali episodio.
 metadata:
   author: risorseartificiali
-  version: "4.1"
+  version: "4.2"
 ---
 
 <!--
@@ -71,7 +71,22 @@ v1.0 → v2.0 (22 aprile 2026)
 - Aggiunte sezioni Audience Targeting (CTO/senior dev IT, 35-55) e
   Posizionamento (AI Engineering in italiano), publishing hints per formato
 
-Note di design v4.0/v4.1 (decisioni ambigue documentate):
+v4.1 → v4.2 (2026-04-24) — Newsletter section flessibile per codiceartificiale
+- Feedback dopo primo uso: non esiste newsletter dedicata a Risorse Artificiali.
+  L'utente ha una newsletter Substack partialmente attiva chiamata `codiceartificiale`
+  dove menziona i nuovi episodi con 1-2 bullet in intro, non con un post dedicato.
+  La versione "800-1500 parole post standalone" del Passaggio 11 era troppo lunga.
+- Nuovo input opzionale `I` al Passaggio 0: `newsletter_length` con opzioni
+  `bullet` (30-50 parole, default), `short` (150-300), `full` (800-1500),
+  o numero intero per target custom.
+- Passaggio 11 rinominato "Sezione per newsletter codiceartificiale" e adattato:
+  3 strutture diverse in base a `newsletter_length`, UTM `utm_source=codiceartificiale`
+  invece di `substack`, publishing hint "quando pubblichi la prossima codiceartificiale"
+  invece di orario fisso.
+- Default `bullet` riflette l'uso reale: 1-2 bullet in intro della newsletter esistente,
+  non post dedicato.
+
+Note di design v4.0/v4.1/v4.2 (decisioni ambigue documentate):
 - Per interviste senza numero puntata (episode_number: null), il campaign
   identifier UTM diventa `{guest_slug}_drop` invece di `ep{N}_drop`, coerente
   con la convenzione di interview-relaunch.
@@ -98,7 +113,7 @@ Questa skill e' la **skill master** per il workflow standard di pubblicazione di
 2. **`thumbnail-gen` v1.1** — usa SOLO per use-case non-standard: iterazioni su thumbnail di un episodio gia' droppato, A/B test manuali con modelli diversi, batch rigenerazione visual. Per il drop normale il brief e i prompt pronti stanno gia' nel Passaggio 13 di questa skill.
 3. **`podcast-transcript` v3.0** — usa SOLO per retrofit di post gia' esistenti (modalita' B, `--retrofit-existing`) o correzioni chirurgiche su trascrizioni gia' pubblicate. Per il drop normale il post Jekyll e' scritto dal Passaggio 16 di questa skill.
 4. **`interview-relaunch` v1.2+** — orchestratore dedicato al rilancio retroattivo di interviste gia' pubblicate (angle callback, reflection post, Guest Re-Launch Kit). Usa QUESTA skill solo per episodi nuovi.
-5. **`newsletter-cover-gen`** — genera cover Substack (1200×630) per la newsletter settimanale. Invocala dopo aver scritto il promo file, riusando il testo della newsletter dal capitolo 11.
+5. **`newsletter-cover-gen`** — genera cover Substack (1200×630). Use case: SOLO se inserisci una sezione dedicata in `codiceartificiale` con modalita' `short` o `full` (cap. 11) e vuoi una cover Substack-style separata. Per la modalita' default `bullet` non serve cover.
 
 Workflow tipico nuovo episodio: **`podcast-promo` v4.1** (unica invocazione) → genera immagine dai 3 prompt del cap. 13 → carica thumbnail in `/assets/images/episodes/` → commit dei 2 file + immagine → push → `newsletter-cover-gen` quando pubblichi la newsletter settimanale.
 
@@ -191,7 +206,7 @@ Formato UTM standard:
 Esempi pratici:
 - LinkedIn post (tuo): `{YT_URL}?utm_source=linkedin&utm_medium=post&utm_campaign=ep48_drop`
 - X/Twitter: `{YT_URL}?utm_source=x&utm_medium=tweet&utm_campaign=ep48_drop`
-- Newsletter Substack: `{YT_URL}?utm_source=substack&utm_medium=newsletter&utm_campaign=ep48_drop`
+- Newsletter codiceartificiale: `{YT_URL}?utm_source=codiceartificiale&utm_medium=newsletter&utm_campaign=ep48_drop`
 - YouTube description verso Spotify: `{SPOTIFY_URL}?utm_source=youtube&utm_medium=description&utm_campaign=ep48_drop`
 - Shorts pinned comment: `{YT_URL}?utm_source=youtube_short&utm_medium=pinned&utm_campaign=ep48_drop`
 - Guest post LinkedIn (solo intervista): `{YT_URL}?utm_source=guest&utm_medium=linkedin&utm_campaign=ep48_drop`
@@ -248,6 +263,18 @@ G. Thumbnail path esistente (se hai gia' una thumbnail pronta, altrimenti
    al Passaggio 13 genero brief + 3 prompt image pronti).
 H. Data drop programmato (sabato per numerato, mercoledi' per intervista).
    Se diversa da oggi, dimmela: finisce nel campo `date:` del frontmatter.
+I. Newsletter length: lunghezza desiderata per la sezione newsletter (cap. 11).
+   Scelte:
+     - `bullet` (30-50 parole, default): 1-2 bullet da inserire nell'intro
+       della newsletter esistente `codiceartificiale`
+     - `short` (150-300 parole): sezione compatta dedicata a Risorse Artificiali
+       dentro codiceartificiale
+     - `full` (800-1500 parole): post standalone (solo se un giorno lanci
+       una newsletter dedicata al podcast)
+     - intero (es. `200`): target parole specifico, uso la struttura piu' vicina
+   Default se non specificato: `bullet`. La newsletter di riferimento e'
+   `codiceartificiale` (quella che hai gia' attiva), non una dedicata a
+   Risorse Artificiali.
 
 NOTA IMPORTANTE: Apple URL NON richiesto ora. Lo aggiungerai dopo con
 un micro-commit quando Apple auto-pubblica via RSS (tipicamente T+4-24h dal
@@ -262,7 +289,7 @@ Condividi tutto quello che hai e parto con il flusso sequenziale a 16 passaggi.
 - YouTube ID o Spotify ID confusi con URL → chiedi di estrarre solo l'ID
 - Intervista senza guest_name/credential/bio → chiedi tutti e tre
 
-Una volta ricevuti i materiali, salva mentalmente: `format`, `episode_number`, `youtube_id`, `spotify_episode_id`, `guest_*` (se intervista), `duration` (se fornita), `resources` (se fornite), `drop_date` (se fornita, default oggi). Usali nei passaggi successivi.
+Una volta ricevuti i materiali, salva mentalmente: `format`, `episode_number`, `youtube_id`, `spotify_episode_id`, `guest_*` (se intervista), `duration` (se fornita), `resources` (se fornite), `drop_date` (se fornita, default oggi), `newsletter_length` (se fornito, default `bullet`). Usali nei passaggi successivi.
 
 **Derivazione campaign_id**:
 - Se `episode_number` e' un intero → `campaign_id = ep{N}_drop`
@@ -481,29 +508,64 @@ Verifica conteggio `[N]/280 char`. Se superi 280, accorcia prima di presentare.
 
 **Gate**: procedi SOLO dopo "Va bene. Continua.".
 
-### Passaggio 11 — Newsletter Substack post
+### Passaggio 11 — Sezione per newsletter `codiceartificiale`
 
-Post settimanale da pubblicare su Substack (owned audience, canale di conversione a lungo termine). 800-1500 parole.
+L'utente ha una newsletter Substack attiva chiamata **`codiceartificiale`** in cui menziona i nuovi episodi di Risorse Artificiali. Questa skill NON genera un post Substack standalone: genera una **sezione da inserire** nella newsletter esistente. La lunghezza viene decisa al Passaggio 0 via `newsletter_length` (default `bullet`).
 
-Struttura template:
+**Determina la struttura in base a `newsletter_length`** (dal Passaggio 0 opzionale I):
 
-1. **Hook** (1-2 paragrafi, 80-150 parole): lo stesso spunto del LinkedIn ma espanso. Perche' questo episodio conta oggi.
-2. **Perche' ne abbiamo parlato** (2-3 paragrafi, 150-250 parole): contesto tecnico, evento recente, dibattito in corso. Qui stabilisci autorita' di nicchia.
-3. **Embed player** (placeholder): `[EMBED Spotify episodio]` e `[EMBED YouTube episodio]`. L'utente li incolla in Substack.
-4. **Shownotes a capitoli** (200-400 parole): estratto dei capitoli del Passaggio 3 trasformati in paragrafi discorsivi. Non solo lista timestamp. Per ogni capitolo, 2-3 frasi del punto chiave.
-5. **Il nostro take della settimana** (150-300 parole): opinione editoriale netta. Sezione che distingue la newsletter dal semplice shownote dump. Presa di posizione: "cosa ci stiamo dicendo tra noi host che non abbiamo detto nell'episodio".
-6. **Risorse citate** (elenco): link, tool, paper menzionati nell'episodio (qui elenco puntato e' accettabile, e' una bibliografia). Usa le resources fornite al Passaggio 0 opzionale E se presenti.
-7. **CTA** (1 paragrafo): iscriviti alla newsletter, forward a un collega, lascia una recensione Spotify/Apple. Link deep con UTM Substack.
+#### Modalità `bullet` (30-50 parole) — DEFAULT
 
-EMBED con UTM:
-- Spotify: `https://open.spotify.com/episode/{SPOTIFY_ID}?utm_source=substack&utm_medium=newsletter&utm_campaign={campaign_id}`
-- YouTube: `https://www.youtube.com/watch?v={YT_ID}?utm_source=substack&utm_medium=newsletter&utm_campaign={campaign_id}`
+Produci **1-2 bullet points** pronti per essere incollati nell'intro della prossima edizione di `codiceartificiale`. Ogni bullet inizia con un trattino `-`, dice in 1 frase cosa contiene l'episodio, include 1 link con UTM.
 
-Publishing hint: Substack esce il giorno del drop o il giorno dopo:
-- Numerato (drop sabato): Dom 10:00 Europe/Rome
-- Intervista (drop mercoledi'): Gio 10:00 Europe/Rome
+Esempio target:
+```
+- Sabato e' uscito "{titolo}", dove [1 frase sul contenuto principale].
+  Ascolta: https://www.youtube.com/watch?v={YT_ID}?utm_source=codiceartificiale&utm_medium=newsletter&utm_campaign={campaign_id}
+```
 
-Nella proposta riporta la **lunghezza totale** in parole.
+Lunghezza totale: 30-50 parole. Tono coerente col resto della newsletter `codiceartificiale` (non marketing, non hype). Max 2 bullet se ci sono 2 angoli complementari da segnalare (es. per intervista: guest + tema).
+
+#### Modalità `short` (150-300 parole)
+
+Produci una **sezione compatta dedicata** da inserire in mezzo alla newsletter `codiceartificiale` con subheading `## Risorse Artificiali: {titolo-breve}`. Struttura:
+1. **1 paragrafo hook** (40-80 parole): perche' questo episodio conta oggi
+2. **1 paragrafo contenuto** (60-120 parole): cosa dice davvero l'episodio, key insight
+3. **Link con UTM** (2 righe, 10-20 parole): Spotify + YouTube short-form
+
+Zero embed player (non pratico per sezione inline), solo link testuali cliccabili.
+
+#### Modalità `full` (800-1500 parole)
+
+Post standalone per una futura newsletter dedicata a Risorse Artificiali. **Usalo solo se l'utente lo richiede esplicitamente** — oggi non esiste questa newsletter. Struttura 7-beat (hook → perche' → embed → shownotes → take → risorse → CTA). Questa versione era il default fino a v4.1.
+
+#### Modalità numero intero (es. `200`, `500`)
+
+Target parole specifico. Usa la struttura piu' vicina:
+- < 100 → `bullet`
+- 100-500 → `short`
+- > 500 → `full` ridimensionato
+
+#### UTM
+
+Sempre:
+```
+utm_source=codiceartificiale&utm_medium=newsletter&utm_campaign={campaign_id}
+```
+
+**Nota v4.2**: cambiato da `utm_source=substack` a `utm_source=codiceartificiale` perche' e' il nome specifico della newsletter dell'utente. Se il podcast acquisisse in futuro una newsletter dedicata, useremmo `utm_source=ra_newsletter` o simile.
+
+#### Publishing hint
+
+Non c'e' un orario fisso. Inserisci la sezione nella **prossima edizione regolare di `codiceartificiale`** secondo il tuo solito ritmo. Se la newsletter esce con cadenza settimanale/bisettimanale, la sezione arriva nell'edizione piu' vicina al drop del podcast. Nessuna sincronizzazione forzata.
+
+#### Output richiesto
+
+Nella proposta:
+1. Modalita' usata (bullet / short / full / numero)
+2. Testo pronto copia-incolla
+3. Lunghezza totale effettiva in parole (conteggio reale, non stima)
+4. Indicazione "da inserire in intro" (bullet) o "come sezione dedicata" (short/full)
 
 **Gate**: procedi SOLO dopo "Va bene. Continua.".
 
@@ -597,7 +659,7 @@ Struttura della checklist:
 - Commit + push post Jekyll + thumbnail + file promo consolidato
 - YouTube Studio: titolo/descrizione/tag/chapter/thumbnail + set visibilita' Programmato
 - Spotify for Creators: metadati + set publish + prepara Spotify Clip (cap. 8)
-- Substack: schedula newsletter (cap. 11) per Dom/Gio 10:00
+- codiceartificiale: includi la sezione del cap. 11 nella prossima edizione regolare della tua newsletter (nessun orario forzato)
 - YouTube Shorts: edita + schedula per Lun/Gio 09:00
 
 **DROP**:

@@ -42,7 +42,7 @@
 8. Spotify Clip spec (dal Passaggio 8)
 9. Post LinkedIn host (dal Passaggio 9) + publishing hint
 10. Post X (dal Passaggio 10)
-11. Newsletter Substack (dal Passaggio 11)
+11. Sezione newsletter codiceartificiale (dal Passaggio 11, lunghezza variabile)
 12. Meta tags sito — preview generati dal layout (dal Passaggio 12)
 13. Brief thumbnail + 3 prompt image pronti (dal Passaggio 13)
 14. Guest Launch Kit (dal Passaggio 14, **solo se intervista**)
@@ -118,7 +118,7 @@ Publishing hint: {Mar 14:00 | Mer 14:00} Europe/Rome
 # 10. Post X
 {post dal Passaggio 10, codeblock}
 
-# 11. Newsletter Substack
+# 11. Sezione newsletter codiceartificiale
 {post dal Passaggio 11, codeblock markdown}
 
 Publishing: {Dom 10:00 | Gio 10:00} Europe/Rome
@@ -337,7 +337,7 @@ Capitoli nel promo file (17):
   8. Spotify Clip spec
   9. Post LinkedIn (tuo host) — pubblica {Mar|Mer} 14:00
   10. Post X
-  11. Newsletter Substack (800-1500 parole)
+  11. Sezione newsletter codiceartificiale (bullet 30-50 | short 150-300 | full 800-1500 parole, decisa al Passaggio 0 opzionale I)
   12. Meta tags sito (preview, generati dal layout)
   13. Brief thumbnail + 3 prompt pronti (Ideogram / Gemini 3 Pro / ChatGPT Image 2)
   14. Guest Launch Kit (solo intervista: clip verticale, LinkedIn guest, X guest, quote-image, email)
@@ -375,7 +375,7 @@ Prossimi passi operativi:
      `apple_episode_url: https://podcasts.apple.com/...`
 
 6. Social publishing:
-   - {Dom|Gio} 10:00: newsletter Substack (cap. 11)
+   - Prossima edizione codiceartificiale: includi la sezione del cap. 11 (nessun orario forzato)
    - {Lun|Gio} 09:00: YT Short (cap. 7)
    - {Mar|Mer} 14:00: post LinkedIn (cap. 9) + post X (cap. 10)
    - {se intervista} Mer 14:00: verifica amplificazione guest (cap. 14)

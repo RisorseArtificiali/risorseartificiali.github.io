@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(yt-dlp --flat-playlist --skip-download --dump-json --no-warnings https://www.youtube.com/channel/UCYQgzIby7QHkXBonTWk-2Fg/videos)",
+      "Bash(echo \"Exit: $?\")"
+    ]
+  }
+}
