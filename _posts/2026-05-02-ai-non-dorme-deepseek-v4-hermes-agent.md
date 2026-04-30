@@ -1,0 +1,606 @@
+---
+title: "L'AI che non dorme: da DeepSeek V4 ad Hermes Agent"
+date: 2026-05-02
+layout: episode
+author_profile: true
+
+episode_number: 50
+episode_type: numerato
+youtube_id: qKl4Vkb6BMw
+spotify_episode_id: 5PYjqRH2j4dI6zhHyW08Fb
+# apple_episode_url: da aggiungere post-publish Apple (T+4-24h)
+duration: PT1H15M30S
+
+description: >-
+  DeepSeek V4 taglia il 78% di compute sulla KV cache, Roo Code chiude dicendo
+  che gli IDE non sono il futuro, e Hermes Agent gira in autonomia mentre dormo.
+
+resources:
+  - title: "Hermes Agent (Nous Research)"
+    url: https://hermes-agent.nousresearch.com/docs/
+    description: "Alternativa open di Nous Research a Claude Code, gira con qualunque modello (Stefano lo usa con GLM-5.1) e gestisce mail, calendario, paper Arxiv in autonomia."
+  - title: "Vision Banana (Google DeepMind)"
+    url: https://vision-banana.github.io/
+    description: "Modello unificato che usa la generazione di immagini come interfaccia universale per i task di vision (segmentazione, depth estimation, edge detection)."
+  - title: "Roo Code: sunsetting extension, cloud, router"
+    url: https://roocode.com/blog/sunsetting-roo-code-extension-cloud-and-router
+    description: "Il blog post di chiusura di Roo Code con la tesi 'gli IDE non sono il futuro del coding'."
+  - title: "Intervista a Demis Hassabis (DeepMind)"
+    url: https://www.youtube.com/watch?v=96jN2OCOfLs
+    description: "Hassabis sull'efficienza dei context window, brute-forcing, e la strada verso l'AGI."
+  - title: "Intervista ad Andrej Karpathy"
+    url: https://www.youtube.com/watch?v=JNyuX1zoOgU
+    description: "Karpathy sull'efficienza dei modelli e sulla verbosita'."
+  - title: "Lince.sh"
+    url: https://lince.sh
+    description: "Sandbox open source per agenti di coding, sviluppata dal gruppo di Risorse Artificiali."
+
+header:
+  og_image: /assets/images/episodes/ep50.png
+
+categories:
+  - Puntate
+tags:
+  - intelligenza artificiale
+  - AI engineering
+  - DeepSeek V4
+  - Kimi K2.6
+  - MiMo V2.5
+  - Hermes Agent
+  - Nous Research
+  - Claude Code
+  - Roo Code
+  - Vision Banana
+  - GLM-5
+  - KV cache
+  - sparse attention
+  - mixture of experts
+  - quantizzazione modelli
+  - coding agents
+  - modelli cinesi open weight
+  - Demis Hassabis
+---
+
+## **[00:00] Settimana cinese: DeepSeek V4, Kimi K2.6, MiMo V2.5**
+
+**Stefano Maestri**
+
+> Ciao a tutti, bentornati ai RIS e questa settimana parliamo cinese sui modelli. Parliamo di DeepSeek che e' uscito con la 4 Flash Pro, ma ci sono anche Kimi K2.6, MiMo 2.5 e poi non so se avete visto, cosi' faccio un po' di anticipazione e poi andiamo dentro tutto. Visto che Google promette ben 40 billion ad Anthropic, cioe' investimento grosso, tutti stanno investendo, tra l'altro strano, non sono in qualche modo concorrenti ma si fa questo grosso investimento. Ma anche i cinesi fanno investimenti perche' Alibaba dice che investe in DeepSeek, quindi anche li' si comincia a vedere questo flusso di denaro. Ma poi ci sono tante altre cose interessanti. C'e' Vision Banana da nominare, poi c'e' una nuova quantizzazione RotorQuant che pare essere meglio di TurboQuant. Ma poi le due o tre cose che a me hanno colpito di piu' sono le lezioni sullo scaling di GLM 5 che ci nominava Paolo e le interviste che ho sentito ieri di Hassabis e Karpathy. Anche se devo dire che le due cose piu' belle sono, una che mi ha lasciato cosi', Roo Code che chiude, l'estensione di coding che chiude, perche' dice che, e poi magari di questo parliamo il nostro punto di vista, che non e' piu' tempo per gli IDE. E poi vabbe', ho installato Hermes Agent che sta facendo tante cose per me, anche in questo momento.
+
+**Paolo Antinori**
+
+> Quello mi interessa. Sai che quando hai detto che parlavamo questa puntata ai modelli parlano cinese pensavo che fosse come quando i miei modelli cinesi impazziscono e mi danno risposte in cinese a domande in inglese.
+
+**Stefano Maestri**
+
+> Certo, ma infatti e' quello che faremo. Daremo risposte a caso alle domande che ci siamo fatti da soli. Anche se devo dire che stavo dicendo perche' non abbiamo commenti, non e' vero, perche' questa settimana abbiamo avuto parecchi commenti, intercompresi, mandarino cinesi assolutamente. No dai, partiamo da quello, partiamo dai cinesi.
+
+**Alessio Soldano**
+
+> In mandarino cinese?
+
+**Stefano Maestri**
+
+> DeepSeek, MiMo, Kimi K2. Ormai abbiamo deciso, Alessio, che sei tu quello dei benchmark. Quindi dici tutto dei benchmark di costoro.
+
+**Alessio Soldano**
+
+> No, io vi posso dire sostanzialmente che settimana scorsa sembrava quasi una gara, buttiamo fuori il modello open weight nuovo state of the art, nel senso che e' uscito per primo DeepSeek V4 Pro e Flash dove Flash e' una versione un po' piu' piccola e chiaramente piu' veloce, e fa vedere tutta una serie di novita', un nuovo tipo di attention. Sulla, prego parla nello Stefano. Ebbene ok, abbiamo il nuovo miglior modello open salvo il fatto che dopo un attimo sono usciti Kimi K2.6 che fa ancora meglio quantomeno nei benchmark e MiMo 2.5 che piu' o meno si allinea alle altre due ma ci fa vedere una cosa interessante nuova. Evidenza un aspetto interessante, quello dell'efficienza dei token che e' un argomento di cui abbiamo parlato poco secondo me negli ultimi tempi, ossia sostanzialmente genera meno token per le risposte per ottenere pari livello diciamo di qualita' nell'output, nel passare i test eccetera. E questo ha un impatto perche' meno token significa meno costi sostanzialmente, e' una metrica un po' meno...
+
+## **[04:15] Token efficiency, adaptive thinking e Hassabis sui context window**
+
+**Paolo Antinori**
+
+> Fammi divagare gia' un secondo e deviarti da questa conversazione. Su risparmio dei token mi e' fatto venire in mente che nelle ultime paio di settimane ho incontrato un sacco di video o di articoli che parlavano di un'estensione rivoluzionaria di Claude Code che si chiamava Caveman, non so se l'avete incrociata, in cui l'idea e' quella di far parlare il vostro modello come un uomo delle caverne. Quindi anziche' darvi delle risposte lunghe articolate risponde a monosillabi tipo... non lo so, a bambino, quando dovete fargli conoscere gli zii lontani. E niente, la gente era esaltatissima dicendo, e' bellissimo, sto risparmiando token di qua e di la'. Dicevo, era curioso, era a controtendenza, poteva avere senso, se non che con un po' di piu' tempo la gente ci ha guardato un po' dentro e gli ha detto si', guardate che la maggior parte, si e' applicato in questo processo alla maggior parte delle casistiche che gli fate fare e poi vi da' delle risposte inconsistenti. Immagina che, non so, gli stai chiedendo di fare un diff tra due sorgenti di codice, puoi volere una risposta piu' concisa, ma se ti risponde si' o no e non significa niente, non vai da nessuna parte. Quindi c'e' stato questo trend, il nome probabilmente evocava chissa' che cosa e il concetto semplice interessava le persone ma poi all'atto pratico non era cosi' tanto utile, grossi casi d'uso.
+
+**Alessio Soldano**
+
+> Si', ti dico, secondo me questa e' una metrica che e' stata un po' sottovalutata ultimamente. Se vai a vedere i modelli che fanno reasoning, thinking, tanto tempo e' speso in quella fase li', a volte noi siamo portati a sottovalutare questo aspetto, ma poi quando ad esempio provi a fare andare i modelli in locale, l'aspetto lo noti ancora di piu'. E probabilmente ci sono delle applicazioni per le quali tutto sommato sei disposto ad accettare magari degli errori, una risposta un pelo meno di qualita' in cambio di una velocita' maggiore. Tant'e' che ad esempio lo stesso Claude Code ma anche altri tool permettono di impostare il livello di reasoning thinking che tu vuoi avere. Chiaramente cambia la qualita' ma cambiano anche i tempi di risposta e di conseguenza i costi.
+
+**Stefano Maestri**
+
+> Si', guarda, una cosa che diceva Hassabis anche nell'intervista che ho anticipato, poi magari ci entriamo un po' piu' nel dettaglio, pero' adesso stavo cercando il mio appunto, lui proprio dice che c'e' un problema architetturale di efficienza sulle context window. Attualmente quello che si e' fatto per il deep reasoning eccetera, e cita se stesso, cita Gemini 3.1 Pro deep thinking, quello che ha vinto non mi ricordo piu' quale competizione matematica, dice che il problema dell'efficienza e' grosso perche' sostanzialmente si e' fatto brute forcing fino ad adesso, cioe' genera tanti token e prendi quelli buoni. Dice quando si parla di efficienza ma anche di efficacia non e' detto che il brute forcing paghi sempre, anzi l'esperienza, la storia ci insegna che poi quando cominci ad ottimizzare ottieni risultati inaspettati. E infatti su quella cosa l'intervistatore che e' il CEO di Y Combinator gli chiede ma quindi quanto siamo lontano dall'AGI da un punto di vista scientifico, parlo con lui giustamente come uno scienziato quale Hassabis sei? Demis risponde non siamo lontani. Puo' anche darsi che abbiamo gia' scoperto tutto quello che ci serve, dobbiamo soltanto ottimizzarlo. Puo' darsi che ci mancano quelle due o tre idee ma non di piu' rivoluzionarie quanto e' stata l'attention o giu' di li' per arrivare a emulare veramente un'intelligenza diversa da quella umana ma comunque una cosa che possiamo chiamare veramente intelligente.
+
+> Infatti dice che in DeepMind hanno due filoni di ricerca completamente distinti, che ogni tanto fanno confrontare tra loro ma che volutamente tengono distinti anche come gruppi: uno e' sull'incremental research e uno e' sul breakthrough research. Proprio esplorano le due possibilita', hanno un approccio estremamente da scienziati in questo. E' uno dei passaggi interessanti. Pero' anche per confermare qualcosa che dici tu dell'efficienza poi ci torna anche Karpathy, ci stanno tornando in tanti in questo momento sul fatto che sbrodolano un po' troppo i modelli. E' una delle polemiche uscite anche su Opus 4.7 che qualcuno si e' lamentato che e' estremamente verboso.
+
+**Alessio Soldano**
+
+> Tra l'altro lo stesso Claude Code adesso ha l'adaptive thinking, cioe' loro tendono, cercano di proporre un sistema automatico in cui in base al tipo di domanda che tu fai, ma anche ChatGPT ce l'ha da un po', decide quanto thinking fare, perche' magari la domanda sembra relativamente superficiale quindi non vale neanche la pena di star li' a fare ragionamenti eccessivi, proprio per dare un sistema automatico che ti migliori l'esperienza in generale. Comunque tornando a DeepSeek V4, dicevamo che ci sono delle migliorie interessanti dal punto di vista proprio dell'algoritmo di come funziona, Stefano?
+
+## **[10:47] DeepSeek V4: 1.6T MoE e quantizzazione mista di Sanfilippo**
+
+**Stefano Maestri**
+
+> Si', no, ci sono tante cose interessanti. Intanto cominciamo a che e' 1,6 trillion.
+
+**Alessio Soldano**
+
+> Si' esatto, modelli giganteschi, tutti e tre.
+
+**Stefano Maestri**
+
+> Modello assolutamente gigantesco ma mixture of experts. Adesso cerco i dati, mi sono fatto un po' di appunti per non perdermi i pezzi: 49 billion di parametri attivi a token. Si', e' un mixture of experts ma abituati a quelli a 3, 4, 5, insomma e' piu' grande, i parametri attivi sono piu' grandi della media di molti modelli che ci sono in giro almeno tra gli open weight, diciamo, quando si pensa ai modelli che girano in locale. Pero' ha delle caratteristiche interessanti questa cosa di essere cosi' fortemente mixture of experts, perche' qualcuno, e ne ha fatto in specie Salvatore Sanfilippo, e' quello che ne ha scritto di piu' per stare in Italia, ha iniziato a dire attenzione pero' perche' qui e' interessante questo modello: non tutti i pesi sono uguali, quelli che contano di piu' sono quelli di routing mi pare, e allora posso fare delle quantizzazioni diverse. Tanto che su alcuni gruppi di parametri e' arrivato a quantizzare Q2, su altri invece glieli ha tenuti Q8.
+
+> E questa cosa gli ha permesso di far girare DeepSeek V4 Flash che e' un po' piu' piccolo, 284 billion comunque non esattamente uno scherzo, con un milione di contesto, l'ha fatto girare sul suo Mac mini Pro con non mi ricordo quanta RAM, tanta ma non mi ricordo quanta, sono su 628 196. Pero' comunque e' un risultato, lui dice con buone performance, ne parla da una settimana su X. Magari sarebbe bello parlarne con lui, vediamo se ci riusciamo, ma perche' io ovviamente non avendo un Mac mini e non avendo nemmeno il tempo di fare anche questa cosa qua, non l'ho provata. E' interessante quello che dice, soprattutto perche' ha giocato con la quantizzazione a livelli diversi su diversi layer e ha fatto una patch per la MLX e la sta usando in questo senso.
+
+**Paolo Antinori**
+
+> Sai cosa mi ricorda questo racconto? Mi ricorda un po' nell'epoca degli albori degli mp3, quando noi avevamo vent'anni o meno, in cui c'erano le varie forme di compressione per avere la qualita' migliore. Si era partiti da 128, poi 192, e poi ci si era espansi verso il bit rate variabile, quindi diverse parti del file erano campionate con variabilita' diversa. E questo approccio di Sanfilippo mi ricorda molto questo. Che ha senso, ovviamente aumenta complessita' perche' fai funzionare il sistema in maniere diverse a seconda di dove ti trovi o di quando ti trovi. Ha senso dal punto di vista di un'ingegneria del software.
+
+## **[14:20] Dalla ricerca pura all'ingegneria del software**
+
+**Stefano Maestri**
+
+> Si', si', sono d'accordo. No, e poi e' comunque interessante che da questo punto di vista ci sia un interesse anche dal mondo open source. Notavamo, e' una cosa che notavamo, che forse metteva Alessio sul piatto un paio di puntate fa, come in parte si stia passando dalla ricerca pura all'ingegneria del software, dall'ingegneria in generale. E non e' un caso che attori come Antirez, Salvatore Sanfilippo entrino in scena. Lui ovviamente ha un background soprattutto sul C++ notevole, in generale sulla programmazione vorrei dire, ed entra in campo mettendo anche il naso su questo genere di cose che e' si' sui modelli, ma e' ottimizzazione dell'inferenza per andare a fare diverse quantizzazioni. La cosa e' interessante da due punti di vista, sia per il risultato che lui ha ottenuto, di cui parla, e che e' interessante di certo, ma e' interessante anche vedere questo spostarsi di competenze che rende posizion...
+
+**Alessio Soldano**
+
+> Non e' solo la parte di ricerca pura sui modelli ma e' l'ingegnerizzazione di facciamoli funzionare con l'hardware che abbiamo.
+
+**Stefano Maestri**
+
+> Esatto. Che torna a far diventare piu' protagonista il movimento open source di quanto non potesse essere con l'open weight. Perche' parliamoci chiaro, un modello open weight io sono tanto contento che me lo diano e di poterlo installare eccetera eccetera, pero' e' sempre una cosa un po' calata dall'alto, cioe' come fai a contribuire a quella roba li'? Non puoi se non sei all'interno di uno dei centri di ricerca che lo rilasciano. Invece se parliamo di ottimizzazione di inferenza piuttosto che di agenti e ottimizzazione degli arnesi, poi parleremo anche di quello, diventa di nuovo protagonista il mondo open source. E noi, uso il noi ma sicuramente io che ci credo forte a quanto l'open source sia stato impattante sui sistemi operativi negli anni 90 fino ai 90 e poi su tutto il resto negli anni 2000, credo che possa avere un impatto anche da questo punto di vista. Non so se voi avete un'altra opinione.
+
+**Alessio Soldano**
+
+> Si', ma poi c'e' anche una platea differente di persone che possono contribuire. Cioe' al livello della ricerca, va bene, ok, lo rendiamo open, ma quanti sono in grado di dare un contributo? Si'.
+
+**Stefano Maestri**
+
+> Certo, certo. E quanti hanno le risorse anche oltre ad essere in grado, vogliono anche le risorse. Cioe' se non stai dentro di un centro di ricerca, bravo o non bravo, competente o non competente che tu sia, quella roba li' non la puoi fare. Se veniamo all'ingegneria del software e' diverso.
+
+**Alessio Soldano**
+
+> Assolutamente.
+
+## **[17:33] Z.AI post-mortem: bug async cache e fix in SGLang**
+
+**Paolo Antinori**
+
+> Se volete io a tal proposito vi posso divagare in direzione del post mortem di Z.AI in cui hanno pubblicato come mai... Ok. Allora qual e' il contesto? Z.AI e' uno dei provider che fornisce GLM, il modello che usiamo noi, che uso io, di cui ho fatto un abbonamento annuale, costava molto poco ed era risultato di buona qualita'.
+
+**Alessio Soldano**
+
+> Esattamente quello il punto.
+
+**Paolo Antinori**
+
+> A un certo punto ha iniziato a dare risultati di qualita' scarsa, allucinava diciamo usando un termine un po' vintage a questo punto visto che capita sempre meno spesso. Ma non solo allucinava, cioe' inventava parole, mischiava delle cose, era come se si fosse ubriacato, o se per chi ha passato abbastanza tempo davanti a uno schermo era come se si fosse corrotta la memoria, quando ti escono dei caratteri che non dovrebbero essere li' e non c'e' spiegazione a come mai siano li'. Internet, Reddit nello specifico, ovviamente era infinitamente oltraggiata dal fatto di non ricevere un livello di qualita' professionale per i loro 20 dollari al mese che pagavano e che dicevano non avrei mai piu' dato altri... si' si'.
+
+**Stefano Maestri**
+
+> Trimestre.
+
+**Paolo Antinori**
+
+> Non avranno mai piu' i miei soldi ovviamente, queste robe, lei non sa chi sono io, queste scenate qua insomma. E niente, non essendoci una comunicazione trasparente, quella gente sembrava competente, la tesi era sono stati un po' avidi questi di Z.AI, o comunque sono stati vittime del loro stesso successo, quindi potevano avere piu' domanda di quanta potessero servirne, e allora hanno chiuso il rubinetto nella forma di deployare loro modelli in forma super quantizzata che ovviamente degrada le performance in termini di qualita' ed e' questo il risultato. E questa era una tesi che io ho preso per buona perche' non avevo tendenzialmente altri elementi e la gente ci credeva, tant'e' che qualcuno pensava che fosse un business che andava a morire quello di Z.AI perche' la qualita' non c'era. Era interessante, scusatemi un altro motivo per cui la gente aveva fatto questa presupposizione era perche' gli stessi modelli forniti da altri provider, nello specifico Alibaba, funzionavano molto bene. Quindi la gente ti diceva no lascio perdere Z.AI, sono dei taccagni loro, fai andare di la' funziona bene.
+
+> E cosi' siamo stati per un po'. Z.AI non si prodigava a commentare. Qualche tempo fa e' arrivato un commento di qualcuno degli ingegneri di Z.AI che ha detto: avevamo un bug, provate adesso e le cose dovrebbero essere meglio. Le cose sono meglio da allora, quindi la storia diciamo checked dal loro punto di vista, e avevano promesso un post mortem. Il post mortem e' arrivato ieri o l'altro ieri ed e' stato, a mio avviso, piu' interessante di quanto potevo immaginare per molteplici aspetti. Parziale trasparenza ti direi. Adesso ti dico perche', dal mio punto di vista da engineering manager tendenzialmente persona cinica e poco ottimista nei confronti delle storie che si sente raccontare. Fondamentalmente hanno dato dei dettagli tecnici di molto basso livello, ho spiegato qual era il...
+
+**Alessio Soldano**
+
+> Tanto per trasparenza, direi.
+
+**Paolo Antinori**
+
+> E quindi dal punto di vista della soddisfazione nerd tecnica hanno spiegato le cose come stavano ed e' credibile la risposta. E' l'apertura, diciamo, che trovo lievemente piu' discutibile, in cui fondamentalmente hanno detto siamo contenti di condividere con voi la risoluzione di questo problema che era molto raro e facevamo un po' fatica a seguirlo, non riuscivamo mai a catturarlo. Si', paio di palle, nel senso o non lo stavate usando bene o non lo guardavate, perche' io e tutti quegli altri lo beccavamo dopo cinque minuti tutti i giorni. Quindi questa e' un po' la mia critica. Ovviamente loro devono mantenere una stance ufficiale, quindi se sei vago sui termini, dici rare condizioni, cosa significa raro per te o per me, e' opinabile e quindi va bene. Quindi quella e' un po' la mia critica. Pero' tolta questa facciata di ammettere una colpa, ma fino a un certo punto, sono arrivati a parlare del punto. E per coloro che hanno un background nel software come voi due nello specifico, ma magari viene da pensare Sanfilippo in questo caso perche' e' una cosa vicina lui anche, ad indovinare qual e' la causa principale del problema che avevano: propagazione di cache asincrona.
+
+> Asincrono! Chi ha mai avuto un problema con la sincronicita', soprattutto quando devi tenere in conto le operazioni? Cosa vuol dire asincrono per chi non ha familiarita'? Fondamentalmente e' fare partire delle operazioni concorrenti e non stare sempre sequenzialmente ad aspettare ogni risposta prima di fare un'altra azione. Per andare piu' veloci decidiamo che posso fare due cose nello stesso momento, come nella vita reale. Ogni tanto quando fai due cose nello stesso momento fai un casino e quindi devi avere un po' diciamo di autocontrollo per coordinarti. Loro hanno imputato le cause principali alla cache, alla KV cache, e alla sincronicita' di questa cosa per cui c'erano delle condizioni in cui alcune volte se veniva abortita un'operazione, l'operazione asincrona della cache non era ancora completata e quindi magari l'operazione successiva si trovava un contesto non suo ed allora usciva il casino. Molto relatable dal punto di vista del software di chi ci ha messo le mani, tutti ci siamo scontrati almeno una volta con questa cosa e quindi ci sta.
+
+> La loro storia e' particolarmente credibile, a mio avviso, perche' hanno identificato un bug specificatamente in questo contesto in uno dei progetti da cui loro dipendono. Un progetto open, di cui adesso io sto cercando il nome perche', l'ho letto stamattina ma non me lo ricordo gia' piu', un progetto legato, SGLang, che, non conosco bene, confesso, non so esattamente quale sia il suo ruolo, ma hanno linkato la PR che loro hanno aperto a quel progetto. Quindi ufficialmente c'era un problema, l'hanno riconosciuto nel loro stack, l'hanno fixato e stanno contribuendo all'open source. Quindi tanto di cappello a questo lato qua. Poi, che sia questa tutta tutta tutta la storia, chi lo sapra' mai, la maggior parte della storia ha senso ed e' interessante dal punto di vista del software. Morale, devi sapere abbastanza che cosa stai facendo se vuoi fornire un servizio a un grosso pubblico, altrimenti non c'e' speranza che puoi chiedere a Claude Code di farlo per te e basta.
+
+**Alessio Soldano**
+
+> Io non vorrei dire stupidate ma SGLang mi risulta sia tipo il motore di inferenza su cui fanno girare il modello, un come se fosse il llama.cpp o vLLM.
+
+**Stefano Maestri**
+
+> Si', puo' essere, si', si'.
+
+**Alessio Soldano**
+
+> Quindi tu puoi avere anche il modello migliore del mondo, ma se hai problemi a tenerlo in piedi per scalare su livelli di concorrenza, di utilizzo, come quelli che possono avere loro con milioni di persone da tutto il mondo che lo vogliono usare, non e' come dirlo. E non stento a credere perche' se avete mai provato anche solo a tirare in piedi qualcosa di locale sul vostro computer e gia' vi siete imbattuti con problemi di performance eccetera, immaginate questa cosa portata a 4-5 livelli di grandezza piu' su.
+
+## **[25:07] Sliding window, CSA e HCA: 78% meno compute sulla KV cache**
+
+**Stefano Maestri**
+
+> Si' assolutamente. Tornando un secondo invece a DeepSeek mi chiedevi dell'attention, di quanto e' cambiata l'attention e di parlarne un po'. Come sempre direi, com'e' stato diciamo a gennaio dell'anno scorso quando e' arrivato il primo DeepSeek R1 se vi ricordate.
+
+**Alessio Soldano**
+
+> Primo DeepSeek moment.
+
+**Stefano Maestri**
+
+> Il primo DeepSeek. DeepSeek e' interessante per i paper piu' che per il modello stesso, perche' alla fine anche R1, a parte aver fatto grande notizia di se', non e' che e' stato adottato su larga scala, anche perche' poi sono arrivati tutti gli altri, il coding non era il suo punto forte, e' uscito nel momento in cui il coding era in rampa di lancio eccetera eccetera.
+
+**Paolo Antinori**
+
+> Si' e no, pero' Stefano, sbaglio o era il modello che deployava per Perplexity?
+
+**Stefano Maestri**
+
+> V3.1 hanno usato loro, se ricordo bene, che e' quello successivo. Pero' si' e' comunque un DeepSeek, hai ragione su questo, e' il modello.
+
+**Alessio Soldano**
+
+> Ha dato delle idee su cui tutti gli altri hanno sviluppato.
+
+**Stefano Maestri**
+
+> Ecco, sono molto interessanti i paper di DeepSeek perche' allora davvero sono molto open nella ricerca e nel condividere quello che fanno. E ricordo velocemente che in DeepSeek R1, anzi V3 che poi e' la base di R1, c'erano i meccanismi che non si erano visti ancora di sparse fast attention e flash attention, che sono due modi di mettere l'attenzione sui token diversi da come si faceva prima. Adesso non li fa piu' nessuno come da paper originale "attention is all you need" che prende tutto e guarda tutto perche' e' troppo costoso. Pero' la sparse fast attention di DeepSeek V3 era molto interessante perche' riusciva ad avere un attention a multilivello che portava ad avere un contesto ampio a livello di concetti pur costando poco. Entrare nel dettaglio in un podcast diventa complicato e non entrero' troppo nel dettaglio neanche in quella nuova, pero' e' notevole, notevole, letta, riletta per chi fa i modelli, le inferenze in particolare. Da quello che so lo stanno gia' facendo perche' inseriscono il concetto di quello che loro chiamano hybrid attention architecture e hanno tre grosse novita'.
+
+> Uno e' quello che chiamano sliding window attention, quindi praticamente l'attention e' divisa in pagine, come se fosse una pagina di memoria per chi e' un ingegnere del software. Anziche' utilizzare il testo raw all'interno delle pagine di memoria usano una produzione a sliding window per considerare come le ultime pagine si sovrappongono tra di loro. Questa cosa permette di concentrare l'attenzione soltanto su un numero piu' limitato di token e in ultima analisi avere efficienza. Ma i due piu' interessanti sono quelli che si chiamano CSA Compressed and Sparse Attention e HCA Hierarchical Compressed Attention. Praticamente loro arrivano a un milione di token spendendo il 78% meno della memoria, della potenza di calcolo, non di memoria perche' sostanzialmente anziche' avere una KV cache piatta, quindi chiave valore, adesso sto oversemplificando, se ci ascolta qualcuno che fa inferenza non rida' per come...
+
+**Alessio Soldano**
+
+> Di calcolo.
+
+**Stefano Maestri**
+
+> La spiego. Per cercare di spiegarla, invece che fare una mappa chiave valore secca con la KV cache, hanno fatto sostanzialmente un sistema gerarchico di memoria ad albero, in modo tale da recuperare piu' velocemente quelle porzioni di KV cache che sono significative per l'attenzione di quel momento. Questo livello di compressione viene fatto per pagine di KV cache piu' o meno grandi a seconda di quanto il contesto e' vecchio. Quindi la prima che ho detto CSA e' diciamo nelle cose non piu' nuove ma non troppo vecchie, mentre la HCA va nelle cose piu' vecchie, per cui piu' il contesto diventa vecchio piu' comprimo. Allora, in se' interessante, va vista sul campo perche' di sicuro a benchmark e a gestione del contesto loro hanno risultati interessanti. Io mentre la leggevo, qualche lampadina degli impatti che questa cosa puo' avere mi si e' accesa. Sicuramente e' migliorativa rispetto a una compressione secca della KV cache.
+
+**Alessio Soldano**
+
+> Intuitivamente e' come se stessimo dicendo che facciamo attenzioni differenti nel guardare le cose che sono appena successe rispetto a quelle che sono successe in passato.
+
+**Stefano Maestri**
+
+> Si', intuitivamente si', ma se vuoi intuitivamente e' piu' simile al dire che stiamo paginando su disco se pensi alla RAM. Non fai un accesso diretto, ma fai un accesso per indice alle pagine e ricarichi le pagine che ti servono. Poi l'attention la fai sulla pagina, attenzione. L'attention vera, quella che poi ti porta a decidere il prossimo passo nel layer, la fai sul contesto reale. Pero' il recupero del contesto reale invece che scorrertelo tutto indietro con la KV cache, vai a prendere la pagina dove e' piu' altamente probabile che tu trovi quelle informazioni. Ovviamente trattasi di altamente probabile e non di certezza, quindi in questo senso puoi perderti alcune informazioni che potevano essere interessanti. Il paper va letto bene, io non ho tempo di approfondirlo fino in fondo, ce l'ho letto ma una volta diciamo. Pero' piu' o meno e' questo quello che succede dentro con il paper. E di sicuro verra' in qualche modo adottato, raffinato, sistemato anche da altri perche' risparmiare il 78% della potenza di calcolo per gestire la KV cache e' fondamentale.
+
+## **[33:30] Gemini Flash, distillation e FP4 quantization aware**
+
+**Stefano Maestri**
+
+> E qui se volete faccio un altro riaggancio alle interviste che abbiamo, in particolare quella di Hassabis perche' l'intervistatore, per me e' stata illuminante quella cosa li' sentita dire da lui sulle scelte di business piu' che sulla tecnologia. E l'intervistatore gli chiede insomma se state diventando fondamentali perche' adesso tutti i prodotti Google integrano Gemini in un modo o nell'altro, avete visto l'hanno messo in Maps, e' dentro tutto Workspace, e lui dice si' e poi ci sono tutte le AI Mode. E gli risponde per non parlare della sintesi AI, delle ricerche che sono miliardi di chiamate al giorno o quelle robe li', perche' avendolo integrato nella ricerca che comunque e' il sito ancora piu' utilizzato dal mondo, e lui dice infatti per noi...
+
+**Alessio Soldano**
+
+> La cosa piu' usata, certo.
+
+**Stefano Maestri**
+
+> Negli ultimi mesi la ricerca si e' focalizzata tantissimo sulla distillation, perche' tutta quella roba che vedete integrata usa Flash, non usa Pro, perche' Flash siamo riusciti a far dare delle risposte a Flash che sono di altissima qualita' spendendo meno di un quindicesimo a livello di potenza di calcolo. E per noi era fondamentale, se non avremmo potuto metterla dappertutto. Quindi e' interessante quanto in realta' possiamo dire che DeepMind stia facendo cose assolutamente di frontiera ma di una frontiera diversa, cioe' la stanno rendendo efficiente ed efficace, invece che concentrarsi sullo sviluppo ulteriore di Gemini 3.1. Poi mi sbagliero', ma visto che c'e' la I/O a maggio, un Gemini 4 lo vediamo arrivare. Pero' questo e' solo una mia sensazione. Pero' e' interessante quanto sia necessario da un lato avere risposte sempre migliori per arrivare, lui ne parla anche per arrivare alle AGI, vabbe' dopo ne parlo meglio di quell'intervista li' perche' e' super interessante, e quanto sia importante anche essere efficienti e distribuire il carico il piu' possibile anche sull'edge eccetera eccetera eccetera.
+
+**Alessio Soldano**
+
+> E di nuovo ingegnerizzazione della questione.
+
+**Stefano Maestri**
+
+> Esatto, e' piu' ingegnerizzazione che ricerca, pur loro continuando a fare un sacco di ricerca.
+
+**Alessio Soldano**
+
+> No, mi piace anche vedere che, tipo tornando a DeepSeek, ogni tanto si esce con queste trovate che sono quelle che ti fanno fare diciamo lo step, il gradino, e poi dopo tutti gli altri in modo nell'altro raffinano e adottano e avremo modelli di nuovo piu' potenti, utilizzabili su risorse piu' o meno pari a quelle che erano richieste prima per modelli piu' scarsi.
+
+**Stefano Maestri**
+
+> E poi c'e' un'altra cosa che credo sia interessante da dire. Nominavamo prima la quantizzazione fatta da Sanfilippo che e' una Q2 da una parte e una Q8 dall'altra. Pero' il paper dice esplicitamente che il training e' stato fatto FP4 Quantization Aware. Cosa vuol dire quella cosa qua? Vuol dire che quando fate i training rappresentate ogni peso dei perceptroni in FP16, normalmente FP16. C'e' qualcuno che l'ha fatto in FP8 ma di base si fa FP16, loro l'hanno fatto FP16. Pero' il training FP4 aware significa che nel cercare i minimi locali che poi portano al minimo generale del modello, perche' e' che una funzione di... e' la ricerca del minimo di una funzione alla fine a trainare un modello, banalizzando un po' ma ecco la roba li'. Dire che FP4 aware significa privilegiare i pesi che sono rappresentabili in FP4 senza troppa compressione rispetto a distribuire molto i pesi su un FP16. Quindi e' come dire ok io ho tutta la potenza dell'FP16 ma cerco di concentrare tutto in alto in basso al centro in una dei tagli FP4 che una quantizzazione potrebbe fare. Gia' in fast day training questo dovrebbe portare, si vede gia' in altri modelli, MiMax l'ha fatto se ricordo bene, tra i primi era MiMax 2.5 ad aver fatto questa scelta. Questa cosa porta ad avere delle quantizzazioni che quando sono fatte si fa meno fatica a farle, quelli di Hugging Face non diventano matti, e poi il risultato e' migliore, comunque il risultato e' migliore perche' stai tagliando via meno roba, cioe' l'informazione e' tutta concentrata a blocchi di FP4 in qualche modo.
+
+**Paolo Antinori**
+
+> Interessante questo.
+
+**Stefano Maestri**
+
+> Cresce un po' il numero di pesi totale, quindi e' sempre un trade-off, pero' lo sono dato a trillion e trillion, cui, cos'e', un trillion e sei, no, se ho letto bene? Poi l'ultima cosa forse interessante dal loro paper, no, troppo tecnica da spiegare qua, e' come se fanno lo storage della KV cache per usare la sparse attention che dicevo prima. E attenzione, attenzione, che e' una cosa di cui discutevamo noi in chat ogni settimana ma che sono certo che anche qualche ascoltatore potrebbe storcere il naso perche' i benchmark non sono entusiasmanti. Pero' attenzione che i benchmark non sono entusiasmanti ma e' una preview questa qua, non e' il modello finito. E' una preview che vuol dire che ha fatto, loro dicono ampiamente meno, che non vuol dire niente ampiamente meno, comunque meno del 50% della fase di reinforcement learning. Quindi e' un modello reasoning a meta', non so come dirla. Perche' hanno fatto probabilmente l'allineamento base per dare risposte, per essere in Instruct, tutto di sicuro quello Instruct vuol dire che e' capace di conversare. Non di prevedere solo il prossimo token, perche' anche questo quando vado a conferenze spesso e' una domanda che viene fuori, ma adesso i modelli sanno conversare, i modelli non sanno conversare, i modelli fanno ancora quello che facevano prima, prevedono il prossimo token o il prossimo blocco di token. Reinforcement Learning Human Feedback o Verifiable Reward, che sono le due fasi che si fanno dopo, insegnano al modello a mettere insieme delle risposte a partire dalla previsione del prossimo token. Questa e' la prima fase di reinforcement learning. Poi ce n'e' una seconda, quella che gli insegna a fare la stessa cosa generando gli hidden token, ovvero i reasoning token anche detti, che sono quelli che gli permettono di fare ragionamento. Questa parte e' fatta in piccola parte sulla preview di DeepSeek, quindi mi aspetto che i benchmark della final siano molto meglio. Poi non e' detto, pero'...
+
+**Paolo Antinori**
+
+> Valutami una figura retorica, Stefano. E' un po' come la differenza che ci passa tra conoscere il vocabolario dell'inglese e sapere parlare l'inglese.
+
+**Stefano Maestri**
+
+> Si', si', e' corretto. E' assolutamente corretto quella cosa che dici. E' proprio la differenza, e' quella li' delle fasi RLHF, RLVR. Poi chiamiamolo reinforcement learning, in realta' e' piu' una distillazione ma non lasciamo stare il tecnicismo. C'e' la fase in cui gli insegni a fare il reasoning, che e' una fase ancora diversa, che stando nel tuo paragone e' come...
+
+**Paolo Antinori**
+
+> Non dire cazzate.
+
+**Stefano Maestri**
+
+> Esatto, bravo, avrei detto esattamente le stesse parole. E questo piu' o meno quello che riesco a raccontarvi cosi' a parole del paper. Pero' il paper per chi e' tecnico del settore va letto, e' interessante.
+
+**Alessio Soldano**
+
+> DeepSeek momento numero 2.
+
+**Stefano Maestri**
+
+> Si', ha fatto meno boom diciamo, perche'...
+
+**Paolo Antinori**
+
+> Beh dipende, sono crollate del 20% le azioni di Nvidia oppure no? Perche' se non sono crollate non e' DeepSeek che muove.
+
+## **[41:53] Jensen vs Dwarkesh e Vision Banana di DeepMind**
+
+**Stefano Maestri**
+
+> No, anche perche' non dirlo che viene a prenderci, l'a-zio Nvidia. Non so se avete visto. No, non facciamo il nome. No, ci... e' monitorato, adesso viene a prenderci. Monitora con l'intelligenza artificiale tutti quelli che nominano il suo nome e ne parlano male. No, non so se avete visto, forse abbiamo gia' detto qualche settimana fa, ed e' andato in intervista da...
+
+**Paolo Antinori**
+
+> Di cui prima o poi impareremo anche il Jensen.
+
+**Alessio Soldano**
+
+> Anche lui ci ascolta.
+
+**Stefano Maestri**
+
+> Prima era stato da Lex Fridman, un'intervista normale, serena eccetera. Poi e' andato da Dwarkesh, che invece l'ha incalzato molto sull'export cinese, sul fatto che i cinesi stanno recuperando terreno, che l'hardware non e' piu' la cosa piu' importante perche' Google sta dimostrando che con i suoi chip sta andando forte eccetera. Cazzo, ti sei incazzato. Cioe' ha proprio cambiato la voce, non aveva piu' la solita voce da keynote, come si definisce. Ha cominciato ad alzare la voce, dirgli ma che fichia si puo' insolutare. Cioe' c'e' pieno di meme su X di Jensen che da' il microfono in testa a Dwarkesh, queste cose qua. Allora, quell'intervista li' va vista solo per quello, perche' lui che si incazza e', credo, notizia unica perche' e' sempre tutto con punto da bravo CEO e poi anche culturale visto che e' asiatico.
+
+> Dunque, scaletta che ci stiamo gia'... Dai, Vision Banana, Vision Banana, mi piace Vision Banana. Comincio a far vedere qualcosa io.
+
+**Alessio Soldano**
+
+> Allora, vi c'e'. Ecco, fai vedere qualcosa. Da dove e' partita la questione? Sostanzialmente DeepSeek e' uscita con un paper in cui... scusa, DeepMind. DeepMind. E' uscita con un paper portando all'attenzione il fatto che...
+
+**Stefano Maestri**
+
+> DeepSeek Google. Ok.
+
+**Alessio Soldano**
+
+> I modelli di generazione di immagini di frontiera come Nano Banana sostanzialmente possono essere utilizzati anche come modelli per fare vision, modelli specifici per fare task di vision tipo segmentazione, tipo depth estimation, tipo edge detection, queste cose qua. L'idea non e' nuova, gia' se n'era parlato, pero' il discorso e' che loro sono nella posizione in cui hanno un modello particolarmente forte e possono dimostrare, quantomeno buttare fuori dei claim, perche' poi non e' che il modello e' open, lo possiamo provare tutti per fare queste cose, che i risultati che si ottengono sono sostanzialmente a livello dei modelli, diciamo frontier, di segmentazione, depth estimation, edge detection eccetera. E che cosa significa questa cosa? Spiegato in modo piu' facile. Se pensiamo cosa fanno i modelli di generazione di immagini attuali, noi partiamo da un'immagine, forniamo un prompt, oppure partiamo con un prompt testuale, generiamo un'immagine. Pero' ci sono i modelli di editing ai quali diamo un'immagine, diamo un prompt e otteniamo un'altra immagine. E allora intuitivamente il concetto e' che nel momento in cui questo prompt esprime il task di vision che noi avremmo voluto fare con un modello dedicato, un modello specifico, possiamo provare ad ottenere la stessa cosa. Per cui un task di segmentazione che e' tipo, dimmi, trovami le auto in questa immagine, puo' utilizzato su un modello di generazione immagini portarti ad avere una nuova immagine in cui per dire le auto sono colorate tutte di rosso.
+
+**Stefano Maestri**
+
+> Questo che sto facendo vedere secondo me e' abbastanza impressionante. Due zuppa con di fianco qualcosa da mangiare, due prompt, uno il primo che isola l'aglio, il secondo che isola la carne. Cioe', questo e' abbastanza impressionante, fatto da un modello che non e' dedicato.
+
+**Paolo Antinori**
+
+> Quindi scusami, se hanno imparato a riconoscere le auto, posso contare sul fatto che Google smettera' di rompermi i coglioni con i suoi captcha, di chiedermi qual e' il semaforo e qual e' l'automobile?
+
+**Stefano Maestri**
+
+> Non lo so, puo' essere...
+
+**Alessio Soldano**
+
+> E sostanzialmente stiamo passando da dei modelli di vision che ti generano in output sostanzialmente delle matrici di numeri che ti dicono la posizione nell'immagine in cui tu hai la cosa che viene diciamo detected, ad dei modelli che sono questi modelli di generazione di immagini che sostanzialmente producono un'altra immagine in cui l'informazione se vuoi e' nei canali del colore. E quindi tu puoi esprimere in quel modo li' le stesse cose che avresti espresso con la matrice dei numeri. Per cui banalmente se stiamo parlando di edge detection tu hai un'immagine in bianco e nero dove in nero hai i bordi della cosa che degli edge. Se parliamo di depth estimation, quindi normalmente avreste avuto una matrice di numeri che ti dice la distanza per ogni pixel la distanza dalla camera, hai un'immagine in cui hai scale di colori differenti e quindi i pixel piu' chiari sono quelli magari piu' vicini e quelli piu' scuri sono quelli piu' lontani o viceversa. Al tempo stesso potresti avere delle heatmap per la salienza per vedere, per dire cos'e' una parte saliente di un'immagine. E' interessante secondo me da due punti di vista. Il primo e' che in realta' molte applicazioni di modelli di vision poi per essere veicolati cioe' per essere utilizzati prevedono che tu le informazioni che ti hanno dato i modelli di vision le trasformi a loro volta in un qualcosa di in un'immagine visuale che sia interpretabile dall'umano. Quindi utilizzare direttamente il modello di generazione di immagini per fare questa cosa, se vuoi ti togli uno step, ti fa gia' uno step che tu avresti fatto.
+
+**Paolo Antinori**
+
+> Scusami mi hai fatto venire in mente quando vai a vedere l'ecografia di tuoi figli e ti dicono vede qui si vede il bambino e tu vedi tipo la galassia di Andromeda e dici si' si' lo vedo, lo vedo.
+
+**Stefano Maestri**
+
+> Io l'ho trovata interessante per un'altra cosa anche, perche' fa un po' il paio con una cosa che Hassabis continua a ripetere. Non nell'intervista che citavo prima ma l'ho sentito in un altro intervento, quando dice che i modelli di generazione in video invece possono essere un buono strumento usati al contrario, cioe' dandogli un video in pasto per interpretare la fisica del video. Perche' sono capace di generare qualcosa che sia una fisica credibile, se non esatta, ma comunque credibile, nel video lui in piu' interventi dice che la potenzialita' di questi oggetti sta molto anche nell'uso che potremmo farne. Come Vision 3D o Vision continua, lui parla di robotica in quella situazione, cioe' come faccio a far vedere al robot e a capire che cosa ha intorno il reverse engineering della generazione video, cosi' come qua e' stato fatto il reverse engineering della generazione immagini, e' in qualche modo, visto che comunque generazione immagini e generazione video, avendo tecniche leggermente diverse eccetera, ma sono la stessa famiglia perche' per fare un video fai frame, e' in qualche modo una conferma di questa sua teoria.
+
+**Alessio Soldano**
+
+> Parenti. E poi c'e' un discorso di versatilita' nel senso che nel momento in cui un modello di generazione di immagini opportunamente promptato con tipo data queste immagini e ridisegnamela come mappa di profondita', ridisegnamela colorando gli oggetti di un certo tipo in un certo modo, isolando solo un certo tipo di oggetti eccetera, tu hai un modello che e' universale, puo' essere usato per segmentazione, per analisi profondita', per edge detection, per object grounding, tutte queste cose senza doverti preoccupare di averne uno per ogni tipo. Chiaramente c'e' un discorso di risorse necessarie per far andare questa cosa, pero' si torna a seguire l'argomento di prima. Ci sono i margini di ottimizzazione eccetera.
+
+## **[51:32] Robotica, hackathon e Stefano Gatti relaunch**
+
+**Paolo Antinori**
+
+> Guarda io trovo super interessante quello che ci hai raccontato e mi stupisce perche' in passato non l'avrei trovato cosi' interessante, non per offendere il tuo campo di interesse ma ha poco a che fare con la mia quotidianita'. Ma mi permette di citare il fatto che nell'ultimo mese io e Stefano, a parte quando lui e' andato in vacanza a divertirsi e mi ha lasciato col cerino acceso, ci siamo dedicati a una sfida di robotica, un hackathon di robotica, in cui questi aspetti che tu hai descritto sono assolutamente chiave e importanti, a partire dai piu' banali e vecchi a questo punto modelli per fare l'algoritmo YOLO che identifica gli oggetti, ti fa un box intorno, che adesso sono commodity, fai una chiamata, hai il risultato. Alcuni dei nostri partner del Contest, che sono dei veri ingegneri nell'ambito della robotica, cosa che noi non siamo, hanno invece mostrato come applicare alcuni degli algoritmi piu' avanzati all'identificazione degli spigoli. Quindi c'era questa macchinina telecomandata, immaginate, che andava in giro con una camera e riconosceva non solo la sedia, ma riconosceva gli spigoli, quindi ne teneva traccia quando ci si avvicinava per non andarci a sbattere. Quindi un sacco di applicazioni pratiche quando vuoi muoverti nel mondo reale che ti serve avere, insomma un aiuto di qualche tipo. E quindi negli screenshot che ha fatto vedere Stefano mentre tu raccontavi questa cosa ci rivedevo tantissime applicazioni pratiche del mio mese di esperienza con un robot che andava a sbattere alla prima curva nel mio caso.
+
+**Stefano Maestri**
+
+> Sbattere alla prima curva ma abbiamo vinto il contest. Siamo comunque stati bravi, abbiamo vinto il contest perche' abbiamo contribuito, perche' abbiamo l'open source nel sangue. Il motivo per cui abbiamo vinto il contest e' che siamo stati estremamente open ed educativi per le prossime generazioni di gente che fara' il contest.
+
+**Alessio Soldano**
+
+> Assolutamente.
+
+**Paolo Antinori**
+
+> Anche troppo open source, il dottore mi ha dato una pastiglia da prendere tutti i giorni.
+
+**Stefano Maestri**
+
+> ...e... e... e... e...
+
+**Alessio Soldano**
+
+> Comunque Paolo mi e' fatto venire mente una cosa. Qualche decennio fa all'universita', al corso di robotica, mi ero infilato in un progetto, infilato e poi dopo me lo sono anche tolto con estrema velocita', in cui si cercava di fare vision per mandare in giro un robot che aveva un'unica telecamera puntata verso l'alto contro uno specchio. Cosi' che potesse vedere tutto quello che c'era attorno. Un'immagine che ti fa vedere tutto quello che hai attorno ottenuta con questa telecamera che punta verso l'alto dove hai uno specchio. E chiaramente i pochi algoritmi che esistevano di edge detection eccetera non ti davano granche' perche' era una trasformazione assolutamente strana. Lo specchio non era esattamente con una forma normale diciamo, per cui distorceva nelle varie parti dell'immagine in modo differente. Probabilmente con i modelli che esistono adesso sarebbe stata una cosa banale. Avere un qualche tipo di tool che e' generico abbastanza per cui puo' fare vari tipi di lavorazioni vision contemporaneamente sarebbe stato stupendo.
+
+**Stefano Maestri**
+
+> Pero' tornando un secondo al nostro di progetto di robotica ne approfitterei per ricordare al nostro gentile pubblico che abbiamo anche intervistato sull'argomento Simone di Somma a gennaio. Se volete andare a vedervi l'intervista e' molto interessante per capire anche che cosa fa Cyberwave eccetera. I maligni staranno pensando che abbiamo vinto il contest perche' avevamo intervistato Simone, pero' non e' cosi', giuro.
+
+**Paolo Antinori**
+
+> Non e' vero, abbiamo vinto perche' c'erano solo altri tre team nella nostra categoria, altri due team e quindi avevamo 33% di possibilita'.
+
+**Stefano Maestri**
+
+> Esatto. E due si sono ritirati. Vabbe', adesso non stiamo a dire tutti gli altarini, Paolo, perche' poi ci sono... Non e' questo il punto. No, pero' andate a sentirvi l'intervista.
+
+**Alessio Soldano**
+
+> Voi siete stati sufficientemente bravi da resistere fino in fondo e portare...
+
+**Stefano Maestri**
+
+> Assolutamente si'. Parlando di interviste, e' uscita mercoledi' l'intervista a Stefano Gatti che era stato gia' nostro ospite, vi ricordate? E' stato il primo a rompere il ghiaccio nelle puntate con ospiti, nella puntata 20. L'ho intervistato invece per lasciargli lo spazio che merita, vista la sua esperienza e la sua vision. Andate a sentirvi l'intervista. E soprattutto, andate a sentirvela perche' ho ascoltato i vostri feedback, perche' finalmente qualcuno ci da' dei feedback, non tutti gentilissimi, ma ci danno dei feedback dicendo che i video sembravano fatti da un bambino di quattro anni e ho provato ad arrivare almeno sei anni. Se qualcuno vuole dargli un'occhiata, mi sono impegnato. Mi impegnero' anche nel montare questo episodio, pero' diciamo che ci stiamo provando ad ascoltare i vostri feedback.
+
+**Paolo Antinori**
+
+> E abbiamo anche ingaggiato degli attori per fare gli screen capture delle copertine, giusto?
+
+**Stefano Maestri**
+
+> No, quella e' intelligenza artificiale, e presto anche qua in video metteremo i nostri avatar in modo che siano belli con la faccia tirata esattamente come quella della tua copertina, Paolo. Ha avuto un grandissimo successo, quindi dovresti anche valutare di qualche... non so.
+
+**Paolo Antinori**
+
+> Grazie.
+
+**Alessio Soldano**
+
+> Che ha avuto un certo seguito, c'e' da dire.
+
+**Paolo Antinori**
+
+> Mi fermano per strada, si' si' si' si'.
+
+**Stefano Maestri**
+
+> Ti fermano per strada, attenzione, spero non per darti delle sberle, ma e' importante che ti fermino per strada. Adunque, dicevamo cosi' nell'introduzione al volo di investimenti che girano, li nominiamo soltanto per dirlo. 40 miliardi di dollari da Google verso Anthropic, interessante per come Google diversifichi i suoi investimenti, non soltanto interni ma anche verso una che potrebbe sembrare una concorrente. E anche in Cina DeepSeek pare che stia raccogliendo 20 billion da Alibaba, e anche li' movimenti interni perche' anche Alibaba vi ricordiamo che fanno Qwen come modelli e quindi sono in qualche modo concorrenti. Cosi', questa e' quasi una curiosita' rispetto ai nostri argomenti soliti.
+
+## **[58:25] Roo Code chiude e Lince.sh: il futuro post-IDE**
+
+**Alessio Soldano**
+
+> Senti, diciamo due parole sul fatto che chiude Roo Code.
+
+**Stefano Maestri**
+
+> Si', diciamo due parole su quella roba li', che era il mio prossimo punto in scaletta prima di parlare di Hermes. Allora, Roo Code, chi non si ricordasse cos'e' Roo Code, era un fork di Cline, uno dei primi agenti di coding che io e Alessio abbiamo usato, storicamente io e Alessio, perche' Paolo ci snobbava al tempo sugli agenti di coding.
+
+**Paolo Antinori**
+
+> No, ho fatto tempo a usarlo anch'io!
+
+**Stefano Maestri**
+
+> Salvo dopo entrare completamente nel loop e non uscirne piu'.
+
+**Paolo Antinori**
+
+> No, vi spiego la storia, ero taccagno e stavo cercando un accesso gratis e non lo trovavo, e poi quando Google ha dato Gemini gratis l'ho provato.
+
+**Stefano Maestri**
+
+> Ok. No, Cline era e, ma anzi Cline e' perche' non e' Cline che chiude. Un agente scritto come plugin di VS Code. Roo Code era un fork di Cline per fare le cose meglio e per i taccagni anche, nel senso che tendeva ad usare un po' meno token perche' Cline era abbastanza un idrovoro. Roo Code ha avuto molto successo comunque perche' e' stato molto open, accettato molto i feedback, e molti di chi ha usato plugin di VS Code diretti, per avere la gente che non voleva usare diciamo Cursor, ha usato Roo Code nell'ambiente open. L'autore ha dichiarato basta, grazie di rivederci. Chiudo tutto, se volete forkatelo, se non volete forkarlo fate quello che volete, io questo non lo mantengo piu'. Ma non l'ha detto perche' si e' scocciato, l'ha detto con una giustificazione forte nel suo blog che e' quella che mi ha colpito: chiudiamo, chiudo Roo Code perche' non sono convinto piu' che sia il tempo per gli IDE. Detto in italiano, gli editor di codice. Roo Code era pensato per girare soltanto dentro VS Code. E' il tempo degli agenti, questa cosa qua non ha piu' senso di esistere, sto solo perdendo tempo, energie e voglio fare altro.
+
+**Alessio Soldano**
+
+> Che se vuoi si abbina un po' a quello che abbiamo detto ormai diverse settimane fa del...
+
+**Stefano Maestri**
+
+> E non si...
+
+**Alessio Soldano**
+
+> Il diffondersi sempre piu' delle CLI, degli agenti che scrivono il codice eccetera.
+
+**Stefano Maestri**
+
+> No, infatti non sembrava una scusa. In qualche modo ha rafforzato la mia, nostra convenzione che abbiamo fatto bene a fare lince.sh. Andate tutti sul sito lince.sh e installate questo software fatto da noi, dal gruppo di Risorse Artificiali. No, pero' adesso, fuori di battuta, su una cosa per niente pubblicizzata se non cosi', noi nel podcast in Italia, cosi'... abbiamo un po' di contributor attivi, cioe' gente che ci sta mandando pull request su questa cosa. Uno e' Paolo, ma non e' solo Paolo che ha mandato le pull request. Ci sono un altro paio di persone e, francamente, non e' che me lo aspettassi piu' di tanto, nel senso che io l'ho fatto per me stesso prima di tutto e lo stiamo usando noi. Paolo ha provato, contribuito, ha messo a posto le cose. Gli servivano pero' evidentemente c'e' un interesse anche da altri, un po' di commenti in giro anche. Cui vi va di provare, provatelo, dateci feedback, soprattutto mandate pull request.
+
+**Paolo Antinori**
+
+> Io te lo vendo in una maniera diversa: se cercate qualcosa che volete lasciare andare tutta la notte e trovare la mattina dopo del lavoro fatto senza preoccuparvi troppo che abbia lanciato i missili nucleari verso la Cina, lince vi offre le funzionalita' per avere un po' di sicurezza. Io l'ho letteralmente usato...
+
+**Alessio Soldano**
+
+> Per dormire bene mentre questa cosa gira.
+
+**Paolo Antinori**
+
+> Si', l'ho letteralmente usato queste ultime due notti per quei progetti che non erano tier 1 ne' tier 2 di priorita' ma tier 3, che non avrei mai guardato. Gli ho detto senti, ma che me ne frega, fanno stanotte, domani mattina vediamo cosa trovo. E per ora ha funzionato bene. Ovviamente a seconda di quello che fate poi dovete guardare proprio a livello di workflow, non a livello di cosa fa il codice. Alcune cose volete controllare come sono andate. Ma se avete spezzettato il lavoro per bene con tecniche di... come si chiama? Spec-driven, che backlog che e' il mio go to workflow, funziona molto bene. E a breve lo promuovero' ad altri se riesco a far convincere Stefano a cambiare alcune cose che odio.
+
+**Stefano Maestri**
+
+> Ma se? Cosa odi? Ma mi convinci di sicuro?
+
+**Paolo Antinori**
+
+> Te lo dico dopo dai, facciamo un po' di maretta, non siamo scriptati, non siamo tutti sempre amici, poi intanto ci sputiamo e quelle cose cosi'.
+
+**Stefano Maestri**
+
+> Si', si', quello sicuramente. Per l'uso che dice Paolo tra l'altro basta la componente sandbox, non vi serve tutta la dashboard. Esistono due componenti, lince ha una la dashboard che vi serve per lavorare con agenti multipli nella stessa finestra e uno e' la sandbox che invece vi permette di farlo girare anche di notte senza preoccuparvi con il troppo. Tant'e' che e' un caso d'uso interessante, tant'e' che ieri sera non ho ancora finito, motivo per cui non c'e' ancora pull request. Stavo integrando come uno degli agenti nativi Pi. Pi e' un piccolo arnese alternativo, open code diciamo, open source minimale, e lo integravo piu' che altro perche' su Pi e' stato fatto uno sviluppo da quelli di Shopify che si chiama Pi Auto Research per usare la modalita' Auto Research di Karpathy, che ha proprio la caratteristica di girare di notte eccetera, e volevo provarla dentro alla mia sandbox o comunque dentro a lince.
+
+## **[01:04:55] Hermes Agent: GLM-5.1, mail e calendario in autonomia**
+
+**Stefano Maestri**
+
+> Ma nel frattempo pero' mi sono distratto perche' ho installato Hermes Agent. Hermes Agent, per chi non se lo ricorda, e' un'alternativa a OpenCode, perche' ho installato quello, non OpenCode, perche' mi piace fare il diverso sempre, Linux invece di Windows o di Mac eccetera.
+
+**Paolo Antinori**
+
+> Ultimo argomento che si collega e ci siamo.
+
+**Stefano Maestri**
+
+> Sostanzialmente perche' c'e' piu' attenzione alla sicurezza oltre al fatto che non e' di OpenAI ma e' indipendente, un progetto open source fatto da gente che viene dalla blockchain quindi con un'attenzione forte alla sicurezza. E l'ho messo su un vecchio computer che avevo, ho valutato anche di metterlo su un Raspberry, perche' ho letto di gente che lo fa, pero' meglio Pi 5 con 8 GB. Io non ce l'avevo libero, ce l'ho ma sta facendo altro, solo un Pi 4, e quindi non avevo li' un computer che non faceva niente. Ho detto sara' meglio questo comunque, che non e' ARM. Mi sono installato un Ubuntu nudo cosi' non devo sandboxare niente, c'e' solo lui dentro li', e gli sto facendo fare un po' di cose con soddisfazione. Tipo guardare come va il podcast, invece che guardarlo io in maniera compulsiva sull'interfaccia di YouTube ogni qualche ora mi dice come stanno andando le cose, che cosa sta andando bene, sta andando male, gli A test, quelle cose qua. Poi gli ho configurato la mail. Attenzione, panico, paura, che serpeggia tra tutti, pensando a quella di Meta che aveva cancellato tutta la inbox che non era vero. L'auribadisco e' una panzana quella li' perche' io non ci credo assolutamente, non tanto che lei non l'abbia fatto ma che lei responsabile della sicurezza di Meta l'abbia fatto, l'abbia pubblicato su tutti i social e Zuckerberg non l'abbia licenziata. E' l'ultima parte che non mi torna, cioe' l'avrebbe licenziata sicuramente se fosse stato vero. Invece era una cosa concordata per far parlare male di OpenAI.
+
+> No, ho configurato la mail, e' attento alla sicurezza ed e' sveglio. Io uso GLM 5.1 come modello e gli ho detto no no no no, aspetta.
+
+**Paolo Antinori**
+
+> Perche' sei attento alla sicurezza, modelli cinesi sono i piu' sicuri.
+
+**Stefano Maestri**
+
+> Modelli cinesi sono i piu' sicuri, assolutamente. Gli ho detto, tabula rasa li', va bene la mail, pero' non voglio che tu ne cancelli, ne spedisci, ne fai queste cose qua. Si', me lo segno. No, me lo segno, aspetta. Me lo segno, bene pero'. Aspetta un attimo, che script usi per fare queste cose? La mail? Si', uso quello li' di script eccetera. Va bene. Prendiamo lo script, lo modifichiamo, gli zappiamo via dal tutto. Send.
+
+**Alessio Soldano**
+
+> Se' segnatelo pure, pero' non abbastanza.
+
+**Stefano Maestri**
+
+> E gli zappiamo via del tutto delete. Cioe' non ce l'hai piu' quelle funzioni li'. E si', va bene. E dopo lui e' stato bravo perche' mi ha detto si', pero' guarda che se io volessi mi tiro su un shell e poi cerco di cancellarti la mail lo stesso. E gli ho detto si', ma io non ti ho dato l'account eccetera. Alla fine hai ragione, ci siamo messi d'accordo e abbiamo questa versione moncata.
+
+**Alessio Soldano**
+
+> Che non fa cose cattive.
+
+**Stefano Maestri**
+
+> Abbiamo questa versione moncata dagli script. Che e' una cosa che in generale consiglio attenzione. Ad esempio adesso gli ho creato un token su GitHub per creare le issue, guardare le issue eccetera eccetera, ma ho fatto un fine grained token in cui gli ho dato solo i permessi precisi delle cose che volevo che facesse. Cioe' non puo' fare delete, non puo' uscire su main, non puo' fare queste cose. Quindi se volete e' uno strumento potente, molto comodo. Cioe' voi ci accedete, io adesso con Telegram perche' e' la cosa piu' comoda che ho, perche' ce l'ho sia sul PC che sul telefono. Ma lui fa cose schedulate, fa cose ricorrenti, diventa proattivo, sta gestendo il mio calendario per esempio. Ad esempio c'era una cosa da fare sulle cose di GitHub che lui non poteva perche' non ha i permessi, e ho detto guarda che io queste cose non le posso fare. Ti ho creato il piano delle cose che vuoi fare. Come faccio a ricordarlo? Io gli ho detto cercami un buco sul calendario e lui mi ha detto e guarda, avresti un buchetto di mezz'ora alle dodici, ti faccio un evento? Si' fammi un evento. Mi ha creato l'evento con tutta la descrizione di quello che devo fare. E' uno strumento oggettivamente potente, un po' addictive come potete immaginare. Pero' e' potente.
+
+> Un'altra cosa per cui lo sto usando e' monitorare i paper su Arxiv e crearmi l'inbox che poi diventera' uno dei miei wiki, i Karpathy wiki. Quindi mi sta risparmiando quella cosa che facevo quasi a mano, c'era un paio di script ma facevo quasi a mano di vedere che paper sono usciti, vedere quali erano interessanti rispetto ai miei interessi. Lui invece fa un bel lavoro, fa un pre-filtering per interessi, non buttando via niente, lasciandomi da un'altra parte tutti quelli che non e' riuscito a classificare per mia eventuale revisione, e poi mi mette questi link dentro all'inbox dei vari Karpathy wiki degli argomenti che seguo e che voglio collegare tra loro. Cioe' fa tutta una serie di cose ricorrenti ma avendo il vantaggio di avere un LLM dietro. Quindi le mail non me le filtra solo per tag ma me le filtra per tag, poi va a leggerle, capisce se una di queste mail ha bisogno della mia attenzione e me lo dice, o se e' soltanto pubblicita' o soltanto una newsletter eccetera. Me le mette in un altro elenco, mi dice guarda, questo e' newsletter, se le vuoi leggere piu' o meno questi sono gli argomenti. E invece se c'e' uno che mi ha scritto qualcosa che vuole una risposta, dice questo qua vorrebbe una risposta, e io gli ho detto che non puo' mandare niente quindi non manda niente, ma gli ho detto che puo' crearmi draft, e quindi mi crea un draft della risposta che io poi mi trovo in Gmail, vado la' e a partire dal draft poi la scrivo io alla fine, perche' magari manca un pezzo cosi' ma almeno gia' il contesto, gia' le cose pronte.
+
+> Eh, in assoluto, allora io avevo gia' provato OpenCode, vi ricordate quando ero molto immaturo? OpenCode sicuramente sara' a questo livello, meglio anche per certi versi, magari per altri peggio tipo la sicurezza, perche' qua sono veramente, non perche' OpenCode non sia sicuro, adesso e' sicuro anche OpenCode alla fine, pero' qua sono molto attenti, cioe' sono quasi esagerati su certe cose, nel senso che si tirano su un Docker container ogni volta che devono far girare uno script per evitare di fare danni. E' la cosa piu' futuristica, futuribile da un punto di vista dell'utente non tecnico finale che ho visto, perche' pensare che hai una roba che ti gestisce l'agenda, che gli dici trovami un buco e te lo trova... secondo me per l'utente non me, che magari lo facevo gia' con Claude Code, con l'MCP giusto o con la CLI giusta. Non sostituisce gli strumenti di coding, anche se lui ti chiede se vuoi installarti Claude Code o Codex perche' puo' spawnare su Claude Code o Codex quando gli dai compiti di coding. Pero' io quella roba li' al momento non lo sto facendo. Sto valutando di fargli fare le code review, quello si'. Perche' accorgendosi di tutte le PR che arrivano, ha una skill per fare le code review e mettere i commenti. Quello sto pensando di farlo, almeno come esperimento su lince.
+
+**Paolo Antinori**
+
+> Interessante, vi fate venire voglia.
+
+**Stefano Maestri**
+
+> Basta, questo e' il mio racconto. Lo so, l'ho raccontato apposta perche' ha detto cosi' Paolo, sa cosa fare al weekend.
+
+**Paolo Antinori**
+
+> Fane!
+
+**Alessio Soldano**
+
+> Come se non avesse avuto nient'altro, no?
+
+**Paolo Antinori**
+
+> Grazie ad esso!
+
+**Stefano Maestri**
+
+> Spero di aver fatto venire voglia anche a qualcun altro e spero che lasciano tanti buchi aperti che io possa sfruttare. Sto scherzando ovviamente.
+
+**Paolo Antinori**
+
+> Poi vee'... senti, fagli fare una cosa. Fagli, ci stavo pensando prima, fagli scaricare i nostri episodi, prendere il transcript e aggiungere i link che noi non aggiungiamo mai. Fagli fare quello.
+
+**Stefano Maestri**
+
+> In realta' la skill nuova con cui pubblico gli episodi lo fa gia'. Poi i link non li mettiamo, dovremmo metterli, pero' i link li tira fuori, me li propone. Solo che mi dice di metterli in un commento, poi dopo mi dimentico eccetera eccetera. E vabbe', purtroppo c'e' la mia umanita'.
+
+> Bene, salutiamo tutti. Mettete stelline e campanelline, che Claude mi conferma che e' giusto che lo dica alla fine per non sembrare piacione.
+
+**Alessio Soldano**
+
+> Iscrivetevi.
+
+**Paolo Antinori**
+
+> Cercate di trovare l'account di mail che sta usando Hermes di Stefano e spammate le vostre trovate.
+
+**Stefano Maestri**
+
+> Spammatemelo. Purtroppo lo trovano, pero' non fatelo gentilmente perche' otterrete una reazione uguale e contraria di enorme misura in perfetto stile Trump. Va bene, dopo questa cazzata. Ciao, ciao ciao.
+
+**Alessio Soldano**
+
+> Ciao.
