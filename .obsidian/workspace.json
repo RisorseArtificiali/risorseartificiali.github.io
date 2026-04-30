@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "analisi-podcast/improvements-April22.md",
+                "file": "podcast-promo/episodes/2026-04-29-Intervista-Stefano-Gatti_promo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "improvements-April22"
+              "title": "2026-04-29-Intervista-Stefano-Gatti_promo"
             }
           }
         ]
@@ -185,19 +185,22 @@
   },
   "active": "ef6b89e5f1cb42ec",
   "lastOpenFiles": [
+    "temp/opening-script-stefano-gatti.md",
+    "podcast-promo/episodes/2026-04-29-Intervista-Stefano-Gatti_promo.md.tmp.2.1777382191486",
+    "podcast-promo/episodes/2026-04-29-Intervista-Stefano-Gatti_promo.md",
+    "podcast-promo/episodes/2026-04-29-Intervista-Stefano-Gatti_promo.md.tmp.2.1777374258122",
+    "_posts/2026-04-29-Intervista-Stefano-Gatti.md",
+    "_posts/2026-04-29-Intervista-Stefano-Gatti.md.tmp.2.1777374031794",
+    "temp/risorse-artificiali-intervista-a-stefano-gatti.txt",
+    "analisi-podcast/improvements-April22.md",
     "analisi-podcast/NEXT-STEPS.md.tmp.2.1776870491702",
     "analisi-podcast/improvements-April22.md.tmp.2.1776870457893",
     "analisi-podcast/analisi-April22.md.tmp.2.1776870455609",
     "analisi-podcast/analisi-April22.md.tmp.2.1776870443295",
     "analisi-podcast/improvements-April22.md.tmp.2.1776867719367",
     "analisi-podcast/alta-priorita-April22.md.tmp.2.1776867687952",
-    "analisi-podcast/analisi-April22.md.tmp.2.1776867672017",
     "analisi-podcast/NEXT-STEPS.md",
     "analisi-podcast/FRONTMATTER-CONVENTION.md",
-    "analisi-podcast/FRONTMATTER-CONVENTION.md.tmp.2.1776865623718",
-    "_layouts/episode.html",
-    "_layouts/episode.html.tmp.2.1776865577566",
-    "_includes/social-share.html",
     "analisi-podcast/analisi-slide-April22.md"
   ]
 }

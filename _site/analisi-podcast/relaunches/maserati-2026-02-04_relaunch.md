@@ -173,7 +173,7 @@ Lunghezza: 220 parole.
 
 # 7. Guest Re-Launch Kit — da inviare a Maserati via email
 
-## 7.1 Clip verticale (45-60s, "aged well" moment)
+## 7.1 Guest clip per social guest (45-60s, "aged well" moment)
 
 - **Timestamp**: 17:45-18:45 (confermare in post-production)
 - **Cosa succede**: Maserati spiega perché lo scenario post-AGI non può essere guardato con serenità, nemmeno nel best-case scenario
@@ -253,7 +253,40 @@ Stefano
 
 ---
 
-# 8. Retrofit Jekyll post (input per `podcast-transcript` v3.0 modalità B)
+# 8. Clip amplificatori host
+
+Due clip aggiuntive che pubblichi tu come host sui canali Risorse Artificiali, oltre alla guest clip del capitolo 7.1 (che pubblica il guest sui suoi social). Stesso momento "aged well" del guest kit (17:45-18:45) o momento complementare.
+
+## 8.1 Spotify Clip (60-90s, pubblicata simultaneamente al rilancio)
+
+- **Timestamp source**: 17:45-18:45 (stesso momento "aged well" del guest kit, oppure 41:17-42:00 sull'allineamento come alternativa)
+- **Durata consigliata**: 60-90s (range standard Spotify Clips)
+- **Testo overlay** (Spotify Clips supporta testo integrato): `"Quanto deve far paura l'AGI?"` (hook 5 parole)
+- **Publishing**: **simultaneo** al drop metadati episodio (14:00 del giorno rilancio). Su Spotify, Clips ed episodi pescano da bacini utenti diversi (Clips → discovery non-follower in Home; episodio → Library follower). Zero cannibalizzazione.
+- **No UTM**: il tracking è interno a Spotify for Creators (sezione Discovery → Clips).
+- **Workflow**: Spotify for Creators → Clips → New Clip → importa audio segment dall'episodio `1Tk01LbQhmFS877ogOEvOR` → trim a 60-90s → aggiungi overlay testo → pubblica.
+
+## 8.2 YouTube Short (45-60s, pubblicato T+1 giorno dopo rilancio, 09:00)
+
+- **Timestamp source**: stesso momento del guest clip (17:45-18:45), oppure momento complementare per evitare overlap visivo col guest (es. 41:17-42:00 sull'allineamento).
+- **Durata**: 45-60s (range ottimale YouTube Shorts feed)
+- **Formato**: 9:16 verticale, sottotitoli bruciati, logo RA bottom-right
+- **Struttura**:
+  - **0-3s** (hook): overlay testo `"L'AGI arriva prima di quanto credi"` + primo piano guest con espressione forte
+  - **3-15s** (setup): Maserati pronuncia la frase chiave del segmento
+  - **15-45s** (payoff): seconda parte del claim + conclusione forte
+  - **45-60s** (CTA): overlay grande `"EPISODIO COMPLETO SUL CANALE"` + `"Link primo commento"`
+- **Pinned comment preimpostato** (fissalo in scheduling su YT Studio):
+  ```
+  Video completo dell'intervista con Alessandro Maserati:
+  https://www.youtube.com/watch?v=XP2jiPxFtPk&utm_source=youtube_short&utm_medium=pinned&utm_campaign=maserati_relaunch
+  ```
+- **Publishing**: **T+1 giorno dopo rilancio, 09:00 Europe/Rome**. Il gap di 1 giorno evita cannibalizzazione del long-form durante il suo push iniziale (YT gli dà 24-48h di spinta algoritmica al giorno del rilancio), e genera una "second wave" di engagement quando la spinta del long-form si affievolisce.
+- **Scheduling anticipato OK**: YT genera l'URL del video all'upload, non alla pubblicazione. Puoi preparare lo Short con link al long-form già funzionante prima che il pinned comment vada live.
+
+---
+
+# 9. Retrofit Jekyll post (input per `podcast-transcript` v3.0 modalità B)
 
 Invoca `podcast-transcript` v3.0 in **modalità B (Retrofit esistente)** con questi parametri:
 
@@ -345,13 +378,14 @@ Apri `http://localhost:4000/2026/02/04/Intervista-Alessandro-Maserati/` e contro
 
 ---
 
-# 9. Checklist publishing
+# 10. Checklist publishing
 
 ## ⚡ Pre-rilancio (T-3gg → T-1gg)
 
 - [ ] **Thumbnail finale** salvata in `/assets/images/episodes/maserati-2026-02-04_relaunch.png` (1280×720 + 1200×630)
-- [ ] **Retrofit Jekyll**: invoca `podcast-transcript` v3.0 modalità B con input del capitolo 8 → verifica `bundle exec jekyll serve` → commit + push → attendi deploy GitHub Pages (~1-3 min)
+- [ ] **Retrofit Jekyll**: invoca `podcast-transcript` v3.0 modalità B con input del capitolo 9 → verifica `bundle exec jekyll serve` → commit + push → attendi deploy GitHub Pages (~1-3 min)
 - [ ] **Invio Guest Re-Launch Kit**: copia sezione 7 e spedisci a Maserati via email (testo email pronto in 7.5)
+- [ ] **Produci Spotify Clip + YouTube Short host** (cap. 8). Editing video totale ~45-60 min per entrambi. Spotify Clip: no editing testuale nel file ma overlay direttamente in Spotify for Creators. YT Short: file 9:16 con sottotitoli bruciati + pinned comment testo preimpostato pronto.
 - [ ] **Recupero LinkedIn URL di Maserati** per integrarlo nel kit
 - [ ] **Concordata data rilancio + orario 14:00 Europe/Rome** con Maserati
 
@@ -363,20 +397,27 @@ Apri `http://localhost:4000/2026/02/04/Intervista-Alessandro-Maserati/` e contro
   - [ ] Thumbnail (cap. 2)
   - [ ] Tag (cap. 4)
 - [ ] **Spotify for Creators**: apri episodio `1Tk01LbQhmFS877ogOEvOR`, sostituisci titolo + descrizione (cap. 5)
+- [ ] **14:00** — Pubblica **Spotify Clip host** (cap. 8.1) simultaneamente al drop metadati episodio
 - [ ] **Apple Podcasts**: feed RSS si aggiorna automaticamente entro 24h via hoster
 - [ ] **14:00** — Pubblica **reflection post LinkedIn host** (cap. 6) sul profilo o sulla pagina RA
 - [ ] **14:00** — Maserati pubblica il suo materiale dal Kit (cap. 7.2 + 7.3 + 7.4). Verifica che sia live.
 - [ ] **14:10-14:20** — Commenta il post di Maserati con ringraziamento + link alla pagina sito (primo commento, pinned se possibile)
 
+## 🔁 T+1 giorno dopo rilancio
+
+- [ ] **09:00** — Pubblica **YouTube Short host** (cap. 8.2) con pinned comment preimpostato. Scheduling anticipato ok dal giorno del rilancio: l'URL del long-form funziona già nel pinned comment perché è pubblico da ieri 14:00.
+
 ## 📊 Post-rilancio
 
 - [ ] **T+7gg** — YT Studio: CTR nuovo vs storico. Target > 4,5%. Se < 3,5%: rivedi hook titolo o lancia "Test & Compare" con seconda thumbnail.
-- [ ] **T+30gg** — Confronta metriche:
+- [ ] **T+7gg** — YT Studio: views del Short. Se decolla (> 5.000 views in 7gg), valuta replica con secondo momento complementare del transcript come secondo Short.
+- [ ] **T+30gg** — Confronta metriche long-form:
   - Views 30gg post-rilancio vs pre-rilancio (baseline ~30/mese) → target +170-400
   - Impressions: verifica spinta algoritmica (baseline 3.409, proiezione +1.000-3.000)
   - Avg % viewed: target 20%+ (era 16,4%)
 - [ ] **T+30gg** — Spotify delta plays (target +500-1.500)
-- [ ] **T+30gg** — Misura effetto amplificatore guest: click `utm_campaign=maserati_relaunch` (tuo) vs `maserati_relaunch_guest` (Maserati) in YT Studio External traffic + GA sito
+- [ ] **T+30gg** — Spotify Clip: controlla impressions e plays del Clip in Spotify for Creators → Discovery
+- [ ] **T+30gg** — Misura effetto amplificatore guest: click `utm_campaign=maserati_relaunch` (tuo) vs `maserati_relaunch_guest` (Maserati) vs `utm_source=youtube_short` (Short → long-form) in YT Studio External traffic + GA sito
 - [ ] **Decisione continue/adjust**: se CTR > 4,5% e views +30%, replica workflow sul prossimo candidato:
   - Venturi (PandasAI, 89 views)
   - Congedo (96 views, CTR 6,5% ma lingua sbagliata)
@@ -385,7 +426,7 @@ Apri `http://localhost:4000/2026/02/04/Intervista-Alessandro-Maserati/` e contro
 
 ---
 
-# 10. Link rapidi
+# 11. Link rapidi
 
 - **YT Studio video**: https://studio.youtube.com/video/XP2jiPxFtPk/edit
 - **Spotify Creators**: https://creators.spotify.com
@@ -396,9 +437,13 @@ Apri `http://localhost:4000/2026/02/04/Intervista-Alessandro-Maserati/` e contro
 
 ---
 
-# 11. Note operative
+# 12. Note operative
 
 - **Preservazione engagement history**: NON cancellare + ri-uploadare il video YouTube. Edit in-place dei metadati è l'unica strada che preserva views, likes, commenti, retention curve.
-- **Spotify Clip opzionale**: se vuoi massimizzare, genera 1 clip dal momento "aged well" (17:45-18:45) e pubblicalo stesso giorno del rilancio con l'aggiornamento descrizione episodio. Editing video esterno ~30 min.
+- **3 tipi di clip distinti**: (1) **guest clip** cap. 7.1 per social del guest (LinkedIn video / IG / TikTok di Maserati); (2) **Spotify Clip** cap. 8.1 per discovery su Spotify Home non-follower, pubblicata dall'host simultanea al drop; (3) **YouTube Short** cap. 8.2 per seconda wave engagement su YT, pubblicato dall'host T+1gg. Bacini utenti diversi, funzioni diverse, timing diversi. Non confonderle.
 - **Nessun "Aged poorly"**: scelta consapevole dell'host, il Guest Kit contiene solo "Aged well" con 2 claim su AGI imminente + aziende create dal nulla. Trade-off accettato: meno retoricamente potente ma coerente con la posizione editoriale dell'host.
-- **UTM separati per attribution**: `maserati_relaunch` (host) vs `maserati_relaunch_guest` (Maserati) permette misurare separatamente l'effetto amplificatore del guest.
+- **UTM separati per attribution** (3 canali, 3 campaign suffix):
+  - `utm_campaign=maserati_relaunch` → post host (tuo LinkedIn reflection, descrizioni YT/Spotify)
+  - `utm_campaign=maserati_relaunch_guest` → post guest (Maserati LinkedIn, X thread)
+  - `utm_source=youtube_short&utm_medium=pinned&utm_campaign=maserati_relaunch` → YT Short → long-form
+  Permette misurare separatamente ogni vettore amplificatore post-T+30gg.

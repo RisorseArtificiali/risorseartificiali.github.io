@@ -1,8 +1,20 @@
 var store = [{
         "title": "",
-        "excerpt":"Risorse Artificiali è la tua bussola settimanale nel mondo dell’Intelligenza Artificiale Generativa. Notizie, tendenze, strumenti, riflessioni critiche e oscuri riferimenti nerd: ogni settimana Alessio, Paolo e Stefano accompagnano chi vuole capire (davvero) cosa sta succedendo con l’AI che cambia il nostro modo di lavorare, creare, pensare. 🎙️ Con un podcast...","categories": [],
+        "excerpt":"Il podcast italiano di AI Engineering. Ogni settimana Alessio, Paolo e Stefano fanno deep dive su agent, LLM, tool chain e produzione — per chi l’AI la scrive, non per chi la racconta. 🎙️ Con un podcast settimanale, esploriamo: LLM &amp; tool chain: modelli, prompt engineering, RAG, evaluation — quello...","categories": [],
         "tags": [],
         "url": "/",
+        "teaser": null
+      },{
+        "title": "I nostri progetti",
+        "excerpt":"Da geek dell’open source, oltre a parlare di AI Engineering ci piace anche scriverne. Su github.com/RisorseArtificiali condividiamo i lavori più interessanti che facciamo con approccio agentic coding — strumenti nati per scrattarci un prurito personale e poi sistemati abbastanza da essere usabili anche da altri. 🦊 Antivocale Trascrizione locale dei...","categories": [],
+        "tags": [],
+        "url": "/progetti/",
+        "teaser": null
+      },{
+        "title": "Intelligenza ibrida e dove va il valore con Stefano Gatti",
+        "excerpt":"[00:00] Intro: Stefano Gatti, ex PM e data leader Stefano Maestri Ciao a tutti e a tutte, bentornati al nostro podcast, Risorse Artificiali. Per l’ennesima settimana siamo bravi e puntuali e stiamo registrando dei nuovi. Tra l’altro questa e’ una cosa terribile di Spotify che ti chiede di mettere il...","categories": ["Puntate"],
+        "tags": ["intelligenza artificiale","AI engineering italia","intelligenza artificiale ibrida","agenti AI","AP2","A2A protocol","X402","ERC 8004","Veo 3","world model","robotica AI","Sora 2","Sonnet 4.5","Y Combinator","venture capital AI","Stefano Gatti"],
+        "url": "/2025/10/15/Intelligenza-artificiale-ibrida/",
         "teaser": null
       },{
         "title": "AI, social e innovazione: cosa cambia davvero con Gemini 3 e i nuovi modelli multimodali - #27",
@@ -147,5 +159,23 @@ var store = [{
         "excerpt":"👉 Ascolta su Spotify 👉 Guarda su YouTube 👉 Segui su LinkedIn [00:00] Introduzione e accoglienza Stefano Vabbè, comunque il sorgente è estremamente interessante. Alessio Questa attenzione a cavallo del 1 aprile, quindi… Stefano Io non ce l’ho, assolutamente non venite a prendermi. Io dico che è assolutamente interessante in...","categories": ["Puntate"],
         "tags": ["AI","Claude","OpenSource","Modelli"],
         "url": "/2026/04/04/Puntata46/",
+        "teaser": null
+      },{
+        "title": "I guardrail degli LLM sono una tassa sul coding",
+        "excerpt":"[00:00] Intro: Claude, GPT 5.5, Gemma obliterata Stefano Maestri Ciao a tutti e tutte, ciao Paolo, ciao Alessio. Oggi puntata super densa perche’ ci sono state tante cose di cui vogliamo parlare. GPT che e’ uscito con la 5.5 e le immagini. Poi vi abbiamo da raccontare di Claude, di...","categories": ["Puntate"],
+        "tags": ["intelligenza artificiale","AI engineering italia","guardrail LLM","coding agent in produzione","modelli obliterati","allineamento AI","Claude Code","GPT 5.5","GPT Image 2","Gemma obliterato","Opus 4.7","Obliteratus","SynthID","Karpathy wiki","Ethan Mollick"],
+        "url": "/2026/04/25/i-guardrail-degli-llm-sono-una-tassa-sul-coding/",
+        "teaser": null
+      },{
+        "title": "L'AI non è un equalizzatore | Stefano Gatti",
+        "excerpt":"[00:00] Le tre ere dell’informatica e l’AI ibrida Stefano Maestri Ciao a tutti e ben tornati alle interviste di Risorse Artificiali. Oggi puntata di intervista: a trovarci torna Stefano Gatti. Per chi non lo conoscesse, Head of Data and Analytics di Nexi, anche professore in Cattolica, autore di due libri...","categories": ["Interviste"],
+        "tags": ["intelligenza artificiale","AI ibrida","cultura del dato","Stefano Gatti","AI in azienda","innovazione AI","dati e algoritmi","podcast tech italia","Nexi","tre ere informatica","effetto Lindy","AI Engineering","machine learning","knowledge graph","NLP","data business","large language models","AGI"],
+        "url": "/2026/04/29/Intervista-Stefano-Gatti/",
+        "teaser": null
+      },{
+        "title": "L'AI che non dorme: da DeepSeek V4 ad Hermes Agent",
+        "excerpt":"[00:00] Settimana cinese: DeepSeek V4, Kimi K2.6, MiMo V2.5 Stefano Maestri Ciao a tutti, bentornati ai RIS e questa settimana parliamo cinese sui modelli. Parliamo di DeepSeek che e’ uscito con la 4 Flash Pro, ma ci sono anche Kimi K2.6, MiMo 2.5 e poi non so se avete visto,...","categories": ["Puntate"],
+        "tags": ["intelligenza artificiale","AI engineering","DeepSeek V4","Kimi K2.6","MiMo V2.5","Hermes Agent","Nous Research","Claude Code","Roo Code","Vision Banana","GLM-5","KV cache","sparse attention","mixture of experts","quantizzazione modelli","coding agents","modelli cinesi open weight","Demis Hassabis"],
+        "url": "/2026/05/02/ai-non-dorme-deepseek-v4-hermes-agent/",
         "teaser": null
       }]

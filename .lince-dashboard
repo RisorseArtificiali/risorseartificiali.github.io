@@ -11,23 +11,41 @@
       "tokens_out": 0
     },
     {
-      "name": "cwave",
+      "name": "docs",
       "agent_type": "claude",
       "profile": "anthropic",
-      "project_dir": "/home/maeste/project/cyberwave_hackathon/",
+      "project_dir": "/home/maeste/project/lince",
       "group": null,
       "tokens_in": 0,
       "tokens_out": 0
     },
     {
-      "name": "pippo",
+      "name": "lince",
       "agent_type": "claude",
-      "profile": "zai",
-      "project_dir": "/home/maeste/project/research/agent-memory/",
+      "profile": "anthropic",
+      "project_dir": "/home/maeste/project/lince",
+      "group": null,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    {
+      "name": "Pi",
+      "agent_type": "pi-bwrap",
+      "profile": null,
+      "project_dir": "/home/maeste/project/risorseartificiali.github.io",
+      "group": null,
+      "tokens_in": 0,
+      "tokens_out": 0
+    },
+    {
+      "name": "pi-54",
+      "agent_type": "pi",
+      "profile": null,
+      "project_dir": "/home/maeste/project/risorseartificiali.github.io",
       "group": null,
       "tokens_in": 0,
       "tokens_out": 0
     }
   ],
-  "next_agent_id": 9
+  "next_agent_id": 54
 }

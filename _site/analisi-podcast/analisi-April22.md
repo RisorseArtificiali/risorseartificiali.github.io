@@ -238,20 +238,20 @@ Dopo l'esecuzione del piano tecnico (refactor skill `podcast-promo` v2.0 e `podc
 | 3 | Fix og:description + Schema.org | 1 | 🔵 | `_includes/head/custom.html` attivo al prossimo deploy. 🔄 **CONFERMA dopo `bundle exec jekyll serve`**: `view-source:` di un post deve mostrare `og:description` non vuoto e `<script type="application/ld+json">` con `"@type":"PodcastEpisode"` valido. |
 | 4 | Riscrivi ultime 5 puntate YT | 1 | 🟡 | `podcast-promo` v2.0 genera titolo + descrizione + thumbnail brief per ogni episodio; edit finale manuale su YT Studio. |
 | 5 | Template hook-30s scripted | 1 | 🟢 | `podcast-promo` v2.0 passaggio 2 "Hook 30 secondi scripted" (2 varianti per episodio). |
-| 6 | Riposizionamento esplicito | 2 | ⚪ | Decisione strategica tua. `podcast-promo` v2.0 ha già codificato "AI Engineering in italiano" come default (Opzione A della diagnosi). 🔄 **CONFERMA o cambia**: se preferisci Opzione B ("AI in impresa") o C ("AI per senior dev che vogliono restare rilevanti") dimmi e aggiorno la skill. |
-| 7 | Newsletter Substack | 2 | ⚪ | Setup Substack è azione umana. 🔄 **CONFERMA dopo creazione account**: dammi l'URL Substack così integro la CTA in `_layouts/episode.html` (oggi skippata per decisione consapevole) e il link nella Checklist Publishing di `podcast-promo` v2.0. |
+| 6 | Riposizionamento esplicito | 2 | ✅ | **Deciso 25 aprile: Opzione A "AI Engineering in italiano" (Latent Space italiano).** `_config.yml` aggiornato. Bio Spotify/YT/Apple/Amazon/LinkedIn da aggiornare manualmente. `podcast-promo` v2.0 già allineato. |
+| 7 | Newsletter Substack | 2 | ⏳ | Posticipato a bassa priorità. Riesamina quando le metriche lo giustificheranno. |
 | 8 | Spotify Clips settimanali | 2 | 🟡 | `podcast-promo` v2.0 passaggio 8 "Spotify Clip spec" produce timestamp start/end + testo overlay. Editing video + upload su Spotify Creators manuali. |
 | 9 | Chapters YouTube + tag SEO custom | 2 | 🟢 | `podcast-promo` v2.0 passaggio 3 (chapters) + passaggio 6 (tag 15-20). Copy-paste in YT Studio. |
 | 10 | Shorts intenzionali | 2 | 🟡 | `podcast-promo` v2.0 passaggio 7 "Shorts YouTube script" (45-60s + CTA + pinned comment suggerito). Editing video + upload manuali. |
 | 11 | Landing page per episodio | 3 | 🟢🔵 | `podcast-transcript` v3.0 genera il post con nuovo schema. `_layouts/episode.html` inietta player + ospite + risorse + share automaticamente. Doppio covering. |
 | 12 | Big guest ogni 4 episodi | 3 | ⚪ | Relazione umana. Vedi Strategia #4 in `improvements-April22.md` per framework scouting futuro. |
 | 13 | Cross-pub LinkedIn strutturato | 3 | 🟡 | `podcast-promo` v2.0 passaggio 9 produce post LinkedIn con `publishing_hint` differenziato (martedì 14:00 per numerato, mercoledì 14:00 per intervista con sync guest). Posting manuale sul tuo profilo/pagina. |
-| 14 | Cover Spotify nuova | 3 | ⚪ | Design + upload su Spotify Creators. La skill `thumbnail-gen` è adattabile (serve aspect-ratio 1:1 anziché 16:9): se vuoi fammi sapere e aggiungo un modo "cover-spotify" alla skill. |
-| 15 | Add YouTube Music + Podchaser + Fountain | 3 | ⚪ | Hoster setup 10-30 min. Vedi `NEXT-STEPS.md` sezione "Immediate". |
+| 14 | Cover Spotify nuova | 3 | ⏳ | Posticipato a bassa priorità. Cover attuale accettabile. |
+| 15 | Add YouTube Music + Podchaser + Fountain | 3 | ✅ | YouTube Music + Podchaser + Fountain.fm abilitati. |
 | 16 | Riformula titoli interviste | 3 | 🟢 | `podcast-promo` v2.0 passaggio 1 applica automaticamente il template `[hook concreto] \| [Nome, credenziale]` quando format=intervista. Stop a "Intervista a...". |
 | 17 | Guest Launch Kit obbligatorio | 3 | 🟢 | `podcast-promo` v2.0 passaggio 13 "Guest Launch Kit" (solo se format=intervista): output file `guest-kit-ep[N].md` con clip specs, post LinkedIn guest in prima persona, post X, quote-image brief, email accompagnatoria. |
 | 18 | Rilancio retroattivo interviste | 3 | 🟢 | **`interview-relaunch` v1.0** orchestra tutto il rilancio: nuovo titolo + brief thumbnail + descrizioni YT/Spotify + reflection post LinkedIn host + Guest Re-Launch Kit con blocco "aged well/poorly" + retrofit Jekyll. Edit finale metadata YT/Spotify e generazione immagine thumbnail restano azioni manuali esterne. |
-| 19 | Distribuzione multi-platform completa | 3 | ⚪ | Abilitazione da Spotify Creators (Amazon/Pocket Casts/Overcast/Castbox/Goodpods/iHeart in 10 min) + hoster per YouTube Music/Podchaser/Fountain. Vedi `NEXT-STEPS.md`. |
+| 19 | Distribuzione multi-platform completa | 3 | ✅ | Spotify extra piattaforme (Pocket Casts, Overcast, Castbox, Goodpods, iHeartRadio) + Amazon Music + Apple Podcasts tutti abilitati. |
 | 20 | Valutazione migrazione hoster | 3 | ⚪ | Trial Transistor.fm 14 giorni. 🔄 **CONFERMA post-trial**: dopo 2 settimane di trial, dammi decisione go/no-go. Se go → procedo con procedura 301 redirect RSS (altre 2-3h di agent work). |
 
 ### Summary copertura
@@ -260,9 +260,10 @@ Dopo l'esecuzione del piano tecnico (refactor skill `podcast-promo` v2.0 e `podc
 |---|---|---|
 | 🟢 Skill-powered (invocazione diretta) | 8 azioni (#5, #9, #11, #16, #17, #18) + componenti di #4, #8, #10, #13 | 40% hard-covered |
 | 🔵 Infrastruttura Jekyll (deploy-powered) | 2 azioni (#3, #11) | 10% auto-covered |
-| ✅ Già fatto | 1 azione (#2) | 5% |
+| ✅ Già fatto | 4 azioni (#2, #6, #15, #19) | 20% |
 | 🟡 Parziale (skill + esecuzione manuale) | 5 azioni (#1, #4, #8, #10, #13) | 25% |
-| ⚪ Umano puro | 6 azioni (#6, #7, #12, #14, #15, #19, #20) | 30% |
+| ⚪ Umano puro | 2 azioni (#12, #20) | 10% |
+| ⏳ Posticipato bassa priorità | 2 azioni (#7, #14) | 10% |
 
 **Totale operativamente sbloccato**: ~**80% delle azioni** (fra full-coverage, partial skill coverage, deploy-auto, e already-done) contro il 20% pre-esecuzione.
 
