@@ -1,6 +1,6 @@
 # Title Examples — Pattern High-CTR per Titoli Podcast
 
-> Reference caricato on-demand dal Passaggio 1 di `podcast-promo` v4.1.
+> Reference caricato on-demand dal Passaggio 1 di `podcast-promo` v4.3.
 > Contiene 10 esempi-bussola, pattern dettagliati per format numerato e intervista, regole ferree e esempi con razionale.
 
 ## Table of Contents

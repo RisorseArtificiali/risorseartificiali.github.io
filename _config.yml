@@ -3,7 +3,7 @@ timezone: Europe/Rome
 future: true
 email: maestri.stefano@gmail.com
 description: >-
-  Il podcast italiano di AI Engineering. Ogni settimana, deep dive tecnici su agent, LLM, tool chain e produzione — per chi l’AI la scrive, non per chi la racconta.
+  Il podcast italiano di AI Engineering. Ogni settimana, deep dive tecnici su agent, LLM, tool chain e produzione
 baseurl: "" 
 url: "https://risorseartificiali.com"
 
@@ -45,7 +45,7 @@ paginate_path: /page:num/
 author:
   name: "Risorse Artificiali"
   avatar: "/assets/images/profile.jpg"
-  bio: "AI Engineering in italiano <br/> per chi l’AI la scrive, non per chi la racconta"
+  bio: "AI Engineering in italiano <br/> per chi l’AI la scrive"
   links:
     - label: "LinkedIn"
       icon: "fab fa-linkedin"

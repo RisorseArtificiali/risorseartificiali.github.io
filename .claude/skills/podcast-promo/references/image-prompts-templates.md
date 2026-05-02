@@ -1,6 +1,6 @@
 # Image Prompts Templates — Brief Thumbnail + 3 Prompt Pronti
 
-> Reference caricato on-demand dal Passaggio 13 di `podcast-promo` v4.1.
+> Reference caricato on-demand dal Passaggio 2 di `podcast-promo` v4.3.
 > Contiene i 3 template prompt per Ideogram / Gemini 3 Pro / ChatGPT Image 2, le regole anti-necrologio estese, template differenziato numerato vs intervista, gestione face reference, fallback post-production.
 
 ## Table of Contents
