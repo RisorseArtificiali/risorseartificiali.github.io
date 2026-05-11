@@ -1,13 +1,57 @@
 ---
 name: podcast-promo
-description: Skill master per la pubblicazione di un nuovo episodio del podcast "Risorse Artificiali". Un'unica invocazione produce titolo high-CTR (pattern numerato o intervista), brief thumbnail con prompt image pronti per Ideogram/Gemini 3 Pro/ChatGPT Image 2, chapters YouTube, descrizioni YouTube/Spotify + tag SEO (review unificata), script Shorts + spec Spotify Clip (review unificata), post LinkedIn, sezione newsletter codiceartificiale, e per le interviste un Guest Launch Kit completo. In output scrive DUE file: un promo file consolidato (`podcast-promo/episodes/{date}-{slug}_promo.md`) con tutti i contenuti pronti copia-incolla, e il post Jekyll (`_posts/{date}-{slug}.md`) con frontmatter v3.0 e trascrizione verbatim. Attiva quando l'utente vuole pubblicare un nuovo episodio, preparare il drop di una puntata, menziona Riverside, o materiali episodio.
+description: Skill master per la pubblicazione di un nuovo episodio del podcast "Risorse Artificiali". Un'unica invocazione produce titolo high-CTR (pattern numerato o intervista), brief thumbnail con prompt image pronto per ChatGPT Image 2 (con face reference photo del soggetto), chapters YouTube, descrizioni YouTube/Spotify + tag SEO (review unificata), script Shorts + spec Spotify Clip (review unificata), post LinkedIn, sezione newsletter codiceartificiale, e per le interviste un Guest Launch Kit completo. In output scrive DUE file: un promo file consolidato (`podcast-promo/episodes/{date}-{slug}_promo.md`) con tutti i contenuti pronti copia-incolla, e il post Jekyll (`_posts/{date}-{slug}.md`) con frontmatter v3.0 e trascrizione verbatim. Attiva quando l'utente vuole pubblicare un nuovo episodio, preparare il drop di una puntata, menziona Riverside, o materiali episodio.
 metadata:
   author: risorseartificiali
-  version: "4.3"
+  version: "4.5"
 ---
 
 <!--
 CHANGELOG
+
+v4.4 → v4.5 (2026-05-10) — Passaggio 2: workflow image-gen single-model
+- FEEDBACK utente in sessione drop Domenico Gagliardi: l'utente fornisce
+  SEMPRE una foto reale del soggetto al modello di image generation e usa
+  ESCLUSIVAMENTE ChatGPT Image 2. Generare 3 prompt per Ideogram / Gemini 3
+  Pro / ChatGPT Image 2 e' uno spreco di token e diluisce la deliverable.
+- Passaggio 2 ora consegna 1 SOLO prompt per ChatGPT Image 2 ottimizzato
+  per face reference: NIENTE descrizione fisica del soggetto (la foto
+  reference e' source of truth), istruzione esplicita di preservare con
+  alta fedelta' i tratti del volto (no idealizzazione, no beautification).
+- I prompt Ideogram + Gemini 3 Pro restano in `references/image-prompts-
+  templates.md` come APPENDICE legacy ("non includere nella deliverable
+  standard salvo richiesta esplicita").
+- INVARIATO il resto: brief structure (hook 3 parole, palette colori, file
+  output, fallback post-production, checklist verifica) e tutti gli altri
+  passaggi (1, 3-10).
+- Saved a feedback memory persistente sotto
+  `~/.claude/projects/.../memory/feedback_image_generation.md` cosi' anche
+  altre skill (es. thumbnail-gen) erediteranno il workflow.
+
+v4.3 → v4.4 (2026-05-07) — YT ID e Spotify Episode ID spostati a checkpoint
+post-Passaggio 3, non piu' obbligatori al Passaggio 0
+- FEEDBACK utente durante drop: chiedere YT ID e Spotify Episode ID al
+  Passaggio 0 forza l'utente a completare l'upload privato su YT Studio e
+  Spotify for Creators PRIMA di iniziare il flusso. In pratica i materiali
+  promo (titolo, thumbnail brief, capitoli) si possono pre-produrre mentre
+  l'upload e' in corso. Sbloccare il flusso anticipa il lavoro creativo.
+- RIMOSSI dagli OBBLIGATORI del Passaggio 0:
+  - YouTube ID (era obbligatorio #3)
+  - Spotify Episode ID (era obbligatorio #4)
+  Ora gli obbligatori sono 3 (numerato) o 6 (intervista).
+- NUOVO CHECKPOINT "Pre-Passaggio 4 — Raccolta YT ID + Spotify Episode ID":
+  inserito tra Passaggio 3 e Passaggio 4. Bloccante. Lo skill chiede gli ID
+  qui perche' dal Passaggio 4 in poi servono per generare deep-link UTM
+  (descrizioni, post LinkedIn, newsletter, Guest Launch Kit, frontmatter
+  Jekyll).
+- WORKFLOW EFFETTIVO: l'utente puo' lanciare l'upload privato YT/Spotify
+  IN PARALLELO ai Passaggi 1-3 (titolo, thumbnail brief con generazione
+  immagine, chapters). Quando si arriva al checkpoint pre-4, gli upload
+  sono tipicamente gia' completati e gli ID sono disponibili.
+- INVARIATO il resto: il numero di passaggi principali resta 10 (il
+  checkpoint non e' un passaggio, e' un gate intermedio sugli input);
+  reference files, derivazione LLM, regole stile, deep-link UTM, output
+  files restano identici.
 
 v4.2 → v4.3 (2026-04-30) — semplificazione del flusso, da 16 a 10 passaggi
 - FEEDBACK utente dopo uso real-world ep49+ep50: il flusso a 16 passaggi era
@@ -104,7 +148,7 @@ v1.0 → v2.0 (22 aprile 2026)
 - Aggiunte sezioni Audience Targeting (CTO/senior dev IT, 35-55) e
   Posizionamento (AI Engineering in italiano), publishing hints per formato
 
-Note di design v4.0/v4.1/v4.2/v4.3 (decisioni ambigue documentate):
+Note di design v4.0/v4.1/v4.2/v4.3/v4.4 (decisioni ambigue documentate):
 - Per interviste senza numero puntata (episode_number: null), il campaign
   identifier UTM diventa `{guest_slug}_drop` invece di `ep{N}_drop`, coerente
   con la convenzione di interview-relaunch.
@@ -120,21 +164,28 @@ Note di design v4.0/v4.1/v4.2/v4.3 (decisioni ambigue documentate):
   all'utente di lanciare la generazione immagine in parallelo mentre la skill
   lavora sui passaggi successivi. Questo richiede solo il titolo finale come
   input, non l'intera derivazione dal transcript.
+- v4.4: YT ID e Spotify Episode ID sono raccolti in un checkpoint dedicato
+  tra Passaggio 3 e Passaggio 4, non al Passaggio 0. Razionale: gli ID
+  servono solo dal Passaggio 4 in poi (deep-link UTM). Spostandoli al
+  checkpoint, l'utente puo' lanciare upload privati YT/Spotify in parallelo
+  ai Passaggi 1-3 (titolo, thumbnail brief, chapters) invece di doverli
+  completare prima di iniziare. Il numero di passaggi principali resta 10
+  (il checkpoint e' un gate intermedio sugli input, non un passaggio).
 -->
 
-# Podcast Promo v4.3 - Skill Master per Drop Nuovo Episodio
+# Podcast Promo v4.4 - Skill Master per Drop Nuovo Episodio
 
 ## Workflow integrato con le altre skill
 
 Questa skill e' la **skill master** per il workflow standard di pubblicazione di un nuovo episodio.
 
-1. **`podcast-promo` v4.3** (questa skill, MASTER) — unica invocazione per il drop standard. Produce tutti i materiali promo, il brief thumbnail con prompt image pronti, e scrive il post Jekyll completo.
+1. **`podcast-promo` v4.4** (questa skill, MASTER) — unica invocazione per il drop standard. Produce tutti i materiali promo, il brief thumbnail con prompt image pronti, e scrive il post Jekyll completo.
 2. **`thumbnail-gen` v1.1** — usa SOLO per use-case non-standard: iterazioni su thumbnail di un episodio gia' droppato, A/B test manuali con modelli diversi, batch rigenerazione visual. Per il drop normale il brief e i prompt pronti stanno gia' nel **Passaggio 2** di questa skill.
 3. **`podcast-transcript` v3.0** — usa SOLO per retrofit di post gia' esistenti (modalita' B, `--retrofit-existing`) o correzioni chirurgiche su trascrizioni gia' pubblicate. Per il drop normale il post Jekyll e' scritto dal **Passaggio 10** di questa skill.
 4. **`interview-relaunch` v1.2+** — orchestratore dedicato al rilancio retroattivo di interviste gia' pubblicate (angle callback, reflection post, Guest Re-Launch Kit). Usa QUESTA skill solo per episodi nuovi.
 5. **`newsletter-cover-gen`** — genera cover Substack (1200×630). Use case: SOLO se inserisci una sezione dedicata in `codiceartificiale` con modalita' `short` o `full` (cap. 7) e vuoi una cover Substack-style separata. Per la modalita' default `bullet` non serve cover.
 
-Workflow tipico nuovo episodio: **`podcast-promo` v4.3** (unica invocazione) → al Passaggio 2 lancia in parallelo la generazione immagine dai 3 prompt → la skill prosegue con i passaggi 3-9 → al Passaggio 10 scrive i 2 file consolidati → carica thumbnail in `/assets/images/episodes/` → commit dei 2 file + immagine → push → `newsletter-cover-gen` quando pubblichi la newsletter settimanale (solo se modalita' newsletter `short`/`full`).
+Workflow tipico nuovo episodio: **`podcast-promo` v4.4** (unica invocazione) → ai Passaggi 1-3 (titolo, thumbnail brief, chapters) lancia in parallelo upload privato YT Studio + Spotify for Creators e generazione immagine dai 3 prompt → al checkpoint pre-Passaggio 4 fornisci YT ID + Spotify Episode ID → la skill prosegue con i Passaggi 4-9 → al Passaggio 10 scrive i 2 file consolidati → carica thumbnail in `/assets/images/episodes/` → commit dei 2 file + immagine → push → `newsletter-cover-gen` quando pubblichi la newsletter settimanale (solo se modalita' newsletter `short`/`full`).
 
 ## Reference files caricati on-demand
 
@@ -245,27 +296,30 @@ Il passaggio 0 e' la chiave del salto v4.0: raccogli **pochi input obbligatori**
 Chiedi all'utente con questo messaggio:
 
 ```
-Ciao, sono Promo Artificiali v4.3, skill master per il drop del nuovo episodio.
+Ciao, sono Promo Artificiali v4.4, skill master per il drop del nuovo episodio.
 Genero tutti i materiali promo e scrivo 2 file: il promo consolidato e il post Jekyll.
 
-Mi servono 5 input obbligatori (8 se intervista):
+Mi servono 3 input obbligatori (6 se intervista):
 
 OBBLIGATORI:
 1. Format: numerato | intervista
 2. Trascrizione completa con speaker + timestamp (formato
    "[HH:MM:SS] Speaker Name: testo" o equivalente). Il timestamp
    mi serve per derivare capitoli e clip moments.
-3. YouTube ID (video gia' caricato privato su YT Studio — serve solo l'ID,
-   11 char tipicamente, es. "XP2jiPxFtPk")
-4. Spotify Episode ID (audio gia' caricato privato su Spotify for Creators
-   — serve solo l'ID, es. "4uLU6hMCjMI75M1A2tKUQC", NON URL, NON ID show)
-5. Episode number (intero). Se intervista senza numero, rispondi "null".
+3. Episode number (intero). Se intervista senza numero, rispondi "null".
 
 SE FORMAT = INTERVISTA, aggiungi:
-6. guest_name (nome cognome, es. "Alessandro Maserati")
-7. guest_credential (1 frase, es. "CTO PandasAI", "ex-Red Hat", "YC W24",
+4. guest_name (nome cognome, es. "Alessandro Maserati")
+5. guest_credential (1 frase, es. "CTO PandasAI", "ex-Red Hat", "YC W24",
    "ricercatore allineamento AI")
-8. guest_bio (2-3 righe, usate nel frontmatter Jekyll e nel Guest Launch Kit)
+6. guest_bio (2-3 righe, usate nel frontmatter Jekyll e nel Guest Launch Kit)
+
+NOTA: YouTube ID e Spotify Episode ID NON richiesti ora. Te li chiedero'
+in un checkpoint dedicato dopo il Passaggio 3 (Chapters), prima del
+Passaggio 4 (Descrizioni). Cosi' puoi lanciare l'upload privato su YT
+Studio e Spotify for Creators IN PARALLELO mentre lavoriamo su titolo,
+thumbnail brief, e capitoli. Quando arriviamo al checkpoint, gli upload
+sono tipicamente gia' completati e gli ID disponibili.
 
 OPZIONALI (migliorano l'output ma non bloccano):
 A. Capitoli Riverside pre-generati (formato "HH:MM Titolo capitolo").
@@ -304,10 +358,11 @@ Condividi tutto quello che hai e parto con il flusso sequenziale a 10 passaggi.
 **Non procedere finche' non hai tutti gli obbligatori.** Se mancano:
 - Format non dichiarato → chiedi esplicitamente
 - Transcript senza timestamp → chiedi di ri-esportare da Riverside con timestamp
-- YouTube ID o Spotify ID confusi con URL → chiedi di estrarre solo l'ID
 - Intervista senza guest_name/credential/bio → chiedi tutti e tre
 
-Una volta ricevuti i materiali, salva mentalmente: `format`, `episode_number`, `youtube_id`, `spotify_episode_id`, `guest_*` (se intervista), `duration` (se fornita), `resources` (se fornite), `drop_date` (se fornita, default oggi), `newsletter_length` (se fornito, default `bullet`). Usali nei passaggi successivi.
+YT ID e Spotify Episode ID **NON sono obbligatori al Passaggio 0**: vengono raccolti al checkpoint pre-Passaggio 4. Se l'utente li fornisce gia' qui spontaneamente, accettali e annotali, ma non bloccare il flusso se mancano.
+
+Una volta ricevuti i materiali, salva mentalmente: `format`, `episode_number`, `guest_*` (se intervista), `duration` (se fornita), `resources` (se fornite), `drop_date` (se fornita, default oggi), `newsletter_length` (se fornito, default `bullet`). `youtube_id` e `spotify_episode_id` arriveranno al checkpoint pre-Passaggio 4. Usali nei passaggi successivi.
 
 **Derivazione campaign_id**:
 - Se `episode_number` e' un intero → `campaign_id = ep{N}_drop`
@@ -333,22 +388,24 @@ Proponi sempre **3 varianti** differenziate per angolo (hook contrarian / numero
 
 **Gate**: procedi SOLO quando l'utente scrive `Il titolo definitivo e':` seguito dal titolo. Se chiede modifiche, proponi nuove varianti senza avanzare.
 
-### Passaggio 2 — Brief thumbnail + 3 prompt image pronti
+### Passaggio 2 — Brief thumbnail + prompt image pronto (ChatGPT Image 2 + face reference)
 
-**Al Passaggio 2, leggi `references/image-prompts-templates.md` per i 3 template prompt completi (Ideogram / Gemini 3 Pro / ChatGPT Image 2), le 10 regole anti-necrologio estese, la palette colori saturi, la differenziazione numerato (host 40%+ frame) vs intervista (guest 70% frame), la gestione face reference, e il fallback post-production.**
+**Al Passaggio 2, leggi `references/image-prompts-templates.md` per il template prompt ChatGPT Image 2 con face reference, le 10 regole anti-necrologio estese, la palette colori saturi, la differenziazione numerato (host 40%+ frame) vs intervista (guest 70% frame), e il fallback post-production.**
 
-**Razionale del posizionamento v4.3**: la thumbnail e' subito dopo il titolo perche' richiede SOLO il titolo finale come input (hook 3 parole + tono + colore + soggetto). Generare i prompt subito permette all'utente di lanciare in parallelo Ideogram/Gemini/ChatGPT mentre la skill prosegue con i passaggi rimanenti. Saving operativo significativo.
+**Workflow del progetto (validato dall'utente)**: si genera un **unico prompt per ChatGPT Image 2** e l'utente allega **sempre una foto reale** del soggetto come reference. Il prompt deve esplicitare la richiesta di **massima fedelta' al volto** (no idealizzazione, no beautification). I prompt per Ideogram e Gemini 3 Pro restano in appendice nel reference file ma **NON vanno consegnati** nella deliverable standard salvo richiesta esplicita.
 
-**Se l'utente ha fornito al Passaggio 0 opzionale G un `thumbnail_path` esistente**: usa quello e salta al preview del brief come documentazione. Altrimenti genera brief completo + 3 prompt pronti copia-incolla per i 3 modelli piu' usati.
+**Razionale del posizionamento v4.3**: la thumbnail e' subito dopo il titolo perche' richiede SOLO il titolo finale come input (hook 3 parole + tono + colore + soggetto). Generare il prompt subito permette all'utente di lanciare in parallelo ChatGPT Image 2 mentre la skill prosegue con i passaggi rimanenti. Saving operativo significativo.
+
+**Se l'utente ha fornito al Passaggio 0 opzionale G un `thumbnail_path` esistente**: usa quello e salta al preview del brief come documentazione. Altrimenti genera brief completo + prompt ChatGPT Image 2 pronto copia-incolla.
 
 Deriva dal **titolo finale del Passaggio 1**:
 - **Hook 3 parole** (TUTTE MAIUSCOLE), dal claim centrale del titolo
 - **Tono emozionale** (scettico / deciso / sorpreso / sorriso aperto), mappato dal tono del titolo
 - **Colore background** da palette ammessa: `#FFC700` (giallo scettico), `#E63946` (rosso drama), `#FF6B35` (arancione intervista), `#39FF14` (verde novita'), `#FF006E` (fucsia pivot). Evita lo stesso colore degli ultimi 2-3 drop per variare il feed YT.
-- **Soggetto**: host o guest, con descrizione fisica essenziale
+- **Composizione + espressione + lighting**: descritti nel prompt. **Niente descrizione fisica del soggetto**: la foto reference allegata dall'utente e' la source of truth.
 - **File output atteso**: `/assets/images/episodes/ep{N}.png` (numerato o intervista con numero) o `/assets/images/episodes/{guest-slug}-{YYYY-MM-DD}.png` (intervista senza numero). Dimensioni 1280×720 minimo (16:9).
 
-Output: brief + 3 prompt pronti copia-incolla (Ideogram, Gemini 3 Pro, ChatGPT Image 2) + fallback post-production se rendering testo fallisce + checklist verifica pre-upload. Tutti i template esatti sono in `references/image-prompts-templates.md`.
+Output: brief + 1 prompt pronto copia-incolla per **ChatGPT Image 2** (con istruzione esplicita di preservare il volto della reference photo allegata) + fallback post-production se rendering testo fallisce + checklist verifica pre-upload. Template esatto in `references/image-prompts-templates.md` sezione "Prompt ChatGPT Image 2 con face reference".
 
 **Gate**: procedi SOLO dopo "Va bene. Continua.".
 
@@ -371,6 +428,38 @@ Se l'utente ha fornito l'opzionale A (capitoli Riverside), usa quelli. Altriment
 Formato proposta: lista `HH:MM Titolo` (o `MM:SS` per episodi <1h), totale, e nota "precisione timestamp ±15s, dimmi se vuoi affinare un singolo item".
 
 **Gate**: procedi SOLO dopo "Va bene. Continua.".
+
+### Checkpoint pre-Passaggio 4 — Raccolta YT ID + Spotify Episode ID
+
+**Bloccante**: dal Passaggio 4 in poi servono YT ID e Spotify Episode ID per generare deep-link UTM (descrizioni cross-platform, post LinkedIn, newsletter, Guest Launch Kit, frontmatter Jekyll). Senza ID non si puo' procedere.
+
+A questo punto del flusso, l'utente ha avuto tempo durante i Passaggi 1-3 (titolo, thumbnail brief, chapters) per completare l'upload privato su YT Studio e Spotify for Creators. Tipicamente gli ID sono gia' disponibili.
+
+Chiedi all'utente con questo messaggio:
+
+```
+Per i prossimi passaggi mi servono YT ID e Spotify Episode ID.
+
+1. YouTube ID (video gia' caricato privato su YT Studio — serve solo l'ID,
+   11 char tipicamente, es. "XP2jiPxFtPk"). Lo trovi nell'URL Studio dopo
+   `?v=` oppure nel pannello "Dettagli" del video.
+2. Spotify Episode ID (audio gia' caricato privato su Spotify for Creators
+   — serve solo l'ID, es. "4uLU6hMCjMI75M1A2tKUQC"). NON URL, NON ID show.
+   Lo trovi nell'URL dell'episodio dopo `/episode/` (taglia eventuali
+   query string `?si=...`).
+
+Se l'upload non e' ancora completo, fammi sapere: aspetto qui senza avanzare.
+```
+
+**Validation**:
+- YouTube ID confuso con URL completo → chiedi di estrarre solo l'ID (11 char dopo `v=` o dopo `youtu.be/`)
+- Spotify ID confuso con URL → chiedi di estrarre solo l'ID dopo `/episode/`, taglia query string
+- Spotify ID confuso con show ID → chiedi l'ID episodio, non quello dello show (lo show e' fisso, l'episodio cambia per ogni puntata)
+- ID non disponibili (upload non completato) → aspetta, **non avanzare**
+
+Una volta ricevuti, salva mentalmente: `youtube_id`, `spotify_episode_id`. Usali per generare tutti i deep-link UTM dai Passaggi 4 in poi e per i campi `youtube_id` / `spotify_episode_id` del frontmatter Jekyll al Passaggio 10.
+
+**Gate**: procedi SOLO dopo aver ricevuto entrambi gli ID validati. Conferma all'utente con un messaggio breve ("Ok, ricevuti. Procedo col Passaggio 4.") prima di iniziare il Passaggio 4.
 
 ### Passaggio 4 — Descrizioni YouTube + Spotify + Tag YouTube (review unificata)
 
@@ -667,7 +756,7 @@ Quando l'utente chiede modifiche a un passaggio:
 - Se l'utente cambia idea su un passaggio gia' confermato, torna indietro e rielabora da quel punto (inclusi passaggi a valle che dipendono — esempio: cambio titolo → rigenera brief thumbnail al Passaggio 2 → eventualmente rigenera descrizioni → rigenera LinkedIn post)
 - Al Passaggio 10, se l'utente chiede modifiche dopo la scrittura dei file, rigenera i capitoli interessati e **riscrivi i file completi** (non diff incrementali): i file sono autocontenuti per design
 
-## Integrazione con le altre skill — riepilogo operativo v4.3
+## Integrazione con le altre skill — riepilogo operativo v4.4
 
 | Passaggio | Cosa fa | Skill esterna invocata? | Reference file |
 |-----------|---------|--------------------------|----------------|

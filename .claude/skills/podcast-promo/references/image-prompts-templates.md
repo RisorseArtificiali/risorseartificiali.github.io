@@ -1,7 +1,7 @@
-# Image Prompts Templates — Brief Thumbnail + 3 Prompt Pronti
+# Image Prompts Templates — Brief Thumbnail + Prompt Pronto
 
 > Reference caricato on-demand dal Passaggio 2 di `podcast-promo` v4.3.
-> Contiene i 3 template prompt per Ideogram / Gemini 3 Pro / ChatGPT Image 2, le regole anti-necrologio estese, template differenziato numerato vs intervista, gestione face reference, fallback post-production.
+> **Workflow del progetto (validato dall'utente)**: si usa **ChatGPT Image 2** come unico modello e si **allega sempre una foto reale del soggetto** (host o guest) come reference. Il prompt deve essere ottimizzato per **massima fedelta' al volto** della reference. I prompt per Ideogram e Gemini 3 Pro sono mantenuti come legacy in fondo al file ma non vanno consegnati nella deliverable standard del Passaggio 2.
 
 ## Table of Contents
 
@@ -11,12 +11,11 @@
 4. [Derivazione del brief da titolo + transcript](#derivazione-del-brief)
 5. [Scelta palette colori + razionali](#scelta-palette-colori)
 6. [Regole per il testo nel prompt](#regole-per-il-testo-nel-prompt)
-7. [Prompt 1 — Ideogram](#prompt-1--ideogram)
-8. [Prompt 2 — Gemini 3 Pro](#prompt-2--gemini-3-pro-flessibile-accetta-reference-photo-guest)
-9. [Prompt 3 — ChatGPT Image 2](#prompt-3--chatgpt-image-2-balance-ottimo-con-testi-brevi)
-10. [Fallback post-production](#fallback-post-production-se-il-testo-esce-sporco)
-11. [Verifica finale pre-upload](#verifica-finale-pre-upload)
-12. [File output atteso](#file-output-atteso)
+7. [Prompt ChatGPT Image 2 con face reference (DEFAULT)](#prompt-chatgpt-image-2-con-face-reference-default)
+8. [Fallback post-production](#fallback-post-production-se-il-testo-esce-sporco)
+9. [Verifica finale pre-upload](#verifica-finale-pre-upload)
+10. [File output atteso](#file-output-atteso)
+11. [APPENDICE — Prompt legacy per altri modelli](#appendice--prompt-legacy-per-altri-modelli)
 
 ---
 
@@ -66,7 +65,7 @@ Le thumbnail del podcast storicamente sembravano annunci funebri. **MAI**:
 - **Nome guest NON nella thumbnail** (gia' nel titolo, niente ridondanza)
 - **Background**: pieno saturo (vedi palette)
 - **Badge logo RA**: piccolo bottom-right
-- **Face reference**: se l'utente fornisce foto del guest, allegala a Gemini 3 Pro (supporta reference nativamente). Ideogram / ChatGPT Image 2 non supportano bene face reference, usa descrizione fisica dettagliata (carnagione, capelli, barba, occhiali, eta' approssimativa).
+- **Face reference (workflow utente)**: l'utente allega SEMPRE una foto reale del guest a ChatGPT Image 2 nello stesso turn del prompt. Il prompt NON deve contenere descrizione fisica del soggetto (la foto e' source of truth) ma deve includere istruzione esplicita di **preservare con alta fedelta' i tratti del volto** della reference: niente idealizzazione, niente stilizzazione, niente beautification. Stesso pattern per host nei format numerati.
 - **Composizione tipica**: guest close-up (70% frame, 3/4 profile leggero per dramatic flair), testo sul lato con piu' spazio negativo
 
 ---
@@ -138,99 +137,54 @@ Deriva dal transcript e dal titolo. Mappa:
 
 ---
 
-## Prompt 1 — Ideogram
+## Prompt ChatGPT Image 2 con face reference (DEFAULT)
 
-**Miglior rendering testo, raccomandato come default**. Ideogram 3.0 ha il rendering tipografico piu' affidabile tra i 3 modelli.
-
-```
-[Scene description with subject and expression, 2-3 sentences in English].
-
-Text in image: "[HOOK MAIUSCOLO]" in bold condensed sans-serif, [color hex]
-with [outline description if needed], positioned [position in frame].
-
-Style: photorealistic YouTube thumbnail, 16:9, saturated [bg hex] background
-wall, high contrast, dramatic portrait lighting, 85mm lens shallow DOF,
-attention-grabbing in a feed at 246x138 pixels.
-
-Negative: no circle portraits, no dark blue cosmic background, no multiple
-faces in rows, no formal stiff poses, no obituary aesthetic, no garbled
-characters in text.
-
---style realistic --aspect 16:9 --magic_prompt OFF
-```
-
-**Note Ideogram**:
-- `--magic_prompt OFF` è cruciale: evita che Ideogram espanda il prompt aggiungendo elementi non richiesti
-- `--style realistic` forza il photorealistic (default è piu' artistico)
-- Ideogram non supporta face reference image: se guest, descrivi caratteristiche fisiche nel testo
-
----
-
-## Prompt 2 — Gemini 3 Pro (flessibile, accetta reference photo guest)
-
-**Unico dei 3 che accetta face reference image nativamente**. Usa questo per le interviste quando hai foto del guest.
+**Workflow utente (validato)**: l'utente apre ChatGPT, carica la foto reale del soggetto come reference image, e incolla il prompt sotto. ChatGPT Image 2 deve preservare il volto della reference con alta fedelta' senza idealizzarlo. Il prompt NON include descrizione fisica del soggetto.
 
 ```
-YouTube thumbnail, 16:9 aspect ratio, 1280x720, photorealistic style, high
-contrast, punchy saturated colors.
+Create a YouTube thumbnail image, 16:9 aspect ratio, photorealistic style,
+1280x720 minimum, suitable for a feed at 246x138 pixels.
 
-Composition: [description of subject/text spatial split, 1 sentence].
+Use the attached reference photo of the subject as the basis for the portrait.
+Maintain the exact facial features, hair, complexion, and identifiable
+likeness with high fidelity. Do NOT alter, idealize, beautify, or stylize the
+face. Keep the resemblance as close as possible to the reference photo.
 
-Subject: [detailed subject description with specific expression, 2 sentences].
+Place the subject in [composition spec — e.g. "a close-up portrait on the
+right side of the frame, occupying 70% of the composition, cropped from the
+chest up, slight 3/4 profile angle for dramatic flair"].
 
-Background: solid saturated [color name] ([bg hex]), uniform, no gradient,
-no elements.
+Expression: [expression spec — e.g. "intense, pensive, analytical, looking
+slightly off-camera with a measured contrarian gaze. Not smiling, not stiff
+corporate, not posed-for-LinkedIn — natural focused intensity"].
+
+Background: solid saturated [color name] ([bg hex]), no elements, no
+gradient, uniform.
 
 Lighting: dramatic key light from [angle], shallow depth of field, subject
-in focus, background perfectly smooth.
-
-Camera: 85mm portrait lens feel.
-
-Text overlay integrated in the image: the words "[HOOK MAIUSCOLO]" rendered
-in bold condensed sans-serif ultra-heavy weight, [text color hex] with
-[outline description], positioned [position], filling approximately [%] of
-the frame width. Text must be crisp, properly kerned, every letter
-perfectly legible.
-
-Mood: [mood keyword].
-
-Negative: no circle portraits, no dark blue cosmic backgrounds, no multiple
-faces in rows, no formal stiff poses, no obituary aesthetic, no garbled
-characters in text, no lorem ipsum.
-```
-
-**Se hai foto reference del guest** (intervista): allegala come reference image (Gemini 3 Pro la supporta nativamente). La descrizione testuale del soggetto diventa secondaria e fa fede l'immagine.
-
----
-
-## Prompt 3 — ChatGPT Image 2 (balance, ottimo con testi brevi)
-
-**Buon compromesso**, rendering testo decente con 3-4 parole. Piu' fluente nel linguaggio naturale del prompt.
-
-```
-Create a YouTube thumbnail image, 16:9 aspect ratio, photorealistic style.
-
-[Scene description with subject and strong expression].
-
-Background: solid saturated [color name] ([bg hex]), no elements.
-Portrait lens feel, shallow depth of field, dramatic lighting from [angle].
+in focus, background perfectly smooth, 85mm portrait lens feel.
 
 Include the text "[HOOK MAIUSCOLO]" rendered prominently in the image as
-bold condensed sans-serif, [text color hex] with [outline description],
-positioned [position]. The text must be perfectly legible, crisp, integrated
-as part of the composition, not as watermark.
+bold condensed sans-serif ultra-heavy weight (Anton / Impact / Bebas Neue
+style), [text color hex] with [outline description, e.g. "4px black
+outline"], positioned [position, e.g. "left side vertically centered"],
+filling approximately [%] of the frame width. The text must be perfectly
+legible, crisp, integrated as part of the composition, not as watermark,
+every letter rendered correctly.
 
-Style: high-contrast YouTube thumbnail aesthetic, attention-grabbing in a
-feed at 246x138 pixels.
+Style: high-contrast YouTube thumbnail aesthetic, attention-grabbing in
+the feed.
 
 Avoid: circular portrait frames, dark blue cosmic backgrounds, multiple
-faces in rows, stiff corporate poses, garbled text, obituary aesthetic.
+faces, stiff corporate poses, garbled text, obituary aesthetic, altering
+or beautifying the subject's facial features beyond what the reference
+photo shows.
 ```
 
-**Note ChatGPT Image 2**:
-- Funziona meglio con testi ≤ 4 parole; oltre tende a garblare
-- Non supporta face reference image
-- Rispetta meglio i vincoli "avoid" rispetto a Ideogram
+**Note operative**:
+- ChatGPT Image 2 funziona meglio con testi ≤ 4 parole — oltre tende a garblare. Se l'hook e' piu' lungo, valuta il fallback post-production manuale (vedi sezione successiva).
+- Carica la reference photo PRIMA del prompt nello stesso turn, non dopo.
+- Se la prima generazione idealizza il volto, rilancia con "the subject's facial features must match the reference photo exactly, do not change face shape, jawline, or eye spacing".
 
 ---
 
@@ -280,3 +234,59 @@ Prima di caricare su YouTube Studio, checklist ferrea:
 - **Intervista senza numero**: `/assets/images/episodes/{guest-slug}-{YYYY-MM-DD}.png`
 
 Dimensioni: **1280×720 minimo, 1920×1080 ideale** (16:9).
+
+---
+
+## APPENDICE — Prompt legacy per altri modelli
+
+> Sezione mantenuta solo per riferimento. **Non includere questi template nella deliverable standard del Passaggio 2** salvo richiesta esplicita dell'utente: il workflow attivo e' ChatGPT Image 2 + face reference (vedi sezione [Prompt ChatGPT Image 2 con face reference](#prompt-chatgpt-image-2-con-face-reference-default)).
+
+### Ideogram (rendering testo affidabile, no face reference nativa)
+
+```
+[Scene description with subject and expression, 2-3 sentences in English].
+
+Text in image: "[HOOK MAIUSCOLO]" in bold condensed sans-serif, [color hex]
+with [outline description if needed], positioned [position in frame].
+
+Style: photorealistic YouTube thumbnail, 16:9, saturated [bg hex] background
+wall, high contrast, dramatic portrait lighting, 85mm lens shallow DOF,
+attention-grabbing in a feed at 246x138 pixels.
+
+Negative: no circle portraits, no dark blue cosmic background, no multiple
+faces in rows, no formal stiff poses, no obituary aesthetic, no garbled
+characters in text.
+
+--style realistic --aspect 16:9 --magic_prompt OFF
+```
+
+### Gemini 3 Pro (face reference nativa)
+
+```
+YouTube thumbnail, 16:9 aspect ratio, 1280x720, photorealistic style, high
+contrast, punchy saturated colors.
+
+Composition: [description of subject/text spatial split, 1 sentence].
+
+Subject: [detailed subject description with specific expression, 2 sentences].
+
+Background: solid saturated [color name] ([bg hex]), uniform, no gradient,
+no elements.
+
+Lighting: dramatic key light from [angle], shallow depth of field, subject
+in focus, background perfectly smooth.
+
+Camera: 85mm portrait lens feel.
+
+Text overlay integrated in the image: the words "[HOOK MAIUSCOLO]" rendered
+in bold condensed sans-serif ultra-heavy weight, [text color hex] with
+[outline description], positioned [position], filling approximately [%] of
+the frame width. Text must be crisp, properly kerned, every letter
+perfectly legible.
+
+Mood: [mood keyword].
+
+Negative: no circle portraits, no dark blue cosmic backgrounds, no multiple
+faces in rows, no formal stiff poses, no obituary aesthetic, no garbled
+characters in text, no lorem ipsum.
+```
