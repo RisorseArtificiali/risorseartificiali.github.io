@@ -1,0 +1,759 @@
+Stefano Maestri (00:00)
+Ciao a tutti e tornati al nostro podcast Ressource Artificial Intelligence. Oggi artificial intelligence un anno dopo. Quindi parliamo di tutto quello che è successo nell'arco di quest'anno. Voi direte ma perché è maggio non è fine anno non è natale non è niente. Perché c'è la torta perché questa è la puntata 52 quindi un anno esatto di podcast a 52 settimane in fila.
+
+Alessio Soldano (00:17)
+Non c'è il panettone.
+
+Stefano Maestri (00:29)
+a rompere le palle, si poteva dire rompere, miei colleghi co-host perché sono super regolare, vero è true story questa nel senso che non so se si poteva dire rompere ma ho decisamente rotto le palle a tutti perché mi piace essere regolare, anche la newsletter lo sapete che ha fatto la stessa cosa quindi la colpa tutta mia, colpa merito chi lo sa.
+
+Paolo Antinori (00:38)
+storia
+
+Stefano Maestri (01:00)
+Quindi come state dopo un anno di podcast? Siete pronti a uccidermi, a uccidere voi stessi, a uccidere le jai o siete tutti felici?
+
+Paolo Antinori (01:13)
+che che è un pochettino una tassa il doversi preparare tutte le settimane per sta roba e sapere di non poter scappare mai è stato utile a mio vi per me stesso è stato utile con gli obiettivi iniziali che avevamo introdotto quando facciamo il podcast ovvero noi queste chiacchere questa ricerca di informazioni lo facciamo più o meno a scopo personale per rimanere al passo per capire che cosa sta succedendo
+
+e a questo punto le chiacchere davanti alla birra che avremo fatto per i fatti nostri tanto vale farle con la porta aperta e se qualcuno vuole ascoltare che ascolti
+
+Alessio Soldano (01:48)
+Sì, assolutamente. La preparazione della puntata in realtà è utilissima per rimanere al passo coi tempi.
+
+Paolo Antinori (01:58)
+Penso che io questa settimana mi è capitato una storia vera di un amico che mi ha chiesto una consulenza su come poteva fare qualcosa riguardo a come creare un'app AI, un'app che ti trova i percorsi per la bicicletta per chi va in mountain bike.
+
+mi chiedeva, io lo faccio con MCP, però MCP è difficile da proporre come modulo perché se qualcuno per i fatti suoi usa Cloud, lo deve installare, non è facilmente condivisibile o tanto condivisibile per gli obiettivi che avevo io di averlo su un'app facilmente consumabile
+
+al che gli ho consigliato l'approccio che usiamo per antivocale ovvero che si può embeddare un modello gemma localmente che a quel punto puoi fare quello che vuoi, che gli esempi poteva anche prendere in ondamema dall'app Edge Gallery di Google è stato utile, cioè mi sono reso conto che quella conoscenza che ho usato per fare le cose che abbiamo fatto era già riciclabile a contesti diversi e mi è realmente capitato questo esempio, Giovanni può confermare se la si mai ascoltasse
+
+Stefano Maestri (03:05)
+che ci ascolti, non ci ascolta che ci ascolti come tutti voi che state ascoltando anche per caso, siete passati di qua per caso, cosa dovete fare? Mettere il campanello e le stelline, iscrivervi al canale, tutte quelle cose lì. Anche perché avrete visto... Allora, cosa è cambiato nell'arco di quest'anno? Dai, proviamo a partire da lì. È cambiato che nelle ultime tre settimane mi faccio molto più il culo a montare le puntate e sono molto più belle, dicono.
+
+Alessio Soldano (03:18)
+lo dite ai vostri amici.
+
+Stefano Maestri (03:32)
+però mi occupa più tempo ma fa niente, spero che appreziate.
+
+Paolo Antinori (03:38)
+è
+
+cambiata la mia attività su github, se andate a guardare il profilo c'è tutto pezzo bianco e poi in certo punto verde scuro, così da un giorno all'altro
+
+Stefano Maestri (03:47)
+Sì, anche il è
+
+diventato di un verdone intenso. Che ci porta se vuoi a parlare di una delle cose... Un anno fa, di cosa parliamo oggi, dicevamo che le IAI toccherà alcuni lavori, probabilmente sta cominciando a toccare quello degli ingegneri, eccetera. Oggi anche i più...
+
+o resilienti degli ingegneri, almeno di quelli con cui abbiamo a che fare noi, sembra che siano ormai tutti quanti concordi che il mondo è cambiato.
+
+Alessio Soldano (04:32)
+Secondo te l'abbiamo abbondantemente passata la fase della negazione?
+
+Stefano Maestri (04:35)
+dipende.
+
+Allora, dipende dal livello degli ingegneri.
+
+su github l'abbiamo passata secondo me mettiamolo così poi ci sarà chi lavora in ambienti specifici non era un giudizio di livello intenso di capacità magari c'è chi lavora in ambienti specifici che ne sono sui PLC piuttosto che su cose di robotica industriale che magari ha dei casi per cui fa ancora tutto quanto a mano io questo
+
+Alessio Soldano (04:52)
+Ci vediamo
+
+Stefano Maestri (05:12)
+Qualche visibilità ce l'ho, non piena.
+
+Alessio Soldano (05:13)
+se
+
+la platea è quella che condivido i propri sorgenti su github, quella platea lì l'abbondantemente passata.
+
+Stefano Maestri (05:25)
+Boh non so, secondo voi c'è ancora qualcuno che scrive JavaScript per fare un sito?
+
+Paolo Antinori (05:29)
+Sì,
+
+sapete che io temo di dovervi dare questa visione basata su una storia vera successa ieri con peraltro partecipante anche uno dei nostri precedenti ospiti, Andrea Cosentino, nostro esperto di sicurezza. Ieri ero a una colla collaziendale in cui si faceva promozione, si discuteva, si faceva una tavola rotonda, volete, di approccio AI al lavoro e quindi
+
+immaginiamo noi quando diamo per scontato che tutti lo facciano, ci sono talmente tante cose da fare e maniere per fare le cose per cui io ho qualche trucco nella manica, qualche workflow che funziona bene, te lo posso spiegare a te, tu impari qualcosa di nuovo e viceversa ed è normale, no? Si dà per scontato che tu fai delle cose diverse da me, c'è sempre qualcosa da imparare, quindi questo era l'obiettivo di quella call e c'erano un po' di persone che hanno presentato i loro vari approcci
+
+Andrea come altri aveva allora l'approccio che rappresentava il suo team su come fare triaging delle attività, fare sviluppo, testing, classiche cose tendenzialmente, cioè fatte bene e ben ragionate ma cose che ormai appunto è più di un anno che stiamo vedendo che la gente sta approcciando e niente era interessante comunque, ben articolato, orientato in particolare al suo mondo di Apache Foundation e le necessità che hanno di là.
+
+e la parte di sicurezza che era interessante per Andrea. Bene, la presentazione va bene, ci sono un po' di domande così, la sensazione che ho avuto io, e me l'ha confermata Andrea con un messaggio privato oggi, fa cavolo, non mi aspettavo tramite i commenti che abbiamo ricevuto che ci fossero così tante persone che ancora non hanno iniziato questo viaggio o che non avevano idea di questa cosa.
+
+rimasto scioccato che il suo messaggio fosse preso come, la prima volta che sento questa storia. Io temo che sia abbastanza vero, ora il giudizio sulla platea, qualcuno potrebbe dire, magari erano le tue persone non all'altezza, temo che sia una questione di scala. Quando parliamo noi tre, o parliamo con i nostri amici, le persone che ci danno retta, che oramai queste storie da noi le hanno sentite perché magari li abbiamo annoiati a forzargli l'informazione,
+
+Sono il passo con noi, o male, poco più avanti, poco più indietro sanno di cosa stiamo parlando. Quando apri le porte a tutti e metti dentro un'organizzazione di persone anonime, buoni, brutti e cattivi, il gradiente si abbassa terribilmente a mio avviso e quindi ti ritrovi a dover ammettere che secondo me non tutti sono lì e non tutti stanno facendo le cose come noi ci aspettiamo che li stiano facendo. Temo che così sia, pochettino.
+
+Stefano Maestri (08:14)
+No, probabilmente hai ragione. Mentre parlavi riflettevo anche di commenti, letti, sentiti su LinkedIn, altri social, podcast. Cioè adesso ci sono tanti altri influencer, più influencer nel vero senso della parola, che provano a fare quello.
+
+che parlano molto di questa cosa e che si scaldano sul fatto che i programmatori dovrebbero, dovrebbero, dovrebbero. Quindi è sintomo che probabilmente la nostra è una visione molto biased. Anzi, facciamo la domanda agli ascoltatori. Se volete lasciare un commento. Se state qui ad ascoltare, secondo me, per il tipo di podcast che siamo, il viaggio lo avete già cominciato. Ma i vostri amici, i vostri conoscenti, vostri...
+
+colleghi sono al punto dove siete voi dove stiamo andando dove io dicevo che stiamo andando eccetera o appunto siamo molto condizionati dal nostro essere molto focalizzati su quello può benissimo darsi
+
+Alessio Soldano (09:25)
+Peraltro, la mia domanda, se effettivamente è così, che c'è un sacco di gente che fa un lavoro simile al nostro, che ancora non ha cominciato il viaggio, come dite voi, mi domando se la ragione sia perché non ha visto l'applicabilità ai propri use case, immagina che tutte queste nuove possibilità siano lontane da quello che fanno day by day.
+
+o perché ha provato sei mesi fa, un anno fa, è rimasto insoddisfatto e quindi ha assunto che va bene, non fa per me tutte stupitate e niente, senza cogliere il fatto che ogni mese migliora tutto, ogni settimana migliora tutto.
+
+Stefano Maestri (10:08)
+Sì, esatto. Ci sono queste due possibilità. La terza è quella che dicevi tu prima, Ale, è il negazionismo, perché io credo che il cambiamento sia difficile spesso per molte persone, soprattutto quando tocca qualcosa a cui sei affezionato. Cioè, fa il programmatore lo fa per passione spesso, non sempre, però in molti lo fanno per passione, è una cosa che piace fare.
+
+Alessio Soldano (10:39)
+essere spiazzante non avere più il reward di ottenere le cose in un certo modo o con un certo tipo di attività
+
+Stefano Maestri (10:48)
+Sì, e la quarta categoria secondo me sono anche quelli che invece pur facendo il nostro lavoro eccetera non hanno voglia di stare dietro a questa cosa che dicevi ma proprio non hanno del continuo cambiamento perché comunque può essere spiazzante, dicono gli inglesi che rende molto l'idea e quindi è un po' l'idea con cui siamo partiti con questo podcast, cercare di
+
+fare un podcast estremamente tecnico ed estremamente per addetti ai lavori, come dice la moglie di Paolo e dice anche la mia compagna, e hanno ragione, ma cercando di essere un pochettino più leggeri. Ecco, speriamo di... fatelo ascoltare anche a quelle persone scettiche, cioè ditegli di sottoscrivere e mettere il campanellino anche a loro, ovviamente.
+
+Alessio Soldano (11:42)
+legatele alla sedia e
+
+fateli ascoltare qualche puntata.
+
+Stefano Maestri (11:46)
+e fategli ascoltare magari qualche intervista se le ritenete qualcuna di quelle un po' più diverse dalle nostre chiacchere però non so fategli ascoltare che secondo me gli fa bene
+
+Paolo Antinori (11:59)
+Dobbiamo fare la puntata con i vari montaggi, quindi sai che all'anno di solito ci sono gli spezzoni come in Friends in Happy Days.
+
+Stefano Maestri (12:05)
+No, non se ne parla neanche. No, no, no, non c'ho il tempo
+
+Alessio Soldano (12:07)
+Best of!
+
+Stefano Maestri (12:09)
+di fare quella roba lì. C'ho due tolchi in arrivo, preparato bene, nessuno dei due ancora. Quindi no, best of scordatevelo, lo facciamo noi il best of, lo stiamo facendo in questo momento. No, però parlando invece della tecnologia in sé, penso che voi siate d'accordo con me che se guardiamo 52 settimane fa
+
+gli agenti in generale e di coding poi arriviamo quelli in generale ma stiamo sul coding cioè il giorno e la notte 52 settimane fa parlavamo di usare il cursor per fare tab tab tab cioè la code completion è voluta oggi oggi
+
+Alessio Soldano (12:52)
+si c'era già un minimo di
+
+chiamiamolo pseudovibe coding ok però
+
+Stefano Maestri (12:59)
+Sì, sì, sì, CloudCode è di marzo-aprile dell'anno scorso, sì. Però, Sonnet 3.5, che ancora si usa, qualcuno ancora usa, non lo possiamo dire. Però, c'era Sonnet 3.5 che non è al livello di quello che usiamo oggi.
+
+E cioè è cambiato come il giorno a notte. Io colloco, l'ho già detto tante volte, il momento di svolta vero su quella cosa lì, anche se io c'ero dentro mangi e piedi già prima e voi con me, è stato intorno a Natale. E Natale non perché gli smanetone avevano tempo di provare, anche, ma perché a inizio dicembre sono usciti chat GPT 5.3, se ricordo bene.
+
+Gemini 3.0 e Opus 4.5 che sono stati... 4.6? Non mi ricordo più, 5-6. Comunque sono stati una svolta per quanto erano bravi nella parte agentica. E quindi la gente ha cominciato a dire, è Natale, gli do una provata, ⁓ ma hai cambiato da sei mesi fa, cazzo fa tutto lui.
+
+Paolo Antinori (14:25)
+Sì, anche se secondo me forse sai che più che la qualità stessa che ha spinto gli individui a riprovare era più la presenza mediatica di figure non strettamente legate al coding che dicevano io non faccio programmatore ma Cloud Code mi aiuta nel mio workflow personale che poi è sfociato in Cloud Desktop o Cloud
+
+Stefano Maestri (14:26)
+Ed enda top!
+
+B, sai l'uovo e la gallina. Non so, è un po' l'uovo e la gallina questo. Hai ragione da un lato dall'altro l'impatto mediatico, che hanno avuto programmatori famosi che fanno da... anche da Deverell, Influencer, senza volerlo, Salvatore San Filippo in Italia, Kent Beck, Mondo.
+
+che hanno cominciato a dire, io ho provato, non potete non farlo, io lo sto facendo, faccio tutto così e questa cosa, Kent Beck è tornato a scrivere più articoli di quanti forse ne abbia scritti nel periodo del test driven development dicendo a tutti, vi prego, fatelo perché dovete e secondo me anche quello ha avuto un peso.
+
+almeno spingere e ok è natale, ho ciò tempo, ci sono i modelli nuovi, tutti questi di cui ho sempre letto i libri mi dicono che lo fanno perché non devo provare io, sono chi l'ultimo del villaggio, ne ho già detto troppe di parole, poi dopo va finire che il buono youtube ci taglia. Quindi secondo me è stato un insieme di cose.
+
+Paolo Antinori (16:19)
+sai che queste riflessioni le stavo facendo questa settimana sempre pensando a chi rifiuta la cosa o a quelli che si chiedono, che ho sentito ancora ieri, ma l'AI ci rende più stupidi perché ci sono degli studi che ti dicono che quindi la tua capacità cognitiva... sì, adesso... a quelli di quegli studi vorrei dire, sì, ma voi se fate una cosa sola come prima forse sì vi rende più stupidi, se ne fate 65
+
+Stefano Maestri (16:36)
+Sì, sì.
+
+Paolo Antinori (16:46)
+in contemporanea magari non siete più stupidi. Comunque questa è mia prere riflessione. No, cosa ti stavo dicendo? Che il...
+
+non mi ricordo più confesso che non mi ricordo più
+
+Stefano Maestri (17:00)
+Io ho una riflessione, va niente, mi dicevo io una riflessione
+
+su questo, una cosa che ho letto, non cito la fonte, l'ho letta su LinkedIn, non mi ricordo da chi, mi scuso se è un ascoltatore o comunque chi, qualche ascoltatore lo sa, mettetelo nei commenti, che ha detto una cosa molto molto intelligente, dicendo che in fondo...
+
+fin dall'epoca dei grandi filosofi greci, la persona più intelligente è quella che sapeva fare le domande giuste, non quella che aveva tutte le risposte. E questa cosa qui in fondo dell'AI spinge all'eccesso questa cosa qua. Credo che fosse Luciano Floridi, il filosofo peraltro, ci starebbe, ma non sono certo.
+
+verificare se volete però in sé la citazione a me è piaciuta molto perché è vero spinge all'eccesso questa cosa del del saper cosa chiedere cioè io non devo più avere una conoscenza verticale del singolo linguaggio tanto che lince il nostro progetto è in gran parte scritto in rasta
+
+perché ha senso scriverlo in Rust per fare il plugin di ZLJ ma se l'avessi dovuto fare a mano avrei avuto una curva di apprendimento di Rust difficilmente affrontabile con il tempo poco che ho essendo ai assisted coding Rust per me è un linguaggio come un altro, lo leggo sono in grado di dire dove sta sbagliando, cosa sta facendo di chiedere alla gente di come fare le modifiche
+
+ma se lo devo scrivere da zero ho bisogno di una conoscenza di verticalità che non mi avrebbe permesso di farlo. E lì la mia esperienza da software engineer o architetto viene fuori perché anche se il linguaggio non lo conosco verticalmente capisco cosa fa e so come indirizzare il lavoro.
+
+Paolo Antinori (19:14)
+scusami, è tornato in mente quello che volevo dire ed è ancora un po' legato a queste cose mi sono trovato a chiedermi se la gente che sia infastidita dalla presenza delle AI, intendo anche gli sviluppatori forse erano in questo ambito o in questa attività non tanto con l'obiettivo di realizzare qualcosa quanto più con l'obiettivo di scrivere del codice magari per loro la parte... l'interesse
+
+era scrivere del codice, mettere insieme del codice che compilasse e queste cose qua. Peraltro Rast è perfetto se vuoi passare il tempo a cercare di far compilare anziché fare della roba. Mentre se le persone in cui l'obiettivo è sempre stato realizzare cose, tutto sommato adesso che gli è stata tolta parte della responsabilità della scrittura del codice stesso, sono più contenti. Leggevo in un articolo in cui proprio si parlava di...
+
+del successo di Rust in questo periodo di come sia sempre stato un linguaggio per quelli che volevano ma non potevano perché non avevano mai abbastanza tempo. Un linguaggio ammirato era descritto insieme a elixire ad altri che le persone vorrebbero usare ma non hanno tempo per via degli impegni della loro vita che appunto come dicevamo la presenza di tutte di tutto questo aiuto spingeva alcuni sb-
+
+In quel caso era qualcuno di famoso, non mi ricordo più, che diceva io sono solo che contento che adesso posso scrivere meno codice perché mi posso concentrare sugli altri aspetti del software development che sono la definizione precisa dei test, così sono sicuro che il software fa quello che dico io, e la documentazione, così sono sicuro che la roba che ho fatto qualcuno riesce anche ad usarla. Il codice stesso è un byproduct, è un po' come dire adesso uso il mini peamer anziché girare la maionese a mano, cioè non era mai stato il girare a mano la cosa.
+
+Alessio Soldano (21:08)
+Sì, però non tutti i
+
+programmatori la pensano così, cioè trovano, diciamo, soddisfazione nella stessa parte del lavoro. Ci sono quelli che traggono proprio l'ispirazione, la soddisfazione, eccetera, nell'effettivo, nell'effettiva fase di scrittura del software, che volentino lentamente hanno dovuto cambiare, insomma,
+
+Stefano Maestri (21:20)
+Sì, sì, certo.
+
+Alessio Soldano (21:38)
+l'approccio e cercare motivazioni in qualcosa di diverso, che per quelli che, come dici tu Paolo, traevano soddisfazione da tutto il resto, dalla parte del ciclo di sviluppo del software, era già lì. E per qualcun altro mi viene da dire che hanno dovuto cercare questa spinta, questo fuoco, mettiamola così, che ti motiva nel, ad esempio,
+
+capire come fare prompt engineering, capire come avere modelli che ti danno risultati migliori, come migliorare le performance, questi aspetti legati all'ingegnerizzazione di questi nuovi tool.
+
+Stefano Maestri (22:21)
+Sì, esatto, sono d'accordo e poi va beh è ironica, no? Però questa cosa che qualcuno dica, finalmente posso concentrarmi sui test e sulla documentazione perché immediatamente è la cosa che i programmatori non hanno mai fatto evidentemente perché non avevano tempo, no? Perché non gli piaceva come insinuavano i quelli che scrivevano la documentazione. Magari semplicemente non avevamo tempo.
+
+Alessio Soldano (22:48)
+Pensa
+
+che c'è anche chi dice adesso posso far fare i test all'AI e io posso concentrarmi sul design.
+
+Stefano Maestri (22:53)
+⁓ sì sì sì sì, Questo è un più pericoloso se non gli dai almeno un'occhiata ai test, però vabbè questo è un altro discorso. Ma che ci porta... Scusa Paolo, stai dicendo?
+
+Paolo Antinori (23:02)
+Dicevo, è
+
+legato alle vostre battute, chissà se adesso i progetti open source inizieranno ad avere una UI decente, perché c'era il vecchio scherzo che diceva come fai a sapere se un progetto open source, se la UI fa schifo.
+
+Stefano Maestri (23:10)
+darsi.
+
+Alessio Soldano (23:14)
+Beh io quasi un anno fa ormai la prima cosa veramente diciamo utile che ho fatto con i dai è stato proprio fare l'interfaccia grafica di un prototipo che ho fatto sul quale avevo anche preso un e mi ha fatto un'interfaccia grafica l'ho provata tre volte funziona non l'ho più usata però intanto è fatta
+
+Stefano Maestri (23:37)
+Allora su quello non so perché quelli che nell'open source hanno le radici tipo noi
+
+sia là in questo momento perché finalmente siamo potuti tornare almeno parlo per me all'amato terminale in cui siamo nati non esco più dal terminale lo dicevo in una delle ultime puntate che mi sono accorto che fino a qualche mese fa quando riavviavo il computer la prima cosa che aprivo era il browser per la posta eccetera eccetera adesso prima cosa che apro quando accendo il computer è il terminale sono tornato a essere quello che apre il terminale e sono felicissimo
+
+Alessio Soldano (24:15)
+Ti
+
+dico io non sono così un amante del terminale ai livelli tuoi però devo dire che in una situazione come questa in cui ci sono tutti gli aspetti legati alla sicurezza sandboxing macchine virtuali eccetera il fatto di poter andare da terminale ti aiuta tanto
+
+Stefano Maestri (24:33)
+Io sono un grande amante del terminale. Io per anni sono andato avanti nei Google Docs a trovarmi in giro delle cose scritte, due punti WQ, che per chi sa cosa vi hai, mi viene in automatico salvare.
+
+Alessio Soldano (24:44)
+Beh io ho imparato da testa e cose.
+
+Paolo Antinori (24:53)
+si salva con zzz
+
+di zorro via i ragazzi tutto vi devo dire
+
+Stefano Maestri (24:59)
+No, però per chiudere il discorso sugli agenti che cosa è cambiato in quest'anno non possiamo non menzionare quanto, quello che dicevi anche prima di Andrea Cosentino, quanto ci sia un tentativo giusto di adattare i processi ai nuovi strumenti e questo io lo sottolineo fortissimo non solo per la programmazione ma per tutti quelli che vogliono fare una vera adoption dell'AI nelle aziende.
+
+la IA si adotta solo se adattate ai vostri processi non è gratis in quel senso, in senso di processo e infatti sono nati i vari spec driven development si è tornati a avere molta più attenzione sia alle specifiche che ai test ultimamente, attenzione, questo ultimamente dico negli ultimi mesi c'è stata più attenzione alla sicurezza, sandbox
+
+a come ci creiamo l'ambiente e come scriviamo il codice, cioè come portiamo in fondo il progetto, il discorso dello Spec Driven Development. Tra l'altro abbiamo avuto un paio di interviste su quello, abbiamo fatto un talk io e Alessio che lo trovate in giro su Spec Driven, ma poi c'è stata un'intervista anche a Massimo R. Ferre che è il PM di Kiro in...
+
+per AWS nel mondo, andate a sentirvela, perché lui va molto a fondo. Poi abbiamo avuto ospite anche Alex di BacklogMD, è il tool che noi, almeno io e Paolo, credo anche a lei, si usiamo di più come spec driven, o come dice Alex, come ha detto Alex, squadanoi, per non fare le cose a casaccio.
+
+Cito la sua definizione di backlog a Medica che era piaciuta molto. Quindi c'è questa tendenza decisamente.
+
+Paolo Antinori (26:54)
+⁓
+
+C'è una scelta volentieri un adesivo sul laptop dei backlog? Ce l'ha.
+
+Stefano Maestri (27:14)
+c'è l'ha, c'è l'ha, c'è gli ha lui gli adesivi Alex, ci stai ascoltando mandaci gli adesivi
+
+Alessio Soldano (27:19)
+Manta e adesive.
+
+Stefano Maestri (27:20)
+o alla prossima conferenza in cui ci incrociamo dacci gli adesivi sì sì lui ha fatto gli adesivi perché all'ultima conferenza mi ha chiesto come avevamo fatto il nostro adesivo di risorse artificiali perché voleva stamparlo anche lui e quindi mi pare che poi mi abbia scritto su x che l'ha stampato perché abbiamo un adesivo di risorse artificiali che se non venite
+
+Alessio Soldano (27:29)
+dove stampate tu a esse
+
+Stefano Maestri (27:43)
+agli eventi dove ci siamo non avrete mai ma se venite agli eventi dove ci siamo potreste avere esclusivissimo, molto bello, po' piccolo però.
+
+Alessio Soldano (27:50)
+esclusivissimo.
+
+Paolo Antinori (27:53)
+Adesso dobbiamo fare anche quelli con le facce
+
+generate dell'AI per le copertine dei YouTube.
+
+Stefano Maestri (27:59)
+Adesso quando cambieremo anche la copertina faremo anche quello perché il regalo del compleanno potrebbe essere cambiare anche le copertine del podcast. Ma parlando di agenti, cosa è cambiato in quest'anno? Non possiamo non citare gli agenti generici. OpenClaw, il mio amato Hermes che mi sta mandando cose in questo momento su Telegram, dopo le leggerò.
+
+Beh, quando è stato, questo è successo anche questo a gennaio, sì, gennaio l'esplosione di OpenClaw, come primo poi Hermes, ce ne sono altri, non sono gli unici due, ci sono i due più famosi perché hanno filosofie leggermente diverse, Hermes più orientato alla sicurezza, all'isolamento, eccetera, OpenClaw a buttare dentro tutto quello che si può.
+
+lo dico con grandissimo rispetto, un milione di skill, un milione di tool, l'Hermes ne ha di meno perché ci vanno un pochino più coi piedi di piombo su ogni skill però però c'è da dire che Peter o Peter non so come si pronuncia Peter credo è austriaco
+
+Paolo Antinori (29:13)
+se Heidi mi ha insegnato
+
+qualcosa dovrebbe essere Petter,
+
+Alessio Soldano (29:16)
+petà
+
+Stefano Maestri (29:18)
+No, quello è Aydima pronunciato direttamente dai giapponesi, dallo serie originale.
+
+Paolo Antinori (29:26)
+under game
+
+Alessio Soldano (29:31)
+ahah ok... ma che l'ho piccata...
+
+Paolo Antinori (29:32)
+Ok, ok.
+
+Stefano Maestri (29:36)
+No, c'è da dire che lui ha, con un'idea, se vogliamo semplice, ha dato un grosso cambiamento. Quei sono questi agenti generici, lo ripetiamo un attimo, sono agenti che girano sempre su una macchina, una macchina virtuale, quello che è, e che fanno cose ogni tanto.
+
+o con un crono o con quello che in open close si chiama Earthbeat, battito del cuore.
+
+prendono anche iniziative, basano... sostanzialmente le date accesso a tutto quello che volete o che potete dei vostri dati e sulla base di quello fanno cose prendendo iniziative anche in certe cose stupende, ve le ho raccontate nell'ultimo appuntato, non ci torno.
+
+Paolo Antinori (30:30)
+come se Alexa funzionasse. Mi piace sempre descriverla così.
+
+Stefano Maestri (30:34)
+come
+
+se Alexa funzionasse. Esatto. Peraltro Alexa, tanto annunciata l'Alexa Plus che doveva fare esattamente qualcosa lì, non si è ancora vista.
+
+Paolo Antinori (30:43)
+No,
+
+si è vista, non ce l'hanno data noi in Italia. Eric che lavora con me negli Stati Uniti ce l'ha, gli ho chiesto com'è, fa... fa errori diversi da quelli di prima, mi ha detto.
+
+Stefano Maestri (30:52)
+mmm
+
+Ok.
+
+Alessio Soldano (30:56)
+E
+
+da noi non c'è per questioni normative o cosa?
+
+Paolo Antinori (30:59)
+Non ne ho idea, devo dir la verità, è facile.
+
+Stefano Maestri (31:00)
+credo di costi
+
+perché anche negli Stati Uniti hanno fatto un sotto insieme di utenti che poi è il motivo per cui anche secondo me anche Google che ha tanto annunciato Gemini su Home Assistant di fatto non c'è ancora ma perché se la gente comincia a chiacchierare tutto il giorno con questi strumenti diventa difficile da sostenere questa è una mia opinione personalissima
+
+Alessio Soldano (31:26)
+Vedi, devi farci andare il modello in locale sull'attrezzino.
+
+Paolo Antinori (31:26)
+C'è quale...
+
+Stefano Maestri (31:30)
+e devi arrivare a quella roba lì, almeno a spezzare, almeno le cose più semplici, farle in locale, già fanno per dirla, parte Wishbird, quello che so, fanno già, non Alexa, gli Home Assistant la fanno già lì in locale gli ultimi.
+
+Alessio Soldano (31:36)
+Per le richieste stupide base, sì.
+
+Paolo Antinori (31:54)
+Sì.
+
+Stefano Maestri (31:54)
+Però finché non è
+
+stabilizzato un po' qualcosa lì non è sostenibile.
+
+Paolo Antinori (31:58)
+Io credo che ci sia anche qualche questione di scala e testing a livello di grossi deployment perché io sono anni che sospettando una funzionità di Alexa come sviluppatore che è quella dell'accesso diretto alle skill senza dover dire Alexa apri questa roba per fare qualcosa e in inglese c'è sul marketplace inglese tu puoi usarla come sviluppatore in italiano non c'è
+
+e c'è su qualche skill che è stata offerta a ID in vita dall'organizzazione di Alex, agli sviluppatori che avevano un app popolare per dire...
+
+c'è ed è una rottura perché rende non naturale l'interazione con con le gente vocale due palle insomma però ci sono anni letteralmente anni che sto controllando sarei arrivata arrivata arrivata non arriva mai non credo che arriverà mai e pare che sia perché è un po complicata quella faccenda genera dei ripple effect che può rompere altre cose probabilmente non volevano gestirla l'hanno messa negli stati uniti per menarsela un pochettino per far vedere che c'era ma forse li crea più
+
+che no e quindi non la distribuiscono alle altre lingue.
+
+Stefano Maestri (33:08)
+Beh, parlando però di Alexa, siamo finiti a parlare di Alexa, non possiamo non citare l'Interaction Models, la startup di Mira Murati, Thinking Machine, ha rilasciato questa settimana.
+
+non sono ancora disponibili almeno non in Europa, non facilmente credo siano solo in preview al momento ma io ho visto i video abbastanza impressionanti vorrei dire la modalità vocale di Chatt GPT che funziona con steroid di cosa si tratta? si tratta dei modelli che rispondono alla modalità vocale
+
+in maniera realmente interattiva. Per chi ha provato la modalità avvocale di ChatGPT, premessa, scusate. Nel frattempo, OpenAI è uscita ieri con dei modelli equivalenti, dicono loro, che si chiamano GPT Real Time. Per la voce non ho ancora visto video, non ho ancora avuto modo di provarli. Quelli però dovrebbero fare più o meno la stessa cosa, tagliando un po' le gambe a questo rilascio fatto in pompomagna da...
+
+Thinking Machine, però Thinking Machine l'ha fatto con un modello relativamente piccolo, 273 milioni mi pare di parametri, quindi relativamente piccolo. Ricordo che Rumors, perché non li hanno mai pubblicati, ma sia Cloud, Opus che GPT 5.5 dovrebbero aggirarsi intorno ai 2 trillioni di parametri, Mixture of Expert.
+
+un ordine di grandezza di meno, più o meno, 273 milioni. I risultati sono impressionanti. Ci sono i video di queste persone che parlano in maniera estremamente naturale, come se stessero parlando con una persona, il modello interrompe chi sta parlando, aspetta... Dicevo, chi ha provato CITPT vocale, è comunque ad oggi l'esperienza migliore, molto meglio di quello di Claude in questo.
+
+hai comunque la sensazione che il modello aspetti che tu faccia una pausa per capire che hai finito la frase e poi ti risponde. Questo ci sta perché fanno una generazione, ho letto un po' come fanno, prendono il contesto, lo spezzettano in sotto sezioni e cominciano a preparare la risposta. Però il rischio è che se le tue sotto sezioni sono troppo piccole, la risposta non c'entra in niente con quello che gli hai chiesto ma solo con
+
+la prima parte della frase, se tu hai fatto una frase molto lunga, quindi tendenzialmente aspettano la fine, riconcigliano le sottosezioni e poi danno la risposta. Quello dei Thinking Machine Labs invece si chiama appunto, sono considerati modelli real time, perché invece riescono ad avere una comprensione al secondo di tutto quello che stato il contesto, rielaborandolo continuamente.
+
+Non è ancora uscito il paper, credo che uscirà per come lavorano loro, sono curioso di leggerlo, ma di nuovi rumors danno come idea che stiano usando i recursive model internamente, come ha provato già Google su altre cose. E questa cosa permette una notorialezza pazzesca, tra cui la traduzione simultanea.
+
+Alessio Soldano (36:58)
+Io ho visto un filmato in realtà di GPT Real Time ieri sera, non ho fatto in tempo da approfondire però ho notato proprio questa roba qua, facevano vedere come c'era questa persona che parlava in francese e la traduzione in inglese partiva tipo dopo un paio di secondi che lui stava parlando e proseguiva in parallelo proprio come quando ascolti la traduzione simultanea di un professionista.
+
+Stefano Maestri (37:16)
+Sì, sì, come...
+
+Alessio Soldano (37:22)
+e lui spiegava che praticamente il modello aspetta di capire che è passato il verbo principale della frase perché quello lì gli comanda la comprensione di dove sta andando a parare la persona che parla e poi traduce una roba impressionante.
+
+Stefano Maestri (37:38)
+Sì,
+
+c'è un video uguale di Tinky Machine Lab, loro lo fanno in modo leggermente diverso, probabilmente, però l'effetto è lo stesso, cioè un secondo, due secondi dopo che la persona ha cominciato a parlare parte una traduzione simultanea come quella dei traduttori simultanei, che tra l'altro dicevamo un anno fa, per collegarci di nuovo, che forse era uno da investire più a rischio, ecco, rischio concreto, ci siamo, siamo lì.
+
+Alessio Soldano (38:04)
+Ciao
+
+Stefano Maestri (38:06)
+perché se prima la traduzione era un po' tipo Walkie Talkie adesso no.
+
+Alessio Soldano (38:13)
+tra l'altro anche con
+
+più lingue che si intervallano una con l'altra, perché a quel punto lì una volta che hai il sistema una lingua vale la...
+
+Stefano Maestri (38:18)
+Si, si non.
+
+Sì, sì, una lingua fa... e a questo proposito i rumor danno che anche Google sia lì, sia arrivato alla stessa conclusione, poi alla fine la ricerca va tutta insieme sempre e così ci accolleghiamo da un'altra notizia, da un'altra cosa che abbiamo detto tante volte nell'arco dell'anno, rumor danno gli occhiali di Google al prossimo I.O. il 19...
+
+maggio giusto Paolo?
+
+Paolo Antinori (38:53)
+Sì, rumor lo stanno confermando ed ero abbastanza excited. Scusate, mi venuto eccitato, ma eccitato suona male. Quindi, excited mi suona meglio, anche se magari significa la stessa cosa. Quindi ero contento di vedere questo annuncio finalmente, perché come vi dicevo, da quando ho visto dei video convincenti, trovo che sia un formato che funziona. E poi questo Natale mi è capitato di provare un visore VR di...
+
+di metà, sebbene sia sempre stato scettico, io avevo trovato il suo perché nell'oggetto, quindi in un formato più vestibile trovo che possa essere molto utile, quindi vediamo se finalmente arriva sta roba, consapevole che io mi fido sempre poco delle avventure di hardware di Google, perché le buttano via quando si stufano, anche se in questo caso è coinvolta Samsung, che non dovrebbe buttarlo via, però non lo so, scettico, sono curioso di... diciamo che non comprerai la prima versione, ecco.
+
+dovrebbe stare arrivando vediamo vediamo se è vero in realtà il fatto che riuscivano gli occhiali è soltanto una delle tante cose ovviamente che verranno annunciate da google e il grosso il tema grosso va sotto il nome gemini intelligence che è una feature o un brand, label diciamo che google ha deciso di appiccicare ad android per ⁓ scusatemi parlo di google e google mi dice
+
+Stefano Maestri (40:03)
+Sì,
+
+Paolo Antinori (40:21)
+che ha deciso di appiccicare ad Android per infondere l'AI e le funzioni di Gemini un po' dappertutto nel sistema operativo. Quindi gli Android, tra un po', saranno nativi per questa gestione di AI integrata dappertutto. Che può essere una cosa buona o cattiva a seconda di come la vedete voi? L'esempio più egregio di una cosa simile era quando Microsoft aveva forzato for...
+
+Cortana nel suo Windows. Io già non lo usavo più Windows ma mi ricordo che una volta l'avevo installato, sono stufato, sono andato via perché stava installando e a un certo punto mi sono spaventato perché c'è una voce in altra stanza che ha detto qualcosa. Ho capito che era Cortana che da sola dava il benvenuto quando installavi Windows e detto signore. Quindi potrebbe essere un po' invadente, potrebbe non per forza appiacere tantissimo la presenza. Loro hanno preparato un catalogo di feature
+
+che vogliono spingere e su cui vogliono puntare per il messaggio di marketing. Una classica che potevamo immaginare era la parte di browsing, quindi usare browsing in maniera vocale è più facile, farsi leggere, spiegare le cose che stai guardando, cosa che me interessa molto, perché sarebbe molto comodo in macchina per leggere articoli senza dover cliccare i centomila cose. Ma poi ne ha anche altre... Scusate, prima di passare a questo, hanno fatto bene una parte...
+
+che ho apprezzato molto dove hanno detto che stanno testando questa cosa da un po' di tempo che è molto complicata e per farla venire bene e naturale ci sono dovuti mettere d'impegno e hanno scelto come target quello dei ragazzi delle consegne in cui hanno sempre il telefono di fuori, devono fare in fretta a fare quello che devono fare cercare informazioni trovare il traffico e quindi hanno fatto fine tuning sul loro feedback e ha detto ⁓ dai
+
+è una buona idea, senso, loro hanno sempre il telefono in mano e ci hanno le mani occupate, quindi chi meglio di loro. Quindi quello ho apprezzato. Sono invece vagamente più perplesso dell'altra feature che stanno spingendo molto, in cui hanno pensato che una delle killer feature per il consumer sia la possibilità di generare widget custom per Android grazie al supporto dell'AI. Quindi se voi sapete Android prima, poi la...
+
+Stefano Maestri (42:17)
+si
+
+Paolo Antinori (42:42)
+preso anche iOS, potete fare dei widget, potete avere l'orologio, il ticker con le informazioni della borsa, a quel che è, e potete farli lì. C'è una palette predefinita, ci sono delle applicazioni in terze parti che te li fanno comporre, ma è una roba da nerd che fa soltanto chissà cosa sta facendo, è sempre rimasta un po' così. Io non ho mai usato molto più che quello del calendario, devo dire la verità, so voi. E niente, Google invece ritiene che questa sia una cosa in... sì, neanche. Comunque, sì, quelle cose lì.
+
+Alessio Soldano (43:06)
+il meteo.
+
+Paolo Antinori (43:11)
+Il QR code è quando c'era il green pass. Però a parte quello, dicevo, Google sta spingendo questa cosa, io sono un po' perplesso. Da un lato è vero, c'hai un'app contenuta, è un po' come quando fai creare il profilo virtuale dell'Avatar in iOS, la gente perde tempo a customizzare come fosse un videogioco degli anni 2000, però...
+
+Avranno le persone realmente bisogno del loro avatar, mia madre, l'uomo medio? Non lo so, sono perplesso.
+
+Stefano Maestri (43:42)
+No però...
+
+allora non so se ne hanno bisogno, però in sé è interessante perché sta dicendo un'altra cosa. Vai vai. No no. No no vai, dila
+
+Paolo Antinori (43:49)
+Te la faccio dire, ma vediamo se arrivi alla stessa conclusione che mi hai rubato la chiusura. Vai vai!
+
+Allora, trovo che l'obiettivo sia inutile, ma il modello che sta proponendo Google è letteralmente Vibe Coding sul telefono. Anche lì voglio andare.
+
+Stefano Maestri (44:07)
+⁓ sì, questo.
+
+Sì sì volevo andare lì, cioè o tiravo ancora di più. Finita l'epoca delle app, è una cosa che nelle ultime settimane io ho già detto tante volte, è finita l'epoca delle app e si arriva alle disposable app o alle app generate per quello che serve all'utente.
+
+ultima intervista che ho fatto a Domenico Gagliardi, lui ha esprimito questa tese forte, nessun prodotto software più difendibile nell'era delle AI e io sono abbastanza d'accordo, anche la nostra esperienza mia in particolare, ad esempio quando Carpati che è stato probabilmente insieme ad Alex il più citato in questo anno
+
+podcast quindi è giusto anche in questa puntata citarsi Alex e Carpati quando Carpati ha fatto il Wiki e l'LM sono nate 55 mila progetti su github che implementavano la sua idea e 5 startup e così via e lui è tirato sul dito e ha veramente la mia idea è questa qua e ha fatto un gist con un prompt
+
+in cui tu lo prendi e te lo customizzi. Poi io me lo sono customizzato per me, lo sto usando nella mia versione custom, perché lui preferisce leggere, io per estrarre i concetti ho bisogno anche di un po' di cose visuali, grafici, cose così, e quindi ho aggiunto un pezzetto per quello che io chiamo view.
+
+ma non ho nessuna intenzione di pubblicarlo, cioè sì è lì open source, se qualcuno vuole usare prendetelo è nel mio repository, ma non ho nessuna intenzione di farci una startup su una cosa del genere. Perché è finita quell'epoca lì e Google lo conferma, cioè Google dice non state più fare, non fate più la mini software house che fai widget con il Tamagotchi o il...
+
+il pokemon perché chiunque dirà al suo telefono con la voce probabilmente fammi un widget che già abbia bulbasaur che mi saluta tutte le mattine nella lingua dei pokemon probabilmente appena esce io lo faccio peraltro, bulbasaur mi piace moltissimo
+
+Paolo Antinori (46:36)
+Non ti facevo Broni, sai Stefano?
+
+Sapevo che avevamo passato da Broni o simile sottoculture, invece...
+
+Stefano Maestri (46:45)
+No, è mio figlio, in realtà, ce l'ha,
+
+però mi piacciono in sé le... sì, anche lui, ma mi piace più Bulbasaur, io lo faccio per me, non per mio figlio, non ho capito, perché devo contentare sempre il bambino.
+
+Alessio Soldano (46:48)
+Il mio preferisce Pikachu.
+
+Paolo Antinori (46:55)
+Comunque
+
+dai buoni osservazioni che hai rimarcato mi hai fatto venire in mente che c'era un ultimo pezzo dell'annuncio di Gemini Intelligence che si collega benissimo alle cose che avete detto prima. Una delle cose di cui Google è molto orgogliosa e ci farà vedere è il... non so se l'hanno chiamato modello o funzionalità Rambler che è la loro diciamo funzionalità avanzata di capire il linguaggio naturale
+
+in particolare nell'osservazione per cui, che quando noi parliamo non parliamo come se stessimo leggendo un libro, cioè non siamo lineari, sappiamo cosa dire, ci mangiamo le parole, mettiamo dei filler, facciamo ⁓ così, che è una grossa problematica nei modelli, loro pare che abbiano risolto questa cosa qua e gli dia molto successo sull'esperienza finale, non solo l'hanno risolta, gli hanno dato il nome Rumbler, che in inglese significa un po' parlare a Vanvera.
+
+girare intorno, parlare a caso, diciamo. Quindi lì vogliono andare. Hanno anche sottolineato come questa funzionità si sposi benissimo con il cambio lingua contestuale istantaneo alla conversazione. Se tu stai parlando in italiano ma ti parte dentro la parola in inglese, player, risetta, queste cose qua che non si possono sentire ma siamo abituati, il modello pare che la gestisca bene. Hanno fatto l'esempio forse più pratico dell'India, dove in India si parla
+
+varie lingue del continente indiano e si infila l'inglese tutte le volte che non c'è il corrispondente, pare che il modello lo gestisca benissimo. Quindi è legato all'AI conversazionale che dicevate voi prima e io aggiungerei un ulteriore connessione che io queste problematiche le vedo nello sviluppo di antivocale, l'app che abbiamo scritto noi per fare la trasquodifica dei messaggi vocali, in cui il modello che funziona meglio, si chiama Distill Italian, è un modello fatto da qualcuno e pubblicato su Agingface.
+
+in cui la fai intunato non solo sul testo classico, quello del telegiornale o delle letture dell'università, ma sul linguaggio colloquiale. Tant'è che funziona benissimo per i messaggi di WhatsApp, perché c'è gli amici che non sanno che cosa dirti.
+
+Alessio Soldano (49:00)
+intendi il linguaggio
+
+in cui tu dici fai intonato?
+
+Paolo Antinori (49:03)
+Sì, linguaggio fa intunato. Grazie che ti fai avanti tu, Alessio. ⁓ scusami, ho capito il gioco adesso. Grazie.
+
+Stefano Maestri (49:12)
+e tre notte su fine tonate.
+
+Paolo Antinori (49:15)
+Grazie, ok. sapete che fa la differenza tra giorno e la notte quella cosa, perché stavo provando gli altri modelli, whisper turbo normale, e falliva miserabilmente in confronto con messaggi di amici i cui al mio orecchio non hanno neanche troppo accento. Quindi quel delta che è stato dato col fine tuning sul linguaggio naturale che c'è un dataset che si può usare, è ottimo. Io cercavo di fare le cose per bene e di riapplicare quel fine tuning a parakit, che è il modello di teoria più veloce,
+
+Alessio Soldano (49:15)
+poi pusci i risultati.
+
+Paolo Antinori (49:44)
+ma vuole una scheda Nvidia che io non ho e che quindi non so se lo farò mai però tutto questo ambito è molto interessante e forse Google ha risolto
+
+Stefano Maestri (49:58)
+Bene, ma questa cosa che a te serve una scheda Nvidia ci porta a raccontare un aneddoto della settimana perché sapete ne abbiamo parlato e che ci porta anche a parlare di modelli open che è l'altro grande cambiamento tra un anno fa e oggi secondo me e secondo noi. Sapete che Salvatore San Filippo Antieraz sta sviluppando un motore di inferenza che si chiama DS4.
+
+Alessio Soldano (50:26)
+DS4
+
+Stefano Maestri (50:28)
+Si, Dordorf, non mi ricordo più cos'è, Nano o qualcosa, il nome intero. Però lui l'ha fatto originariamente sul suo Mac Mini 3 Ultra e qualcuno gli ha cominciato a chiedere ⁓ ma però dovresti farlo girare su un'architettura M5 perché va molto meglio.
+
+Ad un certo punto il studio mi ha se me ne lo regalate un M5 con 128 giga di ram posso anche mettermi a farlo. Io lo faccio come iniziativo open source, posso spendere 12 mila euro quello che è per prendermi un M5 solo perché voi lo volete sull'architettura M5, se no se c'è qualcuno che contribuisce a dare un M5 sono ben felice di guardare il puller e questo.
+
+Alessio Soldano (51:20)
+Sì, o
+
+che mi dà accesso, non è che me lo regala, basta che mi...
+
+Stefano Maestri (51:24)
+E invece gli ha risposto il, non mi ricordo più chi, il ministro della tecnologia, se di Taiwan o di un altro paese, così, detto no, te lo regalo io, è già in viaggio. Quindi è stato carino la cosa che è successa su Twitter, mi è molto piaciuta. Tanto bene perché così Salvatore, che sta facendo un ottimo lavoro su quello, lo svilupperà anche per l'architettura M5, che già gli avevano dato accesso ad un
+
+Digix Spark di NVIDIA e quindi adesso DS4 gira anche su Digix Spark e anzi l'ha migliorato proprio ieri, leggevo il tweet che l'ha migliorato tantissimo su Digix Spark, le performance, ma che ci porta a parlare dei modelli openale?
+
+Alessio Soldano (52:10)
+⁓ sì, tante migliorie. In realtà mi piace in queste ultime settimane pensare che la cosa che veramente è cambiata rispetto a un anno fa, oltre al fatto che ci sono stati tanti rilasci di modelli open, cara Grazia, Grazia ai Cinesi, eccetera, è che stiamo vedendo tanto sviluppo
+
+a livello di motori di inferenza, quello che dicevi di antiretta è un esempio ma non è l'unico, tanti tentativi di migliorare proprio dal punto di vista ingegneristico, di ingegneria del software, il sistema che consente di fare inferenza. Migliorire nel utilizzare in modo più efficiente i vari tipi di hardware, piuttosto che nel pensare ad algoritmi che facciano meglio
+
+che è descritto nella teoria dei modelli, nel fare nuovi sistemi per l'attention, fare nuove idee per la quantizzazione della cache piuttosto che degli altri pesi, nel fare tipo lo speculative decoding, tutte cose che sono comunque possibili
+
+perché i modelli sono disponibili open weight e quindi ci si può provare, ci si può lavorare sopra. E che però stanno pagando perché un sacco di persone sta realizzando che, sì, effettivamente ci sono degli use case per cui vale la pena fare girare i modelli in locale e tutte queste cose, queste migliorie lo stanno rendendo possibile.
+
+Stefano Maestri (53:55)
+e se vuoi
+
+una seconda parte del trend che abbiamo visto andare lungo tutto l'anno, prima l'aumento di tanti modelli open weight sia immagini che LLM, cioè non sono tantissimi, non sono usciti tanti e anche di ottimo livello, cioè sia io che Paolo usiamo GLM di ZAI
+
+Alessio Soldano (54:09)
+Allora,
+
+Stefano Maestri (54:20)
+che lo usiamo in cloud perché è gigantesco non lo si può mettere sulla propria macchina ma è un modello open weight e fa assolutamente molto bene nel coding proprio
+
+Alessio Soldano (54:26)
+Assolutamente.
+
+Sì, perché voi avete scelto di usare il modello Openweight state of the art nel senso che è paragonabile, magari non è proprio uguale eccetera, però è paragonabile agli ultimi usciti closed source. Però c'è anche il trend che dice, invece di usare... esatto, invece di usare quello usiamo le versioni leggermente più piccole, cioè lo stesso Deep Sick.
+
+Stefano Maestri (54:38)
+Sì, esatto.
+
+Sì, sì.
+
+⁓ esatto, sono due cose diverse, certo.
+
+Alessio Soldano (54:59)
+4 è uscito c'è anche la versione diciamo light asson mi ricordo come si chiama se flash o cosa
+
+Stefano Maestri (55:03)
+che è quella che
+
+gira su DS4, tra l'altro che citavamo prima.
+
+Alessio Soldano (55:07)
+esatto che
+
+Che in qualche modo si riescono a fare ad usare su hardware diciamo consumer o quasi consumer Perché poi c'è anche tutto il tema del costo della memoria eccetera Che un anno fa si intravedeva ma non era ancora così critico come adesso Tanto che mi sono comprato il computer Però appunto c'è la possibilità di far girare modelli un po più piccoli
+
+che non saranno a livello delle state of the art ma magari sono a livello delle state of the art di sei mesi fa, un anno fa, poi dipende che hardware avete, quale modello scegliete, eccetera. Fino ad arrivare per dire alla notizia di questa settimana che io non ho approfondito tanto dal punto di vista degli algoritmi perché ci sono tantissime novità però è uscito un modello che si chiama Zaya 1-8B
+
+che è un modello da 8 billion parameters, mixtr of expert, con un billion di parametri attivi e sostengono tra le varie cose di aver utilizzato nuove algoritmi, nuove architetture, un post training più spinto...
+
+performance, performance nel senso dell'accuratezza, equivalenti a un QN3 da 235 billion quindi 235.8, parliamone su agenti, su matematica, coding, reasoning quindi abbastanza
+
+Stefano Maestri (56:36)
+su alcuni benchmark, sarà su quegli agentici eccetera, saranno ottimissimi.
+
+esatto perché allora
+
+ne approfitto perché è una cosa che forse non abbiamo fatto forse avevamo fatta quando abbiamo fatto la puntata domande e risposte però provo a tornarci un attimo per chi non è supera dentro alla cosa numero di parametri prendetela con le pinze oversimplifico per far capire numero di parametri uguale compressione della conoscenza
+
+Alessio Soldano (57:02)
+Te lo
+
+Stefano Maestri (57:17)
+Quindi più parametri O più il modello conoscenza. Se prendete un modello da 8 billion come quello che ha descritto Alessio che magari ha benchmark eccezionali e lo mettete a fare codice, fare matematica, fare quelle cose che lui ha detto, benissimo. Se gli chiedete dove ha perso la prima battaglia a Napoleone può anche darsi che vi dica Catania invece che Waterloo. Questo perché sono due dimensioni diverse.
+
+Tanti parametri è sempre conoscenza. Meno parametri e una fase di reinforcement learning più lunga può essere, con una conoscenza più limitata, una specializzazione delle skill del modello.
+
+Le due cose sono del tutto non correlate, ovviamente no, se prendete una persona esatto, cioè se voi prendete un ragazzino di prima media che ha una conoscenza dal ragazzino di prima media e gli insegnate per bene come fare gli integrali
+
+Alessio Soldano (58:09)
+riuscire bene devi avere conoscenza.
+
+Stefano Maestri (58:26)
+farà fatica o non sarà in grado di fare quella cosa lì, perché gli manca tutta la conoscenza di base. Adesso questo ovviamente è un esempio per far capire, non è proprio così, non sono scollegate del tutto le due cose. Però i modelli piccoli si possono altamente specializzare per alcune cose e ottenere gli ottimi risultati. Su questo abbiamo fatto passi avanti enormi. Poi non usateli come modelli generalisti.
+
+Alessio Soldano (58:52)
+Sì, e poi c'è anche un altro discorso.
+
+Esatto, se vuoi allontanandoci un attimo dal nostro verticale su la programmazione eccetera. Chiaramente c'è una tendenza da parte dell'utente medio di vedere l'intelligenza artificiale come una sorta di mega enciclopedia a cui uno può chiedere qualunque cosa e ti risponde.
+
+portare e andare a pensare che quello sia il luogo di Colombo, la cosa grande che ti porta in intelligenza artificiale. Quando se vuoi c'è tutta un altro aspetto che è quello di avere un modello appunto, large language model, c'è un qualcosa che più che conoscere è capace di comunicare, di parlare, di rialaborare il testo, di fare una serie di attività che sono naturalmente
+
+diciamo difficili, pesanti per l'umano e quindi magari l'umano ha la conoscenza, te la dà e poi il modello la riorganizza e ti produce un output meglio di quello che stuzzeresti in grado di fare. E per fare queste cose non servono modelli giganti o comunque non necessariamente.
+
+Stefano Maestri (1:00:07)
+Quello
+
+che dici tu ha dei trade-off da un lato dall'altro, a chi mi chiede a volte meglio un modello più grande in un contesto più piccolo o meglio un modello piccolo in un contesto grande, dipende. Quello che hai appena detto tu è se un modello bravo a rielaborare il linguaggio ma io ho tanta conoscenza da passargli è meglio la seconda, modello piccolo con un contesto grande. Ci sono trade-off sempre su tutto.
+
+Alessio Soldano (1:00:11)
+Assolutamente.
+
+Stefano Maestri (1:00:37)
+ma il bello è quello che è successo quest'anno, è di cominciare a guardare trade-off. Non siamo fuori da una fase di hype in senso mediatico, però in senso tecnologico forse sì. Cominciamo ad uscire da quella fase di hype della luna di miele, del posso chiedergli qualunque cosa e lui lo farà. No, ma posso chiedergli cose specifiche, le farà bene e posso cominciare a pensare di...
+
+combinare, torniamo agli agenti, modelli specifici che ognuno fa un suo pezzettino e ottengo il risultato finale. Non siamo ancora lì, Quest'ultima è ancora un po' vision di medio-lungo termine e non è detto che si vada in quella direzione perché poi l'altra cosa grossa sul tavolo, che ne parlavamo un anno fa, continuiamo a parlarne oggi, è la parola AGI.
+
+che è venuta fuori spesso in questo podcast, l'intervista con Maserati, anche tra di noi, in un'intervista con Stefano Gatti, più di recente, e opinioni discordanti. Per arrivare poi alle interviste di Amo Dei, piuttosto che Demisas Sapis, non tutti hanno la stessa opinione di EGI e le ultime
+
+Notizie la danno chi comincia a parlare di le GI si costruisce attraverso gli agenti non è una cosa di solo modello e andiamo a quello che stavo dicendo io agenti specializzati anche magari non così con modelli così piccoli ma tanti modelli grandi che collaborano per arrivare ad un risultato
+
+Non so, se voi avete un'opinione forte, la mia è sempre quella che è lì da vedere che arriverà. Io non ho più dubbi sul fatto che si arrivi alle GI. Non so dire in quanti tempi non ho la visibilità che ha a Moday che dice in 18-24 mesi o a Sabis che dice invece in 5 anni.
+
+però è lì da vedere che arriverà e su questo cito una, citare di nuovo Alessandro Maserati che è stato da noi ospite e ha parlato proprio di quello, che ha fatto un post l'altro giorno su LinkedIn che va in quella direzione lì perché allora ci sono state le Olimpiadi di Matematica, Finale delle Olimpiadi di Matematica
+
+300 studenti partecipavano alle Olimpiadi di Matematica, studenti dalle superiori. Soltanto due studenti su 300 sono riusciti a risolvere il quesito della competizione. E lui poi dice Gemini 3.1 Pro lo risolve in 2 minuti e 12 secondi al primo tentativo. GPT 5.5 lo risolve in 2 minuti e 7 secondi con una richiesta di chiarimento.
+
+ChimiK2.6 lo risolve in 6 minuti al primo tentativo, anche se prima ha divagato. Opus 4.7 lo risolve al terzo tentativo, anche se prima ha lucinato due volte. Erni 5.1 e QAN non ci riescono, dopo 10 minuti. Menzione d'onore ad EPSYC V4 Pro, che lo risolve con un piccolo sollecito, dopo 20 minuti ma con una riflessione durata a 39 pagine.
+
+al di là della costa della riflessione delle 39 pagine, tutti i modelli state of the art su quella cosa lì hanno fatto meglio dei 300 studenti.
+
+quindi è specifica, è particolare, è tutto quello che vuoi però agli Olimpiadi di matematica ci va gente che con la matematica è di un altro livello pur essendo uno studente dello superiori
+
+Alessio Soldano (1:04:51)
+Sì, più che altro non tanto di un
+
+altro livello quanto con un'intuizione di un certo tipo, non è solo una, anzi quasi per niente, una questione di conoscenze, ma è più una questione di lateral thinking, di intuizione, eccetera, che se vuoi è proprio quello che ci domandiamo se i modelli sono in grado di capire, non solo.
+
+Stefano Maestri (1:04:57)
+Sì, da quel punto di vista.
+
+sì sì di capacità più che di conoscenza
+
+Alessio Soldano (1:05:19)
+o tutta l'informazione possibile immaginabile. Poi è vero, sono studenti comunque dello superiori, non sono la creme de la creme dei ricercatori e delle MIT, però...
+
+Stefano Maestri (1:05:34)
+però comunque gli altri 298 che erano stati comunque selezionati per arrivare fino lì non l'hanno risolto resta è il fatto poi sì e gi hai ragione dovremmo essere a livello phd eccetera cioè però un anno fa questa cosa non succedeva no un anno fa questa cosa non succedeva nessun modello sarebbe stato in grado di risolvere quel quesito
+
+Alessio Soldano (1:05:49)
+Però intanto, buttala via questa rama!
+
+anche perché poi adesso
+
+non è per dire io le ho fatte le Olimpiadi di Matematica mi sembra di essere arrivato a terzo quarto nella mia provincia sono andato a quelle nazionali dove ovviamente non mi sono neanche lontanamente avvicinato al top della categoria non so in quanti abbiano mai provato e abbiano idea però comunque non è che tutti gli studenti vanno alle Olimpiadi di Matematica
+
+Stefano Maestri (1:06:27)
+E no,
+
+infatti, in finale quest'anno erano 300 in tutta Italia. I professori quando sei un po' bravino in matematica ti ci spingono a provarci almeno. Quindi, insomma, a me ha colpito quel posto lì per dire che comunque ci stiamo avvicinando e questo ha delle implicazioni comunque, ha delle implicazioni.
+
+Alessio Soldano (1:06:28)
+d'altro cioè
+
+Stefano Maestri (1:06:57)
+tutto dal lavoro al come intenderemo sia il lavoro, il knowledge working che già si vedono sul codice è quello che dicevamo prima forse dove siamo più vicini alle GI se la prendiamo in un settore estremamente specifico, GI dovrebbe essere su tutto ma se andiamo nel settore specifico forse il posto dove siamo più vicini è proprio sulla scrittura di codice lo dicevamo all'inizio di questa puntata
+
+e ha già delle implicazioni lì, oggettivamente.
+
+Paolo Antinori (1:07:30)
+In una delle interviste che ho sentito io di Assabis, lui introduceva un termine che non avevo mai sentito, è la definita JAGGED AI o JAGGED AGI, qualcosa che assomiglia vagamente all'AGI o che ci si illude che stiamo andando in quella direzione, ma che in realtà è ancora spigolosa e imperfetta e che quindi ha delle sacche o delle bolle di successo e di eccellenza ma che gli manca...
+
+visione totale. Non la descriveva come una cosa negativa, lui la descriveva semplicemente come una maniera migliore per descrivere lo stato attuale delle cose e mi è piaciuta come definizione, significa spigoloso, squadrato in inglese, jacked.
+
+Stefano Maestri (1:08:15)
+Sì, sì, squadrata
+
+ancora. Tagliata con la scure, credo che la definiremmo noi in italiano. Rozza. Ecco, forse Rozza. Però è decisamente un avvicinamento. Anche forse solo Jagged ha delle implicazioni gigantesche. Secondo me...
+
+Paolo Antinori (1:08:20)
+mmm, c'è
+
+Sì.
+
+Stefano Maestri (1:08:42)
+nessuno nel mondo in particolare in Europa, in Italia, men che meno se ne sta occupando da un punto di vista politico dell'impatto sociale anche solo delle IAIE senza la G che comunque ce lo sta avendo un impatto ed è abbastanza grave questa cosa che hai appena detto di Assabis e del Jagged EGI ci porta all'ultima cosa che volevamo toccare oggi che siamo in chiusura ma tocchiamola lo stesso
+
+che è la robotica come The Next Big Things. Noi ne abbiamo parlato tante volte di robotica qua ne abbiamo parlato anche con un founder di un'azienda che fa questo di mestiere che è Cyberwave di cui Paolo ci mostra un robottino perché abbiamo fatto con loro un Neketon, una Builder Mant
+
+però qua era venuto Simone di Somma che è il loro CEO a gennaio e avevamo parlato di questa cosa in intervista ma la cito perché a Sabis continua a ripetere in tutte le volte che gli chiedono delle GI dice per arrivare alle GI a questi modelli manca ancora l'esperienza fisica alle GI ci arriveremo quando questi modelli cominciano ad avere le gambe, le braccia e le mani
+
+lui questa cosa la ripete tutte le volte che glielo chiedono io tendo ad essere abbastanza d'accordo perché oggi sono troppo stretti su delle cose specifiche per poter simulare perché poi le GI continuano a pensare che sia una simulazione di intelligenza ma non hanno quella base di esperienza più che di conoscenza su cui l'uomo ha costruito
+
+il pollice oponibile è quello che fatto l'uomo, l'uomo e quindi tendo a essere d'accordo con quella cosa lì oltre al fatto che far muovere le cose intelligenti in giro per il mondo sarà interessante per sé.
+
+Paolo Antinori (1:10:57)
+E' un po' come dire che l'AI attualmente è nella sua fase di adolescenza e bisogna fargli allungare un po' le mani a questa adolescente.
+
+Stefano Maestri (1:11:07)
+All'adolescenza la cita in modo molto più politica ricorretta, anche a Modèi nel suo essay di quest'anno, che dice che siamo in una fase di adolescenza tecnologica.
+
+Paolo Antinori (1:11:20)
+⁓ di quello stavo parlando. Stiamo dicendo la stessa cosa, iomedei, chiaramente.
+
+Stefano Maestri (1:11:24)
+Sì, state dicendo più o meno la stessa cosa, che tu hai una visione più distorta del mondo di lui. O lui ce l'ha più di te, dipende dai punti di vista. E' molto verticale, Dario Molley. Chiudiamo su quello, dai, che siamo all'ora e undici. Chiudiamo su quello, lui dice che siamo nell'adolescenza tecnologica, citando un famoso film in cui chi era...
+
+in cui chiede, e racconta il film comunque, cui lei viene a contatto con... già di Foster, esatto, lei viene a contatto con gli alieni che gli dicono ci puoi fare una domanda, e l'unica domanda che lei si sente di fare è come siete sopravvissuti alla fase di adolescenza tecnologica. E sulla base di quella cosa lì, a moda, iscrive il suo saggio di quest'anno che è consigliato da leggere, se non l'avete fatto.
+
+Paolo Antinori (1:12:00)
+ehm... Jodie Foster.
+
+Stefano Maestri (1:12:28)
+Bene, quindi è passato un anno, non soffiamo sulle candeline perché queste registazioni le facciamo in cola, avremmo avuto bisogno di tre torte, ma magari le metteremo come copertina. Come fate? Farci gli auguri, stelline, campanelline, sottoscrivete al canale voi, vostri parenti, amici, vicini di casa, cani, agenti, quello che avete.
+
+Alessio Soldano (1:12:52)
+Gatti!
+
+Va bene, ciao ciao
+
+Stefano Maestri (1:12:59)
+Ciao
+
