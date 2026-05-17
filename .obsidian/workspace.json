@@ -11,14 +11,10 @@
             "id": "ef6b89e5f1cb42ec",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "podcast-promo/episodes/2026-04-29-Intervista-Stefano-Gatti_promo.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "2026-04-29-Intervista-Stefano-Gatti_promo"
+              "title": "New tab"
             }
           }
         ]
@@ -185,20 +181,26 @@
   },
   "active": "ef6b89e5f1cb42ec",
   "lastOpenFiles": [
+    "podcast-promo/episodes/2026-05-09-un-ai-agent-in-casa-ecco-cosa-fa-hermes_promo.md",
+    "_posts/2026-05-09-un-ai-agent-in-casa-ecco-cosa-fa-hermes.md",
+    "podcast-promo/episodes/2026-05-13-con-lai-nessun-software-e-difendibile_promo.md",
+    "_posts/2026-05-13-con-lai-nessun-software-e-difendibile.md",
+    "_posts/2026-05-13-con-lai-nessun-software-e-difendibile.md.tmp.2.76fc73c1444d",
+    "podcast-promo/episodes/2026-05-13-con-lai-nessun-software-e-difendibile_promo.md.tmp.2.cccda5172fbe",
+    "podcast-promo/episodes/2026-05-02-ai-non-dorme-deepseek-v4-hermes-agent_promo.md",
+    "_posts/2026-05-13-con-lai-nessun-software-e-difendibile.md.tmp.2.14a22ead16ad",
+    "podcast-promo/episodes/2026-05-13-con-lai-nessun-software-e-difendibile_promo.md.tmp.2.f6889a487a6b",
+    "temp/dom.jpeg",
+    "temp/Unconfirmed 811084.crdownload",
+    "temp/dom.sbv",
+    "temp/dom.txt",
+    "podcast-promo/episodes/2026-04-29-Intervista-Stefano-Gatti_promo.md",
     "temp/opening-script-stefano-gatti.md",
     "podcast-promo/episodes/2026-04-29-Intervista-Stefano-Gatti_promo.md.tmp.2.1777382191486",
-    "podcast-promo/episodes/2026-04-29-Intervista-Stefano-Gatti_promo.md",
     "podcast-promo/episodes/2026-04-29-Intervista-Stefano-Gatti_promo.md.tmp.2.1777374258122",
     "_posts/2026-04-29-Intervista-Stefano-Gatti.md",
     "_posts/2026-04-29-Intervista-Stefano-Gatti.md.tmp.2.1777374031794",
-    "temp/risorse-artificiali-intervista-a-stefano-gatti.txt",
     "analisi-podcast/improvements-April22.md",
-    "analisi-podcast/NEXT-STEPS.md.tmp.2.1776870491702",
-    "analisi-podcast/improvements-April22.md.tmp.2.1776870457893",
-    "analisi-podcast/analisi-April22.md.tmp.2.1776870455609",
-    "analisi-podcast/analisi-April22.md.tmp.2.1776870443295",
-    "analisi-podcast/improvements-April22.md.tmp.2.1776867719367",
-    "analisi-podcast/alta-priorita-April22.md.tmp.2.1776867687952",
     "analisi-podcast/NEXT-STEPS.md",
     "analisi-podcast/FRONTMATTER-CONVENTION.md",
     "analisi-podcast/analisi-slide-April22.md"
