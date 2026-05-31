@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md",
+                "file": "podcast-promo/episodes/2026-05-30-il-papa-ha-capito-gli-llm-meglio-di-noi_promo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo"
+              "title": "2026-05-30-il-papa-ha-capito-gli-llm-meglio-di-noi_promo"
             }
           }
         ]
@@ -185,6 +185,13 @@
   },
   "active": "ef6b89e5f1cb42ec",
   "lastOpenFiles": [
+    "podcast-promo/episodes/2026-05-27-ai-adoption-problema-culturale-andrea-saltarello_promo.md",
+    "podcast-promo/episodes/2026-05-27-ai-adoption-problema-culturale-andrea-saltarello_promo.md.tmp.2.5c4cc4f71ca1",
+    "_posts/2026-05-27-ai-adoption-problema-culturale-andrea-saltarello.md",
+    "_posts/2026-05-27-ai-adoption-problema-culturale-andrea-saltarello.md.tmp.2.57e0691c8613",
+    "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md",
+    "podcast-promo/episodes/2026-05-27-ai-adoption-problema-culturale-andrea-saltarello_promo.md.tmp.2.895a76d645b4",
+    "temp/interviste-artificiali_andrea-stefano.txt",
     "temp/Briefing_Andrea_Saltarello.md",
     "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md.tmp.2.c84e63a60429",
     "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md.tmp.2.8017704c193e",
@@ -192,17 +199,12 @@
     "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md.tmp.2.4e899627f7af",
     "_posts/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis.md.tmp.2.ff1c32e7a01a",
     "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md.tmp.2.c8a8ecaa0948",
-    "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md.tmp.2.fd851717352c",
     "_posts/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis.md",
-    "_posts/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis.md.tmp.2.538990087417",
-    "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md",
-    "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md.tmp.2.25cce5cdb0ac",
     "temp/Andrea_Saltarello_LinkedIn_Intervista.md",
     "podcast-promo/episodes/2026-05-09-un-ai-agent-in-casa-ecco-cosa-fa-hermes_promo.md",
     "_posts/2026-05-09-un-ai-agent-in-casa-ecco-cosa-fa-hermes.md",
     "podcast-promo/episodes/2026-05-13-con-lai-nessun-software-e-difendibile_promo.md",
     "_posts/2026-05-13-con-lai-nessun-software-e-difendibile.md",
-    "_posts/2026-05-13-con-lai-nessun-software-e-difendibile.md.tmp.2.76fc73c1444d",
     "podcast-promo/episodes/2026-05-02-ai-non-dorme-deepseek-v4-hermes-agent_promo.md",
     "temp/dom.jpeg",
     "podcast-promo/episodes/2026-04-29-Intervista-Stefano-Gatti_promo.md",
