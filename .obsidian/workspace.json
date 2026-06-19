@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "podcast-promo/episodes/2026-05-30-il-papa-ha-capito-gli-llm-meglio-di-noi_promo.md",
+                "file": "podcast-promo/episodes/2026-06-20-clona-ogni-voce-in-locale-gratis-ora-preoccupati_promo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-05-30-il-papa-ha-capito-gli-llm-meglio-di-noi_promo"
+              "title": "2026-06-20-clona-ogni-voce-in-locale-gratis-ora-preoccupati_promo"
             }
           }
         ]
@@ -185,34 +185,42 @@
   },
   "active": "ef6b89e5f1cb42ec",
   "lastOpenFiles": [
+    "_posts/2026-06-20-clona-ogni-voce-in-locale-gratis-ora-preoccupati.md",
+    "_posts/2026-06-20-clona-ogni-voce-in-locale-gratis-ora-preoccupati.md.tmp.2.4f14cb6b024f",
+    "temp/simone_basso_domande_e_apertura.md",
+    "podcast-promo/episodes/2026-06-20-clona-ogni-voce-in-locale-gratis-ora-preoccupati_promo.md",
+    "podcast-promo/episodes/2026-06-20-clona-ogni-voce-in-locale-gratis-ora-preoccupati_promo.md.tmp.2.175481523509",
+    "temp/tommaso.txt",
+    "temp/simone_basso_briefing.md",
+    "temp/simone_basso_domande_e_apertura.md.tmp.2.44d00ee7e9cb",
+    "temp/simone_basso_domande_e_apertura.md.tmp.2.10465316a9b2",
+    "temp/simone_basso_domande_e_apertura.md.tmp.2.8c1513bd3137",
+    "temp/simone_basso_domande_e_apertura.md.tmp.2.cef8cd73ebc3",
+    "temp/simone_basso_domande_e_apertura.md.tmp.2.002cdc9a69d8",
+    "temp/simone_basso_domande_e_apertura.md.tmp.2.40b6eb7e5c82",
+    "temp/simone_basso_domande_e_apertura.md.tmp.2.04aba41fc23e",
+    "temp/simone_basso_intervista.md",
+    "podcast-promo/episodes/2026-06-10-context-engineering-per-agenti-ai-roberto-stagi_promo.md",
+    "podcast-promo/episodes/2026-06-13-scrivere-codice-e-una-commodity-fable-e-i-workflow_promo.md",
+    "_posts/2026-06-10-context-engineering-per-agenti-ai-roberto-stagi.md",
+    "_posts/2026-06-06-workflow-dinamici-ai-che-si-scrive-gli-harness.md",
+    "podcast-promo/episodes/2026-06-06-workflow-dinamici-ai-che-si-scrive-gli-harness_promo.md",
+    "temp/script_apertura_roberto_stagi.md",
+    "temp/scaletta_episodio_vittorio_banfi.md",
+    "temp/briefing_roberto_stagi.md",
+    "temp/vittorio_banfi_profilo_linkedin.md",
+    "podcast-promo/episodes/2026-05-30-il-papa-ha-capito-gli-llm-meglio-di-noi_promo.md",
+    "temp/roberto_stagi_x_posts.md",
+    "temp/ai_socratic_profilo.md",
+    "temp/roberto_stagi_profilo.md",
     "podcast-promo/episodes/2026-05-27-ai-adoption-problema-culturale-andrea-saltarello_promo.md",
-    "podcast-promo/episodes/2026-05-27-ai-adoption-problema-culturale-andrea-saltarello_promo.md.tmp.2.5c4cc4f71ca1",
     "_posts/2026-05-27-ai-adoption-problema-culturale-andrea-saltarello.md",
-    "_posts/2026-05-27-ai-adoption-problema-culturale-andrea-saltarello.md.tmp.2.57e0691c8613",
     "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md",
-    "podcast-promo/episodes/2026-05-27-ai-adoption-problema-culturale-andrea-saltarello_promo.md.tmp.2.895a76d645b4",
-    "temp/interviste-artificiali_andrea-stefano.txt",
     "temp/Briefing_Andrea_Saltarello.md",
-    "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md.tmp.2.c84e63a60429",
-    "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md.tmp.2.8017704c193e",
-    "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md.tmp.2.42a87c109273",
-    "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md.tmp.2.4e899627f7af",
-    "_posts/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis.md.tmp.2.ff1c32e7a01a",
-    "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md.tmp.2.c8a8ecaa0948",
     "_posts/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis.md",
     "temp/Andrea_Saltarello_LinkedIn_Intervista.md",
     "podcast-promo/episodes/2026-05-09-un-ai-agent-in-casa-ecco-cosa-fa-hermes_promo.md",
     "_posts/2026-05-09-un-ai-agent-in-casa-ecco-cosa-fa-hermes.md",
-    "podcast-promo/episodes/2026-05-13-con-lai-nessun-software-e-difendibile_promo.md",
-    "_posts/2026-05-13-con-lai-nessun-software-e-difendibile.md",
-    "podcast-promo/episodes/2026-05-02-ai-non-dorme-deepseek-v4-hermes-agent_promo.md",
-    "temp/dom.jpeg",
-    "podcast-promo/episodes/2026-04-29-Intervista-Stefano-Gatti_promo.md",
-    "temp/opening-script-stefano-gatti.md",
-    "_posts/2026-04-29-Intervista-Stefano-Gatti.md",
-    "analisi-podcast/improvements-April22.md",
-    "analisi-podcast/NEXT-STEPS.md",
-    "analisi-podcast/FRONTMATTER-CONVENTION.md",
-    "analisi-podcast/analisi-slide-April22.md"
+    "temp/dom.jpeg"
   ]
 }
