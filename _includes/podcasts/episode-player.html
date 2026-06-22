@@ -1,0 +1,55 @@
+{% comment %}
+Episode player component — embed Spotify + YouTube + link Apple/altro.
+Consuma:
+  page.youtube_id
+  page.spotify_episode_id
+  page.apple_episode_url
+  page.episode_number (opzionale)
+
+UTM pattern: ?utm_source=website&utm_medium=shownotes&utm_campaign=ep{N}
+{% endcomment %}
+
+{%- assign ep = page.episode_number | default: "x" -%}
+{%- assign utm = "?utm_source=website&utm_medium=shownotes&utm_campaign=ep" | append: ep -%}
+
+<div class="episode-player" style="margin: 1.5em 0;">
+
+  {%- if page.episode_number -%}
+  <p style="font-size: 0.85em; color: #888; margin-bottom: 0.3em;">
+    Episodio #{{ page.episode_number }} · {{ page.episode_type | default: "puntata" | capitalize }}
+  </p>
+  {%- endif -%}
+
+  {%- if page.youtube_id -%}
+  <div class="video-embed" style="margin-bottom: 1em;">
+    {% include video id=page.youtube_id provider="youtube" %}
+  </div>
+  {%- endif -%}
+
+  {%- if page.spotify_episode_id -%}
+  <div class="spotify-embed" style="margin-bottom: 1em;">
+    <iframe
+      src="https://open.spotify.com/embed/episode/{{ page.spotify_episode_id }}?utm_source=generator"
+      width="100%"
+      height="152"
+      frameborder="0"
+      allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+      loading="lazy"></iframe>
+  </div>
+  {%- endif -%}
+
+  <p class="episode-links" style="font-size: 0.95em; line-height: 1.8;">
+    <strong>Ascolta o guarda anche su:</strong><br/>
+    {%- if page.spotify_episode_id -%}
+    🎧 <a href="https://open.spotify.com/episode/{{ page.spotify_episode_id }}{{ utm }}" rel="noopener" target="_blank">Spotify</a> ·
+    {%- endif -%}
+    {%- if page.apple_episode_url -%}
+    🎙️ <a href="{{ page.apple_episode_url }}{{ utm }}" rel="noopener" target="_blank">Apple Podcasts</a> ·
+    {%- endif -%}
+    {%- if page.youtube_id -%}
+    ▶️ <a href="https://www.youtube.com/watch?v={{ page.youtube_id }}{{ utm }}" rel="noopener" target="_blank">YouTube</a>
+    {%- endif -%}
+  </p>
+
+</div>

@@ -1,0 +1,831 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Top 5 priorità — approfondimento con esempi concreti - Risorse Artificiali</title>
+<meta name="description" content="Il podcast italiano di AI Engineering. Ogni settimana, deep dive tecnici su agent, LLM, tool chain e produzione">
+
+
+  <meta name="author" content="Risorse Artificiali">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Risorse Artificiali">
+<meta property="og:title" content="Top 5 priorità — approfondimento con esempi concreti">
+<meta property="og:url" content="https://risorseartificiali.com/analisi-podcast/alta-priorita-April22/">
+
+
+  <meta property="og:description" content="Il podcast italiano di AI Engineering. Ogni settimana, deep dive tecnici su agent, LLM, tool chain e produzione">
+
+
+
+  <meta property="og:image" content="https://risorseartificiali.com/assets/images/profile.jpg">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://risorseartificiali.com/analisi-podcast/alta-priorita-April22/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Organization",
+      "url": "https://risorseartificiali.com/",
+      "logo": "https://risorseartificiali.com/assets/images/profile.jpg"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Risorse Artificiali Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- Open Graph -->
+<meta property="og:site_name" content="Risorse Artificiali">
+<meta property="og:title" content="Top 5 priorità — approfondimento con esempi concreti">
+<meta property="og:description" content="Il podcast italiano di AI Engineering. Ogni settimana, deep dive tecnici su agent, LLM, tool chain e produzione">
+<meta property="og:url" content="https://risorseartificiali.com/analisi-podcast/alta-priorita-April22/">
+<meta property="og:image" content="https://risorseartificiali.com/assets/images/profile.jpg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+
+<meta property="og:type" content="website">
+
+<meta property="og:locale" content="it_IT">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@risorseAI">
+<meta name="twitter:title" content="Top 5 priorità — approfondimento con esempi concreti">
+<meta name="twitter:description" content="Il podcast italiano di AI Engineering. Ogni settimana, deep dive tecnici su agent, LLM, tool chain e produzione">
+<meta name="twitter:image" content="https://risorseartificiali.com/assets/images/profile.jpg">
+
+<!-- Description (standard) -->
+<meta name="description" content="Il podcast italiano di AI Engineering. Ogni settimana, deep dive tecnici su agent, LLM, tool chain e produzione">
+
+<!-- RSS Feed alternate -->
+<link rel="alternate" type="application/rss+xml" title="Risorse Artificiali RSS" href="https://risorseartificiali.com/feed.xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://risorseartificiali.com/analisi-podcast/alta-priorita-April22/",
+  "name": "Top 5 priorità — approfondimento con esempi concreti",
+  "description": "Il podcast italiano di AI Engineering. Ogni settimana, deep dive tecnici su agent, LLM, tool chain e produzione",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Risorse Artificiali",
+    "url": "https://risorseartificiali.com"
+  }
+}
+</script>
+
+
+  </head>
+
+  <body class="layout--default">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/profile.jpg" alt="Risorse Artificiali"></a>
+        
+        <a class="site-title" href="/">
+          Risorse Artificiali
+          
+        </a>
+        <ul class="visible-links"></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      <h1 id="top-5-priorità--approfondimento-con-esempi-concreti">Top 5 priorità — approfondimento con esempi concreti</h1>
+
+<blockquote>
+  <p>Estratto dall’analisi del 22 aprile 2026, rivisto lo stesso giorno dopo analisi specifica del format interviste. Queste 5 azioni hanno il rapporto <strong>impatto/sforzo</strong> più alto. Eseguite tutte, dovrebbero spostare il CTR YT da 2,6% a 4,5%+ e la retention dal 16% al 25%+ entro 6–8 settimane.</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>Revisione cadenza finale</strong>: sabato 13:00 numerato (settimanale) + <strong>mercoledì 12:00 intervista</strong> (bi-settimanale). 6 drop/mese totali. LinkedIn post intervista sincronizzato mercoledì 14:00. Motivo Mer anziché Mar: 73h gap dal numerato sabato evita cannibalizzazione push window YT (Mar 12:00 sarebbe stato a 71h, ancora dentro push).</p>
+</blockquote>
+
+<hr />
+
+<h2 id="-strumenti-già-pronti-per-queste-priorità-stato-22-aprile-2026-sera">🛠 Strumenti già pronti per queste priorità (stato 22 aprile 2026 sera)</h2>
+
+<p>Dopo l’esecuzione del piano tecnico, ognuna delle 5 priorità ha uno o più strumenti automatizzati:</p>
+
+<ul>
+  <li><strong>Priorità #1 · Nuovo template thumbnail</strong> → invoca skill <code class="language-plaintext highlighter-rouge">thumbnail-gen</code> (3 varianti prompt pronti per Gemini 3 Pro / Ideogram / altri image model). 🟡 parziale: image generation e upload restano manuali.</li>
+  <li><strong>Priorità #2 · Titoli riscritti</strong> → invoca skill <code class="language-plaintext highlighter-rouge">podcast-promo</code> v2.0 passaggio 1 (template numerato vs intervista automaticamente applicato). 🟢 fully covered.</li>
+  <li><strong>Priorità #3 · Hook-30s scripted</strong> → <code class="language-plaintext highlighter-rouge">podcast-promo</code> v2.0 passaggio 2 (2 varianti per episodio). 🟢 fully covered.</li>
+  <li><strong>Priorità #4 · Riposizionamento nicchia</strong> → ⚪ decisione tua. <code class="language-plaintext highlighter-rouge">podcast-promo</code> v2.0 ha codificato “AI Engineering in italiano” come default (Opzione A). 🔄 se preferisci altro, dimmelo e aggiorno skill.</li>
+  <li><strong>Priorità #5 · Interviste + Guest Launch Kit</strong> → <code class="language-plaintext highlighter-rouge">podcast-promo</code> v2.0 passaggio 13 (Guest Launch Kit completo quando format=intervista) + <code class="language-plaintext highlighter-rouge">podcast-transcript</code> v3.0 (template intervista con sezione ospite automatica) + <code class="language-plaintext highlighter-rouge">_layouts/episode.html</code> (sezione ospite condizionale). 🟢 fully covered.</li>
+</ul>
+
+<p>Per dettagli completi di copertura su tutte le 20 azioni del piano, vedi sezione “Stato copertura” in <code class="language-plaintext highlighter-rouge">analisi-April22.md</code>.</p>
+
+<hr />
+
+<h2 id="priorità-1--nuovo-template-thumbnail-youtube">Priorità #1 · Nuovo template thumbnail YouTube</h2>
+
+<h3 id="perché-è-la-1">Perché è la #1</h3>
+
+<p>Con 128.348 impressioni/anno e CTR 2,6%, ogni punto % di CTR in più vale circa <strong>1.280 views aggiuntive</strong> senza fare nulla di nuovo sul contenuto. Il CTR è il collo di bottiglia più misurabile e più aggredibile.</p>
+
+<h3 id="cosa-cè-che-non-va-thumbnail-attuale-ep-48">Cosa c’è che non va (thumbnail attuale ep #48)</h3>
+
+<ul>
+  <li>3 volti piccoli in cerchi → illeggibili a 246×138 px nel feed</li>
+  <li>Titolo ripetuto nella thumbnail → spreco di pixel</li>
+  <li>“48” gigante dietro → confuso (età? anno? codice?)</li>
+  <li>Freccia gialla + “Ascoltaci ora!” + loghi Apple/YT/Spotify → segnale “podcast aggregator” → utente YT scrolla</li>
+  <li>Sfondo “AI cosmic blue” → zero contrasto nel feed dark mode</li>
+  <li>Zero emozione nei volti (screenshot Zoom)</li>
+</ul>
+
+<h3 id="le-regole-del-nuovo-template">Le regole del nuovo template</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Elemento</th>
+      <th>Regola</th>
+      <th>Motivo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Volto</td>
+      <td>1 solo, ~40% del frame, espressione forte (sorpresa, scetticismo, sorriso aperto)</td>
+      <td>Il cervello legge facce prima di tutto; una faccia grande vince su 3 piccole</td>
+    </tr>
+    <tr>
+      <td>Testo</td>
+      <td>3–5 parole max, font bold ≥120px su canvas 1280×720, 2 righe max</td>
+      <td>Deve essere leggibile a 246×138</td>
+    </tr>
+    <tr>
+      <td>Contrasto</td>
+      <td>Background tinta piena o gradiente aggressivo (giallo/rosso/bianco)</td>
+      <td>Deve “pop” nel feed dark mode</td>
+    </tr>
+    <tr>
+      <td>No ripetere il titolo</td>
+      <td>Testo thumbnail ≠ titolo video</td>
+      <td>Amplifica il messaggio, non duplica</td>
+    </tr>
+    <tr>
+      <td>No loghi piattaforme</td>
+      <td>Niente Apple/Spotify/YT in thumbnail</td>
+      <td>Segnale “podcast lento”, YT penalizza</td>
+    </tr>
+    <tr>
+      <td>Numero episodio</td>
+      <td>NO in thumbnail, NO in titolo</td>
+      <td>“#48” dice “non capirai se non hai visto i 47 prima”</td>
+    </tr>
+    <tr>
+      <td>Consistency brand</td>
+      <td>Elemento fisso piccolo (logo bottom-right 40×40px)</td>
+      <td>Riconoscibilità senza rubare spazio</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="3-esempi-concreti-di-thumbnail-per-i-prossimi-3-episodi">3 esempi concreti di thumbnail per i prossimi 3 episodi</h3>
+
+<p><strong>Episodio futuro: “Sicurezza AI + Claude Code” (tipo ep #48)</strong></p>
+<ul>
+  <li>Volto ospite (Andrea Cosentino) sorpreso/scettico, 40% frame destro</li>
+  <li>Sfondo: rosso pieno (#D32F2F)</li>
+  <li>Testo sinistra, 2 righe bold bianco:
+    <ul>
+      <li>Riga 1: “L’AI TROVA”</li>
+      <li>Riga 2: “BUG PRIMA DI TE”</li>
+    </ul>
+  </li>
+  <li>Logo Risorse Artificiali 40×40 bottom-right</li>
+</ul>
+
+<p><strong>Episodio futuro tipo ep #46 “app AI fai-da-te”</strong></p>
+<ul>
+  <li>Primo piano di uno dei 2 host che punta dito verso camera (pose “ascoltami”)</li>
+  <li>Sfondo: giallo (#FFC107)</li>
+  <li>Testo 2 righe nero bold:
+    <ul>
+      <li>Riga 1: “CLAUDE CODE”</li>
+      <li>Riga 2: “HA LEAKATO”</li>
+    </ul>
+  </li>
+  <li>Emoji 🔓 tra le righe (1 emoji OK)</li>
+</ul>
+
+<p><strong>Episodio futuro tipo ep #44 “Claude vs GPT-Codex”</strong></p>
+<ul>
+  <li>Split screen: faccia host sx vs logo Claude/GPT dx</li>
+  <li>Sfondo: gradiente viola→arancio</li>
+  <li>Testo centro bold bianco, 3 righe:
+    <ul>
+      <li>Riga 1: “CLAUDE”</li>
+      <li>Riga 2: “vs”</li>
+      <li>Riga 3: “CODEX”</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="come-testare-se-funziona">Come testare se funziona</h3>
+
+<ol>
+  <li>Pubblica con la nuova thumbnail</li>
+  <li>Dopo 48h controlla CTR in YouTube Studio → sotto 3,5% = cambia</li>
+  <li>YouTube Studio ha la feature “Test &amp; compare” (3 thumbnail A/B) → usala per ogni nuovo ep</li>
+</ol>
+
+<hr />
+
+<h2 id="priorità-2--titoli-riscritti-hook-first-keyword-tech-no-n-finale">Priorità #2 · Titoli riscritti: hook-first, keyword tech, no #N finale</h2>
+
+<h3 id="perché">Perché</h3>
+
+<p>Il titolo è l’altra metà del CTR. Oggi i titoli:</p>
+<ol>
+  <li>Sono lunghi (spesso 80+ char → troncati a 60 su mobile)</li>
+  <li>Mettono “#48” alla fine = segnale “serie chiusa”</li>
+  <li>Elencano topic (“X, Y e Z”) = zero hook</li>
+  <li>Mescolano inglese/italiano (Interview with…) → confonde lingua algoritmo</li>
+  <li>Non contengono keyword cercabili dalla tua nicchia</li>
+</ol>
+
+<h3 id="il-framework-del-nuovo-titolo">Il framework del nuovo titolo</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[HOOK / PROMISE] : [KEYWORD TECH SPECIFICA] [NUMERO OPZIONALE IN PRIMA PARTE]
+</code></pre></div></div>
+
+<p>Max 60 caratteri, keyword tech entro i primi 30, hook emotivo o numerico.</p>
+
+<h3 id="esempi-concreti--riscrittura-ultimi-5-episodi">Esempi concreti — riscrittura ultimi 5 episodi</h3>
+
+<p><strong>Ep #48 — originale:</strong></p>
+<blockquote>
+  <p><em>“Sicurezza AI, bug bounty e i rischi di un futuro Freemium #48”</em>
+(61 char, “Sicurezza AI” generico, #48 in fondo)</p>
+</blockquote>
+
+<p><strong>Riscritto — 3 varianti:</strong></p>
+<ol>
+  <li><em>“L’AI trova i bug prima di te: la realtà di Mythos e Opus”</em> (56 char)</li>
+  <li><em>“Bug bounty nell’era AI: cosa abbiamo imparato da Mythos”</em> (55 char)</li>
+  <li><em>“Claude Opus 4.7 cambia il bug bounty (e non in bene)”</em> (52 char)</li>
+</ol>
+
+<hr />
+
+<p><strong>Ep #46 — originale:</strong></p>
+<blockquote>
+  <p><em>“Dal leak di Claude Code a Lince e antivocale: le app AI fai-da-te e i nostri progetti open #46”</em>
+(93 char, 3 topic separati, troppo lungo)</p>
+</blockquote>
+
+<p><strong>Riscritto:</strong></p>
+<ol>
+  <li><em>“Claude Code ha leakato: cosa abbiamo scoperto”</em> (47 char)</li>
+  <li><em>“Costruire app AI in 48h: Lince, antivocale, il processo”</em> (56 char)</li>
+  <li><em>“Il leak di Claude Code e la nuova era delle app AI personali”</em> (60 char)</li>
+</ol>
+
+<hr />
+
+<p><strong>Ep #44 — originale:</strong></p>
+<blockquote>
+  <p><em>“Claude vs GPT-Codex: i trend AI che stanno cambiando l’AI Engineering (e validano OpenClaw) #44”</em>
+(97 char, 3 concetti)</p>
+</blockquote>
+
+<p><strong>Riscritto:</strong></p>
+<ol>
+  <li><em>“Claude vs Codex: chi scrive codice migliore davvero?”</em> (52 char)</li>
+  <li><em>“AI Engineering 2026: Claude, Codex e la fine del vibe coding”</em> (60 char)</li>
+  <li><em>“Ho testato Claude e Codex in produzione: ecco chi vince”</em> (55 char)</li>
+</ol>
+
+<hr />
+
+<p><strong>Ep intervista Luigi Congedo — originale:</strong></p>
+<blockquote>
+  <p><em>“Interview with Luigi Congedo: AI, Talent, and the Future of Work between Silicon Valley and Italy”</em> (98 char, inglese)</p>
+</blockquote>
+
+<p><strong>Riscritto:</strong></p>
+<ol>
+  <li><em>“Silicon Valley vs Italia: il talento AI secondo Luigi Congedo”</em> (60 char)</li>
+  <li><em>“Come si lavora nell’AI in Silicon Valley (e perché l’Italia no)”</em> (60 char)</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>*“Da Milano a SF: cosa chiede davvero il mercato AI</td>
+          <td>Luigi Congedo”* (62 char)</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+
+<h3 id="principi-di-formulazione">Principi di formulazione</h3>
+
+<ul>
+  <li><strong>Prima parola</strong> = keyword tech (Claude, GPT, AI Engineering, agent, LLM, vibe coding…) O hook emotivo (“Ho testato”, “Perché”, “La verità su”)</li>
+  <li><strong>Specificità &gt; generalità</strong>: “Claude Code” vince su “AI coding”</li>
+  <li><strong>Numeri concreti</strong>: “in 48h”, “su 200 repo”, “3 tool”, “1 anno dopo”</li>
+  <li><strong>Rimozione #N</strong>: mettilo nella descrizione, non nel titolo</li>
+</ul>
+
+<hr />
+
+<h2 id="priorità-3--hook-30s-scripted-per-sbloccare-la-retention">Priorità #3 · Hook-30s scripted per sbloccare la retention</h2>
+
+<h3 id="perché-1">Perché</h3>
+
+<p>Retention attuale: <strong>16,2% avg viewed</strong>. Significa che su un video da 60 minuti la gente guarda 10 minuti. Il crollo brusco avviene nei primi 30 secondi. Se fissi i primi 30 secondi, sblocchi tutto.</p>
+
+<h3 id="il-template-hook-30s">Il template hook-30s</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Secondi</th>
+      <th>Cosa dice</th>
+      <th>Scopo</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0–5s</td>
+      <td><strong>Claim forte</strong> (contro-intuitivo o numerico)</td>
+      <td>Ferma lo scroll</td>
+    </tr>
+    <tr>
+      <td>5–12s</td>
+      <td><strong>Perché ora</strong> (tempisticità, evento recente)</td>
+      <td>Relevance</td>
+    </tr>
+    <tr>
+      <td>12–22s</td>
+      <td><strong>Cosa porti a casa</strong> (promessa concreta)</td>
+      <td>WIIFM (What’s In It For Me)</td>
+    </tr>
+    <tr>
+      <td>22–28s</td>
+      <td><strong>Ospite + credenziale in 1 frase</strong> (se intervista)</td>
+      <td>Authority</td>
+    </tr>
+    <tr>
+      <td>28–30s</td>
+      <td><strong>“Andiamo”</strong> (transizione)</td>
+      <td>Chiude l’hook</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="esempi--3-hook-scripted-reali">Esempi — 3 hook scripted reali</h3>
+
+<p><strong>Hook per ep tipo “Sicurezza AI e Claude”:</strong></p>
+<blockquote>
+  <p><em>(0s) “Anthropic ha appena ammesso che Claude Opus 4.7 trova bug prima di te. (6s) Hanno rilasciato Mythos la settimana scorsa, un tool che gira sopra Claude e fa reverse engineering in minuti. (15s) Nei prossimi 50 minuti Andrea Cosentino, che di mestiere fa bug bounty all’IBM, ci dice cosa cambia per chi lavora in security — e dove ci sono ancora margini per gli umani. (28s) Andiamo.”</em></p>
+</blockquote>
+
+<p>Timing: ~30 sec esatti. Zero “benvenuti”, zero “in questa puntata”, zero saluti.</p>
+
+<p><strong>Hook per ep tipo “Vibe coding è morto”:</strong></p>
+<blockquote>
+  <p><em>(0s) “Il vibe coding è finito. (3s) Dopo 18 mesi di Cursor e Claude Code in produzione su 200 repo, possiamo dirlo: copiare e incollare prompt non scala. (12s) Oggi ti raccontiamo i 3 pattern che funzionano davvero — e i 4 che ci siamo bruciati provando. (22s) Nessun ospite, solo noi tre e le nostre cicatrici. (28s) Andiamo.”</em></p>
+</blockquote>
+
+<p><strong>Hook per ep tipo “Intervista Maserati”:</strong></p>
+<blockquote>
+  <p><em>(0s) “Alessandro Maserati dice che l’AGI non arriverà nel 2027. (5s) E lui è uno dei pochi in Italia ad aver lavorato sui benchmark che decidono cos’è intelligenza artificiale generale. (14s) In questa conversazione ti spieghiamo perché ARC-AGI sta crollando, cosa sta succedendo dentro OpenAI e Anthropic, e cosa dovresti fare se stai costruendo prodotti AI oggi. (28s) Andiamo.”</em></p>
+</blockquote>
+
+<h3 id="regole-ferree">Regole ferree</h3>
+
+<ul>
+  <li><strong>Niente saluti</strong>: “Ciao a tutti, bentornati su Risorse Artificiali” = -15% retention</li>
+  <li><strong>Niente autopromozione in apertura</strong>: “se vi piace mettete like” alla fine, non all’inizio</li>
+  <li><strong>Niente musichetta lunga</strong>: max 3 sec di sigla, poi hook</li>
+  <li><strong>Registra l’hook separatamente</strong> se necessario e montalo in post-produzione (è normale)</li>
+</ul>
+
+<h3 id="come-implementarlo-senza-stravolgere-il-workflow">Come implementarlo senza stravolgere il workflow</h3>
+
+<ol>
+  <li>Alla fine di ogni registrazione, rimani 2 minuti in più e registra SOLO l’hook scripted (dopo aver visto l’episodio, sai cosa promettere)</li>
+  <li>In post: metti prima l’hook, poi tutto il resto</li>
+  <li>Testa per 4 episodi consecutivi, confronta retention curve</li>
+</ol>
+
+<hr />
+
+<h2 id="priorità-4--riposizionamento-di-nicchia-esplicito">Priorità #4 · Riposizionamento di nicchia esplicito</h2>
+
+<h3 id="perché-2">Perché</h3>
+
+<p><strong>97,4% maschi + 57% sopra i 45 anni + 89,7% Italia + contenuto tecnico/enterprise</strong> = tu sei già il podcast dei CTO/senior engineer/IT manager italiani. Ma non lo dichiari. Il risultato: l’algoritmo non sa a chi mostrarti, il mass-market non ti trova, la tua tribù ti scopre per caso.</p>
+
+<p><strong>Riposizionarsi esplicitamente = dare all’algoritmo e al pubblico un “se X allora tu”</strong>. Non perdi audience, la comprimi e la fidelizzi.</p>
+
+<h3 id="le-3-opzioni-di-riposizionamento-scegline-una">Le 3 opzioni di riposizionamento (scegline UNA)</h3>
+
+<h4 id="opzione-a--ai-engineering-in-italiano-tipo-latent-space-it">Opzione A — “AI Engineering in italiano” (tipo Latent Space IT)</h4>
+<ul>
+  <li><strong>Target</strong>: AI engineer, staff/senior dev, tech leader</li>
+  <li><strong>Promessa</strong>: deep dive tecnico su agent, LLM, infra, tool chain</li>
+  <li><strong>Tagline</strong>: <em>“Risorse Artificiali — AI Engineering per chi la scrive, non per chi la racconta”</em></li>
+  <li><strong>Stile titoli</strong>: Claude Code, LangGraph, inference economics, vLLM, spec-driven dev</li>
+  <li><strong>Pro</strong>: nicchia stretta, alta fedeltà, sponsorizzabile (dev tools brand)</li>
+  <li><strong>Contro</strong>: mercato italiano piccolo (10–20k people max)</li>
+</ul>
+
+<h4 id="opzione-b--ai-in-impresa">Opzione B — “AI in impresa”</h4>
+<ul>
+  <li><strong>Target</strong>: CTO, IT manager, tech director, CIO</li>
+  <li><strong>Promessa</strong>: come l’AI cambia l’org, i processi, i ruoli, il budget</li>
+  <li><strong>Tagline</strong>: <em>“Risorse Artificiali — L’AI vista dal punto di vista di chi la porta in azienda”</em></li>
+  <li><strong>Stile titoli</strong>: adozione, change management, ROI AI, platform engineering, governance</li>
+  <li><strong>Pro</strong>: mercato più ampio, budget decisionale alto (sponsorizzazioni B2B)</li>
+  <li><strong>Contro</strong>: rischio di diventare corporate/noioso</li>
+</ul>
+
+<h4 id="opzione-c--ai-per-senior-dev-che-vogliono-restare-rilevanti">Opzione C — “AI per senior dev che vogliono restare rilevanti”</h4>
+<ul>
+  <li><strong>Target</strong>: dev 35–55 anni che temono l’AI</li>
+  <li><strong>Promessa</strong>: tradurre l’AI in ciò che serve a te, senza paura</li>
+  <li><strong>Tagline</strong>: <em>“Risorse Artificiali — Per chi ha scritto codice prima del 2020 e vuole scriverlo ancora nel 2030”</em></li>
+  <li><strong>Stile titoli</strong>: “Cursor vs IntelliJ AI”, “Ho licenziato i miei template”, “Il nuovo senior”</li>
+  <li><strong>Pro</strong>: audience disperatamente bisognosa e grata, match perfetto con demografia attuale</li>
+  <li><strong>Contro</strong>: rischio di limitare crescita</li>
+</ul>
+
+<h3 id="la-mia-raccomandazione">La mia raccomandazione</h3>
+
+<p><strong>Opzione A</strong> è quella più compatibile con il contenuto attuale e ha la leva più forte (l’assenza di un “Latent Space italiano” è un vuoto evidente). Ma <strong>Opzione C</strong> ha il match demografico più forte (97% M, 57% 45+) e la minore concorrenza.</p>
+
+<p>Se devi scegliere adesso: <strong>A per 6 mesi, poi valuti</strong>.</p>
+
+<h3 id="cosa-cambia-operativamente">Cosa cambia operativamente</h3>
+
+<ol>
+  <li><strong>Bio Spotify</strong> riscritta (oggi “Appunti e spunti dal mondo dell’Intelligenza Artificiale” → diventa <em>“Il podcast italiano di AI Engineering. Ogni settimana, 3 ingegneri con 20+ anni di codice ti raccontano come usare davvero Claude, agent e LLM in produzione.”</em>)</li>
+  <li><strong>Bio YouTube channel</strong> idem, più l’header banner riscritto</li>
+  <li><strong>Sito</strong>: nuovo claim sopra tutto in H1</li>
+  <li><strong>Email signature, LinkedIn degli host</strong>: allineati</li>
+</ol>
+
+<hr />
+
+<h2 id="priorità-5--riformula-il-format-interviste--guest-launch-kit">Priorità #5 · Riformula il format interviste + Guest Launch Kit</h2>
+
+<h3 id="perché-questa-è-entrata-nella-top-5-e-newsletter-è-scivolata-a-tier-2">Perché questa è entrata nella top 5 (e Newsletter è scivolata a Tier 2)</h3>
+
+<p>Rivedendo i dati dopo prima analisi, le <strong>interviste sono il tuo format con il CTR e la retention più alti</strong> (CTR 3,3–6,5% vs numerati 1,5–2,8%; retention @:30 sistematicamente sopra la media). Ma sono trattate come “bonus a metà settimana” e pubblicate con pattern titolo sbagliato, template thumbnail uguale al numerato, e zero coordinamento promozionale col guest.</p>
+
+<p>Sbloccare questo format dà risultati <strong>in 2–4 settimane</strong>, mentre la Newsletter Substack (che resta importantissima come Azione #7 del Tier 2) ha un ROI più lento (3–6 mesi per raggiungere massa critica). Sequenza corretta: prima le interviste, poi la newsletter.</p>
+
+<h3 id="il-problema-concreto-oggi">Il problema concreto oggi</h3>
+
+<p><strong>Pattern attuale dei titoli intervista:</strong></p>
+<blockquote>
+  <p><em>“Intervista a [Nome]: [tema lungo]”</em></p>
+</blockquote>
+
+<p>Errori strutturali:</p>
+<ol>
+  <li>“Intervista a” in prima posizione = 12 caratteri di rumore SEO</li>
+  <li>Nome del guest in posizione 2: searchable solo se è già famoso</li>
+  <li>Tema al fondo: il cervello decide di cliccare prima di arrivarci</li>
+  <li>Titoli bilingue mescolati (<em>“Interview with Luigi Congedo…“</em>) → algoritmo perde confidence sulla lingua del canale (italiano) e non mostra né a italiani né a inglesi con convinzione</li>
+</ol>
+
+<p><strong>Dati che confermano:</strong></p>
+<ul>
+  <li>Luigi Congedo (inglese): CTR 6,5% ma solo <strong>679 impressioni</strong> — YouTube ha dubbi sulla lingua</li>
+  <li>Gabriele Venturi (inglese): CTR 3,7%, 1.344 impressioni, 89 views → un founder YC muore a 89 views perché nessuno amplifica</li>
+  <li>Pamela Gotti: 54 views → senza guest launch kit anche guest interessanti spariscono</li>
+</ul>
+
+<h3 id="il-nuovo-pattern-obbligatorio-per-i-titoli">Il nuovo pattern obbligatorio per i titoli</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[HOOK concreto o claim forte] | [Nome Cognome, credenziale 1 frase]
+</code></pre></div></div>
+
+<p>Regole ferree:</p>
+<ul>
+  <li>Max 60 caratteri</li>
+  <li>Hook/claim nelle prime parole (SEO + cliccabilità)</li>
+  <li>Guest in posizione 2, dopo il pipe <code class="language-plaintext highlighter-rouge">|</code>, come credenziale non come soggetto</li>
+  <li><strong>SEMPRE in italiano</strong>, anche se il guest parla inglese. Episodio bilingue OK, titolo monolingua.</li>
+  <li>Niente “Intervista a”, niente “Interview with”, niente “🎙️”</li>
+</ul>
+
+<h3 id="10-esempi-concreti-di-riscrittura-dalle-tue-interviste-reali">10 esempi concreti di riscrittura (dalle tue interviste reali)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Originale</th>
+      <th>Views</th>
+      <th>Riscritto</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>“Interview with Luigi Congedo: AI, Talent, and the Future of Work…”</em></td>
+      <td>96</td>
+      <td><strong>“Cosa chiede davvero il mercato AI in Silicon Valley | Luigi Congedo”</strong></td>
+    </tr>
+    <tr>
+      <td><em>“Interview with Gabriele Venturi: PandasAI, Y Combinator…”</em></td>
+      <td>89</td>
+      <td><strong>“Come è entrata un’italiana in Y Combinator | Gabriele Venturi (PandasAI)”</strong></td>
+    </tr>
+    <tr>
+      <td><em>“Intervista ad Alessandro Maserati: AGI allineamento e consapevolezza…”</em></td>
+      <td>299</td>
+      <td><strong>“L’AGI non arriverà quando pensi | Alessandro Maserati”</strong></td>
+    </tr>
+    <tr>
+      <td><em>“Intervista a Mario Fusco: sviluppo software nell’era dell’AI”</em></td>
+      <td>141</td>
+      <td><strong>“30 anni di Java, e ora l’AI: cosa resta del mestiere | Mario Fusco”</strong></td>
+    </tr>
+    <tr>
+      <td><em>“Intervista a Pamela Gotti: dal codice alla CTO…”</em></td>
+      <td>54</td>
+      <td><strong>“Da dev a CTO lottando col bias di genere | Pamela Gotti”</strong></td>
+    </tr>
+    <tr>
+      <td><em>“Intervista a Daniele Zonca: portare l’AI generativa in Enterprise”</em></td>
+      <td>178</td>
+      <td><strong>“L’AI generativa in enterprise: cosa rompe davvero | Daniele Zonca (Red Hat)”</strong></td>
+    </tr>
+    <tr>
+      <td><em>“Intervista a Massimo Re Ferrè: AI Coding, Spec Driven development…”</em></td>
+      <td>135</td>
+      <td><strong>“Spec-driven development: il nuovo modo di scrivere codice | Massimo Re Ferrè”</strong></td>
+    </tr>
+    <tr>
+      <td><em>“Intervista a Mizio Ratti e Stefano Lombardini: creatività nell’era dell’AI”</em></td>
+      <td>167</td>
+      <td><strong>“Creativi nell’era dell’AI: il nostro studio lavora così | Ratti &amp; Lombardini”</strong></td>
+    </tr>
+    <tr>
+      <td><em>“Intervista a Emanuele Fabbiani: ricerca e startup AI…”</em></td>
+      <td>102</td>
+      <td><strong>“Allucinazioni LLM: come le affrontiamo in startup | Emanuele Fabbiani”</strong></td>
+    </tr>
+    <tr>
+      <td><em>“Intervista a Simone Di Somma: lezioni da Y Combinator…”</em></td>
+      <td>126</td>
+      <td><strong>“Robotica italiana post-YC: cosa abbiamo imparato | Simone Di Somma”</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="template-thumbnail-dedicato-interviste">Template thumbnail dedicato interviste</h3>
+
+<p>Oggi: stesso template dei numerati (3 volti piccoli + titolo ripetuto). <strong>Segnale al viewer: “questo è il solito podcast”.</strong></p>
+
+<p>Nuovo template interviste:</p>
+<ul>
+  <li><strong>Primo piano del guest</strong> al 70% del frame (non 3 volti in cerchio)</li>
+  <li><strong>Hook 3 parole</strong> grandi (non il nome — il nome è già nel titolo)</li>
+  <li><strong>Fondo tinta piena</strong> diverso dal numerato (es. giallo per numerato → arancio/rosso per intervista)</li>
+  <li>Piccolo badge “intervista” bottom-left (opzionale, solo se aiuta la riconoscibilità)</li>
+</ul>
+
+<p>Segnale: <strong>“questo è l’episodio-flagship della settimana, non lo skippare”</strong>.</p>
+
+<h3 id="guest-launch-kit--cosa-consegnare-al-guest-una-settimana-prima-del-drop">Guest Launch Kit — cosa consegnare al guest una settimana prima del drop</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Elemento</th>
+      <th>Dettaglio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Clip verticale</strong></td>
+      <td>45–60s estratti dal momento più forte, 9:16, con sottotitoli bruciati, quote overlay testo</td>
+    </tr>
+    <tr>
+      <td><strong>Post LinkedIn draft</strong></td>
+      <td>Scritto in prima persona del guest, 100–150 parole, lui può firmare e postare senza modifiche. Tono: “è uscita oggi la mia conversazione con [host] su [tema]. Abbiamo parlato di [3 punti]. Link in commento.”</td>
+    </tr>
+    <tr>
+      <td><strong>Post X/thread draft</strong></td>
+      <td>1 post singolo o thread di 3, stesso tono, 280 char</td>
+    </tr>
+    <tr>
+      <td><strong>Quote-image</strong></td>
+      <td>1 frase forte dall’intervista, tipograficamente trattata 1200×630, perfetta per OG/WhatsApp share</td>
+    </tr>
+    <tr>
+      <td><strong>Email/DM accompagnatoria</strong></td>
+      <td>“Ciao X, [drop day] alle [ora] esce. Materiali nel link qui. Il nostro piano: noi pubblichiamo [day+ora], idealmente tu posti LinkedIn martedì alle 14:00 [stesso giorno o giorno dopo] per amplificazione sincrona. Tutto pronto, devi solo firmare.”</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Perché funziona</strong>: un guest YC-alumni o founder o CTO con 5k+ LinkedIn follower che pubblica il suo kit pre-fatto converte tipicamente <strong>50–500 click esterni</strong> sulla tua intervista, contro gli 89 attuali. Moltiplicatore 5–20×.</p>
+
+<p><strong>Perché oggi non succede</strong>: il guest non ha tempo/energia per scrivere il suo post, le clip le ha chi fa il podcast. Se glielo dai pronto, lo posta nel 80% dei casi.</p>
+
+<h3 id="effort-di-implementazione">Effort di implementazione</h3>
+
+<ul>
+  <li><strong>Setup iniziale</strong>: 4 ore per template + 2 ore per primo kit</li>
+  <li><strong>Per intervista successiva</strong>: 2–3 ore di lavoro (automatizzabile con agent, vedi Strategia #8 in improvements-April22.md)</li>
+  <li><strong>ROI atteso</strong>: interviste da 87–300 views a <strong>400–1.500 views/episodio</strong> entro 2 mesi</li>
+</ul>
+
+<h3 id="sequenziamento-operativo">Sequenziamento operativo</h3>
+
+<ol>
+  <li><strong>Settimana 1</strong>: design nuovo template thumbnail intervista + riscrivi retroattivamente titoli delle ultime 3 interviste pubblicate</li>
+  <li><strong>Settimana 2</strong>: prima intervista con nuovo workflow completo (titolo nuovo pattern, thumbnail dedicata, Guest Launch Kit mandato al guest 1 settimana prima)</li>
+  <li><strong>Settimana 3–4</strong>: misura CTR, impressioni, views delle interviste nuove vs vecchie</li>
+  <li>Se CTR delle nuove supera 5% → consolida workflow. Se no → revisione hook del titolo.</li>
+</ol>
+
+<hr />
+
+<h2 id="priorità-6-ex-5--newsletter-substack--demoted-ma-non-dimenticata">Priorità #6 (ex #5) · Newsletter Substack — demoted ma non dimenticata</h2>
+
+<p>La Newsletter resta <strong>Azione #7 del Tier 2 del piano principale</strong>, non più tra le top 5 priorità perché il suo ROI arriva in 3–6 mesi (tempo necessario ad accumulare iscritti). La priorità delle prime 6 settimane è sulle cose che muovono le metriche <strong>adesso</strong>. Ma va pianificata come successore naturale: nel momento in cui le interviste iniziano a portare 500–1.000 views/episodio, la newsletter è il vaso dove raccogli quelli che ti hanno appena scoperto e li converti in audience di proprietà.</p>
+
+<p>Per la struttura di implementazione della Newsletter (setup Substack, template post settimanale, cross-promotion, target 90 giorni), vedi la sezione “Azione #7” in <code class="language-plaintext highlighter-rouge">analisi-April22.md</code>.</p>
+
+<hr />
+
+<h2 id="come-sequenziare-queste-5-priorità">Come sequenziare queste 5 priorità</h2>
+
+<h3 id="settimana-1">Settimana 1</h3>
+<ul>
+  <li>Gio/Ven: design nuovi template thumbnail <strong>numerato E intervista</strong> (Priorità #1 e #5)</li>
+  <li>Venerdì: prepara pacchetto settimana (numerato + Short + LinkedIn draft) schedulabile</li>
+  <li>Sabato 13:00: <strong>drop numerato + Spotify Clip insieme</strong> con nuova thumbnail + nuovo titolo + hook-30s scripted (Priorità #1, #2, #3)</li>
+  <li>Lunedì 09:00: YT Short dal numerato (schedulato in anticipo)</li>
+  <li>Martedì 14:00: post LinkedIn sul numerato</li>
+</ul>
+
+<h3 id="settimana-2">Settimana 2</h3>
+<ul>
+  <li>Lun/Mar: registra intervista</li>
+  <li>Una settimana prima del drop intervista: invia <strong>Guest Launch Kit</strong> al guest (Priorità #5) — clip 45–60s editata, post LinkedIn draft in prima persona, post X draft, quote-image, data sync Mer 14:00</li>
+  <li>Sabato 13:00: secondo numerato con workflow consolidato + Spotify Clip insieme</li>
+  <li>Lun 09:00: YT Short numerato</li>
+  <li>Mar 14:00: post LinkedIn numerato</li>
+  <li><strong>Mer 12:00</strong>: <strong>drop intervista + Spotify Clip insieme</strong> con nuovo format titolo <code class="language-plaintext highlighter-rouge">[hook] | [guest]</code> + thumbnail dedicata</li>
+  <li><strong>Mer 14:00</strong>: tu pubblichi post LinkedIn intervista + guest pubblica suo kit (sincronizzazione)</li>
+  <li>Gio 09:00: YT Short intervista (gap 1 giorno)</li>
+  <li>Venerdì: controlla CTR intervista dopo 48h vs storico interviste</li>
+</ul>
+
+<h3 id="settimana-3">Settimana 3</h3>
+<ul>
+  <li>Sabato: terzo numerato</li>
+  <li>Durante la settimana: <strong>inizia Azione #18</strong> — rilancio retroattivo batch 1 (edit metadata di 2–3 interviste vecchie: Maserati + Venturi come priorità, nuovo titolo pattern + thumbnail interviste + descrizione riscritta)</li>
+  <li>Setup <strong>Azione #19</strong>: abilita distribuzione multi-platform da Spotify Creators (Amazon, Pocket Casts, Overcast, Castbox, Goodpods, iHeartRadio). 30 min di lavoro</li>
+  <li>Setup RSS pubblico sul sito</li>
+</ul>
+
+<h3 id="settimana-4">Settimana 4</h3>
+<ul>
+  <li>Decidi e annuncia <strong>riposizionamento</strong> (Priorità #4) → riscrivi bio Spotify/YT/sito</li>
+  <li>Sabato: quarto numerato</li>
+  <li>Mer 12:00: seconda intervista con workflow completo</li>
+  <li>Rilancio retroattivo batch 2 (altre 2–3 interviste vecchie)</li>
+  <li>Valuta <strong>Azione #20</strong>: apri trial Transistor.fm 14 giorni per testare analytics cross-platform senza committment</li>
+  <li>Revisione metriche fine-mese 1, decisione continue/adjust</li>
+</ul>
+
+<h3 id="settimana-58">Settimana 5–8</h3>
+<ul>
+  <li>Workflow in regime: 4 numerati + 2 interviste/mese</li>
+  <li>Setup Newsletter Substack (Priorità #6, Tier 2)</li>
+  <li>Continua rilancio retroattivo (target: 5–10 interviste rilanciate entro fine settimana 8)</li>
+  <li>Monitora: CTR, retention, follower Spotify, views interviste (nuove + rilanciate)</li>
+  <li>Se Transistor trial positivo → migrazione definitiva hoster</li>
+</ul>
+
+<p><strong>Totale lavoro incrementale</strong>: ~6–8 ore/settimana in più rispetto al workflow attuale (di cui ~2h/intervista per Guest Launch Kit + ~1h/settimana per rilancio retroattivo, entrambi automatizzabili con agent di Strategie #8 e #9 di improvements).
+<strong>ROI atteso</strong>: +75–100% su CTR e retention entro 8 settimane; interviste nuove da 87–300 views a 400–1.500 views/episodio; +2.000–4.000 views recuperati dalle interviste rilanciate senza nuovo contenuto.</p>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 Risorse Artificiali. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

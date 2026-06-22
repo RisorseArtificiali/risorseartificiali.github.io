@@ -1,0 +1,200 @@
+- generic [active] [ref=e1]:
+  - navigation:
+    - list:
+      - listitem:
+        - link "Skip to primary navigation" [ref=e2] [cursor=pointer]:
+          - /url: "#site-nav"
+      - listitem:
+        - link "Skip to content" [ref=e3] [cursor=pointer]:
+          - /url: "#main"
+      - listitem:
+        - link "Skip to footer" [ref=e4] [cursor=pointer]:
+          - /url: "#footer"
+  - navigation [ref=e8]:
+    - link "Risorse Artificiali" [ref=e9] [cursor=pointer]:
+      - /url: /
+    - list
+  - main [ref=e11]:
+    - generic [ref=e13]:
+      - img "Risorse Artificiali" [ref=e15]
+      - generic [ref=e16]:
+        - heading "Risorse Artificiali" [level=3] [ref=e17]
+        - paragraph [ref=e19]:
+          - text: La tua bussola settimanale
+          - text: nel mondo dell’AI
+      - generic [ref=e20] [cursor=pointer]:
+        - button "Follow" [ref=e21]
+        - text:      
+    - generic [ref=e22]:
+      - heading [level=1]
+      - heading "Risorse Artificiali è la tua bussola settimanale nel mondo dell’Intelligenza Artificiale Generativa." [level=2] [ref=e23]
+      - paragraph [ref=e24]:
+        - text: "Notizie, tendenze, strumenti, riflessioni critiche e oscuri riferimenti nerd: ogni settimana"
+        - link "Alessio" [ref=e25] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/alessiosoldano/
+        - text: ","
+        - link "Paolo" [ref=e26] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/paoloantinori/
+        - text: e
+        - link "Stefano" [ref=e27] [cursor=pointer]:
+          - /url: https://maeste.it
+        - text: accompagnano chi vuole capire (davvero) cosa sta succedendo con l’AI che cambia il nostro modo di lavorare, creare, pensare.
+      - paragraph [ref=e28]: "🎙️ Con un podcast settimanale, esploriamo:"
+      - list [ref=e29]:
+        - listitem [ref=e30]: "News e novità: cosa succede nel mondo dell’AI e perché conta."
+        - listitem [ref=e31]: "Fantascienza?: tutto quello che oggi sembra magia ma domani sarà normale."
+        - listitem [ref=e32]: "Agentic, Vibe Coding & co.: approfondimenti tecnici spiegati senza perdere l’umano."
+        - listitem [ref=e33]: "Società, cultura, business e soldi: accessibilità, lavoro, investimenti e nuovi equilibri."
+        - listitem [ref=e34]: "E l’Italia?: sguardo critico su ciò che accade qui (e in Europa), non solo a San Francisco."
+      - paragraph [ref=e35]:
+        - text: Una risorsa per chi non vuole rincorrere l’hype, ma capirlo.
+        - text: Per chi crede che l’intelligenza artificiale vada seguita con curiosità, consapevolezza e spirito critico.
+      - paragraph [ref=e36]: Segui Risorse Artificiali se anche tu vuoi restare aggiornato senza perdere la bussola.
+      - paragraph [ref=e37]:
+        - text: Un podcast settimanale sull’AI e il suo impatto su società, coding, lavoro e tecnologia.
+        - text: 👉
+        - link "Ascolta su Spotify" [ref=e38] [cursor=pointer]:
+          - /url: https://open.spotify.com/show/16dTKEEtKkIzhr1JJNMmSF?si=900902f2dca8442e
+        - text: 👉
+        - link "Guarda su YouTube" [ref=e39] [cursor=pointer]:
+          - /url: https://www.youtube.com/channel/UCYQgzIby7QHkXBonTWk-2Fg
+        - text: 👉
+        - link "Segui su LinkedIn" [ref=e40] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/risorseartificiali
+      - heading "Recent Posts" [level=3] [ref=e41]
+      - generic [ref=e42]:
+        - article [ref=e44]:
+          - 'heading "Dal leak di Claude Code a Lince e antivocale: le app AI fai-da-te e i nostri progetti open #46" [level=2] [ref=e45]':
+            - 'link "Dal leak di Claude Code a Lince e antivocale: le app AI fai-da-te e i nostri progetti open #46" [ref=e46] [cursor=pointer]':
+              - /url: /2026/04/04/Puntata46/
+          - paragraph
+        - article [ref=e48]:
+          - 'heading "Da GPT-5.4 agli AI Engeeners: perché CLI e workflow stanno cambiando il coding #42" [level=2] [ref=e49]':
+            - 'link "Da GPT-5.4 agli AI Engeeners: perché CLI e workflow stanno cambiando il coding #42" [ref=e50] [cursor=pointer]':
+              - /url: /2026/03/07/Puntata42/
+          - paragraph
+        - article [ref=e52]:
+          - 'heading "Intervista a Mizio Ratti e Stefano Lombardini: la creatività nell’era dell’AI" [level=2] [ref=e53]':
+            - 'link "Intervista a Mizio Ratti e Stefano Lombardini: la creatività nell’era dell’AI" [ref=e54] [cursor=pointer]':
+              - /url: /2026/03/04/Intervista-Lombardini-Ratti/
+          - paragraph
+        - article [ref=e56]:
+          - 'heading "Claude Code, OpenClaw e l’Effetto Slot Machine: la nuova era dell’AI Engineering #41" [level=2] [ref=e57]':
+            - 'link "Claude Code, OpenClaw e l’Effetto Slot Machine: la nuova era dell’AI Engineering #41" [ref=e58] [cursor=pointer]':
+              - /url: /2026/02/28/Puntata41/
+          - paragraph
+        - article [ref=e60]:
+          - heading "Puntata40" [level=2] [ref=e61]:
+            - link "Puntata40" [ref=e62] [cursor=pointer]:
+              - /url: /2026/02/21/Puntata40/
+          - paragraph [ref=e63]: "title: “AI e Coding agents: come cambia lo sviluppo software e le org” categories: Puntate tags: AI Enterprise Agenti Coding layout: single aut..."
+        - article [ref=e65]:
+          - 'heading "Intervista a Daniele Zonca: come portare l’AI generativa in Enterprise" [level=2] [ref=e66]':
+            - 'link "Intervista a Daniele Zonca: come portare l’AI generativa in Enterprise" [ref=e67] [cursor=pointer]':
+              - /url: /2026/02/18/DanieleZonca/
+          - paragraph
+        - article [ref=e69]:
+          - 'heading "Paolo in fissa Claude Code come previsto da Stefano. Ma con OpenClaw arriva l’Internet degli Agenti AI #39" [level=2] [ref=e70]':
+            - 'link "Paolo in fissa Claude Code come previsto da Stefano. Ma con OpenClaw arriva l’Internet degli Agenti AI #39" [ref=e71] [cursor=pointer]':
+              - /url: /2026/02/14/Puntata39/
+          - paragraph
+        - article [ref=e73]:
+          - 'heading "Agenti di coding e non solo:meglio un boomer smanettone oggi che un doomer domani #38" [level=2] [ref=e74]':
+            - 'link "Agenti di coding e non solo:meglio un boomer smanettone oggi che un doomer domani #38" [ref=e75] [cursor=pointer]':
+              - /url: /2026/02/07/Puntata38/
+          - paragraph
+        - article [ref=e77]:
+          - heading "Intervista ad Alessandro Maserati:AGI allineamento e consapevolezza; il futuro di società e lavoro" [level=2] [ref=e78]:
+            - link "Intervista ad Alessandro Maserati:AGI allineamento e consapevolezza; il futuro di società e lavoro" [ref=e79] [cursor=pointer]:
+              - /url: /2026/02/04/Intervista-Alessandro-Maserati/
+          - paragraph
+        - article [ref=e81]:
+          - 'heading "Oltre la Chat: Gemini, Agenti e la corsa all’AGI tra Hassabis, Amodei e il futuro del lavoro #37" [level=2] [ref=e82]':
+            - 'link "Oltre la Chat: Gemini, Agenti e la corsa all’AGI tra Hassabis, Amodei e il futuro del lavoro #37" [ref=e83] [cursor=pointer]':
+              - /url: /2026/01/31/Puntata37/
+          - paragraph
+        - article [ref=e85]:
+          - 'heading "Intervista a Emanuele Fabbiani: ricerca e startup AI; allucinazioni ed explainability degli LLM" [level=2] [ref=e86]':
+            - 'link "Intervista a Emanuele Fabbiani: ricerca e startup AI; allucinazioni ed explainability degli LLM" [ref=e87] [cursor=pointer]':
+              - /url: /2026/01/21/Intervista-Emanuele-Fabbiani/
+          - paragraph
+        - article [ref=e89]:
+          - 'heading "L’AI scala davvero? E poi coding creativo, Gemini ovunque e ChatGPT introduce la pubblicità #36" [level=2] [ref=e90]':
+            - 'link "L’AI scala davvero? E poi coding creativo, Gemini ovunque e ChatGPT introduce la pubblicità #36" [ref=e91] [cursor=pointer]':
+              - /url: /2026/01/17/Puntata36/
+          - paragraph
+        - article [ref=e93]:
+          - 'heading "Il caso Grok, ChatGPT Health: perché l’AI generativa ci costringe a ripensare autenticità, responsabilità e fiducia #35" [level=2] [ref=e94]':
+            - 'link "Il caso Grok, ChatGPT Health: perché l’AI generativa ci costringe a ripensare autenticità, responsabilità e fiducia #35" [ref=e95] [cursor=pointer]':
+              - /url: /2026/01/17/Puntata35/
+          - paragraph
+        - article [ref=e97]:
+          - 'heading "AI e robotica nel 2026: Meta dilemma, novità CES, mattoncini Lego intelligenti e world models #34" [level=2] [ref=e98]':
+            - 'link "AI e robotica nel 2026: Meta dilemma, novità CES, mattoncini Lego intelligenti e world models #34" [ref=e99] [cursor=pointer]':
+              - /url: /2026/01/10/Puntata34/
+          - paragraph
+        - article [ref=e101]:
+          - 'heading "Intervista a Simone Di Somma: lezioni da Y Combinator per portare robotica e startup in Italia" [level=2] [ref=e102]':
+            - 'link "Intervista a Simone Di Somma: lezioni da Y Combinator per portare robotica e startup in Italia" [ref=e103] [cursor=pointer]':
+              - /url: /2026/01/07/Intervista-Simone-Di-Somma/
+          - paragraph
+        - article [ref=e105]:
+          - 'heading "Previsioni Intelligenza Artificiale 2026: modelli locali, agenti AI, robotica e guida autonoma #33" [level=2] [ref=e106]':
+            - 'link "Previsioni Intelligenza Artificiale 2026: modelli locali, agenti AI, robotica e guida autonoma #33" [ref=e107] [cursor=pointer]':
+              - /url: /2026/01/03/Puntata33/
+          - paragraph
+        - article [ref=e109]:
+          - 'heading "AI nel 2025: sorprese e delusioni tra Vibe Coding, DeepSeek, Gemini e open source #32" [level=2] [ref=e110]':
+            - 'link "AI nel 2025: sorprese e delusioni tra Vibe Coding, DeepSeek, Gemini e open source #32" [ref=e111] [cursor=pointer]':
+              - /url: /2025/12/27/Puntata32/
+          - paragraph
+        - article [ref=e113]:
+          - 'heading "AI Engineering con Alex di backlog.md, mentre anche topolino si interessa di AI generativa #31" [level=2] [ref=e114]':
+            - 'link "AI Engineering con Alex di backlog.md, mentre anche topolino si interessa di AI generativa #31" [ref=e115] [cursor=pointer]':
+              - /url: /2025/12/20/Puntata31/
+          - paragraph
+        - article [ref=e117]:
+          - heading "Intervista Pamela Gotti" [level=2] [ref=e118]:
+            - link "Intervista Pamela Gotti" [ref=e119] [cursor=pointer]:
+              - /url: /2025/12/17/Intervista-Pamela-Gotti/
+          - paragraph [ref=e120]: "title: “Intervista a Pamaela Gotti: dal codice alla CTO, tra AI e persone, lottando con il gender bias” categories: Interviste tags:"
+        - article [ref=e122]:
+          - 'heading "L’AI tra GPT 5.2, benchmark, API, occhiali smart, cucina robotica e futuro della guida autonoma #30" [level=2] [ref=e123]':
+            - 'link "L’AI tra GPT 5.2, benchmark, API, occhiali smart, cucina robotica e futuro della guida autonoma #30" [ref=e124] [cursor=pointer]':
+              - /url: /2025/12/13/Puntata30/
+          - paragraph
+        - article [ref=e126]:
+          - 'heading "Intervista a Mario Fusco: sviluppo software nell’era dell’Intelligenza Artificiale" [level=2] [ref=e127]':
+            - 'link "Intervista a Mario Fusco: sviluppo software nell’era dell’Intelligenza Artificiale" [ref=e128] [cursor=pointer]':
+              - /url: /2025/12/03/Intervista-Mario-Fusco/
+          - paragraph
+        - article [ref=e130]:
+          - 'heading "L’AI che cambia tutto: multi-modello, immagini e video evoluti, auto autonome e meccanici col pilota automatico #29" [level=2] [ref=e131]':
+            - 'link "L’AI che cambia tutto: multi-modello, immagini e video evoluti, auto autonome e meccanici col pilota automatico #29" [ref=e132] [cursor=pointer]':
+              - /url: /2025/11/29/Puntata29/
+          - paragraph
+        - article [ref=e134]:
+          - 'heading "Intelligenza Artificiale in fabbrica: etica, interfacce utente e innovazione pragmatica con Veronica Brizzi #28" [level=2] [ref=e135]':
+            - 'link "Intelligenza Artificiale in fabbrica: etica, interfacce utente e innovazione pragmatica con Veronica Brizzi #28" [ref=e136] [cursor=pointer]':
+              - /url: /2025/11/29/Puntata-ventotto/
+          - paragraph
+        - article [ref=e138]:
+          - 'heading "AI, social e innovazione: cosa cambia davvero con Gemini 3 e i nuovi modelli multimodali - #27" [level=2] [ref=e139]':
+            - 'link "AI, social e innovazione: cosa cambia davvero con Gemini 3 e i nuovi modelli multimodali - #27" [ref=e140] [cursor=pointer]':
+              - /url: /2025/11/22/Puntata-ventisette/
+          - paragraph
+  - contentinfo [ref=e142]:
+    - list [ref=e144]:
+      - listitem [ref=e145]:
+        - link "Feed" [ref=e146] [cursor=pointer]:
+          - /url: /feed.xml
+          - generic [ref=e147]: 
+          - text: Feed
+    - generic [ref=e148]:
+      - text: © 2026 Risorse Artificiali. Powered by
+      - link "Jekyll" [ref=e149] [cursor=pointer]:
+        - /url: https://jekyllrb.com
+      - text: "&"
+      - link "Minimal Mistakes" [ref=e150] [cursor=pointer]:
+        - /url: https://mademistakes.com/work/minimal-mistakes-jekyll-theme/
+      - text: .

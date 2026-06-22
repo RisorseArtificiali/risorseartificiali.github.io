@@ -1,0 +1,142 @@
+{% comment %}
+Override Minimal Mistakes head/custom.html
+Scopo: corregge SEO e social preview per episodi podcast.
+
+Aggiunge:
+- og:description esplicito (era vuoto nel tema default)
+- og:image, og:type, og:url
+- Twitter Card tags
+- Schema.org JSON-LD: PodcastEpisode per post con episode_number,
+  PodcastSeries per la home, WebPage fallback altrove.
+- RSS feed alternate link
+
+Consuma i seguenti campi frontmatter (vedi analisi-podcast/FRONTMATTER-CONVENTION.md):
+  episode_number       Se presente → schema PodcastEpisode
+  episode_type         numerato | intervista
+  description          Testo 150-160 char per og:description
+  excerpt              Fallback se description mancante
+  youtube_id           ID video YouTube
+  spotify_episode_id   ID episodio Spotify per deep-link
+  apple_episode_url    URL Apple Podcasts episodio
+  guest_name           Nome ospite (interviste)
+  duration             Durata ISO 8601 (es. PT1H4M42S)
+{% endcomment %}
+
+{%- comment -%} --- Description resolution --- {%- endcomment -%}
+{%- if page.description -%}
+  {%- assign page_description = page.description -%}
+{%- elsif page.excerpt -%}
+  {%- assign page_description = page.excerpt | strip_html | strip_newlines | truncate: 160 -%}
+{%- else -%}
+  {%- assign page_description = site.description -%}
+{%- endif -%}
+
+{%- comment -%} --- Image resolution --- {%- endcomment -%}
+{%- if page.header.og_image -%}
+  {%- assign page_image = page.header.og_image | absolute_url -%}
+{%- elsif page.youtube_id -%}
+  {%- assign page_image = "https://i.ytimg.com/vi/" | append: page.youtube_id | append: "/maxresdefault.jpg" -%}
+{%- else -%}
+  {%- assign page_image = site.og_image | absolute_url -%}
+{%- endif -%}
+
+{%- comment -%} --- Canonical URL --- {%- endcomment -%}
+{%- if page.url -%}
+  {%- assign page_url = page.url | absolute_url -%}
+{%- else -%}
+  {%- assign page_url = site.url -%}
+{%- endif -%}
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+<meta property="og:description" content="{{ page_description | escape }}">
+<meta property="og:url" content="{{ page_url }}">
+<meta property="og:image" content="{{ page_image }}">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+{% if page.episode_number %}
+<meta property="og:type" content="music.song">
+<meta property="og:audio" content="https://open.spotify.com/episode/{{ page.spotify_episode_id }}">
+{% else %}
+<meta property="og:type" content="website">
+{% endif %}
+<meta property="og:locale" content="it_IT">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@risorseAI">
+<meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
+<meta name="twitter:description" content="{{ page_description | escape }}">
+<meta name="twitter:image" content="{{ page_image }}">
+
+<!-- Description (standard) -->
+<meta name="description" content="{{ page_description | escape }}">
+
+<!-- RSS Feed alternate -->
+<link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }} RSS" href="{{ '/feed.xml' | absolute_url }}">
+
+{%- comment -%} --- Schema.org JSON-LD --- {%- endcomment -%}
+{% if page.episode_number %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastEpisode",
+  "url": "{{ page_url }}",
+  "name": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "description": {{ page_description | jsonify }},
+  "image": "{{ page_image }}",
+  "episodeNumber": {{ page.episode_number }},
+  {% if page.duration %}"timeRequired": "{{ page.duration }}",{% endif %}
+  {% if page.spotify_episode_id %}"associatedMedia": {
+    "@type": "MediaObject",
+    "contentUrl": "https://open.spotify.com/episode/{{ page.spotify_episode_id }}"
+  },{% endif %}
+  "inLanguage": "it",
+  "partOfSeries": {
+    "@type": "PodcastSeries",
+    "name": "Risorse Artificiali",
+    "url": "{{ site.url }}",
+    "webFeed": "{{ '/feed.xml' | absolute_url }}"
+  }{% if page.guest_name %},
+  "actor": {
+    "@type": "Person",
+    "name": {{ page.guest_name | jsonify }}{% if page.guest_bio %},
+    "description": {{ page.guest_bio | jsonify }}{% endif %}
+  }{% endif %}
+}
+</script>
+{% elsif page.url == "/" or page.layout == "home" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PodcastSeries",
+  "name": "Risorse Artificiali",
+  "url": "{{ site.url }}",
+  "description": {{ site.description | jsonify }},
+  "image": "{{ site.logo | absolute_url }}",
+  "inLanguage": "it",
+  "webFeed": "{{ '/feed.xml' | absolute_url }}",
+  "sameAs": [
+    {% for link in site.social.links %}"{{ link }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% else %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "{{ page_url }}",
+  "name": {{ page.title | default: site.title | jsonify }},
+  "description": {{ page_description | jsonify }},
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "{{ site.title | escape }}",
+    "url": "{{ site.url }}"
+  }
+}
+</script>
+{% endif %}

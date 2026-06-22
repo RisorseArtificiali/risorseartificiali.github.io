@@ -1,0 +1,732 @@
+Stefano Maestri (00:01.088)
+Ciao a tutti e tornati. Partiamo, allora, da Chate-GPT 5.5 e Istant a Elon vs. Semaltman, intervista improbabili a Claude.
+
+Alessio Soldano (00:05.966)
+Ciao!
+
+Stefano Maestri (00:22.976)
+e poi cose tecniche tra cui Gemma 4 super veloce e poi tante altre cose dai partiamo che ne abbiamo mille oggi da dove partiamo? partiamo dalla tristezza?
+
+Alessio Soldano (00:35.63)
+Ma a questo punto è
+
+Stefano Maestri (00:37.344)
+Dai, partiamo dalla tristezza. Partiamo dalla tristezza che sono le interviste improbabili. Che non sono le interviste improbabili quelle simpatiche che facevano, non mi ricordo più chi fosse, Chiam Bretti. My dear Goller, sì, sì, My dear Goller, no, le interviste improbabili. No, sono quelle che fanno ai modelli di intelligenza artificiale. Abbiamo parlato in passato di quella di Bernie Sanders.
+
+Paolo Antinori (00:49.074)
+mai dire gol mai dire gol
+
+Stefano Maestri (01:06.272)
+e la ha fatta anche Veltroni, la ha fatta anche lui a Claude credo
+
+Paolo Antinori (01:12.978)
+perché il Bernie Sanders di no artri
+
+Stefano Maestri (01:21.856)
+scusate, si rispondo al telefono poi la rimonto un secondo perché è una chiamata strana che non ricevo mai di mio padre non vorrei che ci avessi bisogno
+
+Paolo Antinori (01:22.002)
+Se vuoi rispondere al telefono rispondi Stefano, intanto non stiamo registrando.
+
+Alessio Soldano (01:27.566)
+Bye bye
+
+Alessio Soldano (01:52.814)
+io provo se si riesce a condividere una cosa dopo.
+
+Paolo Antinori (01:55.186)
+Comunque adesso se ti vuoi sentire meno stupido su quella roba che ti tagliava fuori l'interfaccia a me succede ed è successo più di una volta con la feature di clone del profilo di android quando compri il telefono nuovo e devi spostare i dati. Cioè dopo anni qualcuno detto perché non possiamo fargli migrare i file wifi in fase di installazione è un'ottima idea cioè fa tutto lui se non che
+
+Alessio Soldano (02:11.726)
+Sì,
+
+Alessio Soldano (02:19.662)
+si l'ho usato più volte
+
+Paolo Antinori (02:23.122)
+a seconda della risoluzione del tuo telefono il pulsante blu classico con scritto ok è esattamente sotto fuori dalla schermata e la pagina che ti si presta davanti a tutte le informazioni che ti servono non ti verrebbe mai... non c'era la scroll bar perché è nella fase iniziale e non ti verrebbe mai da pensare che c'è qualcosa, pensi che sia rotto e che non si può fare e bestemi come un dannato bestemi bestemi bestemi poi per sbaglio o dopo disperazione di internet dici
+
+hai provato a scrollare, scrolli, ti senti uno stronzo. Quindi ti capisco. Certo se lo fai davanti...
+
+Alessio Soldano (02:58.158)
+Però sai, in diretta con il mio capo, Darren e l'altro di QE che se la mena al inverosimile.
+
+Paolo Antinori (03:06.322)
+No no, certo. Certo, A me è capitato quando abbiamo fatto la presentazione del lavoro di Cyberwave, che gli ho detto, poi ragazzi guarda che sta roba fa un po' schifo perché il punto della roba è fisso del mondo 3D, non si può cambiare. Boccia mi fa, hai provato a tenere clickato il destro e a scrollare con il destro? detto, mio Dio no, fammi provare. E ha funzionato, detto, no minchia che stronzo che sono.
+
+e loro per salvare la fascia ho detto sì l'abbiamo un po' nascosta forse dovremmo documentarla meglio, no no sono io che lo so
+
+Alessio Soldano (03:40.526)
+Stefano non ti sentiamo se stai parlando
+
+Stefano Maestri (03:43.905)
+ho mutato qua, adesso mi sentite? Allora sì sì tutto posto, cosa faccio? La monto? Sì dai, riparto da dove? Parto dalla tristezza. Sì lo metto da secondo riparto così.
+
+Paolo Antinori (03:46.002)
+Sì. Sottobene.
+
+Alessio Soldano (03:49.39)
+posto.
+
+Alessio Soldano (03:56.558)
+Mettiamo un segno.
+
+Paolo Antinori (03:58.066)
+e lo messo io prima, più un po' tardi.
+
+Paolo Antinori (04:02.962)
+hai andato a mutu un'altra volta? no scusa, muovevi la bocca ma non parlavi
+
+Stefano Maestri (04:09.632)
+Allora da dove partiamo? Partiamo dalla tristezza? Partiamo dalla tristezza. La tristezza che per me sono le interviste improbabili, Interviste improbabili quelle di Maidi e Regola, no? No, sono le interviste improbabili che fanno i modelli. Ne abbiamo parlato qualche settimana fa che in America Bernie Sanders, pure senatore, si è messo in intervista a Ray Claude.
+
+e un ex candidato alla presidenza del consiglio che fa giornalista per l'investire principale però cioè Veltroni ha deciso di intervistare anche lui Claude con un'idea così innovativa che sembra quasi... Quando l'ho letto ho proprio pensato...
+
+che è come Little Tony quando faceva le imitazioni...
+
+Paolo Antinori (05:05.618)
+di Elvis.
+
+Stefano Maestri (05:06.656)
+di Elvis, esatto sì, il little Tony che fa Elvis, ecco il troni che fa Bernie Sanders. Allora no, come era no quella di Bernie Sanders, più no ancora. Non è quello che possiamo passare alle nuove generazioni. Cerchiamo di capirla questa intelligenza artificiale.
+
+non di umanizzarla per forza, non di chiedergli tu ci distruggerai. La cosa che mi ha fatto quasi... No, la cosa che mi ha fatto più tenerezza, quasi tenerezza dell'ignoranza, mi senso letterale del termine, puoi, inoltre non ho pazienza, però dell'ignorare la cosa...
+
+Alessio Soldano (05:40.045)
+o cosa pensi del fine vita o proprio del genere.
+
+Stefano Maestri (05:57.024)
+quando gli chiede se fai errori e chiaramente quello che gli dice sì sono pieno di lacune, faccio errori, tristerrimo nel senso, sono strumenti, usiamoli come tali, non umanizziamoli, non chiediamo loro di se stessi, il discorso della coscienza lungo discuso da Antropik eccetera è un interessante campo di ricerca ma lasciamo nel campo della ricerca
+
+perché poi dopo me li leggo già ai giornali che è l'intelligenza artificiale umanizzata e che quindi porta i giovani a fare le cose negative, anche le peggiori. Però se quella è l'immagine che cominciamo a darne senza aver capito che cosa abbiamo in mano, così. Come al solito, opinione abbastanza forte la mia, però no, veramente no. Per me un no.
+
+Paolo Antinori (06:56.114)
+dove l'hanno data in televisione in prima serata?
+
+Stefano Maestri (06:58.4)
+No, intervistazio un giornale.
+
+Paolo Antinori (07:01.138)
+Peccato perché era una di quelle robe da mettere sulla tv nazionale o quelle cose così secondo me
+
+Stefano Maestri (07:06.336)
+ma ci arriveremo! Adesso ci si metterà a Mara Veniera, intervistare Cioto GPT in prima serata.
+
+Paolo Antinori (07:11.826)
+Però guarda tra tra il serio e il faceto visto che raccontavi che tua figlia deve fare la maturità quest'anno magari diglielo di prepararsi sulla traccia delle AI per il tema che secondo me ci sono buone speranze
+
+Stefano Maestri (07:27.136)
+No, non ne abbiamo parlato, ma sì, è probabile che lo diano come tema, ma quello ci starebbe anche. E credo anche che i ragazzi direbbero cose più intelligenti. Lasciamo stare i politici e ex politici italiani, tocchiamo quelli americani, direbbero cose più intelligenti di Bernie Sanders e anche del suo presidente della Repubblica.
+
+Perché anche lui ne ha dette in questi giorni. Mi riferisco a Trump che ha detto... Poi veniamo via dalla politica e torniamo alla tecnologia. mi riferisco a Trump che ha detto che vorrebbe sta valutando il potere di veto al rilascio dei modelli di intelligenza artificiale da parte della Casa Bianca.
+
+per la pericolosità reale o presunta. Immaginerete che Google e Antropica non l'hanno presa benissimo proprio così.
+
+Paolo Antinori (08:23.794)
+Sì, sì, sì, leggevo questa cosa.
+
+Alessio Soldano (08:34.509)
+Sì, anche perché poi mi verrebbe da chiedere sulla base di cosa prendere la decisione, cioè...
+
+Stefano Maestri (08:40.192)
+E chi è che la valuta che è pericolosa? ragione, hai assolutamente ragione.
+
+Alessio Soldano (08:42.861)
+infatti
+
+Alessio Soldano (08:48.621)
+Cioè, di quali esperti si dota la casa bianca della situazione per avere capacità di scernere su quello che i ricercatori di Antropiq, piuttosto che di OpenAI, hanno fatto?
+
+Paolo Antinori (09:02.834)
+Non era Elon l'esperto, scusa.
+
+Stefano Maestri (09:06.368)
+E ma adesso c'è un po' di maretta, l'esperto potrebbe diventare OpenAI, il quale sicuramente favorirà i rilasci di Claude. Cioè, boh, diventa veramente quasi al limite del ridicolo.
+
+Alessio Soldano (09:16.365)
+esatto
+
+Alessio Soldano (09:26.541)
+se no intervista anche lui e lei ai e chiede di cosa pensi di quell'altro rilascio che sta arrivando
+
+Stefano Maestri (09:31.552)
+sì, anche mi sembra fondamentale.
+
+Veniamo via dalla politica dai che ci mettiamo, stiamo soltanto pestando delle cacche. Allora, no nuovi modelli dai parliamo di nuovi modelli, partiamo da casa Google, andiamo un po' a casa di Alessio, l'inferenza, etc. Gemma 4 hai visto che hanno fatto quello che hai scritto tu nel tuo ultimo articolo di Aladino, ti leggono forse?
+
+Alessio Soldano (10:04.077)
+lo
+
+sicuramente guarda ma allora intanto vediamo se riesca a condividervi qualcosa
+
+Allora cosa è successo? è successo che appunto io parlavo di speculative decoding siccome il mondo mi legge come no anche google ha pensato di pubblicizzare questa questa tecnica nel suo esatto che peraltro fanno loro la traduzione per cui
+
+Stefano Maestri (10:32.192)
+e fortuna che hanno il traduttore automatico, perché tu l'hai fatto in italiano.
+
+Alessio Soldano (10:39.437)
+No, a parte gli scherzi. Prima vediamo questo discorso di Gemma 4, se mi concedete un attimo vorrei fare un ragionamento un attimo più ad ampio respiro su quello che sta succedendo in questi giorni in questo campo. In Gemma 4 hanno deciso di abilitare lo speculative decoding che sarebbe una tecnica per velocizzare la fase di generazione dei token, quindi le risposte.
+
+quando si interroga un modello. Quindi non la prima parte che quella di comprensione del prompt ma la parte successiva di generazione della risposta. Come si fa questa ottimizzazione, questa velocizzazione? Ci sono varie tecniche e un gruppo di queste tecniche si basa sull'utilizzo di modelli drafter. Praticamente sono modelli più piccoli e di conseguenza più veloci.
+
+ai quali viene chiesto di fare delle previsioni sul prossimo token o i prossimi token da generare e il modello target, sarebbe il modello grande con cui si sta lavorando, invece di fare lui la generazione del prossimo token fa prima una valutazione della previsione fatta dal modello piccolo. Se il modello piccolo è stato sufficientemente bravo a prevedere bene il prossimo token, sia un risparmio di tempo perché la valutazione
+
+della previsione è sostanzialmente meno pesante dal punto di vista computazionale rispetto a calcolare il prossimo token. O comunque, come si fa in questo caso qui di Gemma 4, è possibile parallelizzare e valutare sostanzialmente più token in una singola passata. Quindi nel momento in cui il modello piccolo ci prende, si ha un grande guadagno.
+
+Quello che hanno fatto quelli di Google è stato sostanzialmente ottimizzare molto questa idea. E come l'hanno fatto con un modello molto piccolo, allora per dire il modello 2 billion di Gemma 4, comunque già è relativamente piccolo.
+
+Alessio Soldano (12:56.365)
+ha un modello drafter da 76 milioni di parametri, quindi 2 miliardi 76 milioni, quindi estremamente più veloce. Questo modello piccolo drafter genera quattro volte i token che andrebbe a generare il modello grande.
+
+e il modello Target fa in una passata sola la valutazione di questa generazione.
+
+Per migliorare ulteriormente la cosa, cosa hanno fatto? Si sono inventati dei trucchi tipo quello di condividere la cave cache dei due modelli, quindi il modello piccolo attinge a lavorazioni che già fatto il modello grande per la cache. In più, nel momento in cui si calcolano gli embedding da cui parte l'operazione di generazione per il modello draft, questi embedding sono
+
+appesi con catenati dopo le attivazioni dell'ultimo layer del modello più grande. Quindi è un modo per consentire al modello piccolo, nonostante sia dotato di pochi parametri, quindi poco intelligente, mettiamola così, di partire da una pre lavorazione dello stato attuale a cui era.
+
+Questo, ovviamente se si va a leggere il paper è spiegato molto meglio, questo consente sostanzialmente al modello draft di prenderci abbastanza spesso. Però, e qui mi racconterai un attimo, diciamo, mie pensieri di questi ultimi giorni, tutta questa cosa si inserisce in un...
+
+Alessio Soldano (14:56.973)
+in un ragionamento molto più esteso, cioè stiamo notando la ricerca che sta affrontando le problematiche di efficienza dell'inferenza sotto in vari campi. Questa che abbiamo appena raccontato ha a che fare con la velocità di generazione. Speculative decoding non è soltanto questo approccio usato da Google che tra parentesi si chiama MTP, Multi Token Prevision.
+
+Ma ci sono altre tecniche, tipo quella di cui parlavo nel mio articolo, che N-Gram, che consente al modello di andare a vedere che cosa ha generato negli step precedenti e fare delle previsioni basate su quello. È possibile fare abbinare modelli draft sviluppati in modo indipendente rispetto a
+
+modello target che si sta utilizzando, chiaramente devono essere accoppiati bene, non è che si può prendere un qualunque modello draft ma senza anche che siano embedded come in questo caso di gemma. Ci sono ricerche per creare modelli draft per i modelli quen ad esempio con varie tecniche e tra l'altro appunto c'è una tecnica che si chiama D-Flash che abbondantemente
+
+diciamo ricercata in questo periodo che consente nell'utilizzare modelli di diffusione. so se vi ricordate che mesi fa, parlavamo anche in podcast, si era cennato all'esistenza di modelli per la generazione di testo non autoregressivi ma basati sull'idea della diffusion, la stessa che si usa per la generazione delle immagini. E questi modelli sostanzialmente fanno
+
+come nel caso dell'immagine una riduzione del rumore a partire da un qualcosa che rappresenta il totale rumore e generano diversi token in parallelo, tanti token in parallelo. Questa idea, questo approccio è esattamente quello che si abbina bene alla costruzione di un modello draft che faccia le previsioni dei prossimi token perché il minus dei modelli
+
+Alessio Soldano (17:22.701)
+La diffusione era proprio quello di essere veloci ma non esageratamente accurati al confronto con i migliori modelli autoregressivi. E questa è esattamente la condizione in cui siamo adesso con i modelli draft. Quindi ci interessa la velocità, siamo disposti ad accettare una minore qualità perché poi ci sarà il modello target che andrà a valutare la previsione. Quindi.
+
+esistono esistono dei modelli draft che sono in fase di svulo per il momento proprio per fare questa cosa che si chiama D-Flash. Nel frattempo la ricerca sta cercando di affrontare anche ovviamente la fase di KVCache quindi la cache. Avevamo parlato di TurboQuant diverse settimane fa.
+
+Sono uscite tante altre idee di ottimizzazione della cache dove l'obiettivo è ridurre l'occupazione di memoria, quindi consentire l'utilizzo di modelli relativamente grandi anche in caso di poche risorse.
+
+e risorse di memoria è uscito tra le varie altre idee di ottimizzazione del modo con cui si fa la cache una cosa che si chiama rotor-quant che sostanzialmente va a cercare di migliorare uno dei difetti di turbo-quant che era il fatto che per costruire la cache nel modo con cui spiegavano
+
+paper di TurboQuant si sostanzialmente usavano diverse risorse computazionali e quindi se è vero che si riduceva la memoria utilizzata si andava comunque a rallentare la fase di pre-fill. L'idea di questi di rotor quente è abbastanza complessa da spiegare ma sostanzialmente loro fanno delle trasformazioni differenti dei vettori in input, li dividono in vettori più piccoli e poi hanno modo intelligente
+
+Alessio Soldano (19:33.613)
+per accessare questi vettori più piccoli. Morale della favola, un ordine di grandezza più veloce rispetto a turboquant in diversi scenari di utilizzo. quindi ottimizzazione in generazione in...
+
+in diciamo sulla parte di cache ma notizie degli ultimi giorni anche in fase di profil prompt processing che è come dicevamo prima quello che avviene nel momento in cui si va a processare il prompt
+
+La fase di pre-fill di base, volete, è l'ottimizzazione naturale, proprio l'utilizzo della KVCache, perché l'idea è che uno, invece di rifare tutta l'attention, va a vedere che cosa è stato calcolato precedentemente. Però ci sono delle nuove ricerche che consentono di utilizzare una tecnica che si chiama P-Flash, da non confondere con D-Flash, di cui parlavamo prima.
+
+che magari anche qui possiamo condividere qualcosa magari Stefano riesce a farlo tu sostanzialmente l'idea di Luce Box è il gruppo che ha sviluppato questa cosa è di avere un nuovo modello piccolo drafter che funzioni da scorer cioè che vada
+
+Stefano Maestri (20:52.896)
+si certo
+
+Alessio Soldano (21:10.989)
+a fare una valutazione dei token del prompt che viene passato cercando di capire quali sono le parti interessanti del token del prompt. Si parla del problema classico che è quello di trovare l'ago nel paiaio cioè capire in un contesto molto grande in cui abbiamo tante informazioni
+
+e non tutte sono super salienti, capire dove sono veramente le parti più salienti sulle quali effettivamente puoi fare il pre fill. Quindi a valle di questa fase di scoring viene costruito un prompt più compresso e con quel prompt si fa il pre fill vero proprio. Chiaramente questo approccio a differenza della
+
+di flash e in generale delle ottimizzazioni in fase di generazione, questo approccio non è lossless, cioè si perdono informazioni nel fare questa compressione. Ma l'idea è che nello use case corretto, ad esempio quello in cui c'è stata un sacco di discussione nel contesto, le chiamate precedenti, i prompt precedenti, e non tutto.
+
+tutte le informazioni che sono state passate sono salienti perché si sono provate varie cose alla fine si è ottenuto un certo risultato è possibile comprimere il contesto in questo modo e avere una velocizzazione del prefil senza perdere troppo in fatto di accuratezza
+
+Tutte queste migliorie su questi tre principali ambiti, pre-fill, generazione e cache sono in parte disponibili ad esempio in Lama CPP, ma in alcuni casi ci sono proprio fork di Lama CPP. C'è un efforte di cercare di unificare tutti questi sviluppi assieme. Vediamo.
+
+Alessio Soldano (23:32.557)
+Io sono abbastanza fiducioso e sono rimasto colpito da tutte queste ricerche che stanno convergendo per migliorare l'inferenza anche locale.
+
+Paolo Antinori (23:43.858)
+mi chiedevo a che cosa porteranno, porteranno a una convergenza in cui tutti i modelli o comunque quelli open di cui si sa come funzionano andranno ad adottare
+
+meglio di queste tecniche e quindi è lo stato dell'arte o in realtà siccome alcune vanno in una direzione altre vanno in un'altra ci sarà sempre spazio per algoritmi e approcci divergenti come c'è adesso con le strutture dati o gli algoritmi in generale per cui esisterà sempre quella casistica per cui questo è caso migliore quindi magari ci saranno
+
+piccoli shop di gente che ottimizza il modello per quella specifica cosa, quella specifica lingua, quella specifica hardware, per quella specifica richiesta di slack che deve avere per cui non spariranno tutte queste tecniche ma ognuno avrà il suo perché nel caso specifico. Cosa pensi che sia lo scenario?
+
+Alessio Soldano (24:55.309)
+ma secondo me è un misto delle due cose, cioè nel momento in cui c'è un'ottimizzazione che per una determinata fase dell'inferenza è meglio di tutte le altre in per dire il 95 % dei casi è probabile che quella diventi lo standard di fatto. Mi viene in mente varie cose nell'attention ormai
+
+Stefano Maestri (25:19.456)
+Il cosiddetto momento di psique in cui hanno definito fast sparse attention poi l'hanno usato tutti perché era nettamente meglio della dance attention, non si usava già più la dance però si usava una sparse diversa però ci sono cose che useranno tutti anche secondo me altre che sono più di nicchia
+
+Alessio Soldano (25:30.669)
+è esatto
+
+Stefano Maestri (25:48.576)
+Ci sono fiori di startup che scommettono su questa cosa in testa a tutti i miramorati. La sua startup scommette sul fatto che le aziende avranno bisogno di ottimizzazioni specifiche e di fine tuning specifici, cioè loro non fanno modelli, stanno cercando di democratizzare la fase di tuning. Loro più sui modelli, ma arriveranno secondo me anche
+
+su un pochino su sulle inferenze se andiamo come pare in questo momento almeno sempre di più ad avere soluzioni ibridi e dove l'inferenza locale e l'inferenza cloud convivono e risolvono problemi diversi
+
+Alessio Soldano (26:35.789)
+Sì, peraltro io accennavo queste cose qua perché sono chiaramente tutta una serie di ottimizzazioni che possono rendere utilizzabili modelli belli, diciamo che hanno capacità interessanti su hardware non esagerato, quindi per l'inferenza locale anche consumer. Però in realtà tutte queste cose interessano molto anche a chi fa
+
+in cloud o questi servizi perché è tutto modo per risparmiare risorse per se vuoi comunque avere un ritorno degli investimenti migliori perché nel momento in tu riesci a offrire le stesse performance con una frazione delle risorse investite senza compromettere la qualità è tutto guadagno.
+
+Paolo Antinori (27:30.898)
+Si, vi confesso, la mia ispirazione era pensare al kernel di Linux e all'infinità di parametri e di configurazione che lui nasconde che la maggior parte di noi non usa, senso usiamo il default e di tanto in tanto tocchiamo le cose più ovvie
+
+ma quella cosa lì fa un sacco di roba immaginate che ne so ha tutte le possibilità per gestire la memoria come uccidere i processi oppure l'infinità di file system diversi che esistono esistono chissà perché cioè giustificato che continui a esistere non lo so qualcuno li usa di sicuro mi chiedo se sarà la stessa cosa con tutte queste tecnologie ottimizzazioni per l'ai
+
+Stefano Maestri (28:13.792)
+beh, cioè sui motor di inferenza quelli diciamo commerciali o anche non commerciali ma cloud il livello a cui puoi fare il tuning è veramente alto magari invitiamo anche abbiamo tra i nostri contatti anche chi lavora su vllm
+
+qualche volta lo invitiamo per parlarci di quanto è fonda la teana del bianconiglio perché poi su quella cosa lì siamo al livello simile a quello che descrivi tu del kernel di Linux e anche meno friendly, dico se forse, perché più giovane come tecnologia.
+
+però sì no, spazio ce ne sarà lungo ancora perché tutte le tecnologie molto verticali riservano tutto quello spazio lì questa è la mia opinione almeno, non so se Alessio non la vede diversamente
+
+Alessio Soldano (29:20.621)
+No, no, anche secondo me. E anche il fatto che esista tanto hardware differente fa sì che ci vorrà una fase di assestamento. Avremo per diverso tempo, secondo me, diversi parametri, come dici tu, Paolo, che portano a migliorie nette con un'architettura e non vanno bene per altre. Guardavo...
+
+per dire ci sono, rimanendo alla MassiPP, diverse PR aperte per ottimizzare un'inferenza ad esempio su Strixalo, sull'hardware che ho io e uno dei commenti ricorrenti che ho visto da parte dei maintainer di la MassiPP è, sì va bene però questa cosa che ci proponete non...
+
+non è migliorativa anzi vagamente peggiorativa su quest'altra architettura oppure finché non la proviamo su tutte non la prendiamo. Finché non si risolvono anche questi problemi qua chiaramente avremo N1000 parametri e N1000 approcci.
+
+Stefano Maestri (30:32.672)
+E no, perché poi da un lato ci metti la complessità di questa cosa. CPP è un progetto estremamente complesso, dall'altro ci metti anche qualche loro scelta forte, più o meno condivisibile per me, non condivisibile, che è la prima cosa che scrivono nel contributing.md e che non accettano pure la requesta completamente o...
+
+principalmente AI Assisted or AI Generated che francamente lascia un po' il tempo che trova nei tempi attuali e nel tipo di progetto che sono. Cioè questi fanno l'AI e non vogliono che l'AI venga usata per il loro progetto. Mi sembra un po' una contraddizione in termini ed è la cosa che scriveva su X questa settimana o la scorsa questa mi pare. Anti-Rez e Salvatore San Filippo.
+
+Alessio Soldano (31:22.733)
+e vediamo
+
+Stefano Maestri (31:25.088)
+che dice vabbè io mi sono rotto non ho il tempo di scrivere tutto a mano e non ha più senso oggi come oggi in più c'è questo discorso dei tanti hardware che da un lato si capisce che la MassiPP voglia supportare tutti dall'altro proprio perché c'è diversità lui dice bisogna di fare un motore di inferenza che sia ottimizzato in particolare per un'architettura nel suo caso quella del Mac Mini
+
+e dice va me lo faccio e non so se è partito da un forco, se è partito da zero perché il software non è ancora pubblico ha detto che lo diventerà ovviamente ma al momento non lo è
+
+Stefano Maestri (32:12.256)
+però VLLM, Lama CPP, Ola, ma tutti questi che cercano di tenere insieme tutti i tipi di hardware sicuramente hanno una complessità estremamente più alta come è per Linux l'esempio di Linux è calzante perché anche nelle architetture dei pc ci sono 1500 differenze e infatti l'audio non va mai
+
+Paolo Antinori (32:36.626)
+Guarda, mentre ne parlavamo e non ero lì che volevo arrivare, mi sono trovato a pensare che forse ci potrebbe essere spazio per un'azienda che faccia quello che fatto Red Hat all'inizio dei Linux, che si preoccupasse di tenere traccia, che tutti questi pezzetti di tanto in tanto convergano e quindi qualcuno li prova tutti insieme e ti garantisca che quello che funziona.
+
+Stefano Maestri (33:03.744)
+quello che Red Hat fa con VLLM
+
+Paolo Antinori (33:06.546)
+Si, richiede uno skillset un po' diverso in questo caso, laddove ognuno di questi algoritmi che abbiamo detto oggi diventerà un aspetto consumabile di libreria, un building block. Però non fatico di immaginare che ci possa essere il domanda per una cosa di questo tipo.
+
+Stefano Maestri (33:22.656)
+Sì, beh Redette stessa ci sta scommettendo, hanno acquisito l'azienda principale che contribuiva via LLM per fare questa cosa, la stanno facendo, la loro offerta AI, una di quelle predominanti, ce la raccontava anche Daniele Zonca quando è venuto qua in intervista, è proprio quella lì di...
+
+dare un VLLM for Enterprise, quindi come è stato redetta Linux for Enterprise.
+
+Alessio Soldano (34:00.974)
+io volevo dire che di nuovo vedi come la ricerca sfuma nell'ingegneria del software nel rendere tutte le idee specifiche per un determinato caso eccetera ben integrate con giusti livelli d'astrazione eccetera così che siano utilizzabili da vari tipi di software
+
+Stefano Maestri (34:26.528)
+Sì, assolutamente. Siamo alla fase, su quella parte lì almeno, siamo alla parte dell'ingegneria del software. La ricerca esiste ancora ed è sicuramente fondamentale e predominante, ma siamo nella fase dell'ingegneria del software. ieri c'era... no, giovedì... no, mercoledì...
+
+Alessio Soldano (34:54.989)
+qualche giorno fa.
+
+Stefano Maestri (34:56.448)
+C'è stata la convention annuale che poi per loro è semestrale in realtà di Antropica, Code of Wave Cloud e allora io ho sentito il keynote e un paio di talk perché per noi era sera o notte. Nessuna novità
+
+eclatante, senso che hanno fatto l'elenco di tutte le novità eclatanti che hanno fatto nell'ultimo periodo non c'è stato un annuncio di modello, non c'è un annuncio vero di nuove modalità anche se ci sono tanti rumor intorno ad una nuova modalità che dovrebbe apparire in Cloud Code che i leak la chiamano Orbit che è sostanzialmente
+
+cod proattivo un po' OpenClaw o Hermes Agent, di cui poi parliamo perché sono super entusiasta di Hermes, però niente di di ecrattante ma tanta parte della abbiamo ingegnerizzato
+
+questa parte qui perché Cloud Code sia più facilmente utilizzabile con Sonnet avendo soltanto Opus come advisor ad esempio hanno puntato molto su quella parte lì
+
+e tutta una serie di cose che si comincia a vedere quanto almeno nella parte degli harness dei coding agent o harness in generale ci stiamo spostando un pochino sulla parte di ingegneria del software e anche c'è chi dice che la cosiddetta IGI non è più una cosa che fa solo il supermodello ma fa il supermodello con
+
+Stefano Maestri (36:54.24)
+ingegnerizzato con un'ottima inferenza, con un'ottima ornese eccetera eccetera e quindi integrato sì perché poi alla fine sai quando dici le GI vuol dire che deve saper fare tutto quello che fa un uomo quindi deve avere gli stessi strumenti che ha quella persona altrimenti dov'ai ma
+
+Alessio Soldano (37:00.013)
+integrato con tutto il resto diciamo.
+
+Stefano Maestri (37:23.68)
+ma questo ci porta anche un po' a...
+
+Il discorso che facevi prima sull'hardware, c'è un annuncio di Google invece che invece si prepara al Google I.O. è tra qualche giorno e se vi ricordate Google tende a fare gli annunci nelle due tre settimane precedenti al Google I.O. e poi al Google I.O. non ci sono annunci ma c'è la presentazione di quello che è appena stato annunciato.
+
+Alessio Soldano (37:51.277)
+demo.
+
+Stefano Maestri (37:54.464)
+Uno degli annunci che non è tanto di prodotto, è tanto consumer, è che a un gruppo selezionato di clienti vendono le TPU, che è un annuncio grosso in realtà nel nostro mondo, perché vendere TPU vuol dire che invidia un concorrente reale grosso, perché AMD
+
+ci ha provato però la distanza nel mondo data center ancora altina. Le TPU invece di Google che fanno girare Gemini ricordiamo sono di livello paragonabile al GPU di Nvidia per quanto riguarda l'inferenza almeno. Sul training ci sono pareri discordanti cioè che dice che vanno molto bene anche in training chi dice meno.
+
+Però tra questo annuncio e l'annuncio di un accordo invece fatto con Antropic per fornire ad Antropic potenza di data center per 5 gigawatt Google ha fatto un salto in borsa l'altro giorno non sono consigli finanziari questi ma giusto per sottolinearlo come il mercato si renda conto dell'importanza di questi due annunci cioè che cominci a fornire anche altri
+
+ma in maniera significativa perché 5 gigawatt è tanta roba e che comincia a vendere anche invece hardware è anche un cambio di strategia un po' di Google che l'hardware se l'è sempre fatto ma non ha sempre venduto il servizio ma non ha mai venduto l'hardware in quanto tale quindi forse anche un po' una cosa da segnalare per
+
+Alessio Soldano (39:30.892)
+e tenuto.
+
+Stefano Maestri (39:43.04)
+30 diversi che cominciano a vedersi e se arrivano TPU si torna a quello che dicevi tu Paolo arrivano TPU e è un'altra architettura su cui aggiungere parametri da settare
+
+Paolo Antinori (39:59.826)
+In realtà scusami mi hai fatto venire in mente ma dovrei fare una ricerca su internet per i dettagli che google anni fa aveva in realtà prodotto una tpu usb che si era diffusa non mi ricordo più come si chiama si chiama
+
+Stefano Maestri (40:11.744)
+Sì, ce l'ho. Ce l'ho per il Raspberry. Si chiama, si chiama, si chiama... Non so se voi apriamo la scatola, ma al momento non mi viene.
+
+Paolo Antinori (40:25.074)
+No, no, va be', fa niente, non sapevo neanche che ce l'avevi. Che... che le ho sempre trovate interessante, anche io per fare in Friends on the Edge, poi in leggevo che a suo tempo, insomma, era una cosa un po' embrionale, funzionava ma non così come altre cose, era più un giocatt... un core, sì. E quindi in realtà giacciai erano passati, non con una, probabilmente una visione...
+
+Stefano Maestri (40:40.384)
+Si, funziona e non funziona. Coral. Coral.
+
+Paolo Antinori (40:53.266)
+di business come questa, più per dire proviamo, sembrava più una cosa di ricerca, sembrava più per darla agli entusiasti.
+
+Stefano Maestri (41:01.29)
+Non è per il server side, hanno mai... Cioè i TPU di cui parliamo adesso sono quelli giganti.
+
+Paolo Antinori (41:07.538)
+Era un po' in giocattolino, sì.
+
+Paolo Antinori (41:12.786)
+che peraltro io ho incrociato nel mio cammino questa settimana perché stavo cercando sempre per antivocale di vedere se riuscivamo a fare una versione più ottimizzata di alcuni dei modelli in particolare mi piacerebbe fare fine tuning di parakit con l'italiano conversazionale perché a quanto pare l'hanno adestrato su linguaggio formale e impostato del
+
+di giornalisti ma non sugli amici che ti sbiascigano le parole e quindi quando ti arriva un vocale reale di un amico che non sa che cazzo dirti non funziona così bene, whisper è meglio da questo lato e quindi ho detto vabbè dai vediamo se si può fare e sono entrato in un rabbit hole per cui sì tendenzialmente si può fare ma per via della tecnologia che ha utilizzato Nvidia in quel caso si può fare se hai dell'Hardware Nvidia e bla bla bla, alla fine non so se ci riuscirò
+
+ma nella mia scoperta ho scoperto che su Google collab oltre a delle gpu tradizionali puoi anche scegliere la tpu e la previsione del modello che mi diceva che se io avessi fatto la stessa operazione con la tpu avrei avuto un guadagno di 4pr rispetto alle tempistiche fatte con la gpu che era niente male non sono arrivato fino in fondo perché non funzionava lo step precedente da arrivare a fare quello quindi non l'ho visto
+
+Ma prima o poi mi risolverò la curiosità di provare a giocarci e vedere un pochettino come si comporta.
+
+Stefano Maestri (42:43.339)
+sì allora questo è sicuramente uno degli aspetti capire anche come si comportano poi queste cose qua quando le mettono alla prova sul serio però tutte le ottimizzazioni anche di cui parlava Alessio comprese quelle su Gemma 4 che sono proprio in casa loro tentano di andare un po' in questa
+
+direzione qui. Tra l'altro sempre stando in casa Google, sempre per gli annunci in preparazione all'IO, pare che stiano testando un modello che si chiama Omni che dovrebbe unificare Veo con Nano Banana. Quindi generazione di video, generazione di immagini in un modello solo che è una cosa un po' in qualche modo attesa anche perché i rumor
+
+dicevano un'altra notizia che leggevo che in realtà è vero che OpenAI ha dismesso Sora, vi ricordate il modello di generazione video eccetera eccetera, ma dicono anche che in realtà Sora è stato dismesso per quella cosa generazione video ma in realtà, chatgp image 2 altro non è che Sora ha declassato a fare solo immagini.
+
+Stefano Maestri (44:14.25)
+con ottimizzazioni su questa cosa eccetera eccetera che tutto sommato ci starebbe perché oggettivamente i risultati di SOR erano notevoli da un punto di vista visivo e lo sono notevoli quelli di CETGPT Image.
+
+Alessio Soldano (44:31.788)
+Allora io ho letto l'annuncio, onestamente non ho trovato ancora grandissime informazioni su Omni. È interessante il fatto che si parlerebbe di un modello multimodale, omnimodale non so come vogliamo definirlo, che genera anche video perché tipicamente questi modelli multimodali
+
+Stefano Maestri (44:37.706)
+Non c'è nulla, no non c'è nulla, non c'è nulla.
+
+Alessio Soldano (45:00.3)
+accettano varie cose ma poi generano sostanzialmente immagini o testo. Molto di quelli di frontiera diciamo. Interessante, vediamo se ci stupiscono.
+
+Stefano Maestri (45:16.81)
+Assolutamente, è tutto da vedere chiaramente perché poi tra il dire e il fare c'è sempre di mezzo un mare. Torniamo dai, torniamo un attimo al mondo della politica. Prima abbiamo perso tutti gli ascoltatori che volevano la tecnologia, parlando di politica all'inizio. Poi abbiamo perso tutti gli altri, li abbiamo uccisi con
+
+Alessio Soldano (45:41.228)
+Poi quelli rimasti li abbiamo uccisi con...
+
+Stefano Maestri (45:45.674)
+con tutta la parte sull'inferenza torniamo alla politica e vorrei andare su uno dei personaggi preferiti di Paolo, se ricordo bene, è Elon, che si scontra con l'altro personaggio preferito di Paolo che è Sam, è vero che non sai quale figurina scegliere.
+
+Paolo Antinori (46:05.586)
+Sì, sì, sì, confesso. Allora, sì, allora, per chi non lo sa cosa sta succedendo in questi giorni, non ho idea se se ne parli in Italia, peraltro. Io non guardo molto la televisione, giornali, telegiornali, quindi non ho idea se qualcuno si preste attenzione a questa notizia. Ma, dopo tanto batti beccare, si è finalmente andati in tribunale per una questione che, volete, con la quale io sono anche d'accordo con Ilono, eccezionalmente, ovvero...
+
+Alessio Soldano (46:15.852)
+mmm
+
+Paolo Antinori (46:35.25)
+L'attacco di la critica attacco di Elon Musk a Sam Altman per cui ha deciso di trasformare una no profit open AI in una società profit per farci del business che non è che mi suona proprio bene cioè se nasci con una no profit e poi si scopri che puoi guadagnarci non facendo un'altra società ma trasformando la tua insomma non è che sei proprio nella lista dei miei preferiti
+
+Ora, magari io sono affascinato da tutta questa vicenda perché ho appena finito di vedere una serie legale su Netflix, Lincoln Lawyer, e quindi sono preso bene e non vedo l'ora di vedere queste cose. E già sul mio feed di YouTube ci sono un sacco di video che fanno com'è andata la giornata in tribunale, queste cose qua, ma non ho ancora avuto tempo di dedicarmici. Confido che ne sentirò echo tramite i programmi di Satire Americani, tramite John Oliver, Colbert e gli altri. Quindi spero prima o poi di avere
+
+cose più succose. Quello che ho letto adesso è che Ailono non se la sta giocando tanto bene. Innanzitutto la critica è che probabilmente lui non ne frega niente dell'etica e della morale che ci sia sotto, nonostante lui abbia messo una trentina di milioni di dollari in una società che doveva essere una profita e poi è cambiata. pare che ci sia un po' di retroscena a mettere in discussione
+
+le, i buoni propositi di Elon, perché se da un lato dice, siamo preoccupati del fatto che l'IGA ci ucciderà tutti e queste cose, abbiamo bisogno di un po' di etica, dall'altro è saltato fuori che Elon aveva cercato di comprarsi OpenAI e di diffonderla con Tesla per avere tutto quanto in uno. Però glielo ha detto di no e a quanto pare si è un pochettino risentito, allora detto, allora il pallone ve lo porto via. E quindi c'è questa parte qua.
+
+Stefano Maestri (48:20.842)
+Sempre lì a guardare il perono all'uovo.
+
+Paolo Antinori (48:29.842)
+Poi appunto pare che Elon sia anche in tribunale un attimino erratic, come si dice in inglese, quindi non so qual è la traduzione più più appropriata in italiano tipo sconclusionato, non lo so, e salta un po' di palo in frasca, tant'è che gli avvocati seri, come quelli delle serie che guardo io, lo stanno un pochettino arrostendo perché lui dice quello che gli viene in mente, non quello per cui preparato. Quindi...
+
+se ci si basa sulle conversazioni iniziali è difficile che possa finire bene per Elon da questo caso. Una delle rivelazioni che ho trovato più interessanti, non necessariamente vera, ma più interessanti, è che una delle motivazioni che Elon cita
+
+per avere investito in OpenAI a suo tempo quando era un no profit che aveva l'obiettivo di portare l'AI, la conoscenza delle AI all'umanità, assolutamente nobile, era che aveva fatto una chiacchiera con i due fondatori di Google e gli avevano detto, gli aveva chiesto, senti ma non sei preoccupato che le AI ci facciano fuori tutti quanti?
+
+Alessio Soldano (49:28.46)
+Nobile.
+
+Paolo Antinori (49:41.458)
+E una delle risposte attribuite a uno di loro è a quanto pare questa. sì, ma non è un problema fin tanto che poi l'AI sopravvive allo stermiglio dell'umanità. E questo commento, se è vero, mi fa ovviamente venire un po' gli occhi a palla e posso capire la preoccupazione di Elon. Adesso c'è da dire se sia mai stato vero. Però se sia mai stato vero oppure no, comunque...
+
+che qualcuno, non necessariamente loro, possa immaginarla così è abbastanza inquietante e non credo che il processo attuale porterà ad alcun che di utile in questa situazione ma mi fa essere lievemente più preoccupato che ci possa essere lo scienziato pazzo che per amore della scienza voglia più bene al fantasma dell'opera che voglia più bene ai computer che non agli umani
+
+e che quindi porterà a questa cosa. Comunque immagino che altre nuove rivelazioni e supercazzole usciranno dal processo di Elon e Sam Altman, quindi vi terrò aggiornati in man mano che ne esco.
+
+Alessio Soldano (50:47.629)
+così invece di continuare a sentire solo dell'omicidio di Garlasco sentiamo anche del processo OpenAI.
+
+Stefano Maestri (50:53.547)
+No, ma che poi... Allora, quella affermazione lì di uno dei due fondatori di Google potrebbe tranquillamente averla fatta Sergei Brin perché è un personaggio leggerissimamente sopra le righe nelle sue uscite, per cui non... Cioè ci credo abbastanza che qualcuno possa averla detta, che poi non... e penso anche chi ecco, tra i due, però...
+
+Certo, chi ha in questo momento in mano le IAI di Google, è Demisos Abyss, ha visioni diverse e non fa altro che ribadirlo nelle sue interviste. Decisamente human centric, molto più di tutti gli altri, anche più del buon D'Arione. Ma poi ho visto un'altra cosa, Paolo, che profeziauto o verante.
+
+Alessio Soldano (51:34.733)
+decisamente.
+
+Stefano Maestri (51:51.722)
+compriamo i server alla Lidl quindi compriamo i datacenter alla Lidl
+
+Paolo Antinori (51:55.73)
+Sì, facciamo dell'autocitazionismo di una puntata in cui non ho idea di quale fosse e non mi interessa andare a cercare, ma scherzando in passato, parlavamo di modelli cinesi e del fatto che appunto arrivano a basso costo e tutto quanto, democratizzazione e stavamo scherzando che in un prossimo futuro uno il modello lo comprerà su Aliexpress, che è il nostro equivalente di comprarlo alla Lidl. E, induivate un po'?
+
+Alessio Soldano (52:11.053)
+democratizzazione.
+
+Paolo Antinori (52:24.306)
+Qualcosa di vagamente simile sta succedendo in realtà in Europa, spinti dall'esigenza percepita di ograzie dai governanti a livello europeo che dicono forse non è che ci possiamo proprio fidare della
+
+delle buone intenzioni degli Stati Uniti, nostro alleato storico che facce sempre la cosa giusta e delle loro società, forse è il caso che iniziamo a pensare ad avere un'infrastruttura proprietaria che ci isoli dai rischi di dipendere eccessivamente da qualcuno di terze parti. Un parallelo se volete di quello che è successo con il carburante con la Russia all'inizio della guerra della Russia dell'Ucraina.
+
+realistico se chiedete a me come scenario e allora hanno detto organizziamoci, proviamo a inventarci qualcosa e la prima infrastruttura che andava a mancare è quella dei cloud services perché ora come ora la fata parlo è eWS, Microsoft e Google principalmente probabilmente anche Alibaba ma nessuno se ne ricorda mai di loro e di strettamente europeo non c'è granché e anche
+
+vari region locali europee che sono state garantite è stato notato recentemente come sono
+
+Scusate, ho attivato Google sul telefono che mi ha sentito che parlavo male di lui e mi ha risposto. Dicevo, non abbiamo niente di europeo e anche nonostante ci siano delle regioni ufficialmente con dei data center europei, sono soggetti alla legge americana. E la legge americana, qualcuno è andato finalmente a guardare, dice che il Cloud Act, se il governo ha bisogno per questioni di sicurezza nazionale, che a quanto pare succedono per ogni cazzata adesso negli Stati Uniti,
+
+Paolo Antinori (54:14.962)
+ha bisogno di andare dai provider a chiedere i tuoi dati, non importa tu dove sei, sotto quale legislazione, loro gli li danno. E questa è una cosa vera. È tanto vera che, oltre a essere stata notata dalla comunità europea, è stata notata da qualcuno vicino agli europei, ovvero la Svizzera, che è finita in prima pagina perché hanno reciso un contratto di 200 milioni o di più, non lo so, non mi ricordo questi fantanumeri, con...
+
+credo, proprio perché non gli poteva garantire questa cosa. Fondamentalmente quando hanno chiesto e verificato gli hanno detto no i vostri dati sono sì privatissimi tranne che quella volta in cui ci richiedono loro e siccome gli svizzeri ci tengono a queste faccende tradizionalmente avendo un piede in due scarpe la privacy è diciamo il loro brand hanno preso
+
+direttamente questa situazione basta hanno annunciato questo taglio da quelle parti. Come si risolverà quello ancora non lo so nel senso che non so se guarderanno a una soluzione locale loro, soluzione europea o soluzione di qualcun altro o forse forzeranno la mano di là per riuscire a cambiare le regole per loro non lo so però sta di fatto che ci sia arrivato in prima pagina con questa cosa ed è una questione. Quindi laddove la Svizzera si muove e si muove anche l'Europa
+
+L'Europa si è mossa in una maniera un pochettino diversa, ovvero facendo un bando per andare a chiedere iniziative commerciali europee di poter fornire un servizio di cloud che sia dignitoso. È stata fatta in maniera molto democratica questa cosa, tant'è che, anziché emergere un supergrupo, una coordinazione di qualcuno che vi possa dare vagamente fiducia che sia capace di farlo, non lo so.
+
+avrei sognato che il Cerna lo facesse, che ok siamo in Svizzera ma qualcuno con un nome di cui ti puoi fidare, invece no. Vari attori più o meno random sono avanzati in Germania, in Olanda e in altri posti, niente dall'Italia quindi non avremo il cloud di poste, almeno una l'abbiamo fatta giusta. E uno di questi è una società legata alla Lidl.
+
+Alessio Soldano (56:19.885)
+perché non poste?
+
+Paolo Antinori (56:34.098)
+Non è proprio la Lidl, il titolo è il clavo della Lidl, in realtà è una sorta di società di servizi che è nata come sottosocettà per le esigenze del gruppo Lidl e poi si è specializzata, se volete, alla stessa relazione che ci passava tra Amazon e AWS. Però il nome veniva da lì.
+
+Quindi da qualche parte tra un po ci sarà il cloud della Lidl che sarà la nostra variante rispetto al cloud di AWS. Ci scherziamo sopra, realtà la Lidl il suo mestiere lo fa anche bene. E' più da vedere a mio avviso, la vera scommessa non è tanto chi te la gestisce, quanto più vedere se le ambizioni di arrivare ad avere una scala tale da potersi autosostenere che sia se non
+
+nella stessa stessa stessa stessa stessa stessa stessa stessa stessa stessa stessa stessa stessa stessa stessa stessa stessa stessa stessa stessa stessa stessa stessa stessa stessa
+
+Stefano Maestri (57:37.45)
+No è una cosa buona e fondamentale perché c'è anche, l'ho nominato tante volte questa cosa credo anche qua in podcast e di sicuro ne ho parlato in qualche intervista con alcuni degli ospiti, c'è anche uno scenario possibile, possibile quasi probabile ad oggi, mi sbilancio nel dire quasi probabile, che è che ad un certo punto gli cosiddetti agenti così
+
+qui vi parlo del mio di agente no a parte gli scherzi i cosiddetti agenti quando staranno dentro al cloud eccetera arriveranno ad un punto in cui produrranno valore ok? produrranno valore è una cosa che dice anche Draghi e non me la sto mettendo a io e nel momento in cui è un agente che produce valore c'è uno scenario possibile in cui
+
+essere tassato è il valore prodotto. Tradizionalmente nell'economia europea la tassa viene messa sul valore prodotto, non tanto su chi lo produce, ma perché è più comodo tassare la persona che il valore, ma in realtà quello che tu ti tassi è il valore prodotto. E se il valore è prodotto su un suolo diverso da quello europeo
+
+potrebbe sottostare ad una tassazione che è diversa da quella europea.
+
+per cui il problema comincia ad avventare complesso anche di sostenibilità del welfare di cui l'Europa ha giustamente il fiore all'occhiello. cui guardare avanti e poter produrre valore digitale sul suolo europeo è una cosa che non è soltanto importante dal punto di vista della privacy che interessa molto l'Europa e ne ha sempre fatto un cavallo di battaglia va benissimo.
+
+Stefano Maestri (59:38.442)
+ma c'è anche un discorso molto più pratico di dove vanno finire poi i soldi.
+
+Alessio Soldano (59:44.461)
+Sì, peraltro questo è un ginepraio legale, mica da ridere, mi vengono in mente tutte le questioni legate alle criptovalute, alla tassazione, capire dove risiedono i fondi, se sono in Europa, negli Stati Uniti, dove in realtà non lo sono, cioè sono nel ledger, come fai a dire dove sono?
+
+Stefano Maestri (59:52.042)
+Certo.
+
+Stefano Maestri (01:00:05.962)
+Esatto, il gene praio però è effettivamente un gene praio e per quanto riguarda la blockchain è più difficile perché è una cosa distribuita ed è costruita per evitare quella cosa lì in realtà. Una delle idee è quella lì. Chi sta facendo e chi farà servizi basati sugli agenti li metterà tendenzialmente più in un cloud.
+
+Alessio Soldano (01:00:21.932)
+Sì.
+
+Stefano Maestri (01:00:33.899)
+dove sì, esiste quel problema lì perché ci sono molti punti, eccetera eccetera, però un pochettino più gestibile ed è più interesse di tutti arrivare a definire chi produce che osa come valore. Quindi forse è un problema leggermente meno complesso ma che può diventare sanguinoso se non hai niente che sul suolo italiano europeo che produce valore.
+
+Alessio Soldano (01:00:51.084)
+sì
+
+Alessio Soldano (01:01:03.788)
+poter offrire la possibilità dal punto di vista di Chimete impede questa cosa qui di dire va bene ma tutto questo gira qua e quindi voglio che sia trattato con le leggi di qua va bene
+
+Stefano Maestri (01:01:11.786)
+Esatto.
+
+Stefano Maestri (01:01:16.778)
+Esatto, esatto, proprio questo per segnalare la cosa. Ma parlando di agenti e parlando anche di località, di fare le cose in locale, io vi ho raccontato che ho messo in piedi Hermes Agent a casa mia su un vecchio computer, usando un modello cinese così per non farmi mancare niente.
+
+e sta facendo delle cose, sta facendo delle cose di cui parlerò poi anche in newsletter che esce il lunedì, ma che vi volevo raccontare magari far vedere anche qualcosa per chi è arrivato fino in fondo qua almeno.
+
+Alessio Soldano (01:02:04.588)
+cosa ti interrompo, giusto per chiarire tu stai facendo girare la gente in locale con il modello però offerto in cloud da un provider cinese
+
+Stefano Maestri (01:02:13.898)
+corretto perché non ho una macchina su cui far girare un modello sufficientemente performante per fargli fare queste cose quindi il modello è cloud ma invece l'agente, l'arnese per usare il termine tecnico che è Hermes agent gira in locale su una mia macchina e i file che modifica le cose che fa le fa lì
+
+e fa lì ma in più gli ho dato accesso a tutta una serie di servizi miei, lo raccontavo l'altra volta anche alla mia mail e quant'altro cercando di prendere tutte le accortezze possibili ho scelto Hermes e non OpenClaw per questo motivo perché è un po' più facile personalizzare gli accessi, cioè ha un sistema di skill molto chiaro
+
+ad esempio lo dicevo l'altra volta su Gmail gli ho detto va bene vai su Gmail fammi vedere come ci va e lui mi ha fatto vedere il suo script e io gli ho detto ecco quei due metodi lì quelli che fanno delete e quello che fa send della mail li cancelliamo proprio dallo script che usi non è che ti dico di non usarli, cancellali proprio non devi più averli
+
+e poi ho verificato che l'avesse fatto e così è. E che cosa gli faccio fare? Li faccio fare un sacco di cose. Dalle cose più banali, se vuoi di utilizzo ciclico, per cui al mattino o ogni ora mi controlla la mail, mi dice quali mail sono soltanto informative, me ne fa un resunto di una riga.
+
+i quali invece hanno bisogno della mia attenzione andando a leggere la mail e quindi capendo che ha bisogno della mia attenzione e in più per quelle che prevedono una risposta gli faccio generare un draft della risposta non la manda, io me le trovo poi in gmail già draftate poi l'edito ma ho un punto di partenza almeno e mi guarda il calendario
+
+Stefano Maestri (01:04:28.939)
+mi dice quelli sono gli appuntamenti del giorno e quelli importanti della settimana, me quelli importanti sono quelli di un certo colore, avevamo discusso un attimo come definire queste cose, mi trovo i buchi, gli dico devo parlare con Alessio, ci mettiamo un'ora, mi trovi un buco nel calendario, mi fa 3 4 proposte, dico va bene quello lì e lui mi fissa l'appuntamento, cose da gestione di questo tipo.
+
+mi gestisce le cose in casa per cui gli ho dato tutte le varie prese smart, tutto quello che di smart ho in casa che non è tanto quanto Paolo ma qualcosa ho anch'io e quindi tipo da fuori casa gli dico di accendere il condizionatore o la pompa di calore, di controllare le luci, le telecamere, queste cose qua
+
+e poi fa cose... allora l'accesso con Telegram per me fa cose anche abbastanza proattive, cioè nel senso, l'altro giorno gli dico guarda il mio sito personale, un sito personale tipo biglietto da visita elettronico, no? Cosa ne pensi? La risposta non è stata gentilissima ma fa niente
+
+Alessio Soldano (01:05:56.941)
+più o meno a livello della risposta su come erano le thumbnail.
+
+Stefano Maestri (01:06:01.418)
+Sì, sì, più o meno. È stato più gentile, perché anche lei gli dice come deve comportarsi con te. Io gli detto di essere estremamente franco e estremamente diretto. E lui mi ha detto sì, capisco il tentativo, però non ci siamo. E gli dico, vabbè, cosa facciamo? Questo mentre mio figlio era all'allenamento di basket. Cosa facciamo, cosa non facciamo? E lui mi dice, guarda...
+
+Alessio Soldano (01:06:08.716)
+torno deve avere.
+
+Stefano Maestri (01:06:31.114)
+ti faccio tre proposte, dimmi se ti piace più una versione dark da sviluppatore o un'altra, infine io scelgo la versione dark e lui dice facciamo così, ti faccio una directory new website te la pusho, la deployo e poi tu gli dai un'occhiata e mi dici come va e lui l'ha fatto
+
+Paolo Antinori (01:06:53.97)
+scusami praticamente ti ha detto ma che te lo chiedo a fare dopo che gli hai espresso la tua scelta? Li faceva talmente schifo la tua preferenza che ha detto facciamo che faccio tutte e due poi decidi dopo
+
+Stefano Maestri (01:07:01.418)
+Sì, sì.
+
+No, no, no, no, no, ha fatto quello che gli avevo chiesto, ma la cosa incredibile di cui posso condividere una di appositiva, perché c'è il new website, aspettate che l'apro, intanto che parlo, la cosa che a me mi ha fatto...
+
+mi ha lasciato lì, è che in altre conversazioni per il podcast, per la newsletter, eccetera eccetera, io gli avevo dato nella newsletter, ad esempio, una parte agenda in cui dico le conferenze che sono state, quelle che hanno pubblicato il video, quelle dove andrò e quant'altro. E lui aveva questo
+
+informazioni perché ne avevamo già parlato lui ha una gestione della memoria ha fatto molto bene meglio di altri gerarchica e quant'altro e lui mi ha generato questa cosa qua che va di là possa piacere o non piacere
+
+Però, allora questi tre i miei contenuti, diciamo, che sono le due newsletter e il nostro podcast, c'erano nel vecchio sito, quindi non è merito suo. I progetti c'erano nel vecchio sito e quindi non è merito suo. Di queste io avevo soltanto l'ultima, il Devox, perché l'avevo fatta a mano. Invece lui ha visto che c'erano tutte le...
+
+Stefano Maestri (01:08:39.435)
+questi talk che avevo fatto o che farò e me li ha messi nella pagina prendendoci, sia le slide che i video che tutto il resto sono giusti. E questa cosa qua del prendere iniziativa mi ha abbastanza colpito.
+
+Non è l'iniziativa quella... anche chi se ne frega, che attribuivano open collo di fare le cose da solo. Però iniziativa, diciamo, intelligente. Un'altra cosa, parliamo anche di quell'argomento lì, c'è una cosa che avevamo messo in scaletta, che è un articolo... aspetta che recupero il titolo perché rischio di dire una sciocchezza.
+
+quello dei 100 milioni, 12 milioni di contesto, adesso non ce l'ho qua sotto mano però c'è un articolo di cui abbiamo parlato Alessio, giusto abbiamo parlato forse in chat, non ce l'abbiamo in scaletta, sto confondendo. Questo articolo che parla di una startup che ha fatto un
+
+Alessio Soldano (01:09:47.724)
+Sì, io non ho approfondito però...
+
+Stefano Maestri (01:09:58.858)
+modello a 12 milioni con un contesto lungo 12 milioni di token siccome ci sono stati annunci in passato di gente che faceva 100 milioni di token che poi non sono andati in nessuna parte volevo capirlo prima di parlarne tempo poco e ho detto ad Hermes ho bisogno di capire questo articolo sono in macchina quindi fammi una sintesi fatta bene
+
+Lui è partito e mi ha chiesto, mi chiedi permesso di fare quasi qualunque cosa ma perché quella è la mia scelta. in macchina e non guidante, è preciso. E mi dice, beh ma se vuoi, se mi dai il permesso di installare un Text to Speech, te lo leggo? Mi sembra una bella idea questa, fallo. Si è installato un modello Text to Speech. ha detto, intanto...
+
+ti faccio una sintesi in italiano che magari se sei in... io non gli ho detto che non stavo guidando, se sei in macchina e stai guidando è meglio se lo faccio nella tua lingua, ti faccio una sintesi in italiano e te la leggo ad alta voce. E l'ha fatto. Vi incondivido un attimo se riesco. Aspettate che vedo di aver aperto.
+
+Paolo Antinori (01:11:19.058)
+mi ti ho mandato un vocale quindi, un file audio
+
+Stefano Maestri (01:11:21.642)
+mi ha mandato un vocale? sì sì mi ha mandato un vocale allora io con a lui i vocali già li mandavo prima perché nello speech to text c'è la di default però adesso qua c'è un mare di roba perché mi ha mandato il mio calendario
+
+Stefano Maestri (01:11:42.986)
+Dove sono i vocali? Perchè non li trovo, volevo farveli sentire. Ehi qua! Allora, la lettura magari è un po' meno sexy di altre. Adesso non riesco a farveli sentire perché avevamo già provato che le cose da telegramma non va all'audio. Cioè, lo sentite voi ma poi non lo sento gli ascoltatori, non mi piace. Vi dico io che la lettura è accettabile, non è...
+
+la voce di OpenAI o quella di Eleven Labs che si può mettere. Lui mi ha subito chiesto, ce l'hai un account di Eleven Labs se ce l'hai lo uso. No, ce l'ho, pago per tante cose per quella no. E quindi questo l'ho fatto con un modello locale. Ci ha messo pochi minuti e mi ha mandato questi due riassunti con due punti di vista diversi.
+
+e allora io da quello che mi ha detto ho capito un po' di cose gli ho detto sì ma senti fami un riassunto in forma in forma tabellare non sto prendendo la finestra giusta per scuola ok, fami un riassunto in forma tabellare di questi dati e lui me l'ha scritto così e gli detto no voglio una tabella perché così a leggere capisco poco e lui mi ha fatto una tabella perché
+
+gli ho detto io che voglio sempre tutto in Markdown e io gli arrivato e detto no, non capisco un cazzo, sono in macchina, non riesco a vederla e lui ha fatto questa scelta pazzesca ha fatto un HTML per farmi la tabella fatta bene e poi si è detto da solo no ma l'utente mi ha detto che è in macchina come lo legge un HTML? Spetta
+
+lo renderizzo, faccio una foto e gli mando una foto. E mi hanno dato una foto dalla tabella. Poi se volete entriamo nel dettaglio del paper ma forse non oggi.
+
+Paolo Antinori (01:13:47.954)
+Ti... Go a niente.
+
+Stefano Maestri (01:13:48.522)
+e poi va beh dopo me ne ha fatta un'altra su un altro argomento ricordandosi che gli avevo detto che non riuscivo a leggerla e allora me l'ha data di nuovo così e buh cioè a me quella roba qua è stata abbastanza
+
+Paolo Antinori (01:13:57.906)
+In questo caso è stato
+
+Paolo Antinori (01:14:03.41)
+Allora, apprezzo, ma io l'avevo già visto. Insomma, mie lunghe conversazioni via Telegram con semplicemente ZAI, GLM, anche a me era arrivato con le conclusioni. In questo caso forse è stato proattivo che te le ha dette tutti e lui, nei miei casi invece gli davo io dei prompting nel cloud.md dicendogli, guarda che...
+
+sono in giro, quindi quando sono in giro mi servono robe brevi, uso gli emoji e queste robe, quindi mi faceva delle cose simili. Però apprezzo e capisco il wow effect.
+
+Alessio Soldano (01:14:32.972)
+è moce
+
+Stefano Maestri (01:14:36.491)
+e ha fatto... io sono particolarmente soddisfatto anche e soprattutto dal fatto che abbia un accesso lascia stare i servizi in cloud anche perché poter accedere alla mail, al calendario è una roba notevole, poter mandare un vocale mentre sono in giro e dire mi sono ricordato che devi aggiungere questo task e poi te lo trovi in gtask è una figata
+
+Paolo Antinori (01:15:03.122)
+tanto roba.
+
+Stefano Maestri (01:15:05.738)
+i DEM per gli appuntamenti sul calendario e cose così però anche che abbia accesso al file system ad esempio vi ho parlato dell'LLM Wiki quello di Carpati che io uso per pensare e per analizzare i paper in questo momento sto guardando i paper sulla memoria di lungo termine e per in questo caso più per risparmiare token e tempo che altro
+
+C'è la fase, dopo che io raccolto tutti i paper, c'è la fase di digest che vuol dire che si scarica tutti i paper in PDF, le legge, general wiki, crea i collegamenti, eccetera che comunque ci mette una mezz'ora a 40 minuti. Questo su Cloud Code anche, non solo lui. E la facevo al mattino, però mi scocciavo, la lanciavo, facevo altro. parte il numero di token non banalissimo che uso per fare questa cosa.
+
+si pagano e quindi lo facevo comunque con GLM e quindi ci metteva un po'. Adesso ho un task assegnato a lui che si fa la rebase del github dove io gli ho detto le cose la sera, si fa tutta la parte dei digest e di reflect e quando ho finito mi crea una pull request e io mergio la pull request e poi il lavoro sulle cose già digerite.
+
+e questo è un bel risparmio di tempo ultimo ma non ultimo e l'avete forse visto su l'ince gli ho fatto fare la pullera questa review di cose che avevo fatto con Clotucode
+
+Paolo Antinori (01:16:38.162)
+mi hai convinto
+
+Stefano Maestri (01:16:49.803)
+e lì è stato affascinante perché se la suonavano se la cantavano perché Claudio gli ha detto guarda che c'è una puller in questa review, l'ha andato a vederla e detto sì bravo questo è interessante, questa la faccio, questa la faccio ha committato e poi ha messo un commento no questa non la faccio perché più una periodo di tempo che altro non so che cosa tu abbia visto nel codice ma ti sbagli e quindi è stato carino che se la siano suonata e cantata che poi è un po' quello
+
+che quando fai slash simplify in locale di fatto si fa una pull a questa review da solo, crude
+
+Paolo Antinori (01:17:23.218)
+ci
+
+Stefano Maestri (01:17:26.026)
+Così, entusiasmo a palla per Hermes. Non posso più vivere senza.
+
+Paolo Antinori (01:17:29.81)
+mi è fatto venire in mente un caso d'uso per cui mi serve questa cosa quindi pubblicamente avviserò che lo farò anche io per finta la comunione
+
+Stefano Maestri (01:17:34.794)
+Per certe
+
+Stefano Maestri (01:17:40.778)
+Sono il diavolo tentatore, si sa.
+
+Stefano Maestri (01:17:49.194)
+e allora se non volete parlare di quel peperlì complicatissimo di cui io mi sono preparato ma il tempo potrebbe essere mediamente lungo credo che più o meno siamo arrivati in fondo alla scaletta diciamo soltanto questa cosa che sempre nel mondo delle tentazioni l'idea di passare a codex perché c'ha gli animaletti che parlano mentre fai il codice è una cosa
+
+a cui sto cercando di resistere ma non so fino a quando riuscirò.
+
+Paolo Antinori (01:18:19.986)
+Senti, fai mi vedere uno screenshot perché come ti dicevo io quella cosa l'avevo attivata tempo fa
+
+Stefano Maestri (01:18:23.594)
+Non ce l'ho pronto, aspetta. C'è l'ho codex, non... Apriamolo per il prossimo puntato con lo screenshot. Non c'ho lo screenshot pronto. C'è l'ho su codex, ma c'ho un abbonamento piccolo e non lo uso tanto. Però l'ho provato e devo dire che, insomma, l'animaletto... Perché è un animaletto fatto bene, non è come quello piccolino...
+
+Alessio Soldano (01:18:27.916)
+apriamo la prossima puntata con lo screenshot con gli animaletti dai
+
+Paolo Antinori (01:18:36.722)
+meglio
+
+Stefano Maestri (01:18:50.762)
+bruttino che aveva fatto quello del code, cioè questo è proprio bello, entra, ti cammina in mezzo allo schermo, rompa anche un po' le palle se vuoi, però...
+
+Paolo Antinori (01:19:00.018)
+Quindi il metaverso di Zuckerberg aveva il suo perché e l'unico perché era per i programmatori per fargli vedere i cartoni animati.
+
+Stefano Maestri (01:19:12.682)
+No, perché lo dico, perché ho provato un po' Codex perché lo sto provando con l'Inchase H che ha un mare di novità andate a vedervele sul sito, sto di dirle qua io e Claude abbiamo fatto un sacco di cose in questi giorni compreso la modalità paranoica che ha dagli estimatori e quindi andate a vedervele se volete
+
+Va bene, ci salutiamo, salutiamo il pubblico, numeroso, mettete campanelline, stelline, guardate gli shorts.
+
+Alessio Soldano (01:19:44.812)
+prossimo
+
+iscrivetevi al canale.
+
+Paolo Antinori (01:19:48.082)
+E non perdetevi la copertina di questa settimana che vedrà Alessio in copertina.
+
+Stefano Maestri (01:19:54.826)
+Sì, tocca ad Alessio, tocca ad Alessio. Poi dicevo anche che non solo tocca ad Alessio per la copertina, poi cercheremo di farle ancora le copertine, così magari un filo meno Bruce Willis, perché l'ultima copertina con me tutti mi hanno detto che sembrava Bruce Willis quando era in forma. Grazie ragazzi.
+
+Paolo Antinori (01:20:13.906)
+prendi quello che ti viene detto, io ci sono passato, fai buon viso cattivo gioco e prendi tutto quello che ti viene detto.
+
+Stefano Maestri (01:20:21.002)
+Bene, bene, adesso tocca ad Alessio. Vado subito a vedere come fare la copertina per Alessio. Ciao!
+
+Alessio Soldano (01:20:29.965)
+Ciao!
+

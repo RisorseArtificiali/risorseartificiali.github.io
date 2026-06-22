@@ -1,0 +1,59 @@
+- main [ref=e5]:
+  - generic [ref=e6]:
+    - 'button "Language: English" [ref=e11]':
+      - img [ref=e15]
+      - generic [ref=e17]: en
+    - link "Sign in" [ref=e21]:
+      - img [ref=e25]
+      - generic [ref=e27]: Sign in
+  - generic [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e32]:
+        - img "YouTube" [ref=e33]
+        - generic [ref=e34]: A Google company
+      - generic [ref=e35]:
+        - heading "Before you continue to YouTube" [level=1] [ref=e36]
+        - generic [ref=e37]:
+          - text: A reminder that showing ads is the primary way we fund our services. Learn more about our use of
+          - link "data for advertising (Opens in a new tab)" [ref=e38] [cursor=pointer]:
+            - /url: https://howwemakemoney.withgoogle.com/en
+            - text: data for advertising
+            - generic "(Opens in a new tab)" [ref=e39]:
+              - img [ref=e40]
+          - text: .
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - paragraph [ref=e44]:
+              - text: We use
+              - link "cookies (Opens in a new tab)" [ref=e45] [cursor=pointer]:
+                - /url: https://policies.google.com/technologies/cookies?hl=en&utm_source=ucb
+                - text: cookies
+                - generic "(Opens in a new tab)" [ref=e46]:
+                  - img [ref=e47]
+              - text: and data to
+            - list [ref=e49]:
+              - listitem [ref=e50]: Deliver and maintain Google services
+              - listitem [ref=e51]: Track outages and protect against spam, fraud, and abuse
+              - listitem [ref=e52]: Measure audience engagement and site statistics to understand how our services are used and enhance the quality of those services
+          - generic [ref=e53]:
+            - paragraph [ref=e54]: If you choose to “Accept all,” we will also use cookies and data to
+            - list [ref=e55]:
+              - listitem [ref=e56]: Develop and improve new services
+              - listitem [ref=e57]: Deliver and measure the effectiveness of ads
+              - listitem [ref=e58]: Show personalized content, depending on your settings
+              - listitem [ref=e59]: Show personalized ads, depending on your settings
+          - paragraph [ref=e61]: If you choose to “Reject all,” we will not use cookies for these additional purposes.
+          - paragraph [ref=e63]: Non-personalized content and ads are influenced by things like the content you’re currently viewing and your location (ad serving is based on general location). Personalized content and ads can also include things like video recommendations, a customized YouTube homepage, and tailored ads based on past activity, like the videos you watch and the things you search for on YouTube. We also use cookies and data to tailor the experience to be age-appropriate, if relevant.
+          - paragraph [ref=e65]: Select “More options” to see additional information, including details about managing your privacy settings. You can also visit g.co/privacytools at any time.
+      - generic [ref=e67]:
+        - link "More options for personalization settings and cookies" [ref=e70]:
+          - generic [ref=e73]: More options
+        - button "Reject all" [ref=e77]:
+          - generic [ref=e80]: Reject all
+        - button "Accept all" [ref=e84]:
+          - generic [ref=e87]: Accept all
+    - generic [ref=e90]:
+      - link "Privacy" [ref=e93]:
+        - generic [ref=e96]: Privacy
+      - link "Terms" [ref=e99]:
+        - generic [ref=e102]: Terms

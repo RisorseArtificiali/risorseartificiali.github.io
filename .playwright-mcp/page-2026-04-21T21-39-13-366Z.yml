@@ -1,0 +1,136 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - link "Skip to main content" [ref=e6] [cursor=pointer]:
+      - /url: "#main-view"
+      - generic [ref=e7]: Skip to main content
+    - link "Spotify" [ref=e9] [cursor=pointer]:
+      - /url: /
+      - img "Spotify" [ref=e10]
+    - generic [ref=e13]:
+      - button "Home" [ref=e14] [cursor=pointer]:
+        - img [ref=e16]
+      - search [ref=e19]:
+        - button "Search" [ref=e21] [cursor=pointer]:
+          - img [ref=e23]
+        - generic [ref=e25]:
+          - combobox "What do you want to play?" [ref=e26]
+          - generic:
+            - generic: CtrlShiftL
+    - generic [ref=e28]:
+      - link "Install App" [ref=e29] [cursor=pointer]:
+        - /url: /download
+        - img [ref=e31]
+        - generic [ref=e34]: Install App
+      - generic [ref=e35]:
+        - button "Sign up" [ref=e36] [cursor=pointer]
+        - button "Log in" [ref=e37] [cursor=pointer]:
+          - generic [ref=e38]: Log in
+      - button [ref=e39] [cursor=pointer]:
+        - img [ref=e40]
+  - generic [ref=e42]:
+    - navigation "Main" [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e48]:
+            - heading "Your Library" [level=1] [ref=e50]
+            - button "Create" [ref=e52] [cursor=pointer]:
+              - img [ref=e53]
+          - generic [ref=e57]:
+            - generic [ref=e58]:
+              - generic [ref=e59]:
+                - generic [ref=e60]: Create your first playlist
+                - generic [ref=e61]: It's easy, we'll help you
+              - button "Create playlist" [ref=e63] [cursor=pointer]:
+                - generic [ref=e64]: Create playlist
+            - generic [ref=e65]:
+              - generic [ref=e66]:
+                - generic [ref=e67]: Let's find some podcasts to follow
+                - generic [ref=e68]: We'll keep you updated on new episodes
+              - link "Browse podcasts" [ref=e70] [cursor=pointer]:
+                - /url: /genre/podcasts-web
+                - generic [ref=e71]: Browse podcasts
+            - grid "Your Library" [ref=e73]:
+              - generic [ref=e74]:
+                - row
+                - row
+        - button "English" [ref=e77] [cursor=pointer]:
+          - img [ref=e79]
+          - text: English
+    - generic [ref=e82]:
+      - text: Resize main navigation
+      - slider "Resize main navigation" [ref=e83]: "280"
+  - complementary "Now playing bar" [ref=e85]:
+    - generic [ref=e86] [cursor=pointer]:
+      - generic [ref=e87]:
+        - paragraph [ref=e88]: Preview of Spotify
+        - paragraph [ref=e89]: Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.
+      - button "Sign up free" [ref=e90]:
+        - generic [ref=e91]: Sign up free
+    - generic:
+      - generic "Player controls" [ref=e93]:
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - switch "Enable shuffle" [disabled] [ref=e96]:
+              - img [ref=e98]
+            - button "Previous" [disabled] [ref=e101]:
+              - img [ref=e103]
+          - button "Pause" [disabled] [ref=e105]:
+            - img [ref=e108]
+          - generic [ref=e110]:
+            - button "Next" [disabled] [ref=e111]:
+              - img [ref=e113]
+            - checkbox "Disable repeat" [disabled] [ref=e115]:
+              - img [ref=e117]
+        - generic [ref=e119]:
+          - generic [ref=e120]: "-:--"
+          - generic [ref=e123]:
+            - text: Change progress
+            - slider "Change progress" [disabled] [ref=e124]: "0"
+          - generic [ref=e130]: "-:--"
+      - generic [ref=e132]:
+        - button "Now playing view" [disabled] [ref=e133]:
+          - img [ref=e135]
+        - generic [ref=e138]:
+          - button "Mute" [ref=e139] [cursor=pointer]:
+            - img [ref=e141]
+          - generic [ref=e146]:
+            - text: Change volume
+            - slider "Change volume" [ref=e147]: "1"
+  - generic [ref=e153]:
+    - banner "Top bar and user menu" [ref=e154]
+    - main "Risorse Artificiali. Appunti e spunti dal mondo dell’Intelligenza Artificiale | Podcast on Spotify" [active] [ref=e160]:
+      - generic [ref=e161]:
+        - generic [ref=e165]:
+          - img [ref=e168]
+          - generic [ref=e169]:
+            - generic [ref=e170]: Podcast
+            - heading "Risorse Artificiali. Appunti e spunti dal mondo dell’Intelligenza Artificiale" [level=1] [ref=e173]
+            - generic [ref=e174]: RisorseArtificiali
+        - generic [ref=e179]:
+          - button "Follow" [ref=e180] [cursor=pointer]
+          - button "More options for Risorse Artificiali. Appunti e spunti dal mondo dell’Intelligenza Artificiale" [ref=e181] [cursor=pointer]:
+            - img [ref=e183]
+        - generic [ref=e185]:
+          - generic [ref=e186]:
+            - heading "About" [level=2] [ref=e187]
+            - generic [ref=e190]:
+              - generic [ref=e191]:
+                - text: 🎙️ Risorse Artificiali è il podcast italiano che esplora il mondo dell’Intelligenza Artificiale, tra AI generativa, agenti autonomi, machine learning e innovazione nel software.
+                - text: Ogni settimana, tre ingegneri e
+              - button "… Show more" [ref=e192] [cursor=pointer]:
+                - generic [ref=e193]: … Show more
+            - generic [ref=e194]:
+              - generic [ref=e195]:
+                - button "4.9 stars, 37 ratings" [ref=e196] [cursor=pointer]:
+                  - generic [ref=e197]: "4.9"
+                  - img [ref=e198]
+                  - generic [ref=e200]: (37)
+                - text: •
+              - link "Technology" [ref=e202] [cursor=pointer]:
+                - /url: /genre/tech_interviews_podcasts
+                - checkbox "Technology" [ref=e203]:
+                  - generic [ref=e204]: Technology
+          - generic [ref=e205]:
+            - heading "All Episodes" [level=2] [ref=e207]
+            - treegrid
+      - separator [ref=e209]

@@ -1,0 +1,66 @@
+---
+layout: single
+---
+
+{% comment %}
+Layout dedicato per gli episodi del podcast.
+Eredita da `single` di Minimal Mistakes (chrome, sidebar, share di default, ecc.)
+e inietta in testa al content:
+  - Player embed (YouTube + Spotify + Apple deep-link)
+  - Badge episodio / tipo
+In coda al content:
+  - Sezione "Ospite" (solo se page.guest_name)
+  - Sezione "Risorse citate" (solo se page.resources)
+  - Share buttons custom con UTM
+
+Nota: Minimal Mistakes renderizza {{ content }} nel parent layout. Qui
+incapsuliamo content con componenti prima/dopo.
+
+Come usare: nel frontmatter del post scrivi `layout: episode`.
+{% endcomment %}
+
+{% include podcasts/episode-player.html %}
+
+{{ content }}
+
+{%- if page.guest_name -%}
+<section class="episode-guest" style="margin-top: 2em; padding: 1.2em; background: #f8f9fa; border-left: 4px solid #0f3460; border-radius: 4px;">
+  <h3 style="margin-top: 0; font-size: 1.15em;">Ospite: {{ page.guest_name }}</h3>
+  {%- if page.guest_bio -%}
+  <p style="margin-bottom: 0.6em;">{{ page.guest_bio }}</p>
+  {%- endif -%}
+  <p style="font-size: 0.9em; margin-bottom: 0;">
+    {%- if page.guest_linkedin -%}
+    <a href="{{ page.guest_linkedin }}" rel="noopener" target="_blank"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
+    {%- endif -%}
+    {%- if page.guest_linkedin and page.guest_twitter -%} · {%- endif -%}
+    {%- if page.guest_twitter -%}
+    <a href="{{ page.guest_twitter }}" rel="noopener" target="_blank"><i class="fab fa-x-twitter" aria-hidden="true"></i> X/Twitter</a>
+    {%- endif -%}
+    {%- if page.guest_website -%}
+    {%- if page.guest_linkedin or page.guest_twitter -%} · {%- endif -%}
+    <a href="{{ page.guest_website }}" rel="noopener" target="_blank"><i class="fas fa-globe" aria-hidden="true"></i> Sito</a>
+    {%- endif -%}
+  </p>
+</section>
+{%- endif -%}
+
+{%- if page.resources and page.resources.size > 0 -%}
+<section class="episode-resources" style="margin-top: 2em;">
+  <h3 style="font-size: 1.15em; border-bottom: 2px solid #0f3460; padding-bottom: 0.3em;">Risorse citate in questo episodio</h3>
+  <ul style="margin-top: 0.6em;">
+    {%- for resource in page.resources -%}
+    <li>
+      {%- if resource.url -%}
+      <a href="{{ resource.url }}" rel="noopener" target="_blank">{{ resource.title | default: resource.url }}</a>
+      {%- if resource.description -%} — {{ resource.description }}{%- endif -%}
+      {%- else -%}
+      {{ resource.title }}
+      {%- endif -%}
+    </li>
+    {%- endfor -%}
+  </ul>
+</section>
+{%- endif -%}
+
+{% include social-share.html %}

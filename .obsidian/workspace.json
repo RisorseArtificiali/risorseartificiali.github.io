@@ -1,0 +1,226 @@
+{
+  "main": {
+    "id": "f247cde2b4fafedb",
+    "type": "split",
+    "children": [
+      {
+        "id": "26bd93197b4f43bf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ef6b89e5f1cb42ec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "podcast-promo/episodes/2026-06-20-clona-ogni-voce-in-locale-gratis-ora-preoccupati_promo.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-06-20-clona-ogni-voce-in-locale-gratis-ora-preoccupati_promo"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "eb21c0f3861c0d0b",
+    "type": "split",
+    "children": [
+      {
+        "id": "308fdb22c575f31c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f26ef7cb4069d3d0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "dd9a8572838e093f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "d81cf2908814aa12",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "609ea5db3843f2b3",
+    "type": "split",
+    "children": [
+      {
+        "id": "a4e460a300b8546d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "65df086db46debc5",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "analisi-podcast/improvements-April22.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for improvements-April22"
+            }
+          },
+          {
+            "id": "ab29e02d32fdce27",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "analisi-podcast/improvements-April22.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from improvements-April22"
+            }
+          },
+          {
+            "id": "d7496ebacaaf99b0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c6b0172599853a03",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "96e1e5d4ec753455",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "analisi-podcast/improvements-April22.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of improvements-April22"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "ef6b89e5f1cb42ec",
+  "lastOpenFiles": [
+    "_posts/2026-06-20-clona-ogni-voce-in-locale-gratis-ora-preoccupati.md",
+    "_posts/2026-06-20-clona-ogni-voce-in-locale-gratis-ora-preoccupati.md.tmp.2.4f14cb6b024f",
+    "temp/simone_basso_domande_e_apertura.md",
+    "podcast-promo/episodes/2026-06-20-clona-ogni-voce-in-locale-gratis-ora-preoccupati_promo.md",
+    "podcast-promo/episodes/2026-06-20-clona-ogni-voce-in-locale-gratis-ora-preoccupati_promo.md.tmp.2.175481523509",
+    "temp/tommaso.txt",
+    "temp/simone_basso_briefing.md",
+    "temp/simone_basso_domande_e_apertura.md.tmp.2.44d00ee7e9cb",
+    "temp/simone_basso_domande_e_apertura.md.tmp.2.10465316a9b2",
+    "temp/simone_basso_domande_e_apertura.md.tmp.2.8c1513bd3137",
+    "temp/simone_basso_domande_e_apertura.md.tmp.2.cef8cd73ebc3",
+    "temp/simone_basso_domande_e_apertura.md.tmp.2.002cdc9a69d8",
+    "temp/simone_basso_domande_e_apertura.md.tmp.2.40b6eb7e5c82",
+    "temp/simone_basso_domande_e_apertura.md.tmp.2.04aba41fc23e",
+    "temp/simone_basso_intervista.md",
+    "podcast-promo/episodes/2026-06-10-context-engineering-per-agenti-ai-roberto-stagi_promo.md",
+    "podcast-promo/episodes/2026-06-13-scrivere-codice-e-una-commodity-fable-e-i-workflow_promo.md",
+    "_posts/2026-06-10-context-engineering-per-agenti-ai-roberto-stagi.md",
+    "_posts/2026-06-06-workflow-dinamici-ai-che-si-scrive-gli-harness.md",
+    "podcast-promo/episodes/2026-06-06-workflow-dinamici-ai-che-si-scrive-gli-harness_promo.md",
+    "temp/script_apertura_roberto_stagi.md",
+    "temp/scaletta_episodio_vittorio_banfi.md",
+    "temp/briefing_roberto_stagi.md",
+    "temp/vittorio_banfi_profilo_linkedin.md",
+    "podcast-promo/episodes/2026-05-30-il-papa-ha-capito-gli-llm-meglio-di-noi_promo.md",
+    "temp/roberto_stagi_x_posts.md",
+    "temp/ai_socratic_profilo.md",
+    "temp/roberto_stagi_profilo.md",
+    "podcast-promo/episodes/2026-05-27-ai-adoption-problema-culturale-andrea-saltarello_promo.md",
+    "_posts/2026-05-27-ai-adoption-problema-culturale-andrea-saltarello.md",
+    "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md",
+    "temp/Briefing_Andrea_Saltarello.md",
+    "_posts/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis.md",
+    "temp/Andrea_Saltarello_LinkedIn_Intervista.md",
+    "podcast-promo/episodes/2026-05-09-un-ai-agent-in-casa-ecco-cosa-fa-hermes_promo.md",
+    "_posts/2026-05-09-un-ai-agent-in-casa-ecco-cosa-fa-hermes.md",
+    "temp/dom.jpeg"
+  ]
+}

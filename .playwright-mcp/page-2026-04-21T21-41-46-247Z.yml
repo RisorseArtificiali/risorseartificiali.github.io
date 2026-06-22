@@ -1,0 +1,175 @@
+- generic [ref=e2]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e7]:
+        - button "Guide" [active] [ref=e9] [cursor=pointer]
+        - generic [ref=e11]:
+          - link "YouTube Home" [ref=e12] [cursor=pointer]:
+            - /url: /
+          - generic [ref=e16]: IT
+        - button "Skip navigation" [ref=e20] [cursor=pointer]:
+          - generic [ref=e21]: Skip navigation
+      - search [ref=e26]:
+        - generic [ref=e27]:
+          - generic [ref=e28]:
+            - combobox "Search" [expanded] [ref=e30]: podcast intelligenza artificiale italiano
+            - button "Clear search query" [ref=e32] [cursor=pointer]
+          - button "Search" [ref=e37] [cursor=pointer]
+  - main [ref=e45]:
+    - generic [ref=e46]:
+      - generic [ref=e48]:
+        - generic [ref=e51]:
+          - tablist [ref=e53]:
+            - tab "All" [selected] [ref=e57] [cursor=pointer]:
+              - generic [ref=e59]: All
+            - tab "Shorts" [ref=e66] [cursor=pointer]:
+              - generic [ref=e68]: Shorts
+            - tab "Unwatched" [ref=e75] [cursor=pointer]:
+              - generic [ref=e77]: Unwatched
+            - tab "Watched" [ref=e84] [cursor=pointer]:
+              - generic [ref=e86]: Watched
+            - tab "Videos" [ref=e93] [cursor=pointer]:
+              - generic [ref=e95]: Videos
+            - tab "Recently uploaded" [ref=e102] [cursor=pointer]:
+              - generic [ref=e104]: Recently uploaded
+            - tab "Live" [ref=e111] [cursor=pointer]:
+              - generic [ref=e113]: Live
+          - button "Next" [ref=e121] [cursor=pointer]
+        - link "About these results" [ref=e130] [cursor=pointer]:
+          - /url: https://www.youtube.com/howyoutubeworks/product-features/search/
+          - generic [ref=e131]: About these results
+        - generic [ref=e138]:
+          - button "Search filters" [ref=e140] [cursor=pointer]:
+            - generic [ref=e141]: Filters
+          - tooltip "tooltip"
+      - generic [ref=e152]:
+        - generic [ref=e157]:
+          - img [ref=e163]
+          - generic [ref=e165] [cursor=pointer]:
+            - generic [ref=e166]:
+              - link "Certified Rapid IQ Test" [ref=e169]:
+                - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CYLiTGO_nabPgDcuBuuYPvb3I2AHp3_ahhgHH26Pb0BVkEAEgAGD9AoIBF2NhLXB1Yi02MjE5ODExNzQ3MDQ5MzcxoAGG3ZShAqgDBMgDCqoEvQJP0BYYVuCq4-boDZT46H_v-yPjjDmDFrZv-SWQkZ1vM2P2P6Vd8RIZevzMNbW4UuEYnllwYLS6ahSb9ySYdeCZ3UTkQoU4WwSkQ9lvrHVs1mB3XwQOQK0Bmz0yO8f6xpdnT5vnJLUa_Y_Uln1Wi-ZK6OGqkZSOJOJ9k5cxkkMbIqhYSsECLFF9e_oUgsuKJeCMt3qlsi9kjz6HN5gPesAEF9I-ae8Qk6YKL7j5hPvxRlozofyLpjEPy3b0x14hZ_vw6KHRDqYoi6QY4yiRs5i8Mau8-1MxmgC1ZwUaNciLY4twBbiSP1CHOCth-jwdEcHbrG7p4suMssbdrNGwwnwnTyk67SA8y8SMVbl8HsIjfdsscLGi9F4kqbi33OHdR_uLcuTgQnA2RXeFaMjRC0TYavHQxzu4KqN7NQ_uEYgF68ng8lSSBQgIE3icvZb2GaAGboAH4OGS4xmQBwGoB_LAsQKoB7jEsQKoB-G2sQKoB6XPsQKoB-edsQKoB-idsQKoB--1sQKoB_C1sQKoB_nTsQKoB8nasQKoB6ngsQKoB4QIqAem1LECqAeo0huoB7YHqAewm7ECqAeusbECqAfmvLECqAfKurECqAf9srECqAf3uLECqAf4uLECqAfIz7ECqAfJz7ECqAfNx7ECqAfx0bECqAf81bECqAf71bECqAeM1rECqAeL1rECqAea4bECqAed17ECqAed1LECqAeBxhuoB_yvsQKoB6vFG6gHt6GxAqgH1amxAqgH2KaxAqgH3rWxArgIAdIINwiAwYBQEAEYXjIIo4LAgICAoAw6EoDCgICAkIACgICAgICQhuADKkjZoNI1UBRY-JqtwPT_kwOaCRZodHRwczovL215aXEuY29tL3N0YXJ0sQkQiyow1x1S1MgJAMgJigKYCwG6Cz8IAxAFGAQgCCgBMBxAAUgAUAFYTmAAaABwAYgBAJgBAaIBCwoAoAIBqAID2AIB2AEBgAIBiAIGugMFdmlicnXQCxLSDAIQAZoNARKqDQJJVMgNAdINyAJodHRwczovL215aXEuY29tL3N0YXJ0P3V0bV9zb3VyY2U9Z29vZ2xlJnV0bV9tZWRpdW09Y3BjJnV0bV9jYW1wYWlnbj1XVy1FTi1EZW1hbmRHZW5fSW1hZ2VzX015SVEmdXRtX3NvdXJjZV9pZD0xJnV0bV9jYW1wYWlnbl9pZD0yMjc4OTIzNTk0NyZ1dG1fYWRncm91cD1XVy1FTi1JUS1MQUFfUHVyY2hhc2U1JnV0bV9hZGdyb3VwX2lkPTE4NDk2MjM5NDc1NSZ1dG1fdGVybT0mdXRtX2NvbnRlbnQ9Nzk4MzI1MzM5MTIyJnV0bV9mdW5uZWw9JnBhcnRuZXI9V00mdXJsPWh0dHBzOi8vbXlpcS5jb20vc3RhcnQmZ2FkX3NvdXJjZT0yJmdhZF9jYW1wYWlnbmlkPTIyNzg5MjM1OTQ3uBP___________8BiBQCsBQDwBWBgIBA0BUB2BUBmBYB4hYCCAGAFwGKFxYIAxgBIAEoATABOAFAAUgBUAFYAWACoBcBqRe92g0XuUofVLoXBigAMAA4AdAYAfAYAcIZAggB&gclid=EAIaIQobChMIs8ytwPT_kwMVy4DOBh29HhIbEAEYASAAEgLVt_D_BwE&num=1&cid=CAASF-Roz5FQFcH-nU6jYvdV_Qy0RF7KsuPr&sig=AOD64_3hxpKUM_vsLNm7EalQiK7gG2ZChw&ms=%5BCLICK_MS%5D&nb=0&nx=%5BNX%5D&ny=%5BNY%5D&dim=%5BDIM%5D
+              - link "Improve problem-solving, critical thinking, and reasoning skills with our brain games." [ref=e172]:
+                - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CYLiTGO_nabPgDcuBuuYPvb3I2AHp3_ahhgHH26Pb0BVkEAEgAGD9AoIBF2NhLXB1Yi02MjE5ODExNzQ3MDQ5MzcxoAGG3ZShAqgDBMgDCqoEvQJP0BYYVuCq4-boDZT46H_v-yPjjDmDFrZv-SWQkZ1vM2P2P6Vd8RIZevzMNbW4UuEYnllwYLS6ahSb9ySYdeCZ3UTkQoU4WwSkQ9lvrHVs1mB3XwQOQK0Bmz0yO8f6xpdnT5vnJLUa_Y_Uln1Wi-ZK6OGqkZSOJOJ9k5cxkkMbIqhYSsECLFF9e_oUgsuKJeCMt3qlsi9kjz6HN5gPesAEF9I-ae8Qk6YKL7j5hPvxRlozofyLpjEPy3b0x14hZ_vw6KHRDqYoi6QY4yiRs5i8Mau8-1MxmgC1ZwUaNciLY4twBbiSP1CHOCth-jwdEcHbrG7p4suMssbdrNGwwnwnTyk67SA8y8SMVbl8HsIjfdsscLGi9F4kqbi33OHdR_uLcuTgQnA2RXeFaMjRC0TYavHQxzu4KqN7NQ_uEYgF68ng8lSSBQgIE3icvZb2GaAGboAH4OGS4xmQBwGoB_LAsQKoB7jEsQKoB-G2sQKoB6XPsQKoB-edsQKoB-idsQKoB--1sQKoB_C1sQKoB_nTsQKoB8nasQKoB6ngsQKoB4QIqAem1LECqAeo0huoB7YHqAewm7ECqAeusbECqAfmvLECqAfKurECqAf9srECqAf3uLECqAf4uLECqAfIz7ECqAfJz7ECqAfNx7ECqAfx0bECqAf81bECqAf71bECqAeM1rECqAeL1rECqAea4bECqAed17ECqAed1LECqAeBxhuoB_yvsQKoB6vFG6gHt6GxAqgH1amxAqgH2KaxAqgH3rWxArgIAdIINwiAwYBQEAEYXjIIo4LAgICAoAw6EoDCgICAkIACgICAgICQhuADKkjZoNI1UBRY-JqtwPT_kwOaCRZodHRwczovL215aXEuY29tL3N0YXJ0sQkQiyow1x1S1MgJAMgJigKYCwG6Cz8IAxAFGAQgCCgBMBxAAUgAUAFYTmAAaABwAYgBAJgBAaIBCwoAoAIBqAID2AIB2AEBgAIBiAIGugMFdmlicnXQCxLSDAIQAZoNARKqDQJJVMgNAdINyAJodHRwczovL215aXEuY29tL3N0YXJ0P3V0bV9zb3VyY2U9Z29vZ2xlJnV0bV9tZWRpdW09Y3BjJnV0bV9jYW1wYWlnbj1XVy1FTi1EZW1hbmRHZW5fSW1hZ2VzX015SVEmdXRtX3NvdXJjZV9pZD0xJnV0bV9jYW1wYWlnbl9pZD0yMjc4OTIzNTk0NyZ1dG1fYWRncm91cD1XVy1FTi1JUS1MQUFfUHVyY2hhc2U1JnV0bV9hZGdyb3VwX2lkPTE4NDk2MjM5NDc1NSZ1dG1fdGVybT0mdXRtX2NvbnRlbnQ9Nzk4MzI1MzM5MTIyJnV0bV9mdW5uZWw9JnBhcnRuZXI9V00mdXJsPWh0dHBzOi8vbXlpcS5jb20vc3RhcnQmZ2FkX3NvdXJjZT0yJmdhZF9jYW1wYWlnbmlkPTIyNzg5MjM1OTQ3uBP___________8BiBQCsBQDwBWBgIBA0BUB2BUBmBYB4hYCCAGAFwGKFxYIAxgBIAEoATABOAFAAUgBUAFYAWACoBcBqRe92g0XuUofVLoXBigAMAA4AdAYAfAYAcIZAggB&gclid=EAIaIQobChMIs8ytwPT_kwMVy4DOBh29HhIbEAEYASAAEgLVt_D_BwE&num=1&cid=CAASF-Roz5FQFcH-nU6jYvdV_Qy0RF7KsuPr&sig=AOD64_3hxpKUM_vsLNm7EalQiK7gG2ZChw&ms=%5BCLICK_MS%5D&nb=7&nx=%5BNX%5D&ny=%5BNY%5D&dim=%5BDIM%5D
+              - generic [ref=e173]:
+                - generic [ref=e175]:
+                  - generic [ref=e176]: Sponsored
+                  - text: ·
+                - generic [ref=e178]: MyIQ
+            - button "My Ad Center" [ref=e181]
+        - generic [ref=e188]:
+          - link [ref=e190] [cursor=pointer]:
+            - /url: /watch?v=q2VCtS4p1yQ&pp=ygUpcG9kY2FzdCBpbnRlbGxpZ2VuemEgYXJ0aWZpY2lhbGUgaXRhbGlhbm8%3D
+            - img [ref=e192]
+            - img [ref=e195]:
+              - generic [ref=e196]: 2:05:33
+            - generic:
+              - generic: Now playing
+              - generic:
+                - img
+          - generic [ref=e197] [cursor=pointer]:
+            - generic [ref=e198]:
+              - heading "TUTTO QUELLO CHE DEVI SAPERE SULL'INTELLIGENZA ARTIFICIALE! Prof. LUCIANO FLORIDI passa dal BSMT! 2 hours, 5 minutes" [level=3] [ref=e200]:
+                - link "TUTTO QUELLO CHE DEVI SAPERE SULL'INTELLIGENZA ARTIFICIALE! Prof. LUCIANO FLORIDI passa dal BSMT! 2 hours, 5 minutes" [ref=e201]:
+                  - /url: /watch?v=q2VCtS4p1yQ&pp=ygUpcG9kY2FzdCBpbnRlbGxpZ2VuemEgYXJ0aWZpY2lhbGUgaXRhbGlhbm8%3D
+                  - text: TUTTO QUELLO CHE DEVI SAPERE SULL'INTELLIGENZA ARTIFICIALE! Prof. LUCIANO FLORIDI passa dal BSMT!
+              - generic [ref=e204]:
+                - generic [ref=e205]: 178K views
+                - generic [ref=e206]: •5 months ago
+            - generic [ref=e207]:
+              - link "Go to channel The BSMT by Gianluca Gazzoli" [ref=e208]:
+                - /url: /@bsmt_basement
+              - generic [ref=e210]:
+                - link "The BSMT by Gianluca Gazzoli" [ref=e214]:
+                  - /url: /@bsmt_basement
+                - img "Verified" [ref=e219]
+            - generic [ref=e221]:
+              - generic [ref=e222]: Da quando è stato qui un anno fa è successo di tutto, nel mondo, nella nostra società e soprattutto nell'universo dell'intelligenza ...
+              - tooltip "tooltip"
+            - generic [ref=e224]:
+              - img "4K" [ref=e227]:
+                - generic [ref=e228]: 4K
+              - img "Closed captions" [ref=e231]:
+                - generic [ref=e232]: CC
+            - generic [ref=e235]:
+              - generic [ref=e236]:
+                - generic [ref=e240]: 15 chapters
+                - button "INTRO | L’IMPATTO DELLE ELEZIONI DI TRUMP | “L’AI NON È UNA NOVITÀ\" | L’IMPATTO DELL’AI NELLE NOSTRE VITE | FA DAVVERO TUTTO L’AI? | COME USARE CHATGPT | LO STILE INCONFONDIBILE DI CHATGPT | L’UTILIZZO DELL’AI A SCUOLA | L’IMPORTANZA DI EDUCARE AL DIGITALE | EFFETTI DELL’AI ALLA PORTATA DI TUTTI | AI E COPYRIGHT | I RISCHI DEL LEGAME AFFETTIVO CON L’AI | LA RISPOSTA DELL'EUROPA ALLA RIVOLUZIONE DIGITALE | INTERNET E GOOGLE DA TUTTO DI NOI | SALUTI FINALI" [ref=e241]
+              - button "More" [ref=e246]
+        - generic [ref=e253]:
+          - link [ref=e255] [cursor=pointer]:
+            - /url: /watch?v=sCgS9H-qutM&t=3262s&pp=ygUpcG9kY2FzdCBpbnRlbGxpZ2VuemEgYXJ0aWZpY2lhbGUgaXRhbGlhbm8%3D
+            - img [ref=e257]
+          - generic [ref=e258] [cursor=pointer]:
+            - generic [ref=e259]:
+              - heading "L'INTELLIGENZA ARTIFICIALE FA PAURA? 👀 Prof. LUCIANO FLORIDI passa dal BSMT! 1 hour, 47 minutes" [level=3] [ref=e261]:
+                - link "L'INTELLIGENZA ARTIFICIALE FA PAURA? 👀 Prof. LUCIANO FLORIDI passa dal BSMT! 1 hour, 47 minutes" [ref=e262]:
+                  - /url: /watch?v=sCgS9H-qutM&t=3262s&pp=ygUpcG9kY2FzdCBpbnRlbGxpZ2VuemEgYXJ0aWZpY2lhbGUgaXRhbGlhbm8%3D
+                  - text: L'INTELLIGENZA ARTIFICIALE FA PAURA? 👀 Prof. LUCIANO FLORIDI passa dal BSMT!
+              - generic [ref=e265]:
+                - generic [ref=e266]: 322K views
+                - generic [ref=e267]: •1 year ago
+            - generic [ref=e268]:
+              - link "Go to channel The BSMT by Gianluca Gazzoli" [ref=e269]:
+                - /url: /@bsmt_basement
+              - generic [ref=e271]:
+                - link "The BSMT by Gianluca Gazzoli" [ref=e275]:
+                  - /url: /@bsmt_basement
+                - img "Verified" [ref=e280]
+            - generic [ref=e282]:
+              - generic [ref=e283]: È tempo di MASTERCLASS al BSMT. Parliamo di filosofia dell'informazione e di intelligenza artificiale con uno dei massimi ...
+              - tooltip "tooltip"
+            - generic [ref=e285]:
+              - img "4K" [ref=e288]:
+                - generic [ref=e289]: 4K
+              - img "Closed captions" [ref=e292]:
+                - generic [ref=e293]: CC
+            - generic [ref=e296]:
+              - generic [ref=e297]:
+                - generic [ref=e301]: Matching chapter
+                - button "54:22 PERCHÉ L’INTELLIGENZA ARTIFICIALE SPAVENTA?" [ref=e302]
+              - button "More" [ref=e307]
+        - generic [ref=e317]:
+          - img [ref=e323]
+          - generic [ref=e325] [cursor=pointer]:
+            - generic [ref=e326]:
+              - link "Impara l'Inglese con MyES" [ref=e329]:
+                - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CgK5NGO_nabPgDcuBuuYPvb3I2AHMiozShgG9k7712xWwkB8QAiAAYP0CggEXY2EtcHViLTYyMTk4MTE3NDcwNDkzNzGgAcvGjeMDqQJ-B_jCaLOzPqgDBMgDCqoEvAJP0BYYVuCq4-boDZT46H_v-yPjjDmDFrZv-SWQkZ1vM2P2P6Vd8RIZevzMNbW4UuEYnllwYLS6ahSb9ySYdeCZ3UTkQoU4WwSkQ9lvrHVs1mB3XwQOQK0Bmz0yO8f6xpdnT5vnJLUa_Y_Uln1Wi-ZK6OGqkZSOJOJ9k5cxkkMbIqhYSsECLFF9e_oUgsuKJeCMt3qlsi9kjz6HN5gPesAEF9I-ae8Qk6YKL7j5hPvxRlozofyLpjEPy3b0x14hZ_vw6KHRDqYoi6QY4yiRs5i8Mau8-1MxmgC1ZwUaNciLY4twBbiSP1CHOCth-jwdEcHbrG7p4t2NssbZrNHenQc-Syk61D5yID1rk7U1kAXmIvyobihy_sa0gJMlrYHQs90lX8XrmmbXy1ynaMTFvWn5YSnM5Tu2PCkKVQIaiAX38uSTQZIFBwgTeKWj2B2gBm6AB5258hyQBwGoB_LAsQKoB7jEsQKoB-G2sQKoB6XPsQKoB-edsQKoB-idsQKoB--1sQKoB_C1sQKoB_nTsQKoB8nasQKoB6ngsQKoB4QIqAem1LECqAeo0huoB7YHqAewm7ECqAeusbECqAfmvLECqAfKurECqAf9srECqAf3uLECqAf4uLECqAfIz7ECqAfJz7ECqAfNx7ECqAfx0bECqAf81bECqAf71bECqAeM1rECqAeL1rECqAea4bECqAed17ECqAed1LECqAeBxhuoB_yvsQKoB6vFG6gHt6GxAqgH1amxAqgH2KaxAqgH3rWxArgIAdIINwiAwYBQEAEYXjIIo4LAgICAoAw6EoDCgICAkIACgICAgICQhuADKkjZoNI1UBRY-JqtwPT_kwOaCS1odHRwczovL3d3dy5teWVzLnNjaG9vbC9jb3JzaS9wcm9tb2xvbmRyYS5waHCxCcWmE8w00pGmyAkAyAmKApgLAboLPwgDEAUYBCAIKAEwHEABSABQAVhOYABoAHABiAEAmAEBogELCgCgAgGoAgPYAgHYAQGAAgGIAga6AwV2aWJyddALEtIMAhABmg0BEqoNAklUyA0B0g2uAWh0dHBzOi8vd3d3Lm15ZXMuc2Nob29sL2NvcnNpL3Byb21vbG9uZHJhLnBocD91dG1fc291cmNlPWdvb2dsZSZ1dG1fbWVkaXVtPWNwYyZzZW1ib3hfc291cmNlPUdvb2dsZV9EaXNjb3ZlcnlfVElFUjEmc2VtYm94X3A9ZGlzY292ZXJ5JmdhZF9zb3VyY2U9MiZnYWRfY2FtcGFpZ25pZD0xNzQ4OTgwMzYzObgT____________AbAUA8AVgYCAQNAVAdgVAZgWAeIWAggBgBcBihcWCAMYASABKAEwATgBQAFIAVABWAFgAqAXAakXg6ENxcMGjdS6FwYoADAAOAHQGAHwGAHCGQIIAQ&gclid=EAIaIQobChMIs8ytwPT_kwMVy4DOBh29HhIbEAEYAiAAEgKX7_D_BwE&num=2&cid=CAASF-Roz5FQFcH-nU6jYvdV_Qy0RF7KsuPr&sig=AOD64_2-2ZqsJ3zZFKalWcTDaWo3hIXnfQ&ms=%5BCLICK_MS%5D&nb=0&nx=%5BNX%5D&ny=%5BNY%5D&dim=%5BDIM%5D
+              - link "Insegnanti madrelingua e native speakers qualificati. Recensioni verificate 4.9/5 stelle." [ref=e332]:
+                - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CgK5NGO_nabPgDcuBuuYPvb3I2AHMiozShgG9k7712xWwkB8QAiAAYP0CggEXY2EtcHViLTYyMTk4MTE3NDcwNDkzNzGgAcvGjeMDqQJ-B_jCaLOzPqgDBMgDCqoEvAJP0BYYVuCq4-boDZT46H_v-yPjjDmDFrZv-SWQkZ1vM2P2P6Vd8RIZevzMNbW4UuEYnllwYLS6ahSb9ySYdeCZ3UTkQoU4WwSkQ9lvrHVs1mB3XwQOQK0Bmz0yO8f6xpdnT5vnJLUa_Y_Uln1Wi-ZK6OGqkZSOJOJ9k5cxkkMbIqhYSsECLFF9e_oUgsuKJeCMt3qlsi9kjz6HN5gPesAEF9I-ae8Qk6YKL7j5hPvxRlozofyLpjEPy3b0x14hZ_vw6KHRDqYoi6QY4yiRs5i8Mau8-1MxmgC1ZwUaNciLY4twBbiSP1CHOCth-jwdEcHbrG7p4t2NssbZrNHenQc-Syk61D5yID1rk7U1kAXmIvyobihy_sa0gJMlrYHQs90lX8XrmmbXy1ynaMTFvWn5YSnM5Tu2PCkKVQIaiAX38uSTQZIFBwgTeKWj2B2gBm6AB5258hyQBwGoB_LAsQKoB7jEsQKoB-G2sQKoB6XPsQKoB-edsQKoB-idsQKoB--1sQKoB_C1sQKoB_nTsQKoB8nasQKoB6ngsQKoB4QIqAem1LECqAeo0huoB7YHqAewm7ECqAeusbECqAfmvLECqAfKurECqAf9srECqAf3uLECqAf4uLECqAfIz7ECqAfJz7ECqAfNx7ECqAfx0bECqAf81bECqAf71bECqAeM1rECqAeL1rECqAea4bECqAed17ECqAed1LECqAeBxhuoB_yvsQKoB6vFG6gHt6GxAqgH1amxAqgH2KaxAqgH3rWxArgIAdIINwiAwYBQEAEYXjIIo4LAgICAoAw6EoDCgICAkIACgICAgICQhuADKkjZoNI1UBRY-JqtwPT_kwOaCS1odHRwczovL3d3dy5teWVzLnNjaG9vbC9jb3JzaS9wcm9tb2xvbmRyYS5waHCxCcWmE8w00pGmyAkAyAmKApgLAboLPwgDEAUYBCAIKAEwHEABSABQAVhOYABoAHABiAEAmAEBogELCgCgAgGoAgPYAgHYAQGAAgGIAga6AwV2aWJyddALEtIMAhABmg0BEqoNAklUyA0B0g2uAWh0dHBzOi8vd3d3Lm15ZXMuc2Nob29sL2NvcnNpL3Byb21vbG9uZHJhLnBocD91dG1fc291cmNlPWdvb2dsZSZ1dG1fbWVkaXVtPWNwYyZzZW1ib3hfc291cmNlPUdvb2dsZV9EaXNjb3ZlcnlfVElFUjEmc2VtYm94X3A9ZGlzY292ZXJ5JmdhZF9zb3VyY2U9MiZnYWRfY2FtcGFpZ25pZD0xNzQ4OTgwMzYzObgT____________AbAUA8AVgYCAQNAVAdgVAZgWAeIWAggBgBcBihcWCAMYASABKAEwATgBQAFIAVABWAFgAqAXAakXg6ENxcMGjdS6FwYoADAAOAHQGAHwGAHCGQIIAQ&gclid=EAIaIQobChMIs8ytwPT_kwMVy4DOBh29HhIbEAEYAiAAEgKX7_D_BwE&num=2&cid=CAASF-Roz5FQFcH-nU6jYvdV_Qy0RF7KsuPr&sig=AOD64_2-2ZqsJ3zZFKalWcTDaWo3hIXnfQ&ms=%5BCLICK_MS%5D&nb=7&nx=%5BNX%5D&ny=%5BNY%5D&dim=%5BDIM%5D
+              - generic [ref=e333]:
+                - generic [ref=e335]:
+                  - generic [ref=e336]: Sponsored
+                  - text: ·
+                - generic [ref=e338]: My English School
+            - button "My Ad Center" [ref=e341]
+        - generic [ref=e348]:
+          - link [ref=e350] [cursor=pointer]:
+            - /url: /watch?v=8I1_bhL2SRo&t=141s&pp=ygUpcG9kY2FzdCBpbnRlbGxpZ2VuemEgYXJ0aWZpY2lhbGUgaXRhbGlhbm_SBwkJ0woBhyohjO8%3D
+          - generic [ref=e352] [cursor=pointer]:
+            - generic [ref=e353]:
+              - 'heading "Esperto di AI: Questi Saranno Gli Unici Lavori Salvi Tra 5 Anni - Simone Rizzo al Symposium Podcast 1 hour, 40 minutes" [level=3] [ref=e355]':
+                - 'link "Esperto di AI: Questi Saranno Gli Unici Lavori Salvi Tra 5 Anni - Simone Rizzo al Symposium Podcast 1 hour, 40 minutes" [ref=e356]':
+                  - /url: /watch?v=8I1_bhL2SRo&t=141s&pp=ygUpcG9kY2FzdCBpbnRlbGxpZ2VuemEgYXJ0aWZpY2lhbGUgaXRhbGlhbm_SBwkJ0woBhyohjO8%3D
+                  - text: "Esperto di AI: Questi Saranno Gli Unici Lavori Salvi Tra 5 Anni - Simone Rizzo al Symposium Podcast"
+              - generic [ref=e359]:
+                - generic [ref=e360]: 5.4K views
+                - generic [ref=e361]: •1 day ago
+            - generic [ref=e362]:
+              - link "Go to channel Symposium Podcast" [ref=e363]:
+                - /url: /@Symposium.Podcast
+              - link "Symposium Podcast" [ref=e368]:
+                - /url: /@Symposium.Podcast
+            - generic [ref=e369]:
+              - generic [ref=e370]: "Scopri il mondo del Symposium: Podcast, Live, Eventi dal Vivo e il nostro CLUB ESCLUSIVO per il miglioramento personale: ..."
+              - tooltip "tooltip"
+            - generic [ref=e372]:
+              - img "New" [ref=e375]:
+                - generic [ref=e376]: New
+              - img "4K" [ref=e379]:
+                - generic [ref=e380]: 4K
+            - generic [ref=e383]:
+              - generic [ref=e384]:
+                - generic [ref=e388]: Matching chapter
+                - button "2:21 Cos'è davvero l'Intelligenza Artificiale?" [ref=e389]
+              - button "More" [ref=e394]

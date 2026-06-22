@@ -1,0 +1,386 @@
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/commonmarker-0.23.12/ext/commonmarker
+/usr/bin/ruby -I/usr/share/rubygems extconf.rb
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/commonmarker-0.23.12/ext/commonmarker
+make DESTDIR\= sitearchdir\=./.gem.20260423-332491-7idw23 sitelibdir\=./.gem.20260423-332491-7idw23 clean
+rm -f 
+rm -fr commonmarker.so false arena.o autolink.o blocks.o buffer.o cmark.o cmark_ctype.o commonmark.o commonmarker.o core-extensions.o ext_scanners.o footnotes.o houdini_href_e.o houdini_html_e.o houdini_html_u.o html.o inlines.o iterator.o latex.o linked_list.o man.o map.o node.o plaintext.o plugin.o references.o registry.o render.o scanners.o strikethrough.o syntax_extension.o table.o tagfilter.o tasklist.o utf8.o xml.o *.bak mkmf.log .*.time
+
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/commonmarker-0.23.12/ext/commonmarker
+make DESTDIR\= sitearchdir\=./.gem.20260423-332491-7idw23 sitelibdir\=./.gem.20260423-332491-7idw23
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o arena.o -c arena.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o autolink.o -c autolink.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o blocks.o -c blocks.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o buffer.o -c buffer.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o cmark.o -c cmark.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o cmark_ctype.o -c cmark_ctype.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o commonmark.o -c commonmark.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o commonmarker.o -c commonmarker.c
+In file included from houdini.h:9,
+                 from commonmarker.c:3:
+config.h:8:9: warning: ‘HAVE_STDBOOL_H’ redefined
+    8 | #define HAVE_STDBOOL_H
+      |         ^~~~~~~~~~~~~~
+In file included from /usr/include/ruby/config.h:18,
+                 from /usr/include/ruby/internal/config.h:22,
+                 from /usr/include/ruby/ruby.h:15,
+                 from /usr/include/ruby.h:38,
+                 from commonmarker.h:9,
+                 from commonmarker.c:1:
+/usr/include/ruby/config-x86_64.h:45:9: note: this is the location of the previous definition
+   45 | #define HAVE_STDBOOL_H 1
+      |         ^~~~~~~~~~~~~~
+commonmarker.c: In function ‘commonmarker_cstr_adopt’:
+commonmarker.c:50:43: warning: passing argument 1 of ‘cmark_get_default_mem_allocator()->free’ discards ‘const’ qualifier from pointer target type [-Wdiscarded-qualifiers]
+   50 |   cmark_get_default_mem_allocator()->free(str);
+      |                                           ^~~
+commonmarker.c:50:43: note: expected ‘void *’ but argument is of type ‘const char *’
+commonmarker.c: In function ‘rb_node_to_value’:
+commonmarker.c:103:3: warning: ‘rb_data_object_wrap_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  103 |   val = Data_Wrap_Struct(rb_cNode, rb_mark_c_struct, free_func, node);
+      |   ^~~
+In file included from /usr/include/ruby/internal/core.h:27,
+                 from /usr/include/ruby/ruby.h:29:
+/usr/include/ruby/internal/core/rdata.h:293:1: note: declared here
+  293 | rb_data_object_wrap_warning(VALUE klass, void *ptr, RUBY_DATA_FUNC mark, RUBY_DATA_FUNC free)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_get_string_content’:
+commonmarker.c:327:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  327 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_set_string_content’:
+commonmarker.c:349:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  349 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_get_type’:
+commonmarker.c:370:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  370 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_get_sourcepos’:
+commonmarker.c:457:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  457 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_get_type_string’:
+commonmarker.c:480:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  480 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_unlink’:
+commonmarker.c:491:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  491 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_first_child’:
+commonmarker.c:506:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  506 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_next’:
+commonmarker.c:519:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  519 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_insert_before’:
+commonmarker.c:536:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  536 |   Data_Get_Struct(self, cmark_node, node1);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c:538:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  538 |   Data_Get_Struct(sibling, cmark_node, node2);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_render_html’:
+commonmarker.c:566:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  566 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_render_xml’:
+commonmarker.c:607:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  607 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_render_commonmark’:
+commonmarker.c:636:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  636 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_render_plaintext’:
+commonmarker.c:664:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  664 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_insert_after’:
+commonmarker.c:683:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  683 |   Data_Get_Struct(self, cmark_node, node1);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c:685:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  685 |   Data_Get_Struct(sibling, cmark_node, node2);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_prepend_child’:
+commonmarker.c:706:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  706 |   Data_Get_Struct(self, cmark_node, node1);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c:708:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  708 |   Data_Get_Struct(child, cmark_node, node2);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_append_child’:
+commonmarker.c:729:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  729 |   Data_Get_Struct(self, cmark_node, node1);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c:731:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  731 |   Data_Get_Struct(child, cmark_node, node2);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_last_child’:
+commonmarker.c:748:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  748 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_parent’:
+commonmarker.c:761:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  761 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_previous’:
+commonmarker.c:774:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  774 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_get_url’:
+commonmarker.c:790:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  790 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_set_url’:
+commonmarker.c:812:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  812 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_get_title’:
+commonmarker.c:831:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  831 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_set_title’:
+commonmarker.c:853:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  853 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_get_header_level’:
+commonmarker.c:872:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  872 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_set_header_level’:
+commonmarker.c:895:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  895 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_get_list_type’:
+commonmarker.c:915:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  915 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_set_list_type’:
+commonmarker.c:942:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  942 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_get_list_start’:
+commonmarker.c:968:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  968 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_set_list_start’:
+commonmarker.c:992:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+  992 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_get_list_tight’:
+commonmarker.c:1011:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+ 1011 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_set_list_tight’:
+commonmarker.c:1032:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+ 1032 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_get_fence_info’:
+commonmarker.c:1051:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+ 1051 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_set_fence_info’:
+commonmarker.c:1074:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+ 1074 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_get_tasklist_item_checked’:
+commonmarker.c:1087:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+ 1087 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_set_tasklist_item_checked’:
+commonmarker.c:1109:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+ 1109 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_get_tasklist_state’:
+commonmarker.c:1127:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+ 1127 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_node_get_table_alignments’:
+commonmarker.c:1143:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+ 1143 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_html_escape_href’:
+commonmarker.c:1172:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+ 1172 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+commonmarker.c: In function ‘rb_html_escape_html’:
+commonmarker.c:1193:3: warning: ‘rb_data_object_get_warning’ is deprecated: by TypedData [-Wdeprecated-declarations]
+ 1193 |   Data_Get_Struct(self, cmark_node, node);
+      |   ^~~~~~~~~~~~~~~
+/usr/include/ruby/internal/core/rdata.h:325:1: note: declared here
+  325 | rb_data_object_get_warning(VALUE obj)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o core-extensions.o -c core-extensions.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o ext_scanners.o -c ext_scanners.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o footnotes.o -c footnotes.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o houdini_href_e.o -c houdini_href_e.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o houdini_html_e.o -c houdini_html_e.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o houdini_html_u.o -c houdini_html_u.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o html.o -c html.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o inlines.o -c inlines.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o iterator.o -c iterator.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o latex.o -c latex.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o linked_list.o -c linked_list.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o man.o -c man.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o map.o -c map.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o node.o -c node.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o plaintext.o -c plaintext.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o plugin.o -c plugin.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o references.o -c references.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o registry.o -c registry.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o render.o -c render.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o scanners.o -c scanners.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o strikethrough.o -c strikethrough.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o syntax_extension.o -c syntax_extension.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o table.o -c table.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o tagfilter.o -c tagfilter.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o tasklist.o -c tasklist.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o utf8.o -c utf8.c
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I.   -fPIC -O2 -flto=auto -ffat-lto-objects -fexceptions -g -grecord-gcc-switches -pipe -Wall -Werror=format-security -Wp,-U_FORTIFY_SOURCE,-D_FORTIFY_SOURCE=3 -Wp,-D_GLIBCXX_ASSERTIONS -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -fstack-protector-strong -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -march=x86-64 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -mtls-dialect=gnu2 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC -std=c99 -m64 -o xml.o -c xml.c
+rm -f commonmarker.so
+gcc -shared -o commonmarker.so arena.o autolink.o blocks.o buffer.o cmark.o cmark_ctype.o commonmark.o commonmarker.o core-extensions.o ext_scanners.o footnotes.o houdini_href_e.o houdini_html_e.o houdini_html_u.o html.o inlines.o iterator.o latex.o linked_list.o man.o map.o node.o plaintext.o plugin.o references.o registry.o render.o scanners.o strikethrough.o syntax_extension.o table.o tagfilter.o tasklist.o utf8.o xml.o -L. -L/usr/lib64 -L. -Wl,-z,relro -Wl,--as-needed  -Wl,-z,pack-relative-relocs -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -specs=/usr/lib/rpm/redhat/redhat-hardened-ld-errors -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -Wl,--build-id=sha1 -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,--no-as-needed -Wl,-z,relro -Wl,--as-needed  -Wl,-z,pack-relative-relocs -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -specs=/usr/lib/rpm/redhat/redhat-hardened-ld-errors -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1  -Wl,--build-id=sha1     -m64  -lruby  -lm -lpthread  -lc
+:
+
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/commonmarker-0.23.12/ext/commonmarker
+make DESTDIR\= sitearchdir\=./.gem.20260423-332491-7idw23 sitelibdir\=./.gem.20260423-332491-7idw23 install
+/usr/bin/mkdir -p . ./.gem.20260423-332491-7idw23/commonmarker
+exit > .sitearchdir.-.commonmarker.time
+/usr/bin/install -c -m 0755 commonmarker.so ./.gem.20260423-332491-7idw23/commonmarker
+
+current directory: /home/maeste/project/risorseartificiali.github.io/vendor/bundle/ruby/3.4.0/gems/commonmarker-0.23.12/ext/commonmarker
+make DESTDIR\= sitearchdir\=./.gem.20260423-332491-7idw23 sitelibdir\=./.gem.20260423-332491-7idw23 clean
+rm -f 
+rm -fr commonmarker.so false arena.o autolink.o blocks.o buffer.o cmark.o cmark_ctype.o commonmark.o commonmarker.o core-extensions.o ext_scanners.o footnotes.o houdini_href_e.o houdini_html_e.o houdini_html_u.o html.o inlines.o iterator.o latex.o linked_list.o man.o map.o node.o plaintext.o plugin.o references.o registry.o render.o scanners.o strikethrough.o syntax_extension.o table.o tagfilter.o tasklist.o utf8.o xml.o *.bak mkmf.log .*.time
