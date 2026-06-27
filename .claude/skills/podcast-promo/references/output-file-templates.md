@@ -1,13 +1,13 @@
 # Output File Templates — Promo File + Post Jekyll
 
-> Reference caricato on-demand dal Passaggio 10 di `podcast-promo` v4.3.
-> Contiene i template completi dei 2 file da scrivere via `Write` tool al termine del flusso: il promo consolidato (11 capitoli) e il post Jekyll (frontmatter v3.0 + body trascrizione verbatim).
+> Reference caricato on-demand dal Passaggio 11 di `podcast-promo` v4.6.
+> Contiene i template completi dei 2 file da scrivere via `Write` tool al termine del flusso: il promo consolidato (12 capitoli) e il post Jekyll (frontmatter v3.0 + body trascrizione verbatim).
 
 ## Table of Contents
 
 1. [File A — Promo consolidato](#file-a--promo-consolidato)
    - [Path + naming convention](#path--naming-convention)
-   - [Struttura 11 capitoli](#struttura-11-capitoli)
+   - [Struttura 12 capitoli](#struttura-12-capitoli)
    - [Template completo markdown](#template-completo-markdown-del-promo-file)
 2. [File B — Post Jekyll](#file-b--post-jekyll)
    - [Path + naming convention](#path--naming-convention-jekyll)
@@ -16,7 +16,7 @@
    - [Regole body](#regole-body-riprese-da-podcast-transcript-v30)
    - [Checklist validazione pre-scrittura](#checklist-validazione-pre-scrittura)
 3. [Summary finale in chat](#summary-finale-in-chat-dopo-scrittura-dei-2-file)
-4. [Vincoli di scrittura file](#vincoli-di-scrittura-file-passaggio-16)
+4. [Vincoli di scrittura file](#vincoli-di-scrittura-file-passaggio-11)
 
 ---
 
@@ -30,19 +30,20 @@
 - `{slug}` = slug derivato dal titolo finale (lowercase, senza accenti, spazi → trattini, max 60 char)
 - Se la cartella `podcast-promo/episodes/` non esiste, la crei implicitamente con Write (Jekyll / Git la tratta come normale directory del repo)
 
-### Struttura 11 capitoli
+### Struttura 12 capitoli
 
 1. Titolo (dal Passaggio 1)
-2. Brief thumbnail + 3 prompt image (dal Passaggio 2)
-3. Chapters YouTube (dal Passaggio 3)
-4. Descrizioni YT + Spotify + Tag YouTube (dal Passaggio 4, 3 sotto-sezioni 4.1/4.2/4.3)
-5. YouTube Shorts script + Spotify Clip spec (dal Passaggio 5, 2 sotto-sezioni 5.1/5.2)
-6. Post LinkedIn host (dal Passaggio 6) + publishing hint
-7. Sezione newsletter codiceartificiale (dal Passaggio 7, lunghezza variabile)
-8. Guest Launch Kit (dal Passaggio 8, **solo se intervista**)
-9. Checklist Publishing (dal Passaggio 9)
-10. Link rapidi
-11. Note operative
+2. Frasi in sovraimpressione (dal Passaggio 2, 7 brevi + 3 lunghe verbatim con timestamp)
+3. Brief thumbnail + prompt image (dal Passaggio 3)
+4. Chapters YouTube (dal Passaggio 4)
+5. Descrizioni YT + Spotify + Tag YouTube (dal Passaggio 5, 3 sotto-sezioni 5.1/5.2/5.3)
+6. YouTube Shorts script + Spotify Clip spec (dal Passaggio 6, 2 sotto-sezioni 6.1/6.2)
+7. Post LinkedIn host (dal Passaggio 7) + publishing hint
+8. Sezione newsletter codiceartificiale (dal Passaggio 8, lunghezza variabile)
+9. Guest Launch Kit (dal Passaggio 9, **solo se intervista**)
+10. Checklist Publishing (dal Passaggio 10)
+11. Link rapidi
+12. Note operative
 
 ### Template completo markdown del promo file
 
@@ -50,7 +51,7 @@
 # Promo — {Titolo finale}
 
 > File consolidato con TUTTI i deliverable del drop nuovo episodio.
-> Generato da `podcast-promo` v4.3 il {YYYY-MM-DD oggi}.
+> Generato da `podcast-promo` v4.6 il {YYYY-MM-DD oggi}.
 > Identifier campaign: `{campaign_id}` (es. `ep48_drop` o `maserati_drop`)
 
 ---
@@ -75,71 +76,76 @@
 # 1. Titolo
 {titolo finale dal Passaggio 1, codeblock copia-incolla}
 
-# 2. Brief thumbnail + 3 prompt image pronti
+# 2. Frasi in sovraimpressione (overlay video)
+{dal Passaggio 2: citazioni verbatim con timestamp, due blocchi}
+
+## 2.1 Frasi brevi (max 10 parole) — 7
+{lista `[MM:SS] "frase verbatim" (N parole)`, codeblock}
+
+## 2.2 Frasi lunghe (max 20 parole) — 3
+{lista `[MM:SS] "frase verbatim" (N parole)`, codeblock}
+
+Nota: timestamp ±15s, frasi verbatim dal transcript (overlay combacia con l'audio).
+
+# 3. Brief thumbnail + prompt image pronto
 ## Brief
-{hook 3 parole, tono, colore, soggetto, file output atteso dal Passaggio 2}
+{hook 3 parole, tono, colore, soggetto, file output atteso dal Passaggio 3}
 
-## Prompt 1 — Ideogram
-{prompt completo, codeblock}
-
-## Prompt 2 — Gemini 3 Pro
-{prompt completo, codeblock}
-
-## Prompt 3 — ChatGPT Image 2
-{prompt completo, codeblock}
+## Prompt ChatGPT Image 2 (con face reference)
+{prompt completo, codeblock. Allegare foto reale del soggetto. Preservare il volto.}
 
 ## Fallback post-production e verifica pre-upload
-{istruzioni dal Passaggio 2}
+{istruzioni dal Passaggio 3}
 
-# 3. Chapters YouTube
-{blocco chapter dal Passaggio 3, codeblock}
+# 4. Chapters YouTube
+{blocco chapter dal Passaggio 4, codeblock}
 
-# 4. Descrizioni YouTube + Spotify + Tag YouTube
+# 5. Descrizioni YouTube + Spotify + Tag YouTube
 
-## 4.1 Descrizione YouTube
-{descrizione completa dalla sotto-sezione 4.1, codeblock}
+## 5.1 Descrizione YouTube
+{descrizione completa dalla sotto-sezione 5.1, codeblock}
 
 Primi 125 char (snippet YT feed/search): "{estratto}"
 
-## 4.2 Descrizione Spotify
-{descrizione completa dalla sotto-sezione 4.2, codeblock}
+## 5.2 Descrizione Spotify
+{descrizione completa dalla sotto-sezione 5.2, codeblock}
 
 Primi 100 char (snippet Spotify): "{estratto}"
 
-## 4.3 Tag YouTube custom
-{lista tag dalla sotto-sezione 4.3, codeblock CSV pronto per YT Studio}
+## 5.3 Tag YouTube custom
+{lista tag dalla sotto-sezione 5.3, codeblock CSV pronto per YT Studio}
 
-# 5. YouTube Shorts script + Spotify Clip spec
+# 6. YouTube Shorts script + Spotify Clip spec
 
-## 5.1 YouTube Shorts script
-{script completo dalla sotto-sezione 5.1: segmento timestamp + script + overlay + descrizione + pinned comment}
+## 6.1 YouTube Shorts script
+{script completo dalla sotto-sezione 6.1: segmento timestamp + script + overlay + descrizione + pinned comment}
 
 Publishing: {Lun | Gio} 09:00 Europe/Rome
 
-## 5.2 Spotify Clip spec
-{spec dalla sotto-sezione 5.2: timestamp + trascrizione + overlay + titolo clip}
+## 6.2 Spotify Clip spec
+{spec dalla sotto-sezione 6.2: timestamp + trascrizione + overlay + titolo clip}
 
 Publishing: STESSO MOMENTO del drop (zero gap).
 
-# 6. Post LinkedIn (host)
-{post dal Passaggio 6, codeblock}
+# 7. Post LinkedIn (host)
+{post dal Passaggio 7, codeblock}
 
 Publishing hint: {Mar 14:00 | Mer 14:00} Europe/Rome
 
-# 7. Sezione newsletter codiceartificiale
-{post dal Passaggio 7, codeblock markdown}
+# 8. Sezione newsletter codiceartificiale
+{post dal Passaggio 8, codeblock markdown}
 
 Publishing: nella prossima edizione regolare di codiceartificiale (no orario forzato)
 
-# 8. Guest Launch Kit (solo se intervista)
-{SE intervista: 8.1 clip verticale, 8.2 post LinkedIn guest, 8.3 post X guest,
- 8.4 quote-image spec, 8.5 email al guest, tutto dal Passaggio 8}
+# 9. Guest Launch Kit (solo se intervista)
+{SE intervista: 9.1 clip verticale, 9.2 post LinkedIn guest, 9.3 post X guest,
+ 9.4 quote-image spec, 9.5 email al guest, tutto dal Passaggio 9}
 {SE numerato: "Sezione omessa — non applicabile a episodi numerati."}
 
-# 9. Checklist Publishing
-{checklist completa differenziata dal Passaggio 9, con checkbox markdown `- [ ]`}
+# 10. Checklist Publishing
+{checklist completa differenziata dal Passaggio 10, con checkbox markdown `- [ ]`}
 
-# 10. Link rapidi
+# 11. Link rapidi
 
 - YT Studio deep-link al video: https://studio.youtube.com/video/{YT_ID}/edit
 - Spotify for Creators: https://creators.spotify.com
@@ -148,7 +154,7 @@ Publishing: nella prossima edizione regolare di codiceartificiale (no orario for
 - LinkedIn company: https://www.linkedin.com/company/risorseartificiali
 - Substack codiceartificiale: https://codiceartificiale.substack.com
 
-# 11. Note operative
+# 12. Note operative
 
 - **Apple URL**: il frontmatter Jekyll ha `# apple_episode_url:` commentato.
   Quando Apple Podcasts auto-pubblica via RSS (T+4-24h dal drop), estrai l'URL
@@ -159,18 +165,21 @@ Publishing: nella prossima edizione regolare di codiceartificiale (no orario for
 - **UTM campaign**: tutti i link in questo file usano `{campaign_id}` come
   campaign. Non modificarlo nelle pubblicazioni (altrimenti perdi attribution
   cross-piattaforma).
+- **Frasi overlay**: le frasi del cap. 2 sono verbatim e ancorate al minuto.
+  In fase di montaggio sovrapponi ogni frase intorno al timestamp indicato
+  (±15s), cosi' l'overlay combacia con cio' che si sente.
 - **Guest amplification** (solo intervista): la forza del drop dipende
   dall'amplificazione sincrona del guest. Ping DM se a Mer 14:15 non ha
   ancora postato.
 - **Thumbnail iteration**: se dopo 48h il CTR YT e' sotto target, usa YT
-  Studio Test & Compare per A/B test con thumbnail alternativa generata da
-  prompt #2 o #3 del cap. 2.
+  Studio Test & Compare per A/B test con una thumbnail alternativa (rigenera
+  il prompt del cap. 3 variando palette/espressione).
 - **Rilancio futuro**: se a T+90gg l'episodio sottoperforma, considera
   invocazione di `interview-relaunch` (solo per interviste) o nuova thumbnail
   per numerati via `thumbnail-gen` v1.1.
-- **Workflow tip v4.3**: la thumbnail e' al cap. 2 (subito dopo il titolo).
-  Lancia in parallelo Ideogram/Gemini/ChatGPT mentre la skill prosegue, cosi'
-  hai gia' la thumbnail pronta quando arriva il momento di caricarla in YT Studio.
+- **Workflow tip**: la thumbnail e' al cap. 3 (early nel flusso). Lancia in
+  parallelo ChatGPT Image 2 (con foto reference) mentre la skill prosegue,
+  cosi' hai gia' la thumbnail pronta quando devi caricarla in YT Studio.
 ```
 
 ---
@@ -315,53 +324,59 @@ File scritti:
   1. Promo consolidato: `podcast-promo/episodes/{YYYY-MM-DD}-{slug}_promo.md`
   2. Post Jekyll: `_posts/{YYYY-MM-DD}-{slug}.md`
 
-Capitoli nel promo file (11):
+File temporaneo rimosso: `podcast-promo/episodes/{YYYY-MM-DD}-{slug}_overlay.md`
+(frasi overlay del Passaggio 2 ora consolidate nel cap. 2 del promo file).
+
+Capitoli nel promo file (12):
   1. Titolo
-  2. Brief thumbnail + 3 prompt pronti (Ideogram / Gemini 3 Pro / ChatGPT Image 2)
-  3. Chapters YouTube
-  4. Descrizioni YT + Spotify + Tag (3 sotto-sezioni 4.1/4.2/4.3 in una review unificata)
-  5. YT Shorts script + Spotify Clip spec (2 sotto-sezioni 5.1/5.2 in una review unificata)
-  6. Post LinkedIn (host) — pubblica {Mar|Mer} 14:00
-  7. Sezione newsletter codiceartificiale (bullet 30-50 | short 150-300 | full 800-1500 parole, decisa al Passaggio 0 opzionale I)
-  8. Guest Launch Kit (solo intervista: clip verticale, LinkedIn guest, X guest, quote-image, email)
-  9. Checklist Publishing (pre-drop, drop, post-drop, monitoring)
-  10. Link rapidi
-  11. Note operative
+  2. Frasi in sovraimpressione (7 brevi + 3 lunghe, verbatim con timestamp)
+  3. Brief thumbnail + prompt ChatGPT Image 2 (con face reference)
+  4. Chapters YouTube
+  5. Descrizioni YT + Spotify + Tag (3 sotto-sezioni 5.1/5.2/5.3 in una review unificata)
+  6. YT Shorts script + Spotify Clip spec (2 sotto-sezioni 6.1/6.2 in una review unificata)
+  7. Post LinkedIn (host) — pubblica {Mar|Mer} 14:00
+  8. Sezione newsletter codiceartificiale (bullet 30-50 | short 150-300 | full 800-1500 parole, decisa al Passaggio 0 opzionale I)
+  9. Guest Launch Kit (solo intervista: clip verticale, LinkedIn guest, X guest, quote-image, email)
+  10. Checklist Publishing (pre-drop, drop, post-drop, monitoring)
+  11. Link rapidi
+  12. Note operative
 
 Prossimi passi operativi:
 
-1. Genera la thumbnail (puoi gia' averlo fatto in parallelo durante il flusso, dato che i prompt sono al cap. 2 subito dopo il titolo):
-   - Vai su Ideogram (raccomandato) o Gemini 3 Pro o ChatGPT Image 2
-   - Incolla il prompt del cap. 2 (preferisci Ideogram per testo crisp)
+1. Genera la thumbnail (puoi gia' averlo fatto in parallelo durante il flusso, dato che il prompt e' al cap. 3 early nel flusso):
+   - Vai su ChatGPT Image 2 e allega la foto reale del soggetto
+   - Incolla il prompt del cap. 3 (preserva il volto della reference)
    - Genera 3-4 varianti, scegli la migliore
    - Salva in `/assets/images/episodes/{ep{N}.png | {guest-slug}-{date}.png}`
 
-2. Commit + push:
+2. Monta le frasi in sovraimpressione (cap. 2) nel video, ognuna intorno al timestamp indicato (±15s).
+
+3. Commit + push:
    - `git add _posts/{YYYY-MM-DD}-{slug}.md podcast-promo/episodes/{YYYY-MM-DD}-{slug}_promo.md assets/images/episodes/{filename}.png`
    - Commit message: "Ep {N}: {titolo breve}" oppure "Intervista {guest_name}: drop materials"
    - Push. Verifica deploy su https://risorseartificiali.com/{slug}
 
-3. YouTube Studio:
+4. YouTube Studio:
    - Apri video caricato privato (ID {YT_ID})
-   - Copia titolo dal cap. 1, descrizione dal cap. 4.1, capitoli dal cap. 3, tag dal cap. 4.3
+   - Copia titolo dal cap. 1, descrizione dal cap. 5.1, capitoli dal cap. 4, tag dal cap. 5.3
    - Carica thumbnail
    - Set visibilita' "Programmato" per {drop_date} {drop_time} Europe/Rome
 
-4. Spotify for Creators:
+5. Spotify for Creators:
    - Apri episodio caricato privato (ID {SPOTIFY_ID})
-   - Copia titolo + descrizione dal cap. 4.2
+   - Copia titolo + descrizione dal cap. 5.2
    - Set publish same time
 
-5. Apple Podcasts (T+4-24h dal drop):
+6. Apple Podcasts (T+4-24h dal drop):
    - Dopo che Apple RSS auto-pubblica, estrai URL dell'episodio Apple
    - Aggiungi al frontmatter Jekyll con micro-commit:
      `apple_episode_url: https://podcasts.apple.com/...`
 
-6. Social publishing:
-   - Prossima edizione codiceartificiale: includi la sezione del cap. 7 (nessun orario forzato)
-   - {Lun|Gio} 09:00: YT Short (cap. 5.1)
-   - {Mar|Mer} 14:00: post LinkedIn (cap. 6)
-   - {se intervista} Mer 14:00: verifica amplificazione guest (cap. 8)
+7. Social publishing:
+   - Prossima edizione codiceartificiale: includi la sezione del cap. 8 (nessun orario forzato)
+   - {Lun|Gio} 09:00: YT Short (cap. 6.1)
+   - {Mar|Mer} 14:00: post LinkedIn (cap. 7)
+   - {se intervista} Mer 14:00: verifica amplificazione guest (cap. 9)
 
 Tutto e' pronto nel file promo consolidato. Aprilo e usalo come playbook
 unico fino a completamento del drop.
@@ -369,11 +384,12 @@ unico fino a completamento del drop.
 
 ---
 
-## Vincoli di scrittura file (Passaggio 10)
+## Vincoli di scrittura file (Passaggio 11)
 
 - I due file devono essere **autocontenuti**: chi li apre non deve chiedere "dove trovo X"
-- **Codeblock copia-incolla** per titolo, descrizioni, post, email, YAML retrofit, prompt image: cosi' l'utente copia al volo in YT Studio / Spotify / LinkedIn / Ideogram senza riformattare
-- **Checkbox markdown `- [ ]`** nella checklist del cap. 9, cosi' l'utente puo' spuntarli in editor markdown
+- **Codeblock copia-incolla** per titolo, frasi overlay, descrizioni, post, email, YAML retrofit, prompt image: cosi' l'utente copia al volo in YT Studio / Spotify / LinkedIn / ChatGPT Image 2 senza riformattare
+- **Checkbox markdown `- [ ]`** nella checklist del cap. 10, cosi' l'utente puo' spuntarli in editor markdown
 - **Nessun contenuto aggiuntivo nella chat** oltre al breve summary: il valore e' nei file, non nella chat
 - Se i file esistono gia' (rigenerazione), **sovrascrivi** senza chiedere conferma (l'utente ha gia' validato tutti i passaggi)
 - Usa path assoluti combinando la working directory: `/home/user/.../_posts/...` e `/home/user/.../podcast-promo/episodes/...`
+- **Cleanup**: dopo aver scritto i 2 file consolidati, rimuovi via `rm` il file temporaneo `podcast-promo/episodes/{YYYY-MM-DD}-{slug}_overlay.md` creato al Passaggio 2 (le frasi sono ora nel cap. 2 del promo file). Se manca, non bloccare; rimuovi eventuali `*_overlay.md` orfani dello stesso episodio
