@@ -317,3 +317,151 @@ Sezione omessa — non applicabile a episodi numerati.
 - **Thumbnail iteration**: se dopo 48h il CTR YT è sotto target, usa YT Studio Test & Compare con una thumbnail alternativa (rigenera il prompt del cap. 3 variando palette/espressione, es. fucsia #FF006E).
 - **Nota titolo**: titolo roundup-style scelto dall'utente. Se sottoperforma sul CTR, valuta A/B con un claim hook-first su Fable (es. "Fable ha rotto la regola: il modello batte l'harness").
 - **Workflow tip**: la thumbnail è al cap. 3 (early). Lancia ChatGPT Image 2 in parallelo mentre lavori sul resto.
+
+---
+
+# 13. End screen + YT Cards (suggerito da youtube-cross-link v1.1)
+
+<!-- Generato da .claude/skills/youtube-cross-link v1.1 il 2026-07-10.
+     Cache canale: .claude/skills/youtube-cross-link/.cache/channel-videos.json (refresh 2026-07-10, 78 video).
+     Episodio target: Xsmd-qbtgVA | "Fable, GPT 5.6 e tanti modelli cinesi" | drop 2026-07-11.
+     Candidati validi: 39 | pre-screened: 15 | Selezione finale: 1 end screen + 5 cards. -->
+
+## End screen — 1 video (layout: Subscribe + Video)
+
+| Campo | Valore |
+|---|---|
+| Titolo target | La politica USA su AI e open source mi fa drizzare i peli (ep60) |
+| YT ID | iB9MxO5jn6E |
+| Durata | 1:09:46 |
+| Views (al 2026-07-10) | 192 |
+| Pubblicato | 2026-07-04 |
+| URL | https://www.youtube.com/watch?v=iB9MxO5jn6E |
+
+**Razionale**: è il prequel narrativo diretto di questo episodio. Ep60 è la puntata in cui Stefano annuncia il taglio dell'abbonamento Anthropic e racconta i limiti imposti a Fable (`/advisor`, fallback a Opus, distillation cinese, scommessa open weight); ep61 si apre letteralmente con "vi racconto Fable, come è andata davvero. Ho detto che non si poteva fare niente, non è stato del tutto vero". Ha il capitolo dedicato "Anthropic limita Fable: 50% dei token e fallback a Opus", segmento > 60s. Score finale 0.909 (semantic 0.92, recency 0.97, views_log 0.80): è il match più alto e il video più recente, ideale come end screen per tenere il viewer nel flusso della serie.
+
+**Setup in YT Studio** (~90s):
+
+1. YT Studio → Content → seleziona ep61 (Xsmd-qbtgVA) → Editor → End screen
+2. Aggiungi elemento → Subscribe (canale Risorse Artificiali, default)
+3. Aggiungi elemento → Video → Specific video → `https://www.youtube.com/watch?v=iB9MxO5jn6E`
+4. Layout "Subscribe + 1 video". Posiziona negli ultimi 20 secondi (≈ 1:14:25 → fine).
+5. Save.
+
+---
+
+## YT Cards — 5 cards a timestamp specifici di ep61
+
+### Card 1 — Mostra al min `12:14`
+
+| Campo | Valore |
+|---|---|
+| Linka video | Licenze AI a tutti in azienda, non solo ai dev \| Simone Basso |
+| YT ID target | gTB3Q0_LXiM |
+| URL | https://www.youtube.com/watch?v=gTB3Q0_LXiM |
+| Tema della card | harness vs modello |
+| Custom message | L'harness è l'asset |
+| Teaser text | Simone Basso, WeRoad |
+
+**Razionale**: al min 12:14 il capitolo è "Modello più harness e Fable advisor di Opus", dove la tesi è che il valore si è spostato dal modello all'harness. Simone Basso (CTPO WeRoad) dedica un capitolo intero a "Il modello è commodity, l'harness è l'asset": stessa tesi da un angolo aziendale/organizzativo, complementare a quello tecnico di ep61. Intervista → varia il format delle card.
+
+---
+
+### Card 2 — Mostra al min `19:03`
+
+| Campo | Valore |
+|---|---|
+| Linka video | L'AI che non dorme: da DeepSeek V4 ad Hermes Agent (ep50) |
+| YT ID target | qKl4Vkb6BMw |
+| URL | https://www.youtube.com/watch?v=qKl4Vkb6BMw |
+| Tema della card | modelli cinesi / open |
+| Custom message | Settimana cinese |
+| Teaser text | DeepSeek, Kimi, MiMo |
+
+**Razionale**: al min 19:03 il capitolo è "Modelli open: Ollama Cloud, OpenRouter e HY3", con Kimi K2.7 e Minimax M3. Ep50 è il roundup "settimana cinese" (DeepSeek V4, Kimi K2.6, MiMo V2.5): stesso terreno degli open weight cinesi, con più dettaglio su inferenza e quantizzazione.
+
+---
+
+### Card 3 — Mostra al min `36:34`
+
+| Campo | Valore |
+|---|---|
+| Linka video | Physical AI: VLA contro World Model (ep58, con Vittorio) |
+| YT ID target | 8Dlsukidue4 |
+| URL | https://www.youtube.com/watch?v=8Dlsukidue4 |
+| Tema della card | i dati per i robot |
+| Custom message | I dati per i robot |
+| Teaser text | Physical AI con Vittorio |
+
+**Razionale**: callback diretto. Al min 36:34 (capitolo "Voce GPT Live 2 e i dati per i robot") Stefano cita esplicitamente Vittorio e la sua battuta "non esiste il Reddit per la robotica", spiegando gli occhiali smart come raccolta dati per i robot. Ep58 è proprio l'intervista con Vittorio di Cyberwave dove "il vero collo di bottiglia sono i dati e non l'hardware".
+
+---
+
+### Card 4 — Mostra al min `51:09`
+
+| Campo | Valore |
+|---|---|
+| Linka video | Clona ogni voce in locale, gratis: ora preoccupati (ep57) |
+| YT ID target | Z-srn-RNf5s |
+| URL | https://www.youtube.com/watch?v=Z-srn-RNf5s |
+| Tema della card | deepfake voce |
+| Custom message | Clona la voce in locale |
+| Teaser text | Deepfake vocale |
+
+**Razionale**: al min 51:09 il capitolo è "Pocket TTS e i deepfake della voce", dove Stefano avverte di non clonare le voci pubbliche e cita il consiglio "ai miei genitori di non rispondere al numero sconosciuto". Ep57 è la puntata in cui Paolo clona la voce in locale con OmniVoice Studio e ha il capitolo "Truffe vocali e come proteggere i genitori": stesso tema, un passo indietro nella cronaca.
+
+---
+
+### Card 5 — Mostra al min `1:06:59`
+
+| Campo | Valore |
+|---|---|
+| Linka video | Emanuele Fabbiani: ricerca e startup AI, allucinazioni ed explainability |
+| YT ID target | vdXPo2tkmqs |
+| URL | https://www.youtube.com/watch?v=vdXPo2tkmqs |
+| Tema della card | meta-reasoning / explainability |
+| Custom message | Explainability LLM |
+| Teaser text | Emanuele Fabbiani |
+
+**Razionale**: callback per nome. Al min 1:06:59 (capitolo "Il paper Anthropic sul ragionamento per concetti") Stefano dice "le racconta bene un nostro ospite che è venuto da noi in intervista, Emanuele Fabbiani, se volete andate a cercare l'intervista". Questa card serve esattamente quella intervista nel momento in cui viene citata. Nota: `[low-conf]` sul match automatico (nessun capitolo H2 estratto dal post pre-v3.0), ma il riferimento esplicito la rende solidissima.
+
+---
+
+## Setup in YT Studio (cards, ~5min)
+
+1. YT Studio → Content → ep61 (Xsmd-qbtgVA) → Editor → Cards
+2. Per ogni card: Aggiungi card → Tipo "Video" → incolla l'URL target → imposta "Show card at" al timestamp indicato → compila Custom message + Teaser text dalla tabella
+3. Aggiungi tutte e 5, poi Save una sola volta
+4. Verifica riproducendo ai timestamp: il teaser deve apparire ~5s nell'angolo superiore destro
+
+## Distribuzione timestamp lungo l'episodio (durata ~1:15:00)
+
+| Card | Timestamp | Posizione relativa | Tema |
+|---|---|---|---|
+| Card 1 | 12:14 | 16% (early hook) | harness vs modello |
+| Card 2 | 19:03 | 25% | modelli cinesi / open |
+| Card 3 | 36:34 | 49% (metà) | dati per i robot |
+| Card 4 | 51:09 | 68% | deepfake voce |
+| Card 5 | 1:06:59 | 89% (prima dell'end screen) | meta-reasoning |
+
+Gap minimi tra card consecutive: 409s / 1051s / 875s / 950s — tutti > 90s. Nessun cluster.
+
+## Score breakdown (trasparenza algoritmo)
+
+| Video | Score | Semantic | Recency | Views_log | Note |
+|---|---|---|---|---|---|
+| ep60 (iB9MxO5jn6E) | 0.909 | 0.92 | 0.97 | 0.80 | END SCREEN (prequel diretto) |
+| ep57 (Z-srn-RNf5s) | 0.859 | 0.84 | 0.92 | 0.83 | Card 4 — tema: deepfake voce |
+| Basso (gTB3Q0_LXiM) | 0.836 | 0.82 | 0.94 | 0.76 | Card 1 — tema: harness vs modello |
+| ep58 (8Dlsukidue4) | 0.834 | 0.80 | 0.95 | 0.79 | Card 3 — tema: dati per i robot |
+| ep50 (qKl4Vkb6BMw) | 0.747 | 0.70 | 0.77 | 0.85 | Card 2 — tema: modelli cinesi / open |
+| Fabbiani (vdXPo2tkmqs) | 0.716 | 0.75 | 0.52 | 0.73 | Card 5 — tema: explainability `[low-conf]` |
+
+Pesi: semantic 0.55, recency 0.25 (decay esponenziale half-life 6 mesi), views_log 0.20. Recency = exp(-ln(2) · mesi / 6). Views_log = log10(views+1) / log10(max_views+1), max_views canale = 740 (ep51). Prima scelta scartata: ep56 "Scrivere codice è una commodity" (0.854, stesso tema Fable/harness della Card 1) — primo rimpiazzo se sostituisci la Card 1.
+
+## Note operative
+
+- **Misurazione**: YT Studio → Analytics → Engagement → "End screens" e "Cards" per impression e CTR. Soglia: > 2% buono, > 4% ottimo. Ricontrolla a T+7gg.
+- **Selezione recency-heavy voluta**: 4 candidati recenti (57/58/60/Basso di giugno) + 1 vecchio (Fabbiani, gennaio). I legami più forti di ep61 sono proprio il mese precedente + i due callback per nome (Vittorio, Fabbiani).
+- **Cache canale**: refresh 2026-07-10, valida ~5 giorni. Per forzare: cancella `.claude/skills/youtube-cross-link/.cache/channel-videos.json` e re-invoca.
+- **Re-invocazione**: se un target ha un picco di views o esce un episodio più affine, re-invoca la skill (chiederà se sovrascrivere questo capitolo o creare `_cross-link-v2.md`).

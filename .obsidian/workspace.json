@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "podcast-promo/episodes/2026-07-04-la-politica-usa-su-ai-e-open-source-mi-fa-drizzare-i-peli_promo.md",
+                "file": "temp/intervista-eugenio-apertura-traccia.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-07-04-la-politica-usa-su-ai-e-open-source-mi-fa-drizzare-i-peli_promo"
+              "title": "intervista-eugenio-apertura-traccia"
+            }
+          },
+          {
+            "id": "0627e8d0d878fde4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "podcast-promo/episodes/2026-07-15-petulla-inferenza-europea-zero-log_promo.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-07-15-petulla-inferenza-europea-zero-log_promo"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -183,27 +198,37 @@
       "bases:Create new base": false
     }
   },
-  "active": "ef6b89e5f1cb42ec",
+  "active": "0627e8d0d878fde4",
   "lastOpenFiles": [
+    "podcast-promo/episodes/2026-07-15-petulla-inferenza-europea-zero-log_promo.md.tmp.2.2d8dafa43030",
+    "podcast-promo/episodes/2026-07-11-fable-gpt-5-6-e-tanti-modelli-cinesi_promo.md",
+    "podcast-promo/episodes/2026-07-15-petulla-inferenza-europea-zero-log_overlay.md",
+    "podcast-promo/episodes/2026-07-15-petulla-inferenza-europea-zero-log_promo.md",
+    "podcast-promo/episodes/2026-07-15-petulla-inferenza-europea-zero-log_promo.md.tmp.2.8392ee9a3f93",
+    "_posts/2026-07-15-petulla-inferenza-europea-zero-log.md",
+    "_posts/2026-07-15-petulla-inferenza-europea-zero-log.md.tmp.2.4880dd6a43a3",
+    "temp/briefing-eugenio-petulla.md",
+    "podcast-promo/episodes/2026-07-15-petulla-inferenza-europea-zero-log_overlay.md.tmp.2.f1612728748d",
+    "temp/eugenio.txt",
+    "temp/intervista-eugenio-apertura-traccia.md",
+    "temp/eugenio.md",
+    "temp/briefing_roberto_stagi.md",
+    "temp/intervista-eugenio-apertura-traccia.md.tmp.2068.d11c0219d569",
+    "temp/intervista-eugenio-apertura-traccia.md.tmp.2068.327d88c44268",
+    "temp/intervista-eugenio-apertura-traccia.md.tmp.2068.7a2dd9b9ed62",
+    "temp/intervista-eugenio-apertura-traccia.md.tmp.2068.461ccd37ed2b",
+    "temp/intervista-eugenio-apertura-traccia.md.tmp.2068.966887b64852",
+    "temp/intervista-eugenio-apertura-traccia.md.tmp.2068.c48362ac5f71",
+    "podcast-promo/episodes/2026-07-04-la-politica-usa-su-ai-e-open-source-mi-fa-drizzare-i-peli_promo.md",
     "podcast-promo/episodes/2026-06-27-physical-ai-vla-contro-world-model_promo.md",
     "podcast-promo/episodes/2026-06-24-licenze-ai-a-tutti-non-solo-dev_promo.md",
-    "podcast-promo/episodes/2026-06-27-physical-ai-vla-contro-world-model_promo.md.tmp.2.decead78ef0c",
     "_posts/2026-06-27-physical-ai-vla-contro-world-model.md",
-    "_posts/2026-06-27-physical-ai-vla-contro-world-model.md.tmp.2.191be1e7d855",
     "podcast-promo/episodes/2026-06-27-physical-ai-vla-contro-world-model_overlay.md",
-    "podcast-promo/episodes/2026-06-27-physical-ai-vla-contro-world-model_promo.md.tmp.2.e753b4d57eaa",
     "podcast-promo/episodes/2026-06-20-clona-ogni-voce-in-locale-gratis-ora-preoccupati_promo.md",
-    "podcast-promo/episodes/2026-06-24-licenze-ai-a-tutti-non-solo-dev_promo.md.tmp.2.5f30186c18d2",
-    "podcast-promo/episodes/2026-06-24-licenze-ai-a-tutti-non-solo-dev_promo.md.tmp.2.004332f73fc5",
     "_posts/2026-06-24-licenze-ai-a-tutti-non-solo-dev.md",
     "_posts/2026-06-22-licenze-ai-a-tutti-non-solo-dev.md",
-    "_posts/2026-06-22-licenze-ai-a-tutti-non-solo-dev.md.tmp.2.bbf070b90d0b",
     "podcast-promo/episodes/2026-06-22-licenze-ai-a-tutti-non-solo-dev_promo.md",
-    "podcast-promo/episodes/2026-06-22-licenze-ai-a-tutti-non-solo-dev_promo.md.tmp.2.9bd3301746c4",
     "podcast-promo/episodes/2026-06-22-licenze-ai-a-tutti-non-solo-dev_overlay.md",
-    "podcast-promo/episodes/2026-06-22-licenze-ai-a-tutti-non-solo-dev_overlay.md.tmp.2.f5ec4b55829d",
-    "trascript.txt",
-    "puntata52-tr.txt",
     "podcast-promo/episodes/puntata-52-scaletta.md",
     "podcast-promo/episodes/2026-06-13-scrivere-codice-e-una-commodity-fable-e-i-workflow_promo.md",
     "podcast-promo/episodes/2026-06-10-context-engineering-per-agenti-ai-roberto-stagi_promo.md",
@@ -211,16 +236,7 @@
     "podcast-promo/episodes/2026-05-30-il-papa-ha-capito-gli-llm-meglio-di-noi_promo.md",
     "podcast-promo/episodes/2026-05-27-ai-adoption-problema-culturale-andrea-saltarello_promo.md",
     "podcast-promo/episodes/2026-05-23-google-io-2026-omnimodalita-e-la-visione-di-hassabis_promo.md",
-    "podcast-promo/episodes/2026-05-16-l-ai-un-anno-dopo_promo.md",
-    "podcast-promo/episodes/2026-05-13-con-lai-nessun-software-e-difendibile_promo.md",
-    "podcast-promo/episodes/2026-05-09-un-ai-agent-in-casa-ecco-cosa-fa-hermes_promo.md",
     "assets/images/episodes/ep52.png",
-    "_posts/2026-06-20-clona-ogni-voce-in-locale-gratis-ora-preoccupati.md",
-    "_posts/2026-06-13-scrivere-codice-e-una-commodity-fable-e-i-workflow.md",
-    "_posts/2026-06-10-context-engineering-per-agenti-ai-roberto-stagi.md",
-    "_posts/2026-06-06-workflow-dinamici-ai-che-si-scrive-gli-harness.md",
-    "_posts/2026-05-30-il-papa-ha-capito-gli-llm-meglio-di-noi.md",
-    "_posts/2026-05-27-ai-adoption-problema-culturale-andrea-saltarello.md",
     "temp/dom.jpeg"
   ]
 }
