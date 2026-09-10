@@ -12,7 +12,14 @@ Models: <strong>GPT-6 Astra</strong> (reasoning medium),
 <strong>GPT-5.6 Sol</strong>, <strong>Claude Sonnet 5</strong>,
 <strong>Gemini 3.8 Flash</strong>, <strong>DeepSeek V4 Flash</strong>,
 <strong>DeepSeek V4.1 Flash</strong>, <strong>Claude Fable 5.1</strong>,
-<strong>Claude Opus 5</strong>, <strong>Kimi K3</strong>. Open the raw SVG to see the animation.</p>
+<strong>Claude Opus 5</strong>, <strong>Kimi K3</strong>,
+<strong>Claude Code</strong>. Open the raw SVG to see the animation.</p>
+<p style="color:#ccc"><strong>Note on Claude Code</strong> (<span style="color:#ffd700">claude-code-minimal / claude-code-constrained</span>):
+these two were <em>not</em> generated as zero-shot API completions. They were
+produced by Claude Code — an agentic coding session where the model read the
+prompts from this page, wrote the SVGs as files, validated the XML and the
+SMIL keyPoints/keyTimes consistency with scripts, and iterated. Same prompts,
+verbatim (typos included), different workflow.</p>
 <style>
   .card { background:#1c1c1c; border:1px solid #333; border-radius:12px;
           padding:1rem; margin-bottom:2rem; }
@@ -56,6 +63,22 @@ Constraints:
 - Loop must be seamless (the skater ends where the loop restarts)
 - Include XML comments describing what each group represents</pre>
 </details>
+
+<div class="card">
+  <h2>claude-code-minimal</h2>
+  <p class="meta">len=2564 · anim=True · tech=SMIL · agentic (Claude Code)</p>
+  <p class="note">not zero-shot: written by Claude Code as a file, then validated (XML well-formedness, keyPoints/keyTimes cardinality, closed motion path) and iterated in-session. Same verbatim minimal prompt.</p>
+  <div class="svgwrap"><iframe src="claude-code-minimal.svg" loading="lazy" style="width:100%;height:480px;border:0;background:#000"></iframe></div>
+  <p><a class="openbtn" href="claude-code-minimal.svg" target="_blank" rel="noopener">Open raw SVG ↗</a></p>
+</div>
+
+<div class="card">
+  <h2>claude-code-constrained</h2>
+  <p class="meta">len=4343 · anim=True · tech=SMIL · agentic (Claude Code)</p>
+  <p class="note">not zero-shot: written by Claude Code as a file, then validated (XML well-formedness, keyPoints/keyTimes cardinality, closed motion path) and iterated in-session. Same verbatim constrained prompt.</p>
+  <div class="svgwrap"><iframe src="claude-code-constrained.svg" loading="lazy" style="width:100%;height:480px;border:0;background:#000"></iframe></div>
+  <p><a class="openbtn" href="claude-code-constrained.svg" target="_blank" rel="noopener">Open raw SVG ↗</a></p>
+</div>
 
 <div class="card">
   <h2>gpt-6-astra-medium-minimal</h2>

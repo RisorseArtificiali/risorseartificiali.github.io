@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -70 900 590" width="900" height="590">
+  <title>Claude Code: skater doing tricks on a half-pipe (constrained prompt)</title>
+  <desc>Animated SMIL SVG of a man doing skateboard tricks on a half-pipe.
+  Physics encoded: pendulum motion along the transitions, speed varies with
+  height via animateMotion keyPoints/keyTimes, ballistic parabolic air above
+  the coping with a 360 spin that realigns before landing, seamless loop.</desc>
+
+  <defs>
+    <!-- Motion path: the skate line, offset ~6px above the ramp surface.
+         Closed teardrop: drop in on the left transition, flat bottom, up the
+         right transition, ballistic parabola (quadratic Bezier = exact
+         parabola) from above the right coping back to the left coping. -->
+    <path id="skatepath" fill="none"
+          d="M 40,128
+             C 40,299 189,438 360,438
+             L 540,438
+             C 711,438 860,299 860,128
+             Q 450,-68 40,128
+             Z"/>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#05060a"/>
+      <stop offset="1" stop-color="#101018"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="-70" width="900" height="590" fill="url(#sky)"/>
+
+  <!-- Half-pipe: two quarter pipes with vertical extensions facing each other -->
+  <g>
+    <!-- transition/flat fill -->
+    <path d="M 40,140 C 40,311 189,450 360,450 L 540,450 C 711,450 860,311 860,140 L 860,520 L 40,520 Z"
+          fill="#1a1a22"/>
+    <!-- ramp surface -->
+    <path d="M 40,140 C 40,311 189,450 360,450 L 540,450 C 711,450 860,311 860,140"
+          fill="none" stroke="#555570" stroke-width="6" stroke-linecap="round"/>
+    <!-- decks/platforms above the copings -->
+    <path d="M 0,140 L 40,140 M 860,140 L 900,140" stroke="#555570" stroke-width="6" stroke-linecap="round"/>
+    <!-- copings -->
+    <circle cx="40" cy="140" r="7" fill="#ffd700"/>
+    <circle cx="860" cy="140" r="7" fill="#ffd700"/>
+    <!-- flat-bottom transition markers -->
+    <path d="M 360,450 L 540,450" stroke="#6b6b88" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <!-- Skater: reference point is the board center; the group is oriented
+       along the direction of travel (rotate="auto") so he leans with the
+       transitions, goes sideways on the vert walls and tilts along the
+       ballistic arc. -->
+  <g>
+    <animateMotion dur="8s" repeatCount="indefinite" rotate="auto"
+                   calcMode="linear"
+                   keyPoints="0;0.05;0.12;0.216;0.306;0.40;0.47;0.52;0.60;0.76;0.84;0.92;1"
+                   keyTimes="0;0.10;0.21;0.31;0.36;0.415;0.475;0.52;0.62;0.78;0.855;0.925;1">
+      <mpath xlink:href="#skatepath" href="#skatepath"/>
+    </animateMotion>
+
+    <!-- Trick group: 360 spin during the aerial phase only. The rotation
+         completes at keyTime 0.86 while landing happens at 1.0, so the skater
+         is realigned before touching down. -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0;0;360;360" keyTimes="0;0.52;0.86;1"
+                        dur="8s" repeatCount="indefinite" calcMode="linear"/>
+
+      <!-- Skateboard: deck + 4 wheels (2 trucks in side view) -->
+      <g>
+        <rect x="-40" y="-9" width="80" height="5" rx="2.5" fill="#ffd700"/>
+        <line x1="-26" y1="-4" x2="-26" y2="0" stroke="#8888aa" stroke-width="3"/>
+        <line x1="26" y1="-4" x2="26" y2="0" stroke="#8888aa" stroke-width="3"/>
+        <circle cx="-30" cy="2" r="4" fill="#ccccee"/>
+        <circle cx="-21" cy="2" r="4" fill="#ccccee"/>
+        <circle cx="21" cy="2" r="4" fill="#ccccee"/>
+        <circle cx="30" cy="2" r="4" fill="#ccccee"/>
+      </g>
+
+      <!-- Skater figure: crouched legs, leaning torso, arms out for balance -->
+      <g stroke="#f2f2f2" stroke-width="7" stroke-linecap="round" fill="none">
+        <!-- legs -->
+        <path d="M -16,-12 L -8,-34 L 2,-48"/>
+        <path d="M 18,-12 L 16,-34 L 2,-48"/>
+        <!-- torso -->
+        <path d="M 2,-48 L 12,-75"/>
+        <!-- arms -->
+        <path d="M 10,-66 L -14,-56"/>
+        <path d="M 10,-66 L 34,-58"/>
+        <!-- head -->
+        <circle cx="15" cy="-84" r="10" fill="#f2f2f2" stroke="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

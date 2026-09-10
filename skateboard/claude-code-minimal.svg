@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 -50 800 530" width="800" height="530">
+  <title>Claude Code: man doing skatevoard tricks on a pipe (minimal prompt)</title>
+  <desc>Animated SMIL SVG prompted with the verbatim minimal prompt.
+  Physics: the skater pendulums in the transitions (slow at the top, fast at
+  the bottom), pops above the coping and follows a parabolic arc with a board
+  spin, landing aligned. Loop is seamless.</desc>
+
+  <defs>
+    <path id="line" fill="none"
+          d="M 60,142
+             C 60,272 170,392 300,392
+             L 500,392
+             C 630,392 740,272 740,142
+             Q 400,-40 60,142
+             Z"/>
+  </defs>
+
+  <rect x="0" y="-50" width="800" height="530" fill="#0a0a0f"/>
+
+  <g>
+    <path d="M 60,150 C 60,280 170,400 300,400 L 500,400 C 630,400 740,280 740,150 L 740,480 L 60,480 Z"
+          fill="#151520"/>
+    <path d="M 60,150 C 60,280 170,400 300,400 L 500,400 C 630,400 740,280 740,150"
+          fill="none" stroke="#3d5a8a" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="60" cy="150" r="6" fill="#4aa3ff"/>
+    <circle cx="740" cy="150" r="6" fill="#4aa3ff"/>
+  </g>
+
+  <g>
+    <!-- keyPoints pace the loop: long dwell near the copings, fastest on the
+         flat bottom and through the parabola (quadratic Bezier = parabola) -->
+    <animateMotion dur="7s" repeatCount="indefinite" rotate="auto"
+                   calcMode="linear"
+                   keyPoints="0;0.05;0.21;0.31;0.42;0.53;0.65;0.8;1"
+                   keyTimes="0;0.10;0.30;0.36;0.44;0.53;0.66;0.82;1">
+      <mpath xlink:href="#line" href="#line"/>
+    </animateMotion>
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+                        values="0;0;360;360" keyTimes="0;0.53;0.82;1"
+                        dur="7s" repeatCount="indefinite" calcMode="linear"/>
+      <rect x="-36" y="-8" width="72" height="5" rx="2.5" fill="#4aa3ff"/>
+      <circle cx="-24" cy="1" r="4" fill="#99bbdd"/>
+      <circle cx="-15" cy="1" r="4" fill="#99bbdd"/>
+      <circle cx="15" cy="1" r="4" fill="#99bbdd"/>
+      <circle cx="24" cy="1" r="4" fill="#99bbdd"/>
+      <g stroke="#e8e8e8" stroke-width="6" stroke-linecap="round" fill="none">
+        <path d="M -14,-11 L -6,-30 L 2,-44"/>
+        <path d="M 16,-11 L 14,-30 L 2,-44"/>
+        <path d="M 2,-44 L 10,-69"/>
+        <path d="M 8,-60 L -12,-50"/>
+        <path d="M 8,-60 L 30,-52"/>
+        <circle cx="13" cy="-77" r="9" fill="#e8e8e8" stroke="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
