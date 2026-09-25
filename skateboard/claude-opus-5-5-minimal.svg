@@ -1,0 +1,254 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5fb8f5"/>
+      <stop offset="1" stop-color="#e6f5ff"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e0ac72"/>
+      <stop offset="1" stop-color="#9c6235"/>
+    </linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8a5a33"/>
+      <stop offset="1" stop-color="#5e3b1f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky, sun, clouds -->
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <circle cx="690" cy="80" r="38" fill="#fff3b0" opacity="0.9"/>
+  <g fill="#fff" opacity="0.85">
+    <g>
+      <ellipse cx="120" cy="80" rx="45" ry="16"/><ellipse cx="150" cy="70" rx="30" ry="18"/>
+      <animateTransform attributeName="transform" type="translate" from="-200 0" to="900 0" dur="60s" repeatCount="indefinite"/>
+    </g>
+    <g>
+      <ellipse cx="420" cy="120" rx="55" ry="15"/><ellipse cx="450" cy="110" rx="32" ry="17"/>
+      <animateTransform attributeName="transform" type="translate" from="-500 0" to="600 0" dur="80s" repeatCount="indefinite"/>
+    </g>
+  </g>
+
+  <!-- Ground -->
+  <rect y="450" width="800" height="50" fill="#8c9a78"/>
+  <rect y="450" width="800" height="4" fill="#6f7d5e"/>
+
+  <!-- Deck supports -->
+  <g stroke="#5e3b1f" stroke-width="4">
+    <line x1="60" y1="262" x2="60" y2="450"/><line x1="740" y1="262" x2="740" y2="450"/>
+    <line x1="60" y1="300" x2="140" y2="440"/><line x1="740" y1="300" x2="660" y2="440"/>
+  </g>
+  <!-- Railings -->
+  <g stroke="#666" stroke-width="3" fill="none">
+    <polyline points="45,250 45,205 120,205 120,250"/>
+    <polyline points="755,250 755,205 680,205 680,250"/>
+  </g>
+
+  <!-- Half-pipe body -->
+  <path d="M40,450 L40,262 L150,262 L150,270 A150,150 0 0 0 300,420 L500,420
+           A150,150 0 0 0 650,270 L650,262 L760,262 L760,450 Z" fill="url(#side)"/>
+  <!-- Riding surface -->
+  <path d="M150,250 L150,270 A150,150 0 0 0 300,420 L500,420 A150,150 0 0 0 650,270 L650,250"
+        fill="none" stroke="url(#wood)" stroke-width="10"/>
+  <path d="M150,250 L150,270 A150,150 0 0 0 300,420 L500,420 A150,150 0 0 0 650,270 L650,250"
+        fill="none" stroke="#f3c892" stroke-width="2" transform="translate(0,-4)" opacity="0.6"/>
+  <!-- Decks (platforms) -->
+  <rect x="38" y="248" width="116" height="14" fill="url(#wood)"/>
+  <rect x="646" y="248" width="116" height="14" fill="url(#wood)"/>
+  <!-- Metal coping -->
+  <circle cx="150" cy="250" r="4.5" fill="#cfd6dc" stroke="#6b7580" stroke-width="1.5"/>
+  <circle cx="650" cy="250" r="4.5" fill="#cfd6dc" stroke="#6b7580" stroke-width="1.5"/>
+
+  <!-- ============ SKATER ============ -->
+  <g id="skater">
+    <g id="spin">
+      <!-- Board -->
+      <g id="board">
+        <path d="M-27,-11.5 Q-25,-8.5 -21,-8.5 L21,-8.5 Q25,-8.5 27,-11.5" fill="none"
+              stroke="#e63946" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M-27,-13 Q-25,-10 -21,-10 L21,-10 Q25,-10 27,-13" fill="none"
+              stroke="#1d1d1d" stroke-width="2" stroke-linecap="round"/>
+        <rect x="-18" y="-8" width="6" height="3" fill="#a0a4a8"/>
+        <rect x="12" y="-8" width="6" height="3" fill="#a0a4a8"/>
+        <circle cx="-15" cy="-3" r="3" fill="#f4e3b2" stroke="#555" stroke-width="1"/>
+        <circle cx="15" cy="-3" r="3" fill="#f4e3b2" stroke="#555" stroke-width="1"/>
+      </g>
+      <!-- Body -->
+      <g stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <polyline id="armB" stroke="#d9a866" stroke-width="5"/>
+        <polyline id="legB" stroke="#1f3a47" stroke-width="7.5"/>
+        <ellipse id="shoeB" rx="5.5" ry="3" fill="#111" stroke="none"/>
+        <circle id="padB" r="4" fill="#222" stroke="none"/>
+        <polyline id="legF" stroke="#264653" stroke-width="7.5"/>
+        <ellipse id="shoeF" rx="5.5" ry="3" fill="#111" stroke="none"/>
+        <circle id="padF" r="4" fill="#333" stroke="none"/>
+        <line id="torso" stroke="#2a9d8f" stroke-width="12"/>
+        <circle id="head" r="7" fill="#f1c27d" stroke="none"/>
+        <path id="helmet" fill="#e76f51" stroke="none"/>
+        <polyline id="armF" stroke="#f1c27d" stroke-width="5"/>
+        <circle id="elbowF" r="3" fill="#333" stroke="none"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- HUD -->
+  <g font-family="monospace" font-size="13" fill="#fff">
+    <rect x="10" y="10" width="215" height="92" rx="8" fill="#000" opacity="0.45"/>
+    <text id="tSpeed" x="20" y="32">Speed:</text>
+    <text id="tG" x="20" y="52">G-force:</text>
+    <text id="tAir" x="20" y="72">Air:</text>
+    <text id="tTrick" x="20" y="92" fill="#ffd166">Trick:</text>
+  </g>
+  <text x="400" y="485" font-family="sans-serif" font-size="12" fill="#fff" text-anchor="middle">
+    ½mv² + mgh = const · ballistic air (g = 9.81 m/s²) · 1 m = 50 px · pumping offsets friction
+  </text>
+
+  <script><![CDATA[
+  (function(){
+    const $ = id => document.getElementById(id);
+    // ---- World & physics constants ----
+    const PX = 50;                 // pixels per metre
+    const g  = 9.81 * PX;          // gravity in px/s^2
+    const R = 150, V = 20, A = Math.PI * R / 2, F = 200;   // transition radius, vert, arc len, flat
+    const L = 2*V + 2*A + F;       // total track length
+    const FLOOR = 420, COPE_Y = 250, LX = 150, RX = 650, CL = 300, CR = 500, CY = 270;
+    const RAMP_H = FLOOR - COPE_Y;                 // 3.4 m ramp
+    const H  = RAMP_H + 1.0 * PX;                  // energy head: 1 m of air above coping
+    const v0 = Math.sqrt(2 * g * (H - RAMP_H));    // speed at the lip (vertical)
+    const Tair = 2 * v0 / g;                       // time of flight
+
+    // Track: arc-length s -> position, surface angle, curvature
+    function track(s){
+      if (s < V) return {x:LX, y:COPE_Y + s, a:90, k:0};
+      s -= V;
+      if (s < A){ const p = s/R; return {x:CL - R*Math.cos(p), y:CY + R*Math.sin(p), a:90 - p*180/Math.PI, k:1/R}; }
+      s -= A;
+      if (s < F) return {x:CL + s, y:FLOOR, a:0, k:0};
+      s -= F;
+      if (s < A){ const p = s/R; return {x:CR + R*Math.sin(p), y:CY + R*Math.cos(p), a:-p*180/Math.PI, k:1/R}; }
+      s -= A;
+      return {x:RX, y:CY - Math.min(s, V), a:-90, k:0};
+    }
+
+    // ---- State (start at the peak of a left-wall air) ----
+    let mode = 'air', s = 0, dir = -1, f = -1, t = Tair/2, side = 'L';
+    let crouch = 0.5, last = null, frameDt = 0.016;
+
+    function physics(h){
+      if (mode === 'ride'){
+        const p = track(s);
+        const v = Math.sqrt(Math.max(2*g*(H - (FLOOR - p.y)), 1));  // energy conservation
+        s += dir * v * h;
+        if (s <= 0){ s = 0; mode = 'air'; t = 0; f = dir; side = 'L'; }
+        else if (s >= L){ s = L; mode = 'air'; t = 0; f = dir; side = 'R'; }
+      } else {
+        t += h;
+        if (t >= Tair){ mode = 'ride'; dir = -f; s = (side === 'L') ? 0 : L; }
+      }
+    }
+
+    const clamp = (x,a,b) => Math.max(a, Math.min(b, x));
+    const smooth = (e0,e1,x) => { const u = clamp((x-e0)/(e1-e0),0,1); return u*u*(3-2*u); };
+    const P = p => p.x.toFixed(2) + ',' + p.y.toFixed(2);
+
+    // Two-bone inverse kinematics
+    function ik(a, b, l1, l2, bend){
+      let dx = b.x-a.x, dy = b.y-a.y, d = Math.hypot(dx,dy) || 0.001;
+      const max = l1 + l2 - 0.01;
+      if (d > max){ b = {x:a.x+dx/d*max, y:a.y+dy/d*max}; dx=b.x-a.x; dy=b.y-a.y; d=max; }
+      const along = (l1*l1 - l2*l2 + d*d) / (2*d);
+      const hh = Math.sqrt(Math.max(l1*l1 - along*along, 0));
+      const ux = dx/d, uy = dy/d, px = uy*bend, py = -ux*bend;
+      return {j:{x:a.x+ux*along+px*hh, y:a.y+uy*along+py*hh}, end:b};
+    }
+
+    function pose(c, grab, armsUp){
+      const footY = -12;
+      const fb = {x:-10, y:footY}, ff = {x:10, y:footY};
+      const hip = {x:-2, y:footY - (41 - 22*c)};
+      const kB = ik(hip, fb, 22, 22, 1).j, kF = ik(hip, ff, 22, 22, 1).j;
+      const lean = (8 + 34*c + 30*grab) * Math.PI/180;
+      const sh = {x:hip.x + 30*Math.sin(lean), y:hip.y - 30*Math.cos(lean)};
+      const hl = lean*0.6;
+      const hd = {x:sh.x + 11*Math.sin(hl), y:sh.y - 11*Math.cos(hl)};
+      // arms: out for balance, or front hand grabs the board (indy)
+      const nF = {x:sh.x + 24, y:sh.y + 8 - armsUp*14};
+      const gT = {x:10, y:-12};
+      const hF = {x:nF.x + (gT.x-nF.x)*grab, y:nF.y + (gT.y-nF.y)*grab};
+      const hB = {x:sh.x - 22, y:sh.y + 12 - armsUp*18};
+      const aF = ik(sh, hF, 16, 16, -1), aB = ik(sh, hB, 16, 16, 1);
+
+      $('legB').setAttribute('points', P(hip)+' '+P(kB)+' '+P(fb));
+      $('legF').setAttribute('points', P(hip)+' '+P(kF)+' '+P(ff));
+      $('padB').setAttribute('cx', kB.x); $('padB').setAttribute('cy', kB.y);
+      $('padF').setAttribute('cx', kF.x); $('padF').setAttribute('cy', kF.y);
+      $('shoeB').setAttribute('cx', fb.x); $('shoeB').setAttribute('cy', fb.y + 1);
+      $('shoeF').setAttribute('cx', ff.x); $('shoeF').setAttribute('cy', ff.y + 1);
+      $('torso').setAttribute('x1', hip.x); $('torso').setAttribute('y1', hip.y);
+      $('torso').setAttribute('x2', sh.x);  $('torso').setAttribute('y2', sh.y);
+      $('armF').setAttribute('points', P(sh)+' '+P(aF.j)+' '+P(aF.end));
+      $('armB').setAttribute('points', P(sh)+' '+P(aB.j)+' '+P(aB.end));
+      $('elbowF').setAttribute('cx', aF.j.x); $('elbowF').setAttribute('cy', aF.j.y);
+      $('head').setAttribute('cx', hd.x); $('head').setAttribute('cy', hd.y);
+      const fx = Math.cos(hl), fy = Math.sin(hl), r = 8.2;
+      const b = {x:hd.x - r*fx, y:hd.y - r*fy}, e = {x:hd.x + r*fx, y:hd.y + r*fy};
+      $('helmet').setAttribute('d', `M${P(b)} A${r},${r} 0 0 1 ${P(e)} L${(e.x+3*fx).toFixed(2)},${(e.y+3*fy).toFixed(2)} Z`);
+    }
+
+    function render(){
+      let x, y, a, v, G, sx, grab = 0, armsUp = 0, target, flip = 0, drop = 0;
+      let airTxt = '-', trick = '-';
+      if (mode === 'ride'){
+        const p = track(s);
+        x = p.x; y = p.y; a = p.a;
+        v = Math.sqrt(Math.max(2*g*(H - (FLOOR - y)), 0));
+        // normal force per unit mass = centripetal + gravity component
+        G = (v*v*p.k + g*Math.cos(a*Math.PI/180)) / g;
+        target = clamp((G - 1)*0.28 + 0.15, 0, 1);   // absorb g-load (pumping)
+        sx = dir;
+      } else {
+        const up = v0*t - 0.5*g*t*t;                   // ballistic flight
+        const q = t / Tair;
+        x = (side === 'L') ? LX : RX; y = COPE_Y - up; a = (side === 'L') ? 90 : -90;
+        v = Math.abs(v0 - g*t); G = 0;
+        airTxt = (up/PX).toFixed(2) + ' m';
+        sx = f * Math.cos(Math.PI * smooth(0.08, 0.92, q));  // 180° body rotation
+        if (Math.abs(sx) < 0.12) sx = (sx < 0 ? -0.12 : 0.12);
+        if (side === 'L'){
+          trick = 'Indy grab 180';
+          grab = clamp(Math.sin(Math.PI*q)*1.7 - 0.2, 0, 1);
+          target = 0.35 + 0.65*Math.sin(Math.PI*q);
+        } else {
+          trick = 'Kickflip 180';
+          const fp = smooth(0.12, 0.62, q);
+          flip = 2*Math.PI*fp;                 // board spins on its long axis
+          drop = Math.sin(Math.PI*fp) * 9;     // board leaves the feet
+          armsUp = Math.sin(Math.PI*q);
+          target = 0.3 + 0.45*Math.sin(Math.PI*q);
+        }
+      }
+      crouch += (target - crouch) * Math.min(1, frameDt*9);
+
+      $('skater').setAttribute('transform', `translate(${x.toFixed(2)},${y.toFixed(2)}) rotate(${a.toFixed(2)})`);
+      $('spin').setAttribute('transform', `scale(${sx.toFixed(3)},1)`);
+      const cy = Math.cos(flip);
+      $('board').setAttribute('transform', `translate(0,${(-6+drop).toFixed(2)}) scale(1,${cy.toFixed(3)}) translate(0,6)`);
+      pose(crouch, grab, armsUp);
+
+      $('tSpeed').textContent = `Speed:   ${(v/PX).toFixed(1)} m/s (${(v/PX*3.6).toFixed(0)} km/h)`;
+      $('tG').textContent     = `G-force: ${G.toFixed(2)} g`;
+      $('tAir').textContent   = `Air:     ${airTxt}`;
+      $('tTrick').textContent = `Trick:   ${trick}`;
+    }
+
+    function frame(ts){
+      if (last === null) last = ts;
+      let dt = Math.min(0.05, (ts - last)/1000); last = ts; frameDt = dt;
+      const step = 1/600;                       // fine sub-stepping for accuracy
+      while (dt > 0){ const h = Math.min(step, dt); dt -= h; physics(h); }
+      render();
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  })();
+  ]]></script>
+</svg>

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-labelledby="title desc">
+  <title id="title">Skateboarder carving a vert half-pipe</title>
+  <desc id="desc">A skater swings through a half-pipe, launching above each coping for a board spin before landing back in the ramp.</desc>
+
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1">
+      <stop offset="0" stop-color="#17284a"/>
+      <stop offset="1" stop-color="#526b85"/>
+    </linearGradient>
+    <linearGradient id="ramp" x2="0" y2="1">
+      <stop offset="0" stop-color="#d5dce2"/>
+      <stop offset="1" stop-color="#8d9aa6"/>
+    </linearGradient>
+    <linearGradient id="deck" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4b544"/>
+      <stop offset="1" stop-color="#d66b30"/>
+    </linearGradient>
+  </defs>
+
+  <!-- The backdrop and ground establish the vert-ramp setting. -->
+  <g id="backdrop">
+    <rect width="1000" height="600" fill="url(#sky)"/>
+    <circle cx="830" cy="92" r="39" fill="#f8d98b" opacity=".85"/>
+    <path d="M0 330 L70 280 135 330 198 266 268 330 335 288 402 330 475 270 550 330 620 286 690 330 760 272 830 330 900 285 1000 330 V510 H0Z"
+          fill="#23384e" opacity=".55"/>
+    <path d="M0 492 H1000 V600 H0Z" fill="#23303a"/>
+    <path d="M0 493 H1000" stroke="#a9b4bd" stroke-width="3" opacity=".45"/>
+  </g>
+
+  <!-- Two opposing quarter pipes form one continuous half-pipe. -->
+  <g id="half-pipe">
+    <path d="M120 176 H180
+             C180 330 278 437 420 450
+             H580
+             C722 437 820 330 820 176
+             H880 V493 H120Z"
+          fill="url(#ramp)" stroke="#657584" stroke-width="4"/>
+    <path d="M180 176 C180 330 278 437 420 450 H580
+             C722 437 820 330 820 176"
+          fill="none" stroke="#eef2f4" stroke-width="5"/>
+    <path d="M180 176 C180 330 278 437 420 450 H580
+             C722 437 820 330 820 176"
+          fill="none" stroke="#566675" stroke-width="2" opacity=".65"/>
+    <path d="M150 176 H210 M790 176 H850" stroke="#f6f7f8" stroke-width="9" stroke-linecap="round"/>
+    <path d="M150 182 H210 M790 182 H850" stroke="#788795" stroke-width="2"/>
+    <path d="M202 204 C214 329 295 415 412 431 M798 204 C786 329 705 415 588 431"
+          fill="none" stroke="#fff" stroke-width="2" opacity=".22"/>
+    <path d="M125 493 H875" stroke="#364553" stroke-width="4"/>
+  </g>
+
+  <!-- The moving skater follows the transitions, slows near the coping, and samples parabolic aerial arcs. -->
+  <g id="skater" transform="translate(500 448)">
+    <animateTransform attributeName="transform" type="translate" dur="10s" repeatCount="indefinite"
+      calcMode="linear"
+      keyTimes="0;.12;.22;.27;.30;.33;.36;.39;.49;.61;.71;.76;.79;.82;.85;.88;1"
+      values="500 448;675 426;790 300;820 190;790 111;760 85;730 111;700 190;500 448;325 426;210 300;180 190;210 111;240 85;270 111;300 190;500 448"/>
+
+    <!-- The skateboard has a deck, two trucks, and four visible wheels; it flips only during the aerials. -->
+    <g id="skateboard">
+      <animateTransform attributeName="transform" type="rotate" dur="10s" repeatCount="indefinite"
+        calcMode="linear"
+        keyTimes="0;.27;.30;.33;.36;.39;.76;.79;.82;.85;.88;1"
+        values="0 0 0;0 0 0;120 0 0;240 0 0;300 0 0;360 0 0;360 0 0;480 0 0;600 0 0;660 0 0;720 0 0;720 0 0"/>
+      <g fill="#18222b">
+        <circle cx="-29" cy="11" r="6"/>
+        <circle cx="-25" cy="16" r="5"/>
+        <circle cx="29" cy="11" r="6"/>
+        <circle cx="25" cy="16" r="5"/>
+      </g>
+      <path d="M-30 3 V9 M30 3 V9 M-30 5 H-18 M18 5 H30" fill="none" stroke="#505b63" stroke-width="3" stroke-linecap="round"/>
+      <path d="M-42 -4 Q-45 0 -42 4 H42 Q45 0 42 -4Z" fill="url(#deck)" stroke="#442f2a" stroke-width="2"/>
+      <path d="M-28 -1 H28" stroke="#ffe1a0" stroke-width="2" opacity=".8"/>
+    </g>
+
+    <!-- The skater's bent legs, spread arms, helmet, and clothing make the rider readable in silhouette. -->
+    <g id="rider" stroke="#18232c" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-13 -10 L-25 -29 L-13 -48 L-5 -57
+               M13 -10 L22 -29 L11 -47 L5 -57"
+            fill="none" stroke="#263443" stroke-width="11"/>
+      <path d="M-13 -10 L-25 -29 L-13 -48 L-5 -57
+               M13 -10 L22 -29 L11 -47 L5 -57"
+            fill="none" stroke="#e8e9e4" stroke-width="6"/>
+      <path d="M-18 -8 L-5 -8 M7 -8 L20 -8" fill="none" stroke="#202a32" stroke-width="7"/>
+      <path d="M-8 -91 L-17 -79 L-12 -54 Q0 -47 14 -55 L18 -79 L9 -91Z"
+            fill="#d34c3f" stroke-width="3"/>
+      <path d="M-13 -82 L11 -82" stroke="#f58b69" stroke-width="3" opacity=".8"/>
+      <path d="M-12 -85 L-34 -76 L-54 -60
+               M13 -85 L34 -74 L55 -64"
+            fill="none" stroke="#263443" stroke-width="11"/>
+      <path d="M-12 -85 L-34 -76 L-54 -60
+               M13 -85 L34 -74 L55 -64"
+            fill="none" stroke="#e8e9e4" stroke-width="6"/>
+      <circle cx="-55" cy="-59" r="5" fill="#e8e9e4" stroke-width="2"/>
+      <circle cx="56" cy="-63" r="5" fill="#e8e9e4" stroke-width="2"/>
+      <path d="M-8 -103 Q-6 -114 2 -114 Q13 -113 15 -102 L12 -96 H-7Z"
+            fill="#e8e9e4" stroke-width="3"/>
+      <path d="M-9 -103 Q2 -109 15 -102" fill="none" stroke="#f2b544" stroke-width="4"/>
+      <circle cx="2" cy="-98" r="2.5" fill="#263443" stroke="none"/>
+    </g>
+  </g>
+</svg>

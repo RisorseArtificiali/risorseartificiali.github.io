@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" role="img"
+     aria-label="Animated skateboarder riding a halfpipe and doing an air on each wall">
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1">
+      <stop stop-color="#14233f"/>
+      <stop offset="1" stop-color="#31577a"/>
+    </linearGradient>
+    <linearGradient id="ramp" x2="0" y2="1">
+      <stop stop-color="#e5ac70"/>
+      <stop offset="1" stop-color="#bb764c"/>
+    </linearGradient>
+    <clipPath id="rampClip">
+      <path d="M100 292 C140 390 230 458 350 458 H610
+               C730 458 820 390 860 292 V560 H100Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Setting -->
+  <rect width="960" height="560" fill="url(#sky)"/>
+  <circle cx="747" cy="100" r="43" fill="#f8dca0" opacity=".9"/>
+  <g fill="#c4d8e8" opacity=".65">
+    <circle cx="170" cy="85" r="2"/><circle cx="333" cy="143" r="2"/>
+    <circle cx="565" cy="77" r="2"/><circle cx="882" cy="161" r="2"/>
+  </g>
+  <text x="480" y="75" text-anchor="middle" fill="#dceaf1"
+        font-family="system-ui, sans-serif" font-size="16" letter-spacing="5">
+    HALFPIPE SESSION
+  </text>
+
+  <!-- The riding surface is the top edge of this shape. -->
+  <path d="M100 292 C140 390 230 458 350 458 H610
+           C730 458 820 390 860 292 V560 H100Z"
+        fill="url(#ramp)"/>
+  <g clip-path="url(#rampClip)" stroke="#885737" stroke-width="2" opacity=".3">
+    <path d="M110 350 H850 M110 395 H850 M110 440 H850
+             M110 490 H850 M110 540 H850"/>
+    <path d="M225 290 V560 M350 290 V560 M480 290 V560
+             M610 290 V560 M735 290 V560"/>
+  </g>
+  <path d="M100 292 C140 390 230 458 350 458 H610
+           C730 458 820 390 860 292"
+        fill="none" stroke="#f7deb5" stroke-width="8"
+        stroke-linecap="round"/>
+  <path d="M100 292 C140 390 230 458 350 458 H610
+           C730 458 820 390 860 292"
+        fill="none" stroke="#674536" stroke-width="2"/>
+  <path d="M83 292 H112 M848 292 H877" stroke="#dce4e6"
+        stroke-width="9" stroke-linecap="round"/>
+
+  <!-- Position follows the walls; the separate rotation follows their slope.
+       At each coping the rider pushes inward, then follows a descending arc. -->
+  <g>
+    <animateTransform attributeName="transform" type="translate"
+      dur="10s" repeatCount="indefinite" calcMode="spline"
+      keyTimes="0;.2;.27;.36;.5;.7;.77;.86;1"
+      keySplines=".25,0,.75,1; .3,0,.7,1; .3,0,.7,1; .25,0,.75,1; .25,0,.75,1; .3,0,.7,1; .3,0,.7,1; .25,0,.75,1"
+      values="480 443; 860 280; 827 163; 785 351; 480 443;
+              100 280; 133 163; 175 351; 480 443"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        dur="10s" repeatCount="indefinite" calcMode="linear"
+        keyTimes="0;.2;.27;.36;.5;.7;.77;.86;1"
+        values="0;-65;-12;-48;0;65;12;48;0"/>
+
+      <!-- Rider: bent knees and low arms keep the center of mass near the board. -->
+      <g stroke-linecap="round" stroke-linejoin="round">
+        <!-- Back arm -->
+        <path d="M-10-80 L-27-65 L-20-46" fill="none"
+              stroke="#e7a47b" stroke-width="10"/>
+        <!-- T-shirt -->
+        <path d="M-13-88 Q1-94 15-83 L12-57 Q0-52-12-59Z"
+              fill="#55dfcb" stroke="#18394b" stroke-width="2"/>
+        <!-- Legs, bent for the landings -->
+        <path d="M-5-57 L-19-37 L-25-21 M7-56 L20-39 L22-21"
+              fill="none" stroke="#243654" stroke-width="12"/>
+        <path d="M-29-20 H-15 M16-20 H30" stroke="#f4e1b5" stroke-width="8"/>
+        <!-- Front arm -->
+        <path d="M13-79 L30-65 L23-47" fill="none"
+              stroke="#e7a47b" stroke-width="10"/>
+        <path d="M-4-89 L-4-98" stroke="#e7a47b" stroke-width="8"/>
+        <circle cx="-3" cy="-111" r="15" fill="#e7a47b"/>
+        <path d="M-18-114 Q-16-132 3-129 Q14-127 13-116
+                 Q0-123-18-114Z" fill="#26364f"/>
+        <path d="M-19-118 Q-5-128 15-116" fill="none"
+              stroke="#ffbd6c" stroke-width="5"/>
+      </g>
+
+      <!-- A quick deck flip on each air. The rider continues along the arc. -->
+      <g>
+        <animateTransform attributeName="transform" type="scale"
+          dur="10s" repeatCount="indefinite" calcMode="linear"
+          keyTimes="0;.2;.235;.27;.305;.34;.7;.735;.77;.805;.84;1"
+          values="1 1;1 1;1 .08;1 -1;1 .08;1 1;
+                  1 1;1 .08;1 -1;1 .08;1 1;1 1"/>
+        <circle cx="-26" cy="10" r="6" fill="#223042" stroke="#b9ced1" stroke-width="2"/>
+        <circle cx="26" cy="10" r="6" fill="#223042" stroke="#b9ced1" stroke-width="2"/>
+        <path d="M-42-3 Q-38 1-30 1 H30 Q38 1 42-3"
+              fill="none" stroke="#213245" stroke-width="8" stroke-linecap="round"/>
+        <path d="M-39-5 H39" stroke="#ffcb79" stroke-width="3" stroke-linecap="round"/>
+      </g>
+    </g>
+  </g>
+</svg>
