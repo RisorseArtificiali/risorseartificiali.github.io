@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- ============================================================
+       Vert ramp skater. Physics model (g scaled for readability):
+       - The skater's centre of mass (CoM) rides a track offset 45px
+         inside the ramp surface (radius 155 on the 200px transitions).
+       - Speed from energy conservation: v^2 = v_coping^2 + 2*g*drop,
+         so the skater is slow near the coping and fastest on the flat.
+       - Airs: vertical launch at the coping, y(t) = y0 - v0*t + g*t^2/2,
+         sampled every 0.1 s (parabolic in time, symmetric about the apex).
+       - Keyframe times come from integrating ds/v along the track.
+       ============================================================ -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5aa9e6"/>
+      <stop offset="1" stop-color="#cfe9ff"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9a066"/>
+      <stop offset="1" stop-color="#9c6b3c"/>
+    </linearGradient>
+    <linearGradient id="deckside" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b2b2b"/>
+      <stop offset="0.35" stop-color="#2b2b2b"/>
+      <stop offset="0.36" stop-color="#e2533b"/>
+      <stop offset="1" stop-color="#b8321f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background: sky, sun and ground -->
+  <g id="background">
+    <rect width="800" height="600" fill="url(#sky)"/>
+    <circle cx="690" cy="80" r="36" fill="#fff4b0" opacity="0.9"/>
+    <g fill="#ffffff" opacity="0.8">
+      <ellipse cx="150" cy="90" rx="60" ry="16"/>
+      <ellipse cx="190" cy="80" rx="40" ry="14"/>
+      <ellipse cx="450" cy="130" rx="50" ry="12"/>
+    </g>
+    <rect y="540" width="800" height="60" fill="#6b8f4e"/>
+  </g>
+
+  <!-- Half-pipe: two quarter pipes (R=200 transitions + 40px vert) facing each other -->
+  <g id="halfpipe">
+    <!-- Support scaffolding under the ramp -->
+    <g stroke="#6e4a26" stroke-width="4">
+      <line x1="40" y1="260" x2="40" y2="540"/>
+      <line x1="90" y1="260" x2="90" y2="540"/>
+      <line x1="710" y1="260" x2="710" y2="540"/>
+      <line x1="760" y1="260" x2="760" y2="540"/>
+      <line x1="40" y1="300" x2="90" y2="520"/>
+      <line x1="710" y1="520" x2="760" y2="300"/>
+    </g>
+    <!-- Riding surface: deck, vert, transition, flat, transition, vert, deck -->
+    <path d="M20,260 L100,260 L100,300 A200,200 0 0 0 300,500 L500,500 A200,200 0 0 0 700,300 L700,260 L780,260 L780,540 L20,540 Z"
+          fill="url(#wood)" stroke="#5a3a1c" stroke-width="3"/>
+    <!-- Surface highlight line (masonite) -->
+    <path d="M100,260 L100,300 A200,200 0 0 0 300,500 L500,500 A200,200 0 0 0 700,300 L700,260"
+          fill="none" stroke="#3d3d44" stroke-width="5"/>
+    <!-- Metal coping pipes on the lips -->
+    <circle cx="100" cy="262" r="5" fill="#c9ced6" stroke="#6d737c" stroke-width="1.5"/>
+    <circle cx="700" cy="262" r="5" fill="#c9ced6" stroke="#6d737c" stroke-width="1.5"/>
+    <!-- Deck safety rails -->
+    <g stroke="#555" stroke-width="3" fill="none">
+      <path d="M22,260 L22,215 L70,215"/>
+      <path d="M778,260 L778,215 L730,215"/>
+    </g>
+  </g>
+
+  <!-- Caption -->
+  <text x="400" y="580" text-anchor="middle" font-family="Verdana, sans-serif" font-size="14" fill="#1d2b12">
+    Vert session: kickflip (right wall) &amp; 360 shove-it (left wall)
+  </text>
+
+  <!-- ============================================================
+       SKATER. Outer group = CoM position (translate),
+       inner group = body orientation normal to the ramp (rotate).
+       Local frame: CoM at origin, wheels touch surface at y=+45.
+       ============================================================ -->
+  <g id="skater-position">
+    <animateTransform attributeName="transform" type="translate" dur="6.67s" repeatCount="indefinite" calcMode="linear"
+      keyTimes="0;.021;.042;.063;.084;.105;.126;.147;.168;.189;.21;.2312;.2496;.266;.2811;.2952;.3088;.3222;.3878;.4011;.4147;.4289;.4439;.4603;.4788;.5;.521;.542;.563;.584;.605;.626;.647;.668;.689;.71;.7312;.7496;.766;.7811;.7952;.8088;.8222;.8878;.9011;.9147;.9289;.9439;.9603;.9788;1"
+      values="655 260;655 227.6;655 202.4;655 184.4;655 173.6;655 170;655 173.6;655 184.4;655 202.4;655 227.6;655 260;655 300;649.7 340.1;634.2 377.5;609.6 409.6;577.5 434.2;540.1 449.7;500 455;300 455;259.9 449.7;222.5 434.2;190.4 409.6;165.8 377.5;150.3 340.1;145 300;145 260;145 227.6;145 202.4;145 184.4;145 173.6;145 170;145 173.6;145 184.4;145 202.4;145 227.6;145 260;145 300;150.3 340.1;165.8 377.5;190.4 409.6;222.5 434.2;259.9 449.7;300 455;500 455;540.1 449.7;577.5 434.2;609.6 409.6;634.2 377.5;649.7 340.1;655 300;655 260"/>
+
+    <!-- Orientation: perpendicular to the ramp on the transitions; slight body tilt during airs -->
+    <g id="skater-orientation">
+      <animateTransform attributeName="transform" type="rotate" dur="6.67s" repeatCount="indefinite" calcMode="linear"
+        keyTimes="0;.021;.042;.063;.084;.105;.126;.147;.168;.189;.21;.2312;.2496;.266;.2811;.2952;.3088;.3222;.3878;.4011;.4147;.4289;.4439;.4603;.4788;.5;.521;.542;.563;.584;.605;.626;.647;.668;.689;.71;.7312;.7496;.766;.7811;.7952;.8088;.8222;.8878;.9011;.9147;.9289;.9439;.9603;.9788;1"
+        values="-90;-84;-77;-71;-67;-65;-67;-71;-77;-84;-90;-90;-75;-60;-45;-30;-15;0;0;15;30;45;60;75;90;90;84;77;71;67;65;67;71;77;84;90;90;75;60;45;30;15;0;0;-15;-30;-45;-60;-75;-90;-90"/>
+
+      <!-- Skateboard: separates from the feet during the tricks, then rejoins before landing -->
+      <g id="board-separation">
+        <animateTransform attributeName="transform" type="translate" dur="6.67s" repeatCount="indefinite"
+          keyTimes="0;.021;.05;.16;.189;.521;.55;.66;.689;1"
+          values="0 0;0 0;0 9;0 9;0 0;0 0;0 9;0 9;0 0;0 0"/>
+        <!-- Pivot the flip about the board's own axis (y=40) -->
+        <g transform="translate(0,40)">
+          <!-- Trick rotation: kickflip = roll about long axis (scaleY), 360 shove-it = spin about normal (scaleX) -->
+          <g id="board-trick">
+            <animateTransform attributeName="transform" type="scale" dur="6.67s" repeatCount="indefinite"
+              keyTimes="0;.0315;.049875;.06825;.086625;.105;.123375;.14175;.160125;.1785;.5315;.549875;.56825;.586625;.605;.623375;.64175;.660125;.6785;1"
+              values="1 1;1 1;1 0.71;1 0;1 -0.71;1 -1;1 -0.71;1 0;1 0.71;1 1;1 1;0.71 1;0 1;-0.71 1;-1 1;-0.71 1;0 1;0.71 1;1 1;1 1"/>
+            <g transform="translate(0,-40)">
+              <!-- Rear (far-side) wheels and trucks -->
+              <g id="far-wheels" fill="#bfb8a8">
+                <circle cx="-13" cy="41" r="3.6"/>
+                <circle cx="13" cy="41" r="3.6"/>
+              </g>
+              <!-- Trucks (hangers + baseplates) -->
+              <g id="trucks" fill="#9aa1ab" stroke="#5b6068" stroke-width="0.8">
+                <rect x="-19" y="38.5" width="8" height="3" rx="1"/>
+                <rect x="11" y="38.5" width="8" height="3" rx="1"/>
+              </g>
+              <!-- Deck with kicked nose and tail; grip tape on top -->
+              <path id="deck" d="M-22,35 L22,35 Q27,35 29,31 L31,32 Q29,39 22,39 L-22,39 Q-29,39 -31,32 L-29,31 Q-27,35 -22,35 Z"
+                    fill="url(#deckside)" stroke="#1a1a1a" stroke-width="0.8"/>
+              <!-- Nose marker so the board spin is readable -->
+              <circle cx="27" cy="35.5" r="1.6" fill="#ffd23f"/>
+              <!-- Near-side wheels -->
+              <g id="near-wheels" fill="#f2ecd9" stroke="#8a8270" stroke-width="1">
+                <circle cx="-16" cy="41" r="4"/>
+                <circle cx="16" cy="41" r="4"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+
+      <!-- Rider body (front-facing, feet over the trucks) -->
+      <g id="rider" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Legs: knees bent for balance -->
+        <g stroke="#2f4a7a" stroke-width="6" fill="none">
+          <path d="M-5,6 L-13,20 L-12,33"/>
+          <path d="M5,6 L13,20 L12,33"/>
+        </g>
+        <!-- Shoes -->
+        <g fill="#222">
+          <ellipse cx="-12" cy="33.5" rx="6" ry="2.5"/>
+          <ellipse cx="12" cy="33.5" rx="6" ry="2.5"/>
+        </g>
+        <!-- Torso (t-shirt) -->
+        <path d="M-7,8 L-8,-18 Q0,-22 8,-18 L7,8 Z" fill="#f28c28" stroke="#b35e12" stroke-width="1"/>
+        <!-- Arms spread for balance -->
+        <g stroke="#e0b089" stroke-width="4.5" fill="none">
+          <path d="M-7,-16 L-17,-8 L-24,-12"/>
+          <path d="M7,-16 L17,-6 L24,-2"/>
+        </g>
+        <!-- Head with helmet -->
+        <circle cx="0" cy="-28" r="7" fill="#e0b089"/>
+        <path d="M-8,-28 A8,8 0 0 1 8,-28 L8,-30 A8,9 0 0 0 -8,-30 Z" fill="#c62828"/>
+        <path d="M-8,-29 A8,8.5 0 0 1 8,-29" fill="#c62828" stroke="#8e1b1b" stroke-width="1"/>
+        <!-- Face -->
+        <circle cx="-2.5" cy="-27" r="0.9" fill="#222"/>
+        <circle cx="2.5" cy="-27" r="0.9" fill="#222"/>
+        <path d="M-2,-24 Q0,-22.8 2,-24" stroke="#7a3a2a" stroke-width="0.9" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

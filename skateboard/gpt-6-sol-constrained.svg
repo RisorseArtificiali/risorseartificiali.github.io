@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-label="A skateboarder swings through a half-pipe and performs an aerial board spin above each coping">
+  <!-- Sky and ground -->
+  <rect width="1000" height="600" fill="#dceefa"/>
+  <rect y="565" width="1000" height="35" fill="#a8bdad"/>
+
+  <!-- Left quarter pipe, flat bottom, and right quarter pipe -->
+  <path d="M50 270 H125 C125 405 238 515 400 515 H600 C762 515 875 405 875 270 H950 V565 H50 Z"
+        fill="#c8a47e" stroke="#694f43" stroke-width="5"/>
+  <path d="M125 270 C125 405 238 515 400 515 H600 C762 515 875 405 875 270"
+        fill="none" stroke="#f1dbc0" stroke-width="17" stroke-linejoin="round"/>
+  <path d="M125 270 C125 405 238 515 400 515 H600 C762 515 875 405 875 270"
+        fill="none" stroke="#694f43" stroke-width="4"/>
+  <!-- Metal coping and deck platforms -->
+  <path d="M50 269 H125 M875 269 H950" stroke="#694f43" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="125" cy="269" r="8" fill="#8b9aa3" stroke="#44545d" stroke-width="3"/>
+  <circle cx="875" cy="269" r="8" fill="#8b9aa3" stroke="#44545d" stroke-width="3"/>
+
+  <!-- Skater: translation follows the ramp; rotation keeps the board tangent to it.
+       Each aerial stays over its coping and rises and falls along a parabolic path. -->
+  <g id="skater">
+    <animateTransform attributeName="transform" type="translate" dur="16s"
+      repeatCount="indefinite" calcMode="linear"
+      keyTimes="0;.05;.11;.18;.22;.29;.35;.4;.425;.45;.475;.5;.55;.61;.68;.72;.79;.85;.9;.925;.95;.975;1"
+      values="125 247;150 343;240 458;400 492;600 492;760 458;850 343;875 247;875 193;875 175;875 193;875 247;850 343;760 458;600 492;400 492;240 458;150 343;125 247;125 193;125 175;125 193;125 247"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" dur="16s"
+        repeatCount="indefinite" calcMode="linear"
+        keyTimes="0;.05;.11;.18;.22;.29;.35;.4;.425;.45;.475;.5;.55;.61;.68;.72;.79;.85;.9;.925;.95;.975;1"
+        values="90;65;30;0;0;-30;-65;-90;-35;0;-35;-90;-65;-30;0;0;30;65;90;35;0;35;90"/>
+
+      <!-- Head, helmet, torso, arms, and bent legs -->
+      <g stroke="#293844" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M-20 -88 L-14 -57 L13 -54 L20 -87 Z"
+              fill="#ed6653"/>
+        <path d="M-15 -56 L-30 -33 L-24 -14 M13 -54 L28 -34 L23 -14"
+              fill="none"/>
+        <path d="M-17 -82 L-38 -66 L-43 -48 M17 -82 L37 -69 L42 -51"
+              fill="none"/>
+        <path d="M-31 -12 H-13 M16 -12 H33"
+              stroke="#f5f5ef" stroke-width="9"/>
+        <circle cx="0" cy="-110" r="16" fill="#c98c66"/>
+        <path d="M-18 -114 Q-16 -134 2 -134 Q18 -133 19 -113 Z"
+              fill="#416577"/>
+        <path d="M-16 -118 Q1 -124 18 -116" fill="none" stroke="#d9e4e8" stroke-width="3"/>
+      </g>
+
+      <!-- Skateboard: spinning deck, two trucks, and all four wheels.
+           Two complete rotations return the deck to its starting alignment at the loop seam. -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" dur="16s"
+          repeatCount="indefinite" calcMode="linear"
+          keyTimes="0;.4;.425;.45;.475;.5;.9;.925;.95;.975;1"
+          values="0;0;90;180;270;360;360;450;540;630;720"/>
+        <path d="M-61 -3 Q-63 -9 -56 -9 H56 Q63 -9 61 -3 L56 3 H-56 Z"
+              fill="#e4a447" stroke="#293844" stroke-width="3"/>
+        <path d="M-48 -4 H48" stroke="#fff1cb" stroke-width="2"/>
+        <path d="M-36 4 V10 M36 4 V10 M-45 10 H-27 M27 10 H45"
+              fill="none" stroke="#53636b" stroke-width="4" stroke-linecap="round"/>
+        <g fill="#30404a" stroke="#e4ebeb" stroke-width="2">
+          <circle cx="-44" cy="13" r="6"/>
+          <circle cx="-29" cy="13" r="6"/>
+          <circle cx="29" cy="13" r="6"/>
+          <circle cx="44" cy="13" r="6"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

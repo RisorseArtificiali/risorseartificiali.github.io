@@ -1,0 +1,198 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 800 600" width="800" height="600">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1565C0"/><stop offset="50%" stop-color="#42A5F5"/>
+    <stop offset="100%" stop-color="#90CAF9"/>
+  </linearGradient>
+  <linearGradient id="gnd" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#6B8E4E"/><stop offset="100%" stop-color="#3E5C2A"/>
+  </linearGradient>
+  <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#78909C"/><stop offset="30%" stop-color="#90A4AE"/>
+    <stop offset="70%" stop-color="#90A4AE"/><stop offset="100%" stop-color="#78909C"/>
+  </linearGradient>
+  <linearGradient id="surf" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#E8D5B0"/><stop offset="100%" stop-color="#C4B088"/>
+  </linearGradient>
+  <linearGradient id="deck" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#B8956A"/><stop offset="100%" stop-color="#9A7A50"/>
+  </linearGradient>
+</defs>
+
+<!-- ═══ SKY ═══ -->
+<rect width="800" height="600" fill="url(#sky)"/>
+<circle cx="720" cy="70" r="45" fill="#FFF176" opacity=".9"/>
+<circle cx="720" cy="70" r="65" fill="#FFF176" opacity=".15"/>
+<g fill="#fff" opacity=".75">
+  <ellipse cx="180" cy="90" rx="65" ry="24"/><ellipse cx="215" cy="78" rx="52" ry="22"/>
+  <ellipse cx="150" cy="82" rx="48" ry="20"/><ellipse cx="480" cy="65" rx="58" ry="22"/>
+  <ellipse cx="515" cy="55" rx="42" ry="18"/><ellipse cx="450" cy="60" rx="38" ry="16"/>
+</g>
+
+<!-- ═══ GROUND ═══ -->
+<rect x="0" y="550" width="800" height="50" fill="url(#gnd)"/>
+<g fill="#263238" opacity=".5">
+  <circle cx="40" cy="540" r="9"/><rect x="33" y="546" width="14" height="18" rx="4"/>
+  <circle cx="85" cy="538" r="9"/><rect x="78" y="544" width="14" height="20" rx="4"/>
+  <circle cx="130" cy="541" r="9"/><rect x="123" y="547" width="14" height="17" rx="4"/>
+  <circle cx="665" cy="539" r="9"/><rect x="658" y="545" width="14" height="19" rx="4"/>
+  <circle cx="710" cy="541" r="9"/><rect x="703" y="547" width="14" height="17" rx="4"/>
+  <circle cx="755" cy="538" r="9"/><rect x="748" y="544" width="14" height="20" rx="4"/>
+  <circle cx="170" cy="543" r="8"/><rect x="164" y="548" width="12" height="15" rx="3"/>
+  <circle cx="630" cy="542" r="8"/><rect x="624" y="547" width="12" height="16" rx="3"/>
+</g>
+
+<!-- ═══ HALF-PIPE ═══ -->
+<path d="M75,238 L140,238 C140,340 175,540 300,540 L500,540 C625,540 660,340 660,238 L725,238 L725,565 L75,565 Z"
+      fill="url(#wall)" stroke="#546E7A" stroke-width="1.5"/>
+<path d="M138,245 C138,340 175,532 300,532 L500,532 C625,532 662,340 662,245"
+      fill="none" stroke="url(#surf)" stroke-width="7" stroke-linecap="round"/>
+<path d="M138,245 C138,340 175,532 300,532 L500,532 C625,532 662,340 662,245"
+      fill="none" stroke="#D4C4A0" stroke-width="1.5" stroke-dasharray="10 12" opacity=".4"/>
+<circle cx="138" cy="245" r="8" fill="#B0BEC5" stroke="#78909C" stroke-width="2"/>
+<circle cx="662" cy="245" r="8" fill="#B0BEC5" stroke="#78909C" stroke-width="2"/>
+<rect x="70" y="233" width="72" height="12" fill="url(#deck)" rx="2" stroke="#7A6040"/>
+<rect x="658" y="233" width="72" height="12" fill="url(#deck)" rx="2" stroke="#7A6040"/>
+<g stroke="#78909C" stroke-width="2.5" fill="none">
+  <line x1="74" y1="233" x2="74" y2="212"/><line x1="140" y1="233" x2="140" y2="212"/>
+  <line x1="74" y1="212" x2="140" y2="212"/>
+  <line x1="660" y1="233" x2="660" y2="212"/><line x1="726" y1="233" x2="726" y2="212"/>
+  <line x1="660" y1="212" x2="726" y2="212"/>
+</g>
+<rect x="340" y="537" width="120" height="20" fill="#D32F2F" rx="4"/>
+<text x="400" y="551" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold" font-family="Arial">SK8 PARK</text>
+<rect x="280" y="540" width="15" height="25" fill="#546E7A"/>
+<rect x="505" y="540" width="15" height="25" fill="#546E7A"/>
+
+<!-- ═══ HIDDEN RIDE PATH (loop with arc pops at top) ═══ -->
+<path id="rp" fill="none" stroke="none"
+  d="M138,245 C138,340 175,532 300,532 L500,532 C625,532 662,340 662,245
+     Q662,225 660,248 C660,350 625,532 500,532 L300,532
+     C175,532 138,340 138,245 Q138,225 140,248"/>
+
+<!-- ═══ SHADOW ═══ -->
+<g opacity=".25">
+  <animateMotion dur="6s" repeatCount="indefinite" rotate="auto"
+    keyPoints="0;0.192;0.300;0.489;0.503;0.686;0.794;0.986;1"
+    keyTimes="0;0.193;0.258;0.447;0.500;0.688;0.754;0.947;1"
+    keySplines="0.42 0 1 1; 0 0 1 1; 0 0 0.58 1; 0.42 0 0.58 1; 0.42 0 1 1; 0 0 1 1; 0 0 0.58 1; 0.42 0 0.58 1"
+    calcMode="spline"><mpath xlink:href="#rp" href="#rp"/></animateMotion>
+  <ellipse cx="0" cy="3" rx="20" ry="4" fill="#000"/>
+</g>
+
+<!-- ═══ SPEED LINES ═══ -->
+<g>
+  <animateMotion dur="6s" repeatCount="indefinite" rotate="auto"
+    keyPoints="0;0.192;0.300;0.489;0.503;0.686;0.794;0.986;1"
+    keyTimes="0;0.193;0.258;0.447;0.500;0.688;0.754;0.947;1"
+    keySplines="0.42 0 1 1; 0 0 1 1; 0 0 0.58 1; 0.42 0 0.58 1; 0.42 0 1 1; 0 0 1 1; 0 0 0.58 1; 0.42 0 0.58 1"
+    calcMode="spline"><mpath xlink:href="#rp" href="#rp"/></animateMotion>
+  <g>
+    <animate attributeName="opacity" values=".6;.6;0;0;.6;.6;0;0;.6"
+      keyTimes="0;0.22;0.26;0.48;0.52;0.72;0.76;0.98;1"
+      keySplines="0 0 1 1; .42 0 .58 1; 0 0 1 1; .42 0 .58 1; 0 0 1 1; .42 0 .58 1; 0 0 1 1; .42 0 .58 1"
+      dur="6s" repeatCount="indefinite" calcMode="spline"/>
+    <line x1="-28" y1="-55" x2="-62" y2="-55" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+    <line x1="-30" y1="-40" x2="-70" y2="-40" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity=".6"/>
+    <line x1="-28" y1="-25" x2="-58" y2="-25" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".7"/>
+    <line x1="-30" y1="-10" x2="-55" y2="-10" stroke="#fff" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+    <line x1="-25" y1="5" x2="-50" y2="5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
+  </g>
+</g>
+
+<!-- ═══ SKATER ═══ -->
+<g>
+  <animateMotion dur="6s" repeatCount="indefinite"
+    keyPoints="0;0.192;0.300;0.489;0.503;0.686;0.794;0.986;1"
+    keyTimes="0;0.193;0.258;0.447;0.500;0.688;0.754;0.947;1"
+    keySplines="0.42 0 1 1; 0 0 1 1; 0 0 0.58 1; 0.42 0 0.58 1; 0.42 0 1 1; 0 0 1 1; 0 0 0.58 1; 0.42 0 0.58 1"
+    calcMode="spline"><mpath xlink:href="#rp" href="#rp"/></animateMotion>
+
+  <g>
+    <!-- Physics: rotation follows ramp surface angle, synchronized with position easing -->
+    <animateTransform attributeName="transform" type="rotate"
+      values="90;0;0;-90;-90;0;0;90;90"
+      keyTimes="0;0.193;0.258;0.447;0.500;0.688;0.754;0.947;1"
+      keySplines="0.42 0 1 1; 0 0 1 1; 0 0 0.58 1; 0.42 0 0.58 1; 0.42 0 1 1; 0 0 1 1; 0 0 0.58 1; 0.42 0 0.58 1"
+      dur="6s" repeatCount="indefinite" calcMode="spline"/>
+
+    <!-- Skateboard -->
+    <rect x="-22" y="-13" width="44" height="4" fill="#263238" rx="2"/>
+    <rect x="-16" y="-12.5" width="32" height="3" fill="#37474F" rx="1.5"/>
+    <rect x="-15" y="-9" width="10" height="5" fill="#B0BEC5" rx="1"/>
+    <rect x="5" y="-9" width="10" height="5" fill="#B0BEC5" rx="1"/>
+    <circle cx="-10" cy="-5" r="5" fill="#EF5350" stroke="#C62828" stroke-width="1"/>
+    <circle cx="10" cy="-5" r="5" fill="#EF5350" stroke="#C62828" stroke-width="1"/>
+    <circle cx="-10" cy="-5" r="2" fill="#B71C1C" opacity=".5"/>
+    <circle cx="10" cy="-5" r="2" fill="#B71C1C" opacity=".5"/>
+
+    <!-- Legs -->
+    <polyline points="-13,-13 -16,-30 -5,-43" fill="none" stroke="#1565C0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <polyline points="13,-13 16,-30 5,-43" fill="none" stroke="#1565C0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <ellipse cx="-13" cy="-13" rx="5" ry="3" fill="#333"/>
+    <ellipse cx="13" cy="-13" rx="5" ry="3" fill="#333"/>
+
+    <!-- Torso -->
+    <line x1="0" y1="-43" x2="2" y2="-63" stroke="#1976D2" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Back arm (balance swing during grab) -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        values="0 0 -61;0 0 -61;-20 0 -61;-20 0 -61;0 0 -61;0 0 -61;-20 0 -61;0 0 -61;0 0 -61"
+        keyTimes="0;0.43;0.45;0.50;0.53;0.93;0.95;0.99;1"
+        keySplines="0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1"
+        dur="6s" repeatCount="indefinite" calcMode="spline"/>
+      <polyline points="0,-61 -16,-55 -28,-59" fill="none" stroke="#FFCC80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="-28" cy="-59" r="3.5" fill="#FFCC80"/>
+    </g>
+
+    <!-- Front arm (grab during trick) -->
+    <g>
+      <animateTransform attributeName="transform" type="rotate"
+        values="0 4 -61;0 4 -61;40 4 -61;40 4 -61;0 4 -61;0 4 -61;40 4 -61;0 4 -61;0 4 -61"
+        keyTimes="0;0.43;0.45;0.50;0.53;0.93;0.95;0.99;1"
+        keySplines="0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1;0 0 1 1;.42 0 .58 1"
+        dur="6s" repeatCount="indefinite" calcMode="spline"/>
+      <polyline points="4,-61 18,-55 30,-49" fill="none" stroke="#FFCC80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="30" cy="-49" r="3.5" fill="#FFCC80"/>
+    </g>
+
+    <!-- Neck + Head -->
+    <line x1="2" y1="-63" x2="3" y2="-69" stroke="#FFCC80" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="3" cy="-75" r="9" fill="#FFCC80" stroke="#555" stroke-width="1.5"/>
+    <path d="M-6,-77 A9,9 0 0,1 12,-77" fill="#F44336" stroke="#C62828"/>
+    <rect x="-7" y="-77" width="20" height="4" fill="#D32F2F" rx="2"/>
+    <rect x="-4" y="-72" width="14" height="4" fill="#263238" rx="2" opacity=".9"/>
+    <circle cx="7" cy="-74" r="2" fill="#fff"/>
+    <circle cx="7.5" cy="-74" r="1" fill="#333"/>
+    <path d="M12,-76 Q18,-70 14,-62" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</g>
+
+<!-- ═══ TRICK EFFECT ═══ -->
+<g>
+  <animateMotion dur="6s" repeatCount="indefinite"
+    keyPoints="0;0.192;0.300;0.489;0.503;0.686;0.794;0.986;1"
+    keyTimes="0;0.193;0.258;0.447;0.500;0.688;0.754;0.947;1"
+    keySplines="0.42 0 1 1; 0 0 1 1; 0 0 0.58 1; 0.42 0 0.58 1; 0.42 0 1 1; 0 0 1 1; 0 0 0.58 1; 0.42 0 0.58 1"
+    calcMode="spline"><mpath xlink:href="#rp" href="#rp"/></animateMotion>
+  <g>
+    <animate attributeName="opacity" values="0;0;1;1;0;0;1;1;0"
+      keyTimes="0;0.43;0.45;0.50;0.53;0.93;0.95;0.99;1"
+      dur="6s" repeatCount="indefinite" calcMode="discrete"/>
+    <text x="0" y="-100" text-anchor="middle" fill="#FFD700" font-size="17" font-weight="bold" font-family="Arial" stroke="#333" stroke-width=".6">+500</text>
+    <text x="0" y="-118" text-anchor="middle" fill="#FF5252" font-size="12" font-weight="bold" font-family="Arial">GRAB!</text>
+    <circle cx="-24" cy="-92" r="3.5" fill="#FFF176"/><circle cx="27" cy="-97" r="2.5" fill="#FF9800"/>
+    <circle cx="-12" cy="-114" r="3" fill="#FFF176"/><circle cx="18" cy="-106" r="2" fill="#FF5252"/>
+    <circle cx="-32" cy="-82" r="2.5" fill="#FFF176"/><circle cx="35" cy="-86" r="2" fill="#FFD700"/>
+  </g>
+</g>
+
+<!-- ═══ UI ═══ -->
+<g transform="translate(400,35)">
+  <rect x="-78" y="-18" width="156" height="36" fill="#263238" rx="8" stroke="#455A64" stroke-width="2"/>
+  <text x="0" y="6" text-anchor="middle" fill="#4CAF50" font-size="22" font-family="'Courier New',monospace" font-weight="bold">SK8 MODE</text>
+</g>
+<rect x="3" y="3" width="794" height="594" rx="6" fill="none" stroke="#263238" stroke-width="4" opacity=".3"/>
+</svg>
