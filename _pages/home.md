@@ -33,6 +33,6 @@ Da geek dell'open source, l'AI non ci piace solo raccontarla — ci piace anche 
 
 ## 🛹 LLM drawing benchmark
 
-Facciamo disegnare agli LLM: SVG animate con la fisica vera di uno skater su half-pipe. Tutti i risultati, i prompt e i metadati (token, costo, tempo) sono open: [galleria skateboarder](https://risorseartificiali.github.io/skateboarder/), [benchmark skateboard](/skateboard/) e [benchmark khazad](/khazad/). Vuoi contribuire? Runna il benchmark col tuo modello e apri una PR.
+Facciamo disegnare agli LLM: SVG animate con la fisica vera di uno skater su half-pipe. Tutti i risultati, i prompt e i metadati (token, costo, tempo) sono open nella [galleria skateboarder](https://risorseartificiali.github.io/skateboarder/). Vuoi contribuire? Runna il benchmark col tuo modello e apri una PR sul [repo GitHub](https://github.com/RisorseArtificiali/skateboarder).
 
-👉 [Apri la galleria](https://risorseartificiali.github.io/skateboarder/)
+👉 [Apri la galleria](https://risorseartificiali.github.io/skateboarder/) · [Contribuisci su GitHub](https://github.com/RisorseArtificiali/skateboarder)
