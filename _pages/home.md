@@ -30,3 +30,9 @@ Un podcast settimanale di AI Engineering in italiano.<br/>
 Da geek dell'open source, l'AI non ci piace solo raccontarla — ci piace anche scriverla. Sulla nostra org GitHub [RisorseArtificiali](https://github.com/RisorseArtificiali/) condividiamo i lavori più interessanti che facciamo con approccio agentic coding: strumenti nati da prurito personale e poi sistemati per essere utili anche ad altri. Al momento i due progetti principali sono **Antivocale** (trascrizione locale dei vocali su Android) e **Lince** (sandbox + dashboard nel terminale per orchestrare i coding agent).
 
 👉 [Scopri i progetti](/progetti/)
+
+## 🛹 LLM drawing benchmark
+
+Facciamo disegnare agli LLM: SVG animate con la fisica vera di uno skater su half-pipe. Tutti i risultati, i prompt e i metadati (token, costo, tempo) sono open: [galleria skateboarder](https://risorseartificiali.github.io/skateboarder/), [benchmark skateboard](/skateboard/) e [benchmark khazad](/khazad/). Vuoi contribuire? Runna il benchmark col tuo modello e apri una PR.
+
+👉 [Apri la galleria](https://risorseartificiali.github.io/skateboarder/)
