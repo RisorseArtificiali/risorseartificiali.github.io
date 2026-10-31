@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "podcast-promo/episodes/2026-10-24-non-descrivi-piu-le-immagini-le-programmi-in-json_promo.md",
+                "file": "podcast-promo/episodes/2026-10-31-modelli-frontiera-ogni-2-settimane-come-stare-al-passo_promo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-10-24-non-descrivi-piu-le-immagini-le-programmi-in-json_promo"
+              "title": "2026-10-31-modelli-frontiera-ogni-2-settimane-come-stare-al-passo_promo"
             }
           }
         ],
@@ -202,11 +202,19 @@
   },
   "active": "0627e8d0d878fde4",
   "lastOpenFiles": [
+    "podcast-promo/episodes/2026-10-24-non-descrivi-piu-le-immagini-le-programmi-in-json_promo.md",
+    "podcast-promo/episodes/2026-10-31-modelli-frontiera-ogni-2-settimane-come-stare-al-passo_promo.md.tmp.2.8983d6d17c22",
+    "podcast-promo/episodes/2026-10-31-modelli-frontiera-ogni-2-settimane-come-stare-al-passo_pre.md",
+    "_posts/2026-10-31-modelli-frontiera-ogni-2-settimane-come-stare-al-passo.md.tmp.2.5d75822bc087",
+    "_posts/2026-10-31-modelli-frontiera-ogni-2-settimane-come-stare-al-passo.md.tmp.2.0ba53804db83",
+    "_posts/2026-10-31-modelli-frontiera-ogni-2-settimane-come-stare-al-passo.md",
+    "_posts/2026-10-31-modelli-frontiera-ogni-2-settimane-come-stare-al-passo.md.tmp.2.89b744fa0890",
+    "podcast-promo/episodes/2026-10-31-modelli-frontiera-ogni-2-settimane-come-stare-al-passo_promo.md",
+    "podcast-promo/episodes/2026-10-31-modelli-frontiera-ogni-2-settimane-come-stare-al-passo_promo.md.tmp.2.c34128d6d146",
     "podcast-promo/episodes/2026-10-17-non-esistera-piu-il-software-esisteranno-i-prompt_promo.md",
     "podcast-promo/episodes/2026-10-24-non-descrivi-piu-le-immagini-le-programmi-in-json_pre.md",
     "_posts/2026-10-24-non-descrivi-piu-le-immagini-le-programmi-in-json.md",
     "_posts/2026-10-24-non-descrivi-piu-le-immagini-le-programmi-in-json.md.tmp.2.cbc935c8b4fd",
-    "podcast-promo/episodes/2026-10-24-non-descrivi-piu-le-immagini-le-programmi-in-json_promo.md",
     "podcast-promo/episodes/2026-10-24-non-descrivi-piu-le-immagini-le-programmi-in-json_promo.md.tmp.2.856531dcabaa",
     "file:/home/maeste/lince_second_brain_plans/00_PRD.md",
     "podcast-promo/episodes/2026-10-10-sign-in-with-openai-labbonamento-diventa-un-portafoglio_promo.md",
@@ -216,17 +224,12 @@
     "_posts/2026-10-17-non-esistera-piu-il-software-esisteranno-i-prompt.md.tmp.2.77098e5f2752",
     "podcast-promo/episodes/2026-10-17-non-esistera-piu-il-software-esisteranno-i-prompt_promo.md.tmp.2.1a786878ab58",
     "podcast-promo/episodes/puntata-52-scaletta.md",
-    "podcast-promo/episodes/2026-10-10-sign-in-with-openai-labbonamento-diventa-un-portafoglio_promo.md.tmp.2.05533051ef98",
     "podcast-promo/episodes/2026-10-10-sign-in-with-openai-labbonamento-diventa-un-portafoglio_pre.md",
     "_posts/2026-10-10-sign-in-with-openai-labbonamento-diventa-un-portafoglio.md",
-    "_posts/2026-10-10-sign-in-with-openai-labbonamento-diventa-un-portafoglio.md.tmp.2.5a5a847e3636",
-    "podcast-promo/episodes/2026-10-10-sign-in-with-openai-labbonamento-diventa-un-portafoglio_promo.md.tmp.2.278e41e6022c",
     "podcast-promo/episodes/2026-10-03-lagi-personale-e-gia-in-vendita-muse-dots-e-grokbot_promo.md",
     "podcast-promo/episodes/2026-09-26-dovevano-rallentare-opus-55-gpt6-e-jev_promo.md",
-    "podcast-promo/episodes/2026-10-03-lagi-personale-e-gia-in-vendita-muse-dots-e-grokbot_promo.md.tmp.2.097ec9153cec",
     "podcast-promo/episodes/2026-10-03-lagi-personale-e-gia-in-vendita-muse-dots-e-grokbot_pre.md",
     "_posts/2026-10-03-lagi-personale-e-gia-in-vendita-muse-dots-e-grokbot.md",
-    "_posts/2026-10-03-lagi-personale-e-gia-in-vendita-muse-dots-e-grokbot.md.tmp.2.cb802b4ff9a7",
     "podcast-promo/episodes/2026-09-19-ave-claude-morituri-te-salutant_promo.md",
     "podcast-promo/episodes/2026-09-26-dovevano-rallentare-opus-55-gpt6-e-jev_pre.md",
     "_posts/2026-09-26-dovevano-rallentare-opus-55-gpt6-e-jev.md",
@@ -240,10 +243,6 @@
     "skateboard/deepseek-v4-1-flash-constrained.svg",
     "skateboard/deepseek-v4-1-flash-constrained-reasoning.svg",
     "podcast-promo/episodes/2026-09-12-ai-code-review-e-altri-cambiamenti-nei-nostri-workflow_promo.md",
-    "podcast-promo/episodes/2026-09-12-ai-code-review-e-altri-cambiamenti-nei-nostri-workflow_pre.md",
-    "_posts/2026-09-12-ai-code-review-e-altri-cambiamenti-nei-nostri-workflow.md",
-    "podcast-promo/episodes/2026-08-29-era-stealth-era-glm-53-flash-e-i-numeri-da-giganti_promo.md",
-    "podcast-promo/episodes/2026-08-22-bannato-da-glm-hybrid-routing-con-litellm_promo.md",
     "assets/images/episodes/ep52.png",
     "temp/dom.jpeg"
   ]
